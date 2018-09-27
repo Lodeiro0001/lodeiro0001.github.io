@@ -5,8 +5,8 @@
     <link>/blog/</link>
     <description>Recent content in Blog on Roberto Lodeiro</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>es</language>
-    <lastBuildDate>Wed, 26 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <language>es-es</language>
+    <lastBuildDate>Thu, 27 Sep 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Raspberry Pi &amp; USB Boot Mode</title>
       <link>/blog/raspberryusbboot/</link>
-      <pubDate>Wed, 26 Sep 2018 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>/blog/raspberryusbboot/</guid>
       <description>En esta primera entrada, explicaré algo que me ha sido muy util a la hora de tener una Raspberry Pi como servidor en casa.

@@ -14,15 +14,15 @@
         "name" : "Roberto Lodeiro",
         "headline" : "Roberto Lodeiro",
         "description" : "",
-        "inLanguage" : "es",
+        "inLanguage" : "es-es",
         "author" : "",
         "creator" : "",
         "publisher": "",
         "accountablePerson" : "",
         "copyrightHolder" : "",
-        "copyrightYear" : "0001",
-        "datePublished": "0001-01-01 00:00:00 &#43;0000 UTC",
-        "dateModified" : "0001-01-01 00:00:00 &#43;0000 UTC",
+        "copyrightYear" : "2018",
+        "datePublished": "2018-09-27 00:00:00 &#43;0000 UTC",
+        "dateModified" : "2018-09-27 00:00:00 &#43;0000 UTC",
         "url" : "/",
         "wordCount" : "0",
         "keywords" : [ "Blog" ]
@@ -75,7 +75,7 @@
 
 
 
-
+<meta property="og:updated_time" content="2018-09-27T00:00:00&#43;00:00"/>
 
 
 
@@ -266,6 +266,45 @@
                 
 
                 
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/raspberryusbboot/">Raspberry Pi &amp; USB Boot Mode</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-09-27'>
+                                    September 27, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/raspberryusbboot/" class="image featured">
+            <img src="/img/2018/09/raspberryUSBboot.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
 
                 
             </div>
@@ -277,6 +316,426 @@
 
     
     <div id="main">
+        
+            <article class="post">
+  <header>
+    <div class="title">
+        
+            <h2><a href="/blog/raspberryusbboot/">Raspberry Pi &amp; USB Boot Mode</a></h2>
+        
+        
+            <p>Como arrancar una Raspberry Pi desde un disco USB</p>
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published"
+            datetime='2018-09-27'>
+            September 27, 2018</time>
+        <span class="author">Roberto lodeiro</span>
+        
+        
+    </div>
+</header>
+
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+<li>
+  <a href="//twitter.com/share?url=%2fblog%2fraspberryusbboot%2f&amp;text=Raspberry%20Pi%20%26%20USB%20Boot%20Mode&amp;via=lodeiro0001" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//plus.google.com/share?url=%2fblog%2fraspberryusbboot%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=%2fblog%2fraspberryusbboot%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=%2fblog%2fraspberryusbboot%2f&amp;title=Raspberry%20Pi%20%26%20USB%20Boot%20Mode" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fraspberryusbboot%2f&amp;title=Raspberry%20Pi%20%26%20USB%20Boot%20Mode" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=%2fblog%2fraspberryusbboot%2f&amp;description=Raspberry%20Pi%20%26%20USB%20Boot%20Mode" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Check out this post by Roberto%20lodeiro&amp;body=%2fblog%2fraspberryusbboot%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+      </ul>
+    </section>
+  
+
+  
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/raspberryusbboot/" class="image featured">
+            <img src="/img/2018/09/raspberryUSBboot.jpg" alt="">
+        </a>
+    
+
+
+  <div id="content">
+    
+
+<p>En esta primera entrada, explicaré algo que me ha sido muy util a la hora de tener una Raspberry Pi como servidor en casa.</p>
+
+<p>Todos sabemos que la Raspberry Pi, por defecto, utiliza una tarjeta MicroSD como disco para el sistema, lo cual supone muchas limitaciones, tanto a nivel de rendimiento como de durabilidad.</p>
+
+<p>Desde hace relativamente poco, en 
+
+    
+        
+    
+
+    <a href="https://www.raspberrypi.org/documentation/hardware/raspberrypi/bootmodes/msd.md" target='_blank'>la documentación oficial</a>
+
+ se explica como activar el arranque desde un dispositivo usb.</p>
+
+<h1 id="1-documentación-oficial">1. Documentación oficial</h1>
+
+<ul>
+<li><p>Actualizar nuestra Raspberry Pi</p>
+
+<pre><code class="language-bash">sudo apt-get update &amp;&amp; sudo apt-get upgrade
+</code></pre></li>
+
+<li><p>Habilitar USB boot mode</p>
+
+<pre><code class="language-bash">echo program_usb_boot_mode=1 | sudo tee -a /boot/config.txt
+</code></pre>
+
+<p>Esto añadirá <code>program_usb_boot_mode=1</code> al final de <code>/boot/config.txt</code>. En cuanto reiniciemos la Raspberry Pi, quedará activado USB Boot Mode de forma permanente, podremos arrancar desde un disco USB sin necesidad de la tarjeta MicroSD, pero si esta está presente, se arrancará desde ella. Si utilizamos esta MicroSD en otra Raspberry Pi, en esta también se activará USB Boot Mode.</p></li>
+
+<li><p>Para comprobar que se ha realizado correctamente</p>
+
+<pre><code class="language-bash">vcgencmd otp_dump | grep 17:
+17:3020000a
+</code></pre>
+
+<p>Verificamos que la salida sea <code>0x3020000a</code>. De no ser así, repetiremos el proceso. Si sigue sin funcionar, significa que la Raspberry Pi tiene un problema de hardware. A mi me ha funcionado sin problema tanto en una Pi 3B como en una 3B+.</p></li>
+</ul>
+
+<p>Solo tenemos que 
+
+    
+        
+    
+
+    <a href="https://www.raspberrypi.org/downloads/raspbian/" target='_blank'>descargar la imagen de raspbian</a>
+
+ (recomiendo Lite para server) y quemarla en nuestro disco USB de la misma forma que lo haríamos en la MicroSD. Personalmente siempre utilizo la 
+
+    
+        
+    
+
+    <a href="https://etcher.io/" target='_blank'>herramienta OpenSource Etcher</a>
+
+ para esto.</p>
+
+<p>Todo pinta muy bonito, pero, siempre hay un pero.</p>
+
+<h3 id="problema-solo-un-hdd">Problema, solo un HDD</h3>
+
+<p>Si queremos utilizar, además del disco USB principal para el sistema, otro u otros discos USB para por ejemplo guardar archivos, nuestra Raspberry Pi ya no arrancará. He intentado especificar en la configuración del boot con cual de los discos se a de arrancar,pero no funciona, así que me temo que esto es algo que no se ha tenido en cuenta al implementar esta característica.</p>
+
+<p>Antes de nada, mencionar que la Raspberry Pi solo alimenta de forma correcta un disco USB. Para utilizar mas discos, tenemos que conectar un hub con alimentación externa propia, y ahí ya podemos conectar el resto de discos.</p>
+
+<h1 id="2-para-poder-conectar-mas-de-un-disco-usb">2. Para poder conectar mas de un disco usb</h1>
+
+<h2 id="2-1-instalación-nueva">2.1 Instalación nueva</h2>
+
+<p>Partimos teniendo instalado raspbian, tanto en la MicroSD como en el disco USB. Básicamente lo que haremos, será arrancar como siempre con la MicroSD, pero indicando en la configuración de arranque que se utilice la partición root del disco USB en lugar de utilizar la de la MicroSD. En este caso, si necesitaremos la tarjeta MicroSD para arrancar.</p>
+
+<p>Es importante, que tanto la MicroSD como el disco USB, tengan la misma version de Raspbian. Si anteriormente hemos hecho un <code>sudo apt upgrade</code> en nuestra MicroSD, antes de continuar, arrancaremos solo con el disco USB para actualizar el sistema también en el. Yo lo he hecho sin actualizar ninguna de las dos instalaciones, actualizando el sistema posteriormente.</p>
+
+<p>Una vez arrancada la Raspberry Pi con la MicroSD y el disco USB conectado:</p>
+
+<ul>
+<li><p>Entramos en la terminal y listamos los discos con <code>lsblk</code>
+Esto nos devolverá el listado de discos/particiones que tenemos en el sistema. Ha de figurar montada la MicroSD, normalmente <code>/boot</code> en <code>mmcblk0p1</code> y la partición root <code>/</code> en <code>mmcblk0p2</code>. Anotamos el nombre de la partición del disco USB donde se encuentra el root, normalmente algo como <code>sda2</code>.</p></li>
+
+<li><p>Montamos la partición root del disco USB</p>
+
+<pre><code class="language-bash">sudo mkdir /mnt/rootUSB
+sudo mount /dev/sda2 /mnt/rootUSB
+</code></pre></li>
+
+<li><p>Para conocer su PARTUUID</p>
+
+<pre><code class="language-bash">sudo blkid -p /dev/sda2
+</code></pre>
+
+<p>No confundir UUID con PARTUUID. Encontraremos PARTUUID como <code>PART_ENTRY_UUID=&quot;XXXXXXXX-02&quot;</code>. Guardamos el código PARTUUID correspondiente a la partición root de nuestro disco USB.</p></li>
+
+<li><p>Hacemos un backup de la configuración de inicio de la sd y la editamos</p>
+
+<pre><code class="language-bash">sudo cp /boot/cmdline.txt /boot/cmdline.sdBoot.bak
+sudo nano /boot/cmdline.txt
+</code></pre>
+
+<p>Veremos algo como <code>root=PARTUUID=XXXXXXXX-02</code>, correspondiente al <code>/</code>de  la sd, lo sustituimos por el PARTUUID del disco USB que guardamos antes.</p></li>
+
+<li><p>Editamos <code>fstab</code> en el disco USB para indicar el <code>/boot</code> de la sd</p>
+
+<pre><code class="language-bash">sudo nano /mnt/rootUSB/etc/fstab
+</code></pre>
+
+<p>Comentamos la linea correspondiente al root <code>/</code> de la sd, y añadimos <code>PARTUUID=XXXXXXXX-02       /               ext4    defaults,noatime  0       1</code> para el disco usb, quedando algo como lo siguiente:</p>
+
+<pre><code class="language-bash">proc                       /proc           proc    defaults          0       0
+PARTUUID=XXXXXXXX-02       /               ext4    defaults,noatime  0       1
+PARTUUID=XXXXXXXX-01       /boot           vfat    defaults          0       2
+#/dev/mmcblk0p2            /               ext4    defaults,noatime  0       1
+</code></pre>
+
+<p>El boot, puede aparecer identificado como <code>/dev/mmcblk0p1</code> o similar. Para evitar problemas, recomiendo cambiarlo por su PARTUUID como muestro arriba.</p></li>
+</ul>
+
+<p>Al reiniciar, si ejecutamos <code>lsblk</code> veremos como ya está montando, tanto el root <code>/</code> del disco USB como <code>/boot</code> de la MicroSD, con lo cual, ya estamos arrancando con la MicroSD, pero utilizando el root del disco USB, y podemos tener todos los discos que necesitemos conectados, y nuestra Raspberry Pi continuará arrancado sin problemas!</p>
+
+<p>Esta instalación, ha sido suponiendo que estamos haciendo una instalación de raspbian nueva, desde 0 en ambos discos. Si se quiere copiar la partición root de la MicroSD  al nuevo disco USB, conservando posibles cambios, es muy sencillo.</p>
+
+<h2 id="2-2-copiando-la-partición-root-de-la-sd-al-disco-usb">2.2 Copiando la partición root de la SD al disco USB</h2>
+
+<ul>
+<li><p>Instalamos <code>rsync</code> si no lo estuviera</p>
+
+<pre><code class="language-bash">sudo apt install rsync
+</code></pre></li>
+
+<li><p>Montamos el disco USB (sustituir <code>sdX</code> por la de vuestro disco USB)</p>
+
+<pre><code class="language-bash">sudo mount /dev/sdX /mnt
+</code></pre></li>
+
+<li><p>Copiamos <code>/</code> de nuestra MicroSD al disco USB</p>
+
+<pre><code class="language-bash">sudo rsync -axv / /mnt/
+</code></pre>
+
+<p>Una vez copiada la partición root en el disco USB, procedemos igual que en la parte 2.1.</p></li>
+</ul>
+
+<p>Espero que sea util, gracias por leerme!</p>
+
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="/categories/raspberry-pi">Raspberry Pi</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+            
+            
+                <i class="fa fa-tags"></i>
+                
+                
+                <li><a class="article-category-link" href="/tags/boot">boot</a></li>
+                
+                
+                <li><a class="article-category-link" href="/tags/usb">USB</a></li>
+                
+                
+                <li><a class="article-category-link" href="/tags/raspberry">Raspberry</a></li>
+                
+            
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+
+<ul class="actions pagination">
+    
+
+    
+</ul>
+
+
+
+            <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Comparte esta publicación <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+<li>
+  <a href="//twitter.com/share?url=%2fblog%2fraspberryusbboot%2f&amp;text=Raspberry%20Pi%20%26%20USB%20Boot%20Mode&amp;via=lodeiro0001" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//plus.google.com/share?url=%2fblog%2fraspberryusbboot%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=%2fblog%2fraspberryusbboot%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=%2fblog%2fraspberryusbboot%2f&amp;title=Raspberry%20Pi%20%26%20USB%20Boot%20Mode" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fraspberryusbboot%2f&amp;title=Raspberry%20Pi%20%26%20USB%20Boot%20Mode" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=%2fblog%2fraspberryusbboot%2f&amp;description=Raspberry%20Pi%20%26%20USB%20Boot%20Mode" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Check out this post by Roberto%20lodeiro&amp;body=%2fblog%2fraspberryusbboot%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+        </ul>
+    </section>
+</section>
+
         
     </div>
     
@@ -401,6 +860,47 @@
         
 
         
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/raspberryusbboot/">Raspberry Pi &amp; USB Boot Mode</a>
+              </h3>
+              
+              <time class="published" datetime='2018-09-27'>
+                September 27, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/raspberryusbboot/" class="image featured">
+            <img src="/img/2018/09/raspberryUSBboot.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
       </div>
 
       
@@ -422,6 +922,17 @@
           
         
 
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/raspberry-pi/">Raspberry Pi</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
         
     </section>
   
@@ -529,7 +1040,7 @@
     
     <p class="copyright">
       
-        &copy; 1
+        &copy; 2018
         
           Roberto Lodeiro
         
