@@ -12,15 +12,6 @@
     
     
     <item>
-      <title>Boot</title>
-      <link>https://rlodeiro.info/tags/boot/</link>
-      <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://rlodeiro.info/tags/boot/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Raspberry</title>
       <link>https://rlodeiro.info/tags/raspberry/</link>
       <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
@@ -35,6 +26,15 @@
       <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://rlodeiro.info/tags/usb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>boot</title>
+      <link>https://rlodeiro.info/tags/boot/</link>
+      <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/boot/</guid>
       <description></description>
     </item>
     

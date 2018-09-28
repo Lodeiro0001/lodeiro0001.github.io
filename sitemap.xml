@@ -19,12 +19,6 @@
   </url>
   
   <url>
-    <loc>https://rlodeiro.info/tags/boot/</loc>
-    <lastmod>2018-09-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://rlodeiro.info/categories/</loc>
     <priority>0</priority>
   </url>
@@ -59,6 +53,12 @@
   
   <url>
     <loc>https://rlodeiro.info/tags/usb/</loc>
+    <lastmod>2018-09-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/boot/</loc>
     <lastmod>2018-09-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
