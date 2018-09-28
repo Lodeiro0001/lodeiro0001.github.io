@@ -798,16 +798,20 @@
 			display: block;
 			margin: 0 0 3em 0;
 			width: 100%;
+			overflow: hidden;
 		}
 
 			.image.featured img {
 				width: 100%;
+				overflow: hidden;
+
 			}
 
 			@media screen and (max-width: 736px) {
 
 				.image.featured {
 					margin: 0 0 1.5em 0;
+					overflow: hidden;
 				}
 
 			}
@@ -1188,6 +1192,7 @@
 
 			.mini-post .image.featured {
 					margin: 0;
+					overflow: hidden;
 			}
 
 		.mini-post header {
@@ -1568,6 +1573,7 @@
 				margin-left: -1.5em;
 				margin-top: 0;
 				width: calc(100% + 3em);
+				overflow: hidden;
 			}
 
 			.post > footer {

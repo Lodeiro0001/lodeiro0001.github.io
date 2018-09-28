@@ -24,7 +24,7 @@
         "datePublished": "2018-09-28 00:00:00 &#43;0000 UTC",
         "dateModified" : "2018-09-28 00:00:00 &#43;0000 UTC",
         "url" : "https://rlodeiro.info/blog/raspberryusbboot/",
-        "wordCount" : "902",
+        "wordCount" : "914",
         "keywords" : [ "boot","USB","Raspberry","Blog" ]
     }
     </script>
@@ -57,7 +57,7 @@
 
 
         
-            <meta name="author" content="Roberto lodeiro">
+            <meta name="author" content="Roberto Lodeiro">
         
         
             <meta name="description" content="Como arrancar una Raspberry Pi desde un disco USB">
@@ -85,7 +85,7 @@
 
 <meta itemprop="datePublished" content="2018-09-28T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-09-28T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="902">
+<meta itemprop="wordCount" content="914">
 
 
 
@@ -174,11 +174,11 @@
         <ul>
             
             <li id="share-nav" class="share-menu" style="display:none;">
-                <a class="fa-share-alt" href="#share-menu">Compartir</a>
+                <a class="fa-share-alt" href="#share-menu">Share</a>
             </li>
             
             <li class="search">
-                <a class="fa-search" href="#search">Buscar</a>
+                <a class="fa-search" href="#search">Search</a>
                 <form id="search" method="get" action="//google.com/search">
                     <input type="text" name="q" placeholder="Search" />
                     <input type="hidden" name="as_sitesearch" value="https://rlodeiro.info">
@@ -253,7 +253,7 @@
         <section class="recent-posts">
             <div class="mini-posts">
                 <header>
-                    <h3>Publicaciones Recientes</h3>
+                    <h3>Recent Posts</h3>
                 </header>
                 
 
@@ -283,9 +283,6 @@
 
 
 
-  
-  
-    
   
 
 
@@ -385,7 +382,7 @@
 
 
 <li>
-  <a href="mailto:?subject=Chequea este post de Roberto%20lodeiro&amp;body=https%3a%2f%2frlodeiro.info%2fblog%2fraspberryusbboot%2f" target="_blank" class="share-btn email">
+  <a href="mailto:?subject=Chequea este post de Roberto%20Lodeiro&amp;body=https%3a%2f%2frlodeiro.info%2fblog%2fraspberryusbboot%2f" target="_blank" class="share-btn email">
     <i class="fa fa-envelope"></i>
     <p>Email</p>
   </a>
@@ -404,7 +401,8 @@
   <header>
     <div class="title">
         
-            <h2><a href="https://rlodeiro.info/blog/raspberryusbboot/">Raspberry Pi &amp; USB Boot Mode</a></h2>
+            <h1><a href="https://rlodeiro.info/blog/raspberryusbboot/">Raspberry Pi &amp; USB Boot Mode</a></h1>
+            
         
         
             <p>Como arrancar una Raspberry Pi desde un disco USB</p>
@@ -416,7 +414,7 @@
         <time class="published"
             datetime='2018-09-28'>
             September 28, 2018</time>
-        <span class="author">Roberto lodeiro</span>
+        <span class="author">Roberto Lodeiro</span>
         
         
     </div>
@@ -495,7 +493,7 @@
 
 
 <li>
-  <a href="mailto:?subject=Chequea este post de Roberto%20lodeiro&amp;body=https%3a%2f%2frlodeiro.info%2fblog%2fraspberryusbboot%2f" target="_blank" class="share-btn email">
+  <a href="mailto:?subject=Chequea este post de Roberto%20Lodeiro&amp;body=https%3a%2f%2frlodeiro.info%2fblog%2fraspberryusbboot%2f" target="_blank" class="share-btn email">
     <i class="fa fa-envelope"></i>
     <p>Email</p>
   </a>
@@ -557,19 +555,19 @@
 <ul>
 <li><p>Actualizar nuestra Raspberry Pi</p>
 
-<pre><code class="language-bash">sudo apt-get update &amp;&amp; sudo apt-get upgrade
+<pre><code class="language-bash">$ sudo apt-get update &amp;&amp; sudo apt-get upgrade
 </code></pre></li>
 
 <li><p>Habilitar USB boot mode</p>
 
-<pre><code class="language-bash">echo program_usb_boot_mode=1 | sudo tee -a /boot/config.txt
+<pre><code class="language-bash">$ echo program_usb_boot_mode=1 | sudo tee -a /boot/config.txt
 </code></pre>
 
 <p>Esto añadirá <code>program_usb_boot_mode=1</code> al final de <code>/boot/config.txt</code>. En cuanto reiniciemos la Raspberry Pi, quedará activado USB Boot Mode de forma permanente, podremos arrancar desde un disco USB sin necesidad de la tarjeta MicroSD, pero si esta está presente, se arrancará desde ella. Si utilizamos esta MicroSD en otra Raspberry Pi, en esta también se activará USB Boot Mode.</p></li>
 
 <li><p>Para comprobar que se ha realizado correctamente</p>
 
-<pre><code class="language-bash">vcgencmd otp_dump | grep 17:
+<pre><code class="language-bash">$ vcgencmd otp_dump | grep 17:
 17:3020000a
 </code></pre>
 
@@ -618,28 +616,28 @@ Esto nos devolverá el listado de discos/particiones que tenemos en el sistema. 
 
 <li><p>Montamos la partición root del disco USB</p>
 
-<pre><code class="language-bash">sudo mkdir /mnt/rootUSB
-sudo mount /dev/sda2 /mnt/rootUSB
+<pre><code class="language-bash">$ sudo mkdir /mnt/rootUSB
+$ sudo mount /dev/sda2 /mnt/rootUSB
 </code></pre></li>
 
 <li><p>Para conocer su PARTUUID</p>
 
-<pre><code class="language-bash">sudo blkid -p /dev/sda2
+<pre><code class="language-bash">$ sudo blkid -p /dev/sda2
 </code></pre>
 
 <p>No confundir UUID con PARTUUID. Encontraremos PARTUUID como <code>PART_ENTRY_UUID=&quot;XXXXXXXX-02&quot;</code>. Guardamos el código PARTUUID correspondiente a la partición root de nuestro disco USB.</p></li>
 
 <li><p>Hacemos un backup de la configuración de inicio de la sd y la editamos</p>
 
-<pre><code class="language-bash">sudo cp /boot/cmdline.txt /boot/cmdline.sdBoot.bak
-sudo nano /boot/cmdline.txt
+<pre><code class="language-bash">$ sudo cp /boot/cmdline.txt /boot/cmdline.sdBoot.bak
+$ sudo nano /boot/cmdline.txt
 </code></pre>
 
 <p>Veremos algo como <code>root=PARTUUID=XXXXXXXX-02</code>, correspondiente al <code>/</code>de  la sd, lo sustituimos por el PARTUUID del disco USB que guardamos antes.</p></li>
 
 <li><p>Editamos <code>fstab</code> en el disco USB para indicar el <code>/boot</code> de la sd</p>
 
-<pre><code class="language-bash">sudo nano /mnt/rootUSB/etc/fstab
+<pre><code class="language-bash">$ sudo nano /mnt/rootUSB/etc/fstab
 </code></pre>
 
 <p>Comentamos la linea correspondiente al root <code>/</code> de la sd, y añadimos <code>PARTUUID=XXXXXXXX-02       /               ext4    defaults,noatime  0       1</code> para el disco usb, quedando algo como lo siguiente:</p>
@@ -662,17 +660,17 @@ PARTUUID=XXXXXXXX-01       /boot           vfat    defaults          0       2
 <ul>
 <li><p>Instalamos <code>rsync</code> si no lo estuviera</p>
 
-<pre><code class="language-bash">sudo apt install rsync
+<pre><code class="language-bash">$ sudo apt install rsync
 </code></pre></li>
 
 <li><p>Montamos el disco USB (sustituir <code>sdX</code> por la de vuestro disco USB)</p>
 
-<pre><code class="language-bash">sudo mount /dev/sdX /mnt
+<pre><code class="language-bash">$ sudo mount /dev/sdX /mnt
 </code></pre></li>
 
 <li><p>Copiamos <code>/</code> de nuestra MicroSD al disco USB</p>
 
-<pre><code class="language-bash">sudo rsync -axv / /mnt/
+<pre><code class="language-bash">$ sudo rsync -axv / /mnt/
 </code></pre>
 
 <p>Una vez copiada la partición root en el disco USB, procedemos igual que en la parte 2.1.</p></li>
@@ -741,7 +739,7 @@ PARTUUID=XXXXXXXX-01       /boot           vfat    defaults          0       2
     
     
       
-        <a href='https://rlodeiro.info/'><img src="https://rlodeiro.info/img/main/logo.jpg" class="intro-circle" width="" alt="lodeiro0001" /></a>
+        <a href='https://rlodeiro.info/'><img src="https://rlodeiro.info/img/main/logo.jpg" class="intro-circle" width="" alt="" /></a>
       
     
     
