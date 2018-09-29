@@ -799,11 +799,13 @@
 			margin: 0 0 3em 0;
 			width: 100%;
 			overflow: hidden;
+			min-height: 19px;
 		}
 
 			.image.featured img {
 				width: 100%;
 				overflow: hidden;
+				min-height: 19px;
 
 			}
 
@@ -812,6 +814,7 @@
 				.image.featured {
 					margin: 0 0 1.5em 0;
 					overflow: hidden;
+					min-height: 19px;
 				}
 
 			}
@@ -1193,6 +1196,7 @@
 			.mini-post .image.featured {
 					margin: 0;
 					overflow: hidden;
+					min-height: 19px;
 			}
 
 		.mini-post header {
@@ -1365,6 +1369,7 @@
 
 		.post > .image.featured {
 			overflow: hidden;
+			min-height: 19px;
 		}
 
 			.post > .image.featured img {
@@ -1574,6 +1579,9 @@
 				margin-top: 0;
 				width: calc(100% + 3em);
 				overflow: hidden;
+				min-height: 19px;
+
+
 			}
 
 			.post > footer {
@@ -1674,6 +1682,7 @@
 
 			.itemized > .image.featured {
 				overflow: hidden;
+				min-height: 19px;
 			}
 
 				.itemized > .image.featured img {

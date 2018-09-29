@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Contacto on Roberto Lodeiro</title>
-    <link>https://rlodeiro.info/contact/</link>
+    <link>//rlodeiro.info/contact/</link>
     <description>Recent content in Contacto on Roberto Lodeiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
     
-	<atom:link href="https://rlodeiro.info/contact/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//rlodeiro.info/contact/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

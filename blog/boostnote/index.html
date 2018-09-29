@@ -1,0 +1,1109 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        
+        <meta property="og:image" content="http://rlodeiro.info/img/posts/2018/09/boostnote/boostnote.jpg"/>
+        <meta property="og:image:secure_url" content="//rlodeiro.info/img/posts/2018/09/boostnote/boostnote.jpg"/>
+        
+        <script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "//rlodeiro.info"
+        },
+        "articleSection" : "blog",
+        "name" : "Boostnote",
+        "headline" : "Boostnote",
+        "description" : "Toma notas en Markdown, guarda tus snippets, ¡encuéntralo!",
+        "inLanguage" : "es-es",
+        "author" : "",
+        "creator" : "",
+        "publisher": "",
+        "accountablePerson" : "",
+        "copyrightHolder" : "",
+        "copyrightYear" : "2018",
+        "datePublished": "2018-09-29 00:00:00 &#43;0000 UTC",
+        "dateModified" : "2018-09-29 00:00:00 &#43;0000 UTC",
+        "url" : "//rlodeiro.info/blog/boostnote/",
+        "wordCount" : "427",
+        "keywords" : [ "Notas","Snippets","Markdown","Blog" ]
+    }
+    </script>
+        
+            
+                <title>Boostnote</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.49" />
+        
+  
+    
+    
+  
+
+  
+
+  <link rel="apple-touch-icon-precomposed" href='//rlodeiro.info/favicon/apple-touch-icon-precomposed-favicon.ico.png'>
+  <link rel="icon" href='//rlodeiro.info/favicon/favicon-favicon.ico.png'>
+  
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content='/favicon/mstile-favicon.ico.png'>
+  <meta name="application-name" content="Roberto Lodeiro">
+  <meta name="msapplication-tooltip" content="Blog personal. Escribo sobre tecnología, programación Backend, herramientas varias y cualquier tema relacionado que me resulte útil en mis proyectos.">
+  <meta name="msapplication-config" content='/favicon/ieconfig.xml'>
+
+
+
+        
+            <meta name="author" content="Roberto Lodeiro">
+        
+        
+            <meta name="description" content="Toma notas en Markdown, guarda tus snippets, ¡encuéntralo!">
+        
+
+        <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Boostnote"/>
+<meta name="twitter:description" content="Toma notas en Markdown, guarda tus snippets, ¡encuéntralo!"/>
+<meta name="twitter:site" content="@lodeiro0001"/>
+
+        
+        
+<meta itemprop="name" content="Boostnote">
+<meta itemprop="description" content="Toma notas en Markdown, guarda tus snippets, ¡encuéntralo!">
+
+
+<meta itemprop="datePublished" content="2018-09-29T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-09-29T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="427">
+
+
+
+<meta itemprop="keywords" content="Notas,Snippets,Markdown," />
+
+        
+
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+            <link rel="stylesheet" href="//rlodeiro.info/css/main.css">
+            <link rel="stylesheet" href="//rlodeiro.info/css/add-on.css">
+            <link rel="stylesheet" href="//rlodeiro.info/css/academicons.min.css">
+        
+
+        
+            
+                
+            
+        
+
+
+  
+    
+    <link href='//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+  
+
+
+      
+    </head>
+    <body>
+
+      
+      <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+      <h1><a href="//rlodeiro.info/">Roberto Lodeiro</a></h1>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="//rlodeiro.info/">
+                            <i class="fa fa-home">&nbsp;</i>Inicio
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="//rlodeiro.info/about/">
+                            <i class="fa fa-id-card-o">&nbsp;</i>Sobre mi
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="//rlodeiro.info/blog/">
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="//rlodeiro.info/categories/">
+                            <i class="fa fa-sitemap">&nbsp;</i>Categorias
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="//rlodeiro.info/contact/">
+                            <i class="fa fa-envelope-o">&nbsp;</i>Contacto
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Buscar</a>
+                <form id="search" method="get" action="//google.com/search">
+                    <input type="text" name="q" placeholder="Buscar" />
+                    <input type="hidden" name="as_sitesearch" value="//rlodeiro.info">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Buscar" />
+                <input type="hidden" name="as_sitesearch" value="//rlodeiro.info">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="//rlodeiro.info/">
+                            <h3>
+                                <i class="fa fa-home">&nbsp;</i>Inicio
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="//rlodeiro.info/about/">
+                            <h3>
+                                <i class="fa fa-id-card-o">&nbsp;</i>Sobre mi
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="//rlodeiro.info/blog/">
+                            <h3>
+                                <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="//rlodeiro.info/categories/">
+                            <h3>
+                                <i class="fa fa-sitemap">&nbsp;</i>Categorias
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="//rlodeiro.info/contact/">
+                            <h3>
+                                <i class="fa fa-envelope-o">&nbsp;</i>Contacto
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section class="recent-posts">
+            <div class="mini-posts">
+                <header>
+                    <h3>Publicaciones Recientes</h3>
+                </header>
+                
+
+                
+                    
+                
+
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="//rlodeiro.info/blog/boostnote/">Boostnote</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-09-29'>
+                                    September 29, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="//rlodeiro.info/blog/boostnote/" class="image featured">
+            <img src="//rlodeiro.info/img/posts/2018/09/boostnote//boostnote.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="//rlodeiro.info/blog/raspberryusbboot/">Raspberry Pi &amp; USB Boot Mode</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-09-28'>
+                                    September 28, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="//rlodeiro.info/blog/raspberryusbboot/" class="image featured">
+            <img src="//rlodeiro.info/img/posts/2018/09/raspberryPiUSBboot//raspberryPiUSBboot.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+
+                
+            </div>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Comparte esta publicación <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+<li>
+  <a href="//twitter.com/share?url=%2f%2frlodeiro.info%2fblog%2fboostnote%2f&amp;text=Boostnote&amp;via=lodeiro0001" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//plus.google.com/share?url=%2f%2frlodeiro.info%2fblog%2fboostnote%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=%2f%2frlodeiro.info%2fblog%2fboostnote%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=%2f%2frlodeiro.info%2fblog%2fboostnote%2f&amp;title=Boostnote" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=%2f%2frlodeiro.info%2fblog%2fboostnote%2f&amp;title=Boostnote" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=%2f%2frlodeiro.info%2fblog%2fboostnote%2f&amp;description=Boostnote" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Chequea este post de Roberto%20Lodeiro&amp;body=%2f%2frlodeiro.info%2fblog%2fboostnote%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+  <header>
+    <div class="title">
+        
+            <h1><a href="//rlodeiro.info/blog/boostnote/">Boostnote</a></h1>
+            
+        
+        
+            <p>Toma notas en Markdown, guarda tus snippets, ¡encuéntralo!</p>
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published"
+            datetime='2018-09-29'>
+            September 29, 2018</time>
+        <span class="author">Roberto Lodeiro</span>
+        
+        
+    </div>
+</header>
+
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+<li>
+  <a href="//twitter.com/share?url=%2f%2frlodeiro.info%2fblog%2fboostnote%2f&amp;text=Boostnote&amp;via=lodeiro0001" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//plus.google.com/share?url=%2f%2frlodeiro.info%2fblog%2fboostnote%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=%2f%2frlodeiro.info%2fblog%2fboostnote%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=%2f%2frlodeiro.info%2fblog%2fboostnote%2f&amp;title=Boostnote" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=%2f%2frlodeiro.info%2fblog%2fboostnote%2f&amp;title=Boostnote" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=%2f%2frlodeiro.info%2fblog%2fboostnote%2f&amp;description=Boostnote" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Chequea este post de Roberto%20Lodeiro&amp;body=%2f%2frlodeiro.info%2fblog%2fboostnote%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+      </ul>
+    </section>
+  
+
+  
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="//rlodeiro.info/blog/boostnote/" class="image featured">
+            <img src="//rlodeiro.info/img/posts/2018/09/boostnote//boostnote.jpg" alt="">
+        </a>
+    
+
+
+  <div id="content">
+    
+
+<p>Hoy os hablaré de una herramienta, para mi <strong>LA HERRAMIENTA</strong> que vengo utilizando desde hace un año.</p>
+
+<p>Está disponible para equipos de escritorio (Linux, macOS y Windows). Como no, es <strong>gratis y OpenSource</strong>, podéis ver su código al completo en su <code>
+
+    
+        
+    
+
+    <a href="https://github.com/BoostIO/Boostnote/" target='_blank'>repositorio de Github.</a>
+
+</code></p>
+
+<p>La versión móvil ha sido retirada temporalmente, tanto para Android como para iOS, hasta que la rehagan por completo. Han dejado un comunicado <strong>
+
+    
+        
+    
+
+    <a href="https://github.com/BoostIO/boostnote-mobile/issues/201" target='_blank'>aquí.</a>
+
+</strong></p>
+
+<p>Personalmente, lo utilizo para guardar manuales, snippets, notas personales y un largo etcétera. Paso a explicarlo más en detalle.</p>
+
+<h1 id="notas-markdown">Notas Markdown</h1>
+
+<p>Booostnote nos permite crear dos tipos de notas, Markdown o snippet. En la primera, destacan cosas como:</p>
+
+<ul>
+<li><code>Previsualización</code> en vivo de lo que estamos escribiendo</li>
+<li>Soporte para código html</li>
+<li>Permite exportar <code>.md</code>, <code>.txt</code> y <code>.html</code> (dentro de la nota, pulsando en la parte superior detecha en <code>i</code> )</li>
+<li>Podemos añadir <code>tags</code> a nuestras notas. Ayudarán mucho a la hora de buscar</li>
+</ul>
+
+<p><img src="//rlodeiro.info/img/posts/2018/09/boostnote/boostnote1.jpg" alt="" /></p>
+
+<h1 id="snippets">Snippets</h1>
+
+<p>Los snippets en Boostnote, son simplemente geniales, entre otras cosas por:</p>
+
+<ul>
+<li>Dentro de una nota, podemos tener todos los snippets que queramos en <code>pestañas</code></li>
+<li>Soporte para <code>más de 100 lenguajes</code>, con su correspondiente <code>Highlight</code></li>
+<li>Texto explicativo en la parte superior y tags para la nota.</li>
+</ul>
+
+<p>Como se ve a continuación (botón derecho, ver imagen si no teneís las gafas puestas) indicar con que lenguaje va cada snippet y que así ponga el Highlight adecuado, es muy simple. Solo tenemos que añadir la extensión correspondiente al lenguaje del snippet en el nombre del mismo (example<code>.html</code>, example<code>.js</code>)</p>
+
+<p><img src="//rlodeiro.info/img/posts/2018/09/boostnote/boostnote2.jpg" alt="" />
+En este caso, no existe opción de exportar, ya que los snippets están pensados para nuestro querido copy&amp;paste.</p>
+
+<h1 id="sincronización-y-notas-finales">Sincronización y notas finales</h1>
+
+<p>Por supuesto, es más que interesante tener nuestras notas sincronizadas en todos los dispositivos.</p>
+
+<p>En las opciones de Bootsnote, podemos agregar tantos almacenamientos o <code>storage</code> como queramos. Es tan simple como crear una carpeta con el nombre deseado (por ejemplo <code>/boostnote</code>) en nuestro directorio de Dropbox, o como no <code>Nextcloud</code>, y todas las notas que guardemos ahí se sincronizarán con todos nuestros equipos. En la versión móvil, que espero que regrese pronto, también existía opción de sincronización con servicios de Cloud.
+<img src="//rlodeiro.info/img/posts/2018/09/boostnote/boostnote3.jpg" alt="" /></p>
+
+<p>En cada storage, podemos crear <code>/carpetas</code> desde la propia interfaz, y dentro de estas agregar las <code>notas</code>. Muy util para tener todo bien organizado.
+<img src="//rlodeiro.info/img/posts/2018/09/boostnote/boostnote4.jpg" alt="" /></p>
+
+<p>Existen multitud de opciones para personalizar la interfaz, pero comentarlas todas resultaría cansino. Seguro que me quedan muchas cosas atrás, en cada versión agregan nuevas features que todavía no utilizo y/o desconozco, así que eso os lo dejo para diversión propia.</p>
+
+<p>Podéis <code>
+
+    
+        
+    
+
+    <a href="https://boostnote.io/#download" target='_blank'>descargar</a>
+
+</code> Bosstnote 
+
+    
+        
+    
+
+    <a href="https://boostnote.io/" target='_blank'>en su web.</a>
+
+</p>
+
+<p>Espero que sea útil, ¡gracias por leerme!</p>
+
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="//rlodeiro.info/categories/herramientas">Herramientas</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+            
+            
+                <i class="fa fa-tags"></i>
+                
+                
+                <li><a class="article-category-link" href="//rlodeiro.info/tags/notas">Notas</a></li>
+                
+                
+                <li><a class="article-category-link" href="//rlodeiro.info/tags/snippets">Snippets</a></li>
+                
+                
+                <li><a class="article-category-link" href="//rlodeiro.info/tags/markdown">Markdown</a></li>
+                
+            
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="//rlodeiro.info/blog/raspberryusbboot/"
+                class="button big previous">Raspberry Pi &amp; USB Boot Mode</a></li>
+    
+
+    
+</ul>
+
+
+    </div>
+    
+<section id="sidebar">
+
+  
+  <section id="intro">
+    
+    
+      
+        <a href='//rlodeiro.info/'><img src="//rlodeiro.info/img/main/logo.jpg" class="intro-circle" width="" alt="" /></a>
+      
+    
+    
+      <header>
+        <h2>Roberto Lodeiro</h2>
+        <p>Reality is wrong. Dreams are for real.</p>
+      </header>
+    
+    
+      <ul class="icons">
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//twitter.com/lodeiro0001" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:me@rlodeiro.info" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+  </section>
+
+  
+  <section class="recent-posts">
+    <div class="mini-posts">
+      <header>
+        <h3>Publicaciones Recientes</h3>
+      </header>
+      <div class="posts-container">
+        
+
+        
+          
+        
+
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="//rlodeiro.info/blog/boostnote/">Boostnote</a>
+              </h3>
+              
+              <time class="published" datetime='2018-09-29'>
+                September 29, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="//rlodeiro.info/blog/boostnote/" class="image featured">
+            <img src="//rlodeiro.info/img/posts/2018/09/boostnote//boostnote.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="//rlodeiro.info/blog/raspberryusbboot/">Raspberry Pi &amp; USB Boot Mode</a>
+              </h3>
+              
+              <time class="published" datetime='2018-09-28'>
+                September 28, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="//rlodeiro.info/blog/raspberryusbboot/" class="image featured">
+            <img src="//rlodeiro.info/img/posts/2018/09/raspberryPiUSBboot//raspberryPiUSBboot.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+      </div>
+
+      
+    </div>
+  </section>
+
+  
+  
+  
+  
+  
+    <section id="categories">
+      <header>
+        <h3>
+          <a href="//rlodeiro.info/categories/">Categorías</a>
+        </h3>
+      </header>
+        
+          
+        
+
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="//rlodeiro.info/categories/herramientas/">Herramientas</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="//rlodeiro.info/categories/raspberry-pi/">Raspberry Pi</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+    </section>
+  
+  
+
+  
+  
+    <section id="mini-bio">
+      <h3>Sobre Mi</h3>
+      <p>¿De donde viene? ¿Cual es su color de pelo? ¿A que tribu urbana pertenece? ¿Será guapo o feo? Si estás muy aburrid@ y tienes tiempo que perder ¡adelante!</p>
+      <a href="//rlodeiro.info/about/" class="button">Leer Más</a>
+    </section>
+  
+
+  
+  <section id="footer">
+    
+      <ul class="icons">
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//twitter.com/lodeiro0001" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:me@rlodeiro.info" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+    <p class="copyright">
+      
+        &copy; 2018
+        
+          Roberto Lodeiro
+        
+      .
+      Powered by <a href="//gohugo.io" target="_blank">Hugo</a>
+    </p>
+  </section>
+</section>
+
+    </div>
+    <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+    
+
+    
+      
+    
+
+    
+      
+      
+      
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+        
+        
+        
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/r.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/yaml.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/css.min.js"></script>
+        <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+      
+    
+    
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+      <script src="//rlodeiro.info/js/util.js"></script>
+      <script src="//rlodeiro.info/js/main.js"></script>
+      <script src="//rlodeiro.info/js/backToTop.js"></script>
+    
+
+    
+      
+        
+      
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+      <script src="//yihui.name/js/math-code.js"></script>
+<script async
+src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+  </body>
+</html>
+

@@ -2,21 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on Roberto Lodeiro</title>
-    <link>https://rlodeiro.info/blog/</link>
+    <link>//rlodeiro.info/blog/</link>
     <description>Recent content in Blog on Roberto Lodeiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <lastBuildDate>Fri, 28 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 29 Sep 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://rlodeiro.info/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//rlodeiro.info/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Boostnote</title>
+      <link>//rlodeiro.info/blog/boostnote/</link>
+      <pubDate>Sat, 29 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//rlodeiro.info/blog/boostnote/</guid>
+      <description>Hoy os hablaré de una herramienta, para mi LA HERRAMIENTA que vengo utilizando desde hace un año.
+Está disponible para equipos de escritorio (Linux, macOS y Windows). Como no, es gratis y OpenSource, podéis ver su código al completo en su  repositorio de Github. 
+La versión móvil ha sido retirada temporalmente, tanto para Android como para iOS, hasta que la rehagan por completo. Han dejado un comunicado  aquí.</description>
+    </item>
+    
+    <item>
       <title>Raspberry Pi &amp; USB Boot Mode</title>
-      <link>https://rlodeiro.info/blog/raspberryusbboot/</link>
+      <link>//rlodeiro.info/blog/raspberryusbboot/</link>
       <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://rlodeiro.info/blog/raspberryusbboot/</guid>
+      <guid>//rlodeiro.info/blog/raspberryusbboot/</guid>
       <description>En esta primera entrada, explicaré algo que me ha sido muy util a la hora de tener una Raspberry Pi como servidor en casa.
 Todos sabemos que la Raspberry Pi, por defecto, utiliza una tarjeta MicroSD como disco para el sistema, lo cual supone muchas limitaciones, tanto a nivel de rendimiento como de durabilidad.
 Desde hace relativamente poco, en la documentación oficial se explica como activar el arranque desde un dispositivo usb.</description>

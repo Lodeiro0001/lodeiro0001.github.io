@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aplicaciones on Roberto Lodeiro</title>
+    <link>//rlodeiro.info/categories/aplicaciones/</link>
+    <description>Recent content in Aplicaciones on Roberto Lodeiro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <lastBuildDate>Mon, 14 May 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="//rlodeiro.info/categories/aplicaciones/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Boostnote</title>
+      <link>//rlodeiro.info/blog/boostnote/</link>
+      <pubDate>Mon, 14 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//rlodeiro.info/blog/boostnote/</guid>
+      <description>Introduction Texto introducción
+Here&amp;rsquo;s an example:
+````bash
+this is a comment echo this is a command this is a command
+edit the file vi foo.md +++ date = &amp;ldquo;2014-09-28&amp;rdquo; title = &amp;ldquo;creating a new theme&amp;rdquo; +++
+bah and humbug :wq
+show it cat foo.md +++ date = &amp;ldquo;2014-09-28&amp;rdquo; title = &amp;ldquo;creating a new theme&amp;rdquo; +++
+bah and humbug
+ ## Some Definitions There are a few concepts that you need to understand before creating a theme.</description>
+    </item>
+    
+  </channel>
+</rss>
