@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>//rlodeiro.info/blog/gogs/</loc>
+    <lastmod>2018-10-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//rlodeiro.info/blog/boostnote/</loc>
     <lastmod>2018-09-29T00:00:00+00:00</lastmod>
   </url>
@@ -19,7 +24,7 @@
   
   <url>
     <loc>//rlodeiro.info/blog/</loc>
-    <lastmod>2018-09-29T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -30,6 +35,24 @@
   
   <url>
     <loc>//rlodeiro.info/contact/</loc>
+  </url>
+  
+  <url>
+    <loc>//rlodeiro.info/tags/control-de-versiones/</loc>
+    <lastmod>2018-10-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//rlodeiro.info/tags/go/</loc>
+    <lastmod>2018-10-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//rlodeiro.info/tags/golang/</loc>
+    <lastmod>2018-10-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -51,6 +74,12 @@
   </url>
   
   <url>
+    <loc>//rlodeiro.info/tags/proyectos/</loc>
+    <lastmod>2018-10-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>//rlodeiro.info/tags/raspberry/</loc>
     <lastmod>2018-09-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -64,7 +93,13 @@
   
   <url>
     <loc>//rlodeiro.info/</loc>
-    <lastmod>2018-09-29T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//rlodeiro.info/categories/servicios/</loc>
+    <lastmod>2018-10-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -76,7 +111,7 @@
   
   <url>
     <loc>//rlodeiro.info/tags/</loc>
-    <lastmod>2018-09-29T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -89,6 +124,12 @@
   <url>
     <loc>//rlodeiro.info/tags/boot/</loc>
     <lastmod>2018-09-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//rlodeiro.info/tags/git/</loc>
+    <lastmod>2018-10-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

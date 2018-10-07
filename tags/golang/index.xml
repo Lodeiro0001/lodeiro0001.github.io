@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Golang on Roberto Lodeiro</title>
+    <link>//rlodeiro.info/tags/golang/</link>
+    <description>Recent content in Golang on Roberto Lodeiro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <lastBuildDate>Sun, 07 Oct 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="//rlodeiro.info/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Gogs | Self-Hosted Git</title>
+      <link>//rlodeiro.info/blog/gogs/</link>
+      <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//rlodeiro.info/blog/gogs/</guid>
+      <description>Todos los que de uno u otro modo estamos relacionados con el desarrollo de software, antes o después hemos usado algún servicio de repositorios Git en la nube. Por lo general, son gratuitos para repositorios públicos, y pagando podemos crear repositorios privados.
+Gogs es un servicio de Git opensource para alojar nuestros repositorios Git en nuestro propio servidor. He probado otras alternativas similares, pero para mi, Gogs es la ganadora ya que consume poquísimos recursos y funciona perfectamente ¿que más se puede pedir?</description>
+    </item>
+    
+  </channel>
+</rss>

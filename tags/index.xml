@@ -6,10 +6,37 @@
     <description>Recent content in Tags on Roberto Lodeiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <lastBuildDate>Sat, 29 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 07 Oct 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="//rlodeiro.info/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Control de versiones</title>
+      <link>//rlodeiro.info/tags/control-de-versiones/</link>
+      <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//rlodeiro.info/tags/control-de-versiones/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GO</title>
+      <link>//rlodeiro.info/tags/go/</link>
+      <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//rlodeiro.info/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Golang</title>
+      <link>//rlodeiro.info/tags/golang/</link>
+      <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//rlodeiro.info/tags/golang/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Markdown</title>
@@ -26,6 +53,15 @@
       <pubDate>Sat, 29 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>//rlodeiro.info/tags/notas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Proyectos</title>
+      <link>//rlodeiro.info/tags/proyectos/</link>
+      <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//rlodeiro.info/tags/proyectos/</guid>
       <description></description>
     </item>
     
@@ -62,6 +98,15 @@
       <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>//rlodeiro.info/tags/boot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>//rlodeiro.info/tags/git/</link>
+      <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//rlodeiro.info/tags/git/</guid>
       <description></description>
     </item>
     
