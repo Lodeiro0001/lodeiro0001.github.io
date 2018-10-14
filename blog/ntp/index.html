@@ -1,0 +1,1352 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        
+        <meta property="og:image" content="http://rlodeiro.info/img/posts/2018/10/ntp/ntp.jpg"/>
+        <meta property="og:image:secure_url" content="//rlodeiro.info/img/posts/2018/10/ntp/ntp.jpg"/>
+        
+        <script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "//rlodeiro.info"
+        },
+        "articleSection" : "blog",
+        "name" : "NTP | Servidor local",
+        "headline" : "NTP | Servidor local",
+        "description" : "Servidor NTP en tuj red local",
+        "inLanguage" : "es-es",
+        "author" : "",
+        "creator" : "",
+        "publisher": "",
+        "accountablePerson" : "",
+        "copyrightHolder" : "",
+        "copyrightYear" : "2018",
+        "datePublished": "2018-10-14 00:00:00 &#43;0000 UTC",
+        "dateModified" : "2018-10-14 00:00:00 &#43;0000 UTC",
+        "url" : "//rlodeiro.info/blog/ntp/",
+        "wordCount" : "649",
+        "keywords" : [ "NTP","Time","Hora","Local","Linux","Blog" ]
+    }
+    </script>
+        
+            
+                <title>NTP | Servidor local</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.49" />
+        
+  
+    
+    
+  
+
+  
+
+  <link rel="apple-touch-icon-precomposed" href='//rlodeiro.info/favicon/apple-touch-icon-precomposed-favicon.ico.png'>
+  <link rel="icon" href='//rlodeiro.info/favicon/favicon-favicon.ico.png'>
+  
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content='/favicon/mstile-favicon.ico.png'>
+  <meta name="application-name" content="Roberto Lodeiro">
+  <meta name="msapplication-tooltip" content="Blog personal. Escribo sobre tecnología, programación Backend, herramientas varias y cualquier tema relacionado que me resulte útil en mis proyectos.">
+  <meta name="msapplication-config" content='/favicon/ieconfig.xml'>
+
+
+
+        
+            <meta name="author" content="Roberto Lodeiro">
+        
+        
+            <meta name="description" content="Servidor NTP en tuj red local">
+        
+
+        <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="NTP | Servidor local"/>
+<meta name="twitter:description" content="Servidor NTP en tuj red local"/>
+<meta name="twitter:site" content="@lodeiro0001"/>
+
+        
+        
+<meta itemprop="name" content="NTP | Servidor local">
+<meta itemprop="description" content="Servidor NTP en tuj red local">
+
+
+<meta itemprop="datePublished" content="2018-10-14T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-10-14T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="649">
+
+
+
+<meta itemprop="keywords" content="NTP,Time,Hora,Local,Linux," />
+
+        
+
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+            <link rel="stylesheet" href="//rlodeiro.info/css/main.css">
+            <link rel="stylesheet" href="//rlodeiro.info/css/add-on.css">
+            <link rel="stylesheet" href="//rlodeiro.info/css/academicons.min.css">
+        
+
+        
+            
+                
+            
+        
+
+
+  
+    
+    <link href='//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+  
+
+
+      
+    </head>
+    <body>
+
+      
+      <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+      <h1><a href="//rlodeiro.info/">Roberto Lodeiro</a></h1>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="//rlodeiro.info/">
+                            <i class="fa fa-home">&nbsp;</i>Inicio
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="//rlodeiro.info/about/">
+                            <i class="fa fa-id-card-o">&nbsp;</i>Sobre mi
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="//rlodeiro.info/blog/">
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="//rlodeiro.info/categories/">
+                            <i class="fa fa-sitemap">&nbsp;</i>Categorias
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="//rlodeiro.info/contact/">
+                            <i class="fa fa-envelope-o">&nbsp;</i>Contacto
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="//rlodeiro.info/">
+                            <h3>
+                                <i class="fa fa-home">&nbsp;</i>Inicio
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="//rlodeiro.info/about/">
+                            <h3>
+                                <i class="fa fa-id-card-o">&nbsp;</i>Sobre mi
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="//rlodeiro.info/blog/">
+                            <h3>
+                                <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="//rlodeiro.info/categories/">
+                            <h3>
+                                <i class="fa fa-sitemap">&nbsp;</i>Categorias
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="//rlodeiro.info/contact/">
+                            <h3>
+                                <i class="fa fa-envelope-o">&nbsp;</i>Contacto
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section class="recent-posts">
+            <div class="mini-posts">
+                <header>
+                    <h3>Publicaciones Recientes</h3>
+                </header>
+                
+
+                
+                    
+                
+
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="//rlodeiro.info/blog/ntp/">NTP | Servidor local</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-10-14'>
+                                    October 14, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="//rlodeiro.info/blog/ntp/" class="image featured">
+            <img src="//rlodeiro.info/img/posts/2018/10/ntp//ntp.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="//rlodeiro.info/blog/gogs/">Gogs | Self-Hosted Git</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-10-07'>
+                                    October 7, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="//rlodeiro.info/blog/gogs/" class="image featured">
+            <img src="//rlodeiro.info/img/posts/2018/10/gogs//gogs.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="//rlodeiro.info/blog/boostnote/">Boostnote</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-09-29'>
+                                    September 29, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="//rlodeiro.info/blog/boostnote/" class="image featured">
+            <img src="//rlodeiro.info/img/posts/2018/09/boostnote//boostnote.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="//rlodeiro.info/blog/raspberryusbboot/">Raspberry Pi &amp; USB Boot Mode</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-09-28'>
+                                    September 28, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="//rlodeiro.info/blog/raspberryusbboot/" class="image featured">
+            <img src="//rlodeiro.info/img/posts/2018/09/raspberry//raspberry.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+
+                
+            </div>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Comparte esta publicación <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+<li>
+  <a href="//twitter.com/share?url=%2f%2frlodeiro.info%2fblog%2fntp%2f&amp;text=NTP%20%7c%20Servidor%20local&amp;via=lodeiro0001" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//plus.google.com/share?url=%2f%2frlodeiro.info%2fblog%2fntp%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=%2f%2frlodeiro.info%2fblog%2fntp%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=%2f%2frlodeiro.info%2fblog%2fntp%2f&amp;title=NTP%20%7c%20Servidor%20local" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=%2f%2frlodeiro.info%2fblog%2fntp%2f&amp;title=NTP%20%7c%20Servidor%20local" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=%2f%2frlodeiro.info%2fblog%2fntp%2f&amp;description=NTP%20%7c%20Servidor%20local" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Chequea este post de Roberto%20Lodeiro&amp;body=%2f%2frlodeiro.info%2fblog%2fntp%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+  <header>
+    <div class="title">
+        
+            <h1><a href="//rlodeiro.info/blog/ntp/">NTP | Servidor local</a></h1>
+            
+        
+        
+            <p>Servidor NTP en tuj red local</p>
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published"
+            datetime='2018-10-14'>
+            October 14, 2018</time>
+        <span class="author">Roberto Lodeiro</span>
+        
+        
+    </div>
+</header>
+
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+<li>
+  <a href="//twitter.com/share?url=%2f%2frlodeiro.info%2fblog%2fntp%2f&amp;text=NTP%20%7c%20Servidor%20local&amp;via=lodeiro0001" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//plus.google.com/share?url=%2f%2frlodeiro.info%2fblog%2fntp%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=%2f%2frlodeiro.info%2fblog%2fntp%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=%2f%2frlodeiro.info%2fblog%2fntp%2f&amp;title=NTP%20%7c%20Servidor%20local" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=%2f%2frlodeiro.info%2fblog%2fntp%2f&amp;title=NTP%20%7c%20Servidor%20local" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=%2f%2frlodeiro.info%2fblog%2fntp%2f&amp;description=NTP%20%7c%20Servidor%20local" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Chequea este post de Roberto%20Lodeiro&amp;body=%2f%2frlodeiro.info%2fblog%2fntp%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+      </ul>
+    </section>
+  
+
+  
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="//rlodeiro.info/blog/ntp/" class="image featured">
+            <img src="//rlodeiro.info/img/posts/2018/10/ntp//ntp.jpg" alt="">
+        </a>
+    
+
+
+  <div id="content">
+    
+
+<p>Nuestro ordenador, nuestro router y muchos de los dispositivos que utilizamos a diario, sincronizan la hora del sistema con un servidor NTP (Network Time Protocol). Los mas conocidos y utilizados son los de 
+
+    
+        
+    
+
+    <a href="https://www.ntppool.org/es/" target='_blank'>NTP Pool Project.</a>
+
+</p>
+
+<p>Si tenemos en mente por ejemplo un proyecto relacionado con Iot, puede que no queramos que nuestros dispositivos (salvo el servidor local que los gestione) tengan acceso a internet, pero que tengamos la necesidad de que estos tengan la hora correcta para poder consultar los logs de una forma sencilla y eficiente.</p>
+
+<p>Tanto si programamos nosotros los dispositivos desde cero basándonos en Arduino/Wemos o similar, como si compramos dispositivos comerciales y los modificamos por ejemplo con el firmware opensource 
+
+    
+        
+    
+
+    <a href="https://github.com/arendst/Sonoff-Tasmota" target='_blank'>Tasmota</a>
+
+ (del que hablare en otro post), sera muy sencillo sincronizar la hora con un servidor NTP local. Paso a explicar como configurarlo en nuestro servidor Linux.</p>
+
+<hr style="border-color: #d6d6d6;" />
+
+<h1 id="instalar-el-cliente-ntp">Instalar el cliente NTP</h1>
+
+<p>Primero instalaremos el cliente NTP en nuestra Raspberry/Debian/derivado para que sincronizara la hora con los servers externos que elijamos.</p>
+
+<ul>
+<li><p>Deshabilitar la sincronización horaria systemd-timesyncd</p>
+
+<pre><code class="language-bash">$ sudo systemctl stop systemd-timesyncd
+$ sudo systemctl disable systemd-timesyncd
+</code></pre></li>
+
+<li><p>Instalar NTP</p>
+
+<pre><code class="language-bash">$ sudo apt-get install ntp
+</code></pre></li>
+
+<li><p>Editar el archivo de configuración con los servers adecuados a tu zona horaria. Los encontrarás en 
+
+    
+        
+    
+
+    <a href="http://www.pool.ntp.org/" target='_blank'>pool.ntp.org</a>
+
+</p>
+
+<pre><code class="language-bash">$ sudo nano /etc/ntp.conf
+</code></pre>
+
+<p>Quedará algo como lo siguiente</p></li>
+</ul>
+
+<pre><code class="language-txt">#/etc/ntp.conf, configuration for ntpd
+
+driftfile /var/lib/ntp/ntp.drift
+statsdir /var/log/ntpstats/
+
+statistics loopstats peerstats clockstats
+filegen loopstats file loopstats type day enable
+filegen peerstats file peerstats type day enable
+filegen clockstats file clockstats type day enable
+
+# You do need to talk to an NTP server or two (or three).
+#server ntp.your-provider.example
+
+# pool.ntp.org maps to more than 300 low-stratum NTP servers.
+# Your server will pick a different set every time it starts up.
+# *** Please consider joining the pool! ***
+# *** ***
+server 0.es.pool.ntp.org
+server 0.europe.pool.ntp.org
+server 1.europe.pool.ntp.org
+
+# By default, exchange time with everybody, but don't allow configuration.
+# See /usr/share/doc/ntp-doc/html/accopt.html for details.
+restrict -4 default kod notrap nomodify nopeer noquery
+restrict -6 default kod notrap nomodify nopeer noquery
+
+# Local users may interrogate the ntp server more closely.
+restrict 127.0.0.1
+restrict ::1
+
+# Clients from this (example!) subnet have unlimited access,
+# but only if cryptographically authenticated
+#restrict 192.168.123.0 mask 255.255.255.0 notrust
+
+# If you want to provide time to your local subnet, change the next line.
+# (Again, the address is an example only.)
+#broadcast 192.168.123.255
+
+# If you want to listen to time broadcasts on your local subnet,
+# de-comment the next lines. Please do this only if you trust everybody
+# on the network!
+#disable auth
+#broadcastclient
+</code></pre>
+
+<ul>
+<li><p>Reiniciar el servicio y probar que sincroniza correctamente</p>
+
+<pre><code class="language-bash">$ sudo service ntp restart
+$ ntpq -pn
+</code></pre>
+
+<p>Se mostrará por pantalla algo similar a esto:</p>
+
+<pre><code class="language-text">remote refid st t when poll reach delay offset jitter
+==============================================================================
+*81.27.192.20 195.113.144.238 2 u 26 64 1 58.571 0.797 68.634
++93.185.101.74 195.113.144.201 2 u 25 64 1 42.282 -1.507 0.477
++93.185.101.77 195.113.144.201 2 u 24 64 1 41.390 -1.544 68.243
+-91.216.168.42 178.238.46.152 3 u 23 64 1 43.510 1.010 1.094
+</code></pre>
+
+<p>Podemos comprobar que la hora y fecha del sistema es correcta con:</p>
+
+<pre><code class="language-bash">$ date
+</code></pre></li>
+</ul>
+
+<h1 id="configurar-el-servidor-ntp">Configurar el servidor NTP</h1>
+
+<p>Ahora vamos a configurar NTP para que esté disponible como servidor local.</p>
+
+<ul>
+<li><p>Editar el archivo de configuración</p>
+
+<pre><code class="language-bash">$ sudo nano /etc/ntp.conf
+</code></pre></li>
+
+<li><p>Añadimos lo siguiente:</p>
+
+<pre><code class="language-text">restrict 192.168.1.0 mask 255.255.255.0
+</code></pre>
+
+<p>Con esto restringimos el acceso al server a nuestra red local. Cambiar las direcciones según las correspondientes a nuestra red.</p>
+
+<pre><code class="language-text">broadcast 192.168.1.255
+broadcast 224.0.1.1
+</code></pre>
+
+<p>Aquí cambiaremos la primera dirección por la dirección broadcast de nuestra red. No cambiar la dirección 224.0.1.1, ya que algunos dispositivos de red sincronizan con NTP en esta dirección multicast de forma automática.</p></li>
+
+<li><p>Reiniciar el servicio</p>
+
+<pre><code class="language-bash">$ sudo service ntp restart
+</code></pre></li>
+</ul>
+
+<p>Por último, configuramos en los dispositivos cliente la ip local del servidor como server NTP, y ya tendremos lo hora sincronizada sin necesidad de que estos tengan acceso a internet.</p>
+
+<hr style="border-color: #d6d6d6;" />
+
+<p>Espero que sea útil, ¡gracias por leerme!</p>
+
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="//rlodeiro.info/categories/servicios">Servicios</a></li>
+                
+                
+                <li><a class="article-category-link" href="//rlodeiro.info/categories/raspberry-pi">Raspberry Pi</a></li>
+                
+                
+                <li><a class="article-category-link" href="//rlodeiro.info/categories/linux">Linux</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+            
+            
+                <i class="fa fa-tags"></i>
+                
+                
+                <li><a class="article-category-link" href="//rlodeiro.info/tags/ntp">NTP</a></li>
+                
+                
+                <li><a class="article-category-link" href="//rlodeiro.info/tags/time">Time</a></li>
+                
+                
+                <li><a class="article-category-link" href="//rlodeiro.info/tags/hora">Hora</a></li>
+                
+                
+                <li><a class="article-category-link" href="//rlodeiro.info/tags/local">Local</a></li>
+                
+                
+                <li><a class="article-category-link" href="//rlodeiro.info/tags/linux">Linux</a></li>
+                
+            
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="//rlodeiro.info/blog/gogs/"
+                class="button big previous">Gogs | Self-Hosted Git</a></li>
+    
+
+    
+</ul>
+
+
+    </div>
+    
+<section id="sidebar">
+
+  
+  <section id="intro">
+    
+    
+      
+        <a href='//rlodeiro.info/'><img src="//rlodeiro.info/img/main/logo.jpg" class="intro-circle" width="" alt="" /></a>
+      
+    
+    
+      <header>
+        <h2>Roberto Lodeiro</h2>
+        <p>Reality is wrong. Dreams are for real.</p>
+      </header>
+    
+    
+      <ul class="icons">
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//twitter.com/lodeiro0001" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:me@rlodeiro.info" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+  </section>
+
+  
+  <section class="recent-posts">
+    <div class="mini-posts">
+      <header>
+        <h3>Publicaciones Recientes</h3>
+      </header>
+      <div class="posts-container">
+        
+
+        
+          
+        
+
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="//rlodeiro.info/blog/ntp/">NTP | Servidor local</a>
+              </h3>
+              
+              <time class="published" datetime='2018-10-14'>
+                October 14, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="//rlodeiro.info/blog/ntp/" class="image featured">
+            <img src="//rlodeiro.info/img/posts/2018/10/ntp//ntp.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="//rlodeiro.info/blog/gogs/">Gogs | Self-Hosted Git</a>
+              </h3>
+              
+              <time class="published" datetime='2018-10-07'>
+                October 7, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="//rlodeiro.info/blog/gogs/" class="image featured">
+            <img src="//rlodeiro.info/img/posts/2018/10/gogs//gogs.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="//rlodeiro.info/blog/boostnote/">Boostnote</a>
+              </h3>
+              
+              <time class="published" datetime='2018-09-29'>
+                September 29, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="//rlodeiro.info/blog/boostnote/" class="image featured">
+            <img src="//rlodeiro.info/img/posts/2018/09/boostnote//boostnote.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="//rlodeiro.info/blog/raspberryusbboot/">Raspberry Pi &amp; USB Boot Mode</a>
+              </h3>
+              
+              <time class="published" datetime='2018-09-28'>
+                September 28, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="//rlodeiro.info/blog/raspberryusbboot/" class="image featured">
+            <img src="//rlodeiro.info/img/posts/2018/09/raspberry//raspberry.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+      </div>
+
+      
+    </div>
+  </section>
+
+  
+  
+  
+  
+  
+    <section id="categories">
+      <header>
+        <h3>
+          <a href="//rlodeiro.info/categories/">Categorías</a>
+        </h3>
+      </header>
+        
+          
+        
+
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="//rlodeiro.info/categories/herramientas/">Herramientas</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="//rlodeiro.info/categories/linux/">Linux</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="//rlodeiro.info/categories/raspberry-pi/">Raspberry Pi</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="//rlodeiro.info/categories/servicios/">Servicios</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+    </section>
+  
+  
+
+  
+  
+    <section id="mini-bio">
+      <h3>Sobre Mi</h3>
+      <p>¿De donde viene? ¿Cual es su color de pelo? ¿A que tribu urbana pertenece? Si estás muy aburrid@ y/o quieres saberlo ¡adelante!</p>
+      <a href="//rlodeiro.info/about/" class="button">Leer Más</a>
+    </section>
+  
+
+  
+  <section id="footer">
+    
+      <ul class="icons">
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//twitter.com/lodeiro0001" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:me@rlodeiro.info" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+    <p class="copyright">
+      
+        &copy; 2018
+        
+          Roberto Lodeiro
+        
+      .
+      Powered by <a href="//gohugo.io" target="_blank">Hugo</a>
+    </p>
+  </section>
+</section>
+
+    </div>
+    <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+    
+
+    
+      
+    
+
+    
+      
+      
+      
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+        
+        
+        
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/r.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/yaml.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/css.min.js"></script>
+        <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+      
+    
+    
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+      <script src="//rlodeiro.info/js/util.js"></script>
+      <script src="//rlodeiro.info/js/main.js"></script>
+      <script src="//rlodeiro.info/js/backToTop.js"></script>
+    
+
+    
+      
+        
+      
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+      <script src="//yihui.name/js/math-code.js"></script>
+<script async
+src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+  </body>
+</html>
+

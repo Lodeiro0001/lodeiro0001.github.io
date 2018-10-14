@@ -20,9 +20,18 @@
     </item>
     
     <item>
+      <title>Linux</title>
+      <link>//rlodeiro.info/categories/linux/</link>
+      <pubDate>Sun, 14 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//rlodeiro.info/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Raspberry Pi</title>
       <link>//rlodeiro.info/categories/raspberry-pi/</link>
-      <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 14 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>//rlodeiro.info/categories/raspberry-pi/</guid>
       <description></description>
@@ -31,7 +40,7 @@
     <item>
       <title>Servicios</title>
       <link>//rlodeiro.info/categories/servicios/</link>
-      <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 14 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>//rlodeiro.info/categories/servicios/</guid>
       <description></description>

@@ -39,11 +39,47 @@
     </item>
     
     <item>
+      <title>Hora</title>
+      <link>//rlodeiro.info/tags/hora/</link>
+      <pubDate>Sun, 14 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//rlodeiro.info/tags/hora/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>//rlodeiro.info/tags/linux/</link>
+      <pubDate>Sun, 14 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//rlodeiro.info/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Local</title>
+      <link>//rlodeiro.info/tags/local/</link>
+      <pubDate>Sun, 14 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//rlodeiro.info/tags/local/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Markdown</title>
       <link>//rlodeiro.info/tags/markdown/</link>
       <pubDate>Sat, 29 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>//rlodeiro.info/tags/markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NTP</title>
+      <link>//rlodeiro.info/tags/ntp/</link>
+      <pubDate>Sun, 14 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//rlodeiro.info/tags/ntp/</guid>
       <description></description>
     </item>
     
@@ -80,6 +116,15 @@
       <pubDate>Sat, 29 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>//rlodeiro.info/tags/snippets/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Time</title>
+      <link>//rlodeiro.info/tags/time/</link>
+      <pubDate>Sun, 14 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//rlodeiro.info/tags/time/</guid>
       <description></description>
     </item>
     

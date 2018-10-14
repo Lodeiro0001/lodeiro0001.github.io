@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>//rlodeiro.info/blog/ntp/</loc>
+    <lastmod>2018-10-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//rlodeiro.info/blog/gogs/</loc>
     <lastmod>2018-10-07T00:00:00+00:00</lastmod>
   </url>
@@ -24,7 +29,7 @@
   
   <url>
     <loc>//rlodeiro.info/blog/</loc>
-    <lastmod>2018-10-07T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -62,8 +67,38 @@
   </url>
   
   <url>
+    <loc>//rlodeiro.info/tags/hora/</loc>
+    <lastmod>2018-10-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//rlodeiro.info/tags/linux/</loc>
+    <lastmod>2018-10-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//rlodeiro.info/categories/linux/</loc>
+    <lastmod>2018-10-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//rlodeiro.info/tags/local/</loc>
+    <lastmod>2018-10-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>//rlodeiro.info/tags/markdown/</loc>
     <lastmod>2018-09-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//rlodeiro.info/tags/ntp/</loc>
+    <lastmod>2018-10-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -87,19 +122,19 @@
   
   <url>
     <loc>//rlodeiro.info/categories/raspberry-pi/</loc>
-    <lastmod>2018-09-28T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>//rlodeiro.info/</loc>
-    <lastmod>2018-10-07T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>//rlodeiro.info/categories/servicios/</loc>
-    <lastmod>2018-10-07T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -112,6 +147,12 @@
   <url>
     <loc>//rlodeiro.info/tags/</loc>
     <lastmod>2018-10-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//rlodeiro.info/tags/time/</loc>
+    <lastmod>2018-10-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
