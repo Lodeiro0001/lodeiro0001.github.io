@@ -2,156 +2,156 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Roberto Lodeiro</title>
-    <link>//rlodeiro.info/tags/</link>
+    <link>https://rlodeiro.info/tags/</link>
     <description>Recent content in Tags on Roberto Lodeiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
     <lastBuildDate>Sun, 07 Oct 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="//rlodeiro.info/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rlodeiro.info/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Control de versiones</title>
-      <link>//rlodeiro.info/tags/control-de-versiones/</link>
+      <link>https://rlodeiro.info/tags/control-de-versiones/</link>
       <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>//rlodeiro.info/tags/control-de-versiones/</guid>
+      <guid>https://rlodeiro.info/tags/control-de-versiones/</guid>
       <description></description>
     </item>
     
     <item>
       <title>GO</title>
-      <link>//rlodeiro.info/tags/go/</link>
+      <link>https://rlodeiro.info/tags/go/</link>
       <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>//rlodeiro.info/tags/go/</guid>
+      <guid>https://rlodeiro.info/tags/go/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Golang</title>
-      <link>//rlodeiro.info/tags/golang/</link>
+      <link>https://rlodeiro.info/tags/golang/</link>
       <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>//rlodeiro.info/tags/golang/</guid>
+      <guid>https://rlodeiro.info/tags/golang/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hora</title>
-      <link>//rlodeiro.info/tags/hora/</link>
+      <link>https://rlodeiro.info/tags/hora/</link>
       <pubDate>Sun, 14 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>//rlodeiro.info/tags/hora/</guid>
+      <guid>https://rlodeiro.info/tags/hora/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>//rlodeiro.info/tags/linux/</link>
+      <link>https://rlodeiro.info/tags/linux/</link>
       <pubDate>Sun, 14 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>//rlodeiro.info/tags/linux/</guid>
+      <guid>https://rlodeiro.info/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Local</title>
-      <link>//rlodeiro.info/tags/local/</link>
+      <link>https://rlodeiro.info/tags/local/</link>
       <pubDate>Sun, 14 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>//rlodeiro.info/tags/local/</guid>
+      <guid>https://rlodeiro.info/tags/local/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Markdown</title>
-      <link>//rlodeiro.info/tags/markdown/</link>
+      <link>https://rlodeiro.info/tags/markdown/</link>
       <pubDate>Sat, 29 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>//rlodeiro.info/tags/markdown/</guid>
+      <guid>https://rlodeiro.info/tags/markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>NTP</title>
-      <link>//rlodeiro.info/tags/ntp/</link>
+      <link>https://rlodeiro.info/tags/ntp/</link>
       <pubDate>Sun, 14 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>//rlodeiro.info/tags/ntp/</guid>
+      <guid>https://rlodeiro.info/tags/ntp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Notas</title>
-      <link>//rlodeiro.info/tags/notas/</link>
+      <link>https://rlodeiro.info/tags/notas/</link>
       <pubDate>Sat, 29 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>//rlodeiro.info/tags/notas/</guid>
+      <guid>https://rlodeiro.info/tags/notas/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Proyectos</title>
-      <link>//rlodeiro.info/tags/proyectos/</link>
+      <link>https://rlodeiro.info/tags/proyectos/</link>
       <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>//rlodeiro.info/tags/proyectos/</guid>
+      <guid>https://rlodeiro.info/tags/proyectos/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Raspberry</title>
-      <link>//rlodeiro.info/tags/raspberry/</link>
+      <link>https://rlodeiro.info/tags/raspberry/</link>
       <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>//rlodeiro.info/tags/raspberry/</guid>
+      <guid>https://rlodeiro.info/tags/raspberry/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Snippets</title>
-      <link>//rlodeiro.info/tags/snippets/</link>
+      <link>https://rlodeiro.info/tags/snippets/</link>
       <pubDate>Sat, 29 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>//rlodeiro.info/tags/snippets/</guid>
+      <guid>https://rlodeiro.info/tags/snippets/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Time</title>
-      <link>//rlodeiro.info/tags/time/</link>
+      <link>https://rlodeiro.info/tags/time/</link>
       <pubDate>Sun, 14 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>//rlodeiro.info/tags/time/</guid>
+      <guid>https://rlodeiro.info/tags/time/</guid>
       <description></description>
     </item>
     
     <item>
       <title>USB</title>
-      <link>//rlodeiro.info/tags/usb/</link>
+      <link>https://rlodeiro.info/tags/usb/</link>
       <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>//rlodeiro.info/tags/usb/</guid>
+      <guid>https://rlodeiro.info/tags/usb/</guid>
       <description></description>
     </item>
     
     <item>
       <title>boot</title>
-      <link>//rlodeiro.info/tags/boot/</link>
+      <link>https://rlodeiro.info/tags/boot/</link>
       <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>//rlodeiro.info/tags/boot/</guid>
+      <guid>https://rlodeiro.info/tags/boot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>git</title>
-      <link>//rlodeiro.info/tags/git/</link>
+      <link>https://rlodeiro.info/tags/git/</link>
       <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>//rlodeiro.info/tags/git/</guid>
+      <guid>https://rlodeiro.info/tags/git/</guid>
       <description></description>
     </item>
     

@@ -2,47 +2,47 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Roberto Lodeiro</title>
-    <link>//rlodeiro.info/categories/</link>
+    <link>https://rlodeiro.info/categories/</link>
     <description>Recent content in Categories on Roberto Lodeiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
     
-	<atom:link href="//rlodeiro.info/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rlodeiro.info/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Herramientas</title>
-      <link>//rlodeiro.info/categories/herramientas/</link>
+      <link>https://rlodeiro.info/categories/herramientas/</link>
       <pubDate>Sat, 29 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>//rlodeiro.info/categories/herramientas/</guid>
+      <guid>https://rlodeiro.info/categories/herramientas/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>//rlodeiro.info/categories/linux/</link>
+      <link>https://rlodeiro.info/categories/linux/</link>
       <pubDate>Sun, 14 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>//rlodeiro.info/categories/linux/</guid>
+      <guid>https://rlodeiro.info/categories/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Raspberry Pi</title>
-      <link>//rlodeiro.info/categories/raspberry-pi/</link>
+      <link>https://rlodeiro.info/categories/raspberry-pi/</link>
       <pubDate>Sun, 14 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>//rlodeiro.info/categories/raspberry-pi/</guid>
+      <guid>https://rlodeiro.info/categories/raspberry-pi/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Servicios</title>
-      <link>//rlodeiro.info/categories/servicios/</link>
+      <link>https://rlodeiro.info/categories/servicios/</link>
       <pubDate>Sun, 14 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>//rlodeiro.info/categories/servicios/</guid>
+      <guid>https://rlodeiro.info/categories/servicios/</guid>
       <description></description>
     </item>
     

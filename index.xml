@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Roberto Lodeiro</title>
-    <link>//rlodeiro.info/</link>
+    <link>https://rlodeiro.info/</link>
     <description>Recent content on Roberto Lodeiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
     <lastBuildDate>Sun, 14 Oct 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="//rlodeiro.info/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rlodeiro.info/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>NTP | Servidor local</title>
-      <link>//rlodeiro.info/blog/ntp/</link>
+      <link>https://rlodeiro.info/blog/ntp/</link>
       <pubDate>Sun, 14 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>//rlodeiro.info/blog/ntp/</guid>
+      <guid>https://rlodeiro.info/blog/ntp/</guid>
       <description>Nuestro ordenador, nuestro router y muchos de los dispositivos que utilizamos a diario, sincronizan la hora del sistema con un servidor NTP (Network Time Protocol). Los mas conocidos y utilizados son los de NTP Pool Project. Si tenemos en mente por ejemplo un proyecto relacionado con la domótica, puede que no queramos que nuestros dispositivos (salvo el servidor local que los gestione) tengan acceso a internet, pero que tengamos la necesidad de que estos tengan la hora correcta para poder consultar los logs de una forma sencilla y eficiente.</description>
     </item>
     
     <item>
       <title>Gogs | Self-Hosted Git</title>
-      <link>//rlodeiro.info/blog/gogs/</link>
+      <link>https://rlodeiro.info/blog/gogs/</link>
       <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>//rlodeiro.info/blog/gogs/</guid>
+      <guid>https://rlodeiro.info/blog/gogs/</guid>
       <description>Todos los que de uno u otro modo estamos relacionados con el desarrollo de software, antes o después hemos usado algún servicio de repositorios Git en la nube. Por lo general, son gratuitos para repositorios públicos, y pagando podemos crear repositorios privados.
 Gogs es un servicio de Git opensource para alojar nuestros repositorios Git en nuestro propio servidor. He probado otras alternativas similares, pero para mi, Gogs es la ganadora ya que consume poquísimos recursos y funciona perfectamente ¿que más se puede pedir?</description>
     </item>
     
     <item>
       <title>Boostnote</title>
-      <link>//rlodeiro.info/blog/boostnote/</link>
+      <link>https://rlodeiro.info/blog/boostnote/</link>
       <pubDate>Sat, 29 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>//rlodeiro.info/blog/boostnote/</guid>
+      <guid>https://rlodeiro.info/blog/boostnote/</guid>
       <description>Hoy os hablaré de una herramienta, para mi LA HERRAMIENTA que vengo utilizando desde hace un año.
 Está disponible para equipos de escritorio (Linux, macOS y Windows). Como no, es gratis y OpenSource, podéis ver su código al completo en su  repositorio de Github. 
 La versión móvil ha sido retirada temporalmente, tanto para Android como para iOS, hasta que la rehagan por completo. Han dejado un comunicado  aquí.</description>
@@ -43,10 +43,10 @@ La versión móvil ha sido retirada temporalmente, tanto para Android como para 
     
     <item>
       <title>Raspberry Pi &amp; USB Boot Mode</title>
-      <link>//rlodeiro.info/blog/raspberryusbboot/</link>
+      <link>https://rlodeiro.info/blog/raspberryusbboot/</link>
       <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>//rlodeiro.info/blog/raspberryusbboot/</guid>
+      <guid>https://rlodeiro.info/blog/raspberryusbboot/</guid>
       <description>En esta primera entrada, explicaré algo que me ha sido muy util a la hora de tener una Raspberry Pi como servidor en casa.
 Todos sabemos que la Raspberry Pi, por defecto, utiliza una tarjeta MicroSD como disco para el sistema, lo cual supone muchas limitaciones, tanto a nivel de rendimiento como de durabilidad.
 Desde hace relativamente poco, en la documentación oficial se explica como activar el arranque desde un dispositivo usb.</description>
