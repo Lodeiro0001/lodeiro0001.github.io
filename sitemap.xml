@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://rlodeiro.info/blog/mdadm/</loc>
+    <lastmod>2018-10-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://rlodeiro.info/blog/ntp/</loc>
     <lastmod>2018-10-14T00:00:00+00:00</lastmod>
   </url>
@@ -29,7 +34,7 @@
   
   <url>
     <loc>https://rlodeiro.info/blog/</loc>
-    <lastmod>2018-10-14T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -45,6 +50,12 @@
   <url>
     <loc>https://rlodeiro.info/tags/control-de-versiones/</loc>
     <lastmod>2018-10-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/debian/</loc>
+    <lastmod>2018-10-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -74,13 +85,13 @@
   
   <url>
     <loc>https://rlodeiro.info/tags/linux/</loc>
-    <lastmod>2018-10-14T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://rlodeiro.info/categories/linux/</loc>
-    <lastmod>2018-10-14T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -115,20 +126,32 @@
   </url>
   
   <url>
+    <loc>https://rlodeiro.info/tags/raid/</loc>
+    <lastmod>2018-10-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://rlodeiro.info/tags/raspberry/</loc>
     <lastmod>2018-09-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://rlodeiro.info/tags/raspberry-pi/</loc>
+    <lastmod>2018-10-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://rlodeiro.info/categories/raspberry-pi/</loc>
-    <lastmod>2018-10-14T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://rlodeiro.info/</loc>
-    <lastmod>2018-10-14T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -171,6 +194,12 @@
   <url>
     <loc>https://rlodeiro.info/tags/git/</loc>
     <lastmod>2018-10-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/mdadm/</loc>
+    <lastmod>2018-10-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

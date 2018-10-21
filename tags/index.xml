@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>Debian</title>
+      <link>https://rlodeiro.info/tags/debian/</link>
+      <pubDate>Sun, 21 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/debian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>GO</title>
       <link>https://rlodeiro.info/tags/go/</link>
       <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
@@ -50,7 +59,7 @@
     <item>
       <title>Linux</title>
       <link>https://rlodeiro.info/tags/linux/</link>
-      <pubDate>Sun, 14 Oct 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 21 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>https://rlodeiro.info/tags/linux/</guid>
       <description></description>
@@ -102,11 +111,29 @@
     </item>
     
     <item>
+      <title>RAID</title>
+      <link>https://rlodeiro.info/tags/raid/</link>
+      <pubDate>Sun, 21 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/raid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Raspberry</title>
       <link>https://rlodeiro.info/tags/raspberry/</link>
       <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://rlodeiro.info/tags/raspberry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Raspberry Pi</title>
+      <link>https://rlodeiro.info/tags/raspberry-pi/</link>
+      <pubDate>Sun, 21 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/raspberry-pi/</guid>
       <description></description>
     </item>
     
@@ -152,6 +179,15 @@
       <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>https://rlodeiro.info/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mdadm</title>
+      <link>https://rlodeiro.info/tags/mdadm/</link>
+      <pubDate>Sun, 21 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/mdadm/</guid>
       <description></description>
     </item>
     
