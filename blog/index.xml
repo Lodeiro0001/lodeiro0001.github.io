@@ -19,7 +19,7 @@
       <guid>https://rlodeiro.info/blog/mqtt1/</guid>
       <description>Esta primera entrada sobre MQTT, pretende ser una forma sencilla de entender los conceptos básicos. Explicaré en que consiste y como podemos usarlo, pero sin entrar en demasiados tecnicismos (para eso ya vendrán entradas posteriores).
 Si usas Telegram u otra aplicación de mensajería actual o has usado IRC antaño, ¡será muy fácil que lo entiendas!.
-MQTT(Message Queue Telemetry Transport), es un protocolo de comunicación muy utilizado en el Iot(Internet of Things).</description>
+MQTT(Message Queuing Telemetry Transport), es un protocolo de comunicación muy utilizado en el Iot(Internet of Things).</description>
     </item>
     
     <item>
