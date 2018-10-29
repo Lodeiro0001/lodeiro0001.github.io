@@ -28,7 +28,7 @@
         "datePublished": "2018-09-28 00:00:00 &#43;0000 UTC",
         "dateModified" : "2018-09-28 00:00:00 &#43;0000 UTC",
         "url" : "https://rlodeiro.info/blog/raspberryusbboot/",
-        "wordCount" : "914",
+        "wordCount" : "915",
         "keywords" : [ "boot","USB","Raspberry","Blog" ]
     }
     </script>
@@ -80,7 +80,7 @@
 
 <meta itemprop="datePublished" content="2018-09-28T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-09-28T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="914">
+<meta itemprop="wordCount" content="915">
 
 
 
@@ -245,6 +245,42 @@
                 
                         <article class="mini-post">
                             <header>
+                                <h3><a href="https://rlodeiro.info/blog/mqtt1/">MQTT | Parte 1</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-10-29'>
+                                    October 29, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/mqtt1/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/10/mqtt1//mqtt1.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
                                 <h3><a href="https://rlodeiro.info/blog/mdadm/">RAID en Linux</a></h3>
                                 
                                 <time class="published" datetime=
@@ -381,42 +417,6 @@
 
         <a href="https://rlodeiro.info/blog/boostnote/" class="image featured">
             <img src="https://rlodeiro.info/img/posts/2018/09/boostnote//boostnote.jpg" alt="">
-        </a>
-    
-
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="https://rlodeiro.info/blog/raspberryusbboot/">Raspberry Pi &amp; USB Boot Mode</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2018-09-28'>
-                                    September 28, 2018</time>
-                            </header>
-                            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="https://rlodeiro.info/blog/raspberryusbboot/" class="image featured">
-            <img src="https://rlodeiro.info/img/posts/2018/09/raspberry//raspberry.jpg" alt="">
         </a>
     
 
@@ -763,22 +763,22 @@ $ sudo mount /dev/sda2 /mnt/rootUSB
 $ sudo nano /boot/cmdline.txt
 </code></pre>
 
-<p>Veremos algo como <code>root=PARTUUID=XXXXXXXX-02</code>, correspondiente al <code>/</code>de  la sd, lo sustituimos por el PARTUUID del disco USB que guardamos antes.</p></li>
+<p>Veremos algo como <code>root=PARTUUID=XXXXXXXX-02</code>, correspondiente al <code>/</code>de  la sd, lo sustituimos por el PARTUUID correpondiente a la partición root del USB que copiamos antes.</p></li>
 
 <li><p>Editamos <code>fstab</code> en el disco USB para indicar el <code>/boot</code> de la sd</p>
 
 <pre><code class="language-bash">$ sudo nano /mnt/rootUSB/etc/fstab
 </code></pre>
 
-<p>Comentamos la linea correspondiente al root <code>/</code> de la sd, y añadimos <code>PARTUUID=XXXXXXXX-02       /               ext4    defaults,noatime  0       1</code> para el disco usb, quedando algo como lo siguiente:</p>
+<p>Comentamos la linea correspondiente al <code>/boot</code> del usb, y añadimos <code>PARTUUID=XXXXXXXX-01       /boot           vfat    defaults          0       2</code> para la sd, quedando algo como lo siguiente:</p>
 
 <pre><code class="language-bash">proc                       /proc           proc    defaults          0       0
 PARTUUID=XXXXXXXX-02       /               ext4    defaults,noatime  0       1
 PARTUUID=XXXXXXXX-01       /boot           vfat    defaults          0       2
-#/dev/mmcblk0p2            /               ext4    defaults,noatime  0       1
+#/dev/mmcblk0p1            /boot           vfat    defaults          0       2
 </code></pre>
 
-<p>El boot, puede aparecer identificado como <code>/dev/mmcblk0p1</code> o similar. Para evitar problemas, recomiendo cambiarlo por su PARTUUID como muestro arriba.</p></li>
+<p>El root, puede aparecer identificado como <code>/dev/mmcblk0p2</code> o similar. Para evitar problemas, recomiendo cambiarlo por su PARTUUID como muestro arriba.</p></li>
 </ul>
 
 <p>Al reiniciar, si ejecutamos <code>lsblk</code> veremos como ya está montando, tanto el root <code>/</code> del disco USB como <code>/boot</code> de la MicroSD, con lo cual, ya estamos arrancando con la MicroSD, pero utilizando el root del disco USB, y podemos tener todos los discos que necesitemos conectados, y nuestra Raspberry Pi continuará arrancado sin problemas!</p>
@@ -989,6 +989,44 @@ PARTUUID=XXXXXXXX-01       /boot           vfat    defaults          0       2
           <article class="mini-post">
             <header>
               <h3>
+                <a href="https://rlodeiro.info/blog/mqtt1/">MQTT | Parte 1</a>
+              </h3>
+              
+              <time class="published" datetime='2018-10-29'>
+                October 29, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/mqtt1/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/10/mqtt1//mqtt1.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
                 <a href="https://rlodeiro.info/blog/mdadm/">RAID en Linux</a>
               </h3>
               
@@ -1138,44 +1176,6 @@ PARTUUID=XXXXXXXX-01       /boot           vfat    defaults          0       2
 
           </article>
         
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="https://rlodeiro.info/blog/raspberryusbboot/">Raspberry Pi &amp; USB Boot Mode</a>
-              </h3>
-              
-              <time class="published" datetime='2018-09-28'>
-                September 28, 2018
-              </time>
-            </header>
-            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="https://rlodeiro.info/blog/raspberryusbboot/" class="image featured">
-            <img src="https://rlodeiro.info/img/posts/2018/09/raspberry//raspberry.jpg" alt="">
-        </a>
-    
-
-
-          </article>
-        
       </div>
 
       
@@ -1219,6 +1219,17 @@ PARTUUID=XXXXXXXX-01       /boot           vfat    defaults          0       2
           <article>
             <header>
               
+                <a href="https://rlodeiro.info/categories/iot/">Iot</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
                 <a href="https://rlodeiro.info/categories/linux/">Linux</a>
                 <span style="float:right;">2</span>
               
@@ -1242,7 +1253,7 @@ PARTUUID=XXXXXXXX-01       /boot           vfat    defaults          0       2
             <header>
               
                 <a href="https://rlodeiro.info/categories/servicios/">Servicios</a>
-                <span style="float:right;">2</span>
+                <span style="float:right;">3</span>
               
             </header>
           </article>

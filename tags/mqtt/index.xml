@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mqtt on Roberto Lodeiro</title>
+    <link>https://rlodeiro.info/tags/mqtt/</link>
+    <description>Recent content in mqtt on Roberto Lodeiro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <lastBuildDate>Mon, 29 Oct 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://rlodeiro.info/tags/mqtt/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MQTT | Parte 1</title>
+      <link>https://rlodeiro.info/blog/mqtt1/</link>
+      <pubDate>Mon, 29 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/blog/mqtt1/</guid>
+      <description>Esta primera entrada sobre MQTT, pretende ser una forma sencilla de entender los conceptos básicos. Explicaré en que consiste y como podemos usarlo, pero sin entrar en demasiados tecnicismos (para eso ya vendrán entradas posteriores).
+Si usas Telegram u otra aplicación de mensajería actual o has usado IRC antaño, ¡será muy fácil que lo entiendas!.
+MQTT(Message Queue Telemetry Transport), es un protocolo de comunicación muy utilizado en el Iot(Internet of Things).</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,1376 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        
+        <meta property="og:image" content="http://rlodeiro.info/img/posts/2018/10/mqtt1/mqtt1.jpg"/>
+        <meta property="og:image:secure_url" content="https://rlodeiro.info/img/posts/2018/10/mqtt1/mqtt1.jpg"/>
+        
+        <script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "https://rlodeiro.info"
+        },
+        "articleSection" : "blog",
+        "name" : "MQTT | Parte 1",
+        "headline" : "MQTT | Parte 1",
+        "description" : "Introducción al protocolo MQTT",
+        "inLanguage" : "es-es",
+        "author" : "",
+        "creator" : "",
+        "publisher": "",
+        "accountablePerson" : "",
+        "copyrightHolder" : "",
+        "copyrightYear" : "2018",
+        "datePublished": "2018-10-29 00:00:00 &#43;0000 UTC",
+        "dateModified" : "2018-10-29 00:00:00 &#43;0000 UTC",
+        "url" : "https://rlodeiro.info/blog/mqtt1/",
+        "wordCount" : "730",
+        "keywords" : [ "mqtt","protocolo","mensajeria","broker","Iot","Blog" ]
+    }
+    </script>
+        
+            
+                <title>MQTT | Parte 1</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.49" />
+        
+  
+    
+    
+  
+
+  
+
+  <link rel="apple-touch-icon-precomposed" href='https://rlodeiro.info/favicon/apple-touch-icon-precomposed-favicon.ico.png'>
+  <link rel="icon" href='https://rlodeiro.info/favicon/favicon-favicon.ico.png'>
+  
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content='/favicon/mstile-favicon.ico.png'>
+  <meta name="application-name" content="Roberto Lodeiro">
+  <meta name="msapplication-tooltip" content="Blog personal. Escribo sobre tecnología, programación Backend, herramientas varias y cualquier tema relacionado que me resulte útil en mis proyectos.">
+  <meta name="msapplication-config" content='/favicon/ieconfig.xml'>
+
+
+
+        
+            <meta name="author" content="Roberto Lodeiro">
+        
+        
+            <meta name="description" content="Introducción al protocolo MQTT">
+        
+
+        <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="MQTT | Parte 1"/>
+<meta name="twitter:description" content="Introducción al protocolo MQTT"/>
+<meta name="twitter:site" content="@lodeiro0001"/>
+
+        
+        
+<meta itemprop="name" content="MQTT | Parte 1">
+<meta itemprop="description" content="Introducción al protocolo MQTT">
+
+
+<meta itemprop="datePublished" content="2018-10-29T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-10-29T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="730">
+
+
+
+<meta itemprop="keywords" content="mqtt,protocolo,mensajeria,broker,Iot," />
+
+        
+
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+            <link rel="stylesheet" href="https://rlodeiro.info/css/main.css">
+            <link rel="stylesheet" href="https://rlodeiro.info/css/add-on.css">
+            <link rel="stylesheet" href="https://rlodeiro.info/css/academicons.min.css">
+        
+
+        
+            
+                
+            
+        
+
+
+  
+    
+    <link href='//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+  
+
+
+      
+    </head>
+    <body>
+
+      
+      <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+      <h1><a href="https://rlodeiro.info/">Roberto Lodeiro</a></h1>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="https://rlodeiro.info/">
+                            <i class="fa fa-home">&nbsp;</i>Inicio
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/about/">
+                            <i class="fa fa-id-card-o">&nbsp;</i>Sobre mi
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/blog/">
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/categories/">
+                            <i class="fa fa-sitemap">&nbsp;</i>Categorias
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/contact/">
+                            <i class="fa fa-envelope-o">&nbsp;</i>Contacto
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="https://rlodeiro.info/">
+                            <h3>
+                                <i class="fa fa-home">&nbsp;</i>Inicio
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/about/">
+                            <h3>
+                                <i class="fa fa-id-card-o">&nbsp;</i>Sobre mi
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/blog/">
+                            <h3>
+                                <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/categories/">
+                            <h3>
+                                <i class="fa fa-sitemap">&nbsp;</i>Categorias
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/contact/">
+                            <h3>
+                                <i class="fa fa-envelope-o">&nbsp;</i>Contacto
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section class="recent-posts">
+            <div class="mini-posts">
+                <header>
+                    <h3>Publicaciones Recientes</h3>
+                </header>
+                
+
+                
+                    
+                
+
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/mqtt1/">MQTT | Parte 1</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-10-29'>
+                                    October 29, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/mqtt1/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/10/mqtt1//mqtt1.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/mdadm/">RAID en Linux</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-10-21'>
+                                    October 21, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/mdadm/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/10/mdadm//mdadm.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/ntp/">NTP | Servidor local</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-10-14'>
+                                    October 14, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/ntp/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/10/ntp//ntp.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/gogs/">Gogs | Self-Hosted Git</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-10-07'>
+                                    October 7, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/gogs/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/10/gogs//gogs.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/boostnote/">Boostnote</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-09-29'>
+                                    September 29, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/boostnote/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/09/boostnote//boostnote.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+
+                
+                    <a href=
+                        
+                            /blog/
+                        
+                        class="button">View more posts</a>
+                
+            </div>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Comparte esta publicación <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2frlodeiro.info%2fblog%2fmqtt1%2f&amp;text=MQTT%20%7c%20Parte%201&amp;via=lodeiro0001" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//plus.google.com/share?url=https%3a%2f%2frlodeiro.info%2fblog%2fmqtt1%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frlodeiro.info%2fblog%2fmqtt1%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=https%3a%2f%2frlodeiro.info%2fblog%2fmqtt1%2f&amp;title=MQTT%20%7c%20Parte%201" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2frlodeiro.info%2fblog%2fmqtt1%2f&amp;title=MQTT%20%7c%20Parte%201" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2frlodeiro.info%2fblog%2fmqtt1%2f&amp;description=MQTT%20%7c%20Parte%201" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Chequea este post de Roberto%20Lodeiro&amp;body=https%3a%2f%2frlodeiro.info%2fblog%2fmqtt1%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+  <header>
+    <div class="title">
+        
+            <h1><a href="https://rlodeiro.info/blog/mqtt1/">MQTT | Parte 1</a></h1>
+            
+        
+        
+            <p>Introducción al protocolo MQTT</p>
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published"
+            datetime='2018-10-29'>
+            October 29, 2018</time>
+        <span class="author">Roberto Lodeiro</span>
+        
+        
+    </div>
+</header>
+
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2frlodeiro.info%2fblog%2fmqtt1%2f&amp;text=MQTT%20%7c%20Parte%201&amp;via=lodeiro0001" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//plus.google.com/share?url=https%3a%2f%2frlodeiro.info%2fblog%2fmqtt1%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frlodeiro.info%2fblog%2fmqtt1%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=https%3a%2f%2frlodeiro.info%2fblog%2fmqtt1%2f&amp;title=MQTT%20%7c%20Parte%201" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2frlodeiro.info%2fblog%2fmqtt1%2f&amp;title=MQTT%20%7c%20Parte%201" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2frlodeiro.info%2fblog%2fmqtt1%2f&amp;description=MQTT%20%7c%20Parte%201" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Chequea este post de Roberto%20Lodeiro&amp;body=https%3a%2f%2frlodeiro.info%2fblog%2fmqtt1%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+      </ul>
+    </section>
+  
+
+  
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/mqtt1/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/10/mqtt1//mqtt1.jpg" alt="">
+        </a>
+    
+
+
+  <div id="content">
+    
+
+<p>Esta primera entrada sobre MQTT, pretende ser una forma sencilla de entender los conceptos básicos. Explicaré en que consiste y como podemos usarlo, pero sin entrar en demasiados tecnicismos (para eso ya vendrán entradas posteriores).</p>
+
+<p>Si usas Telegram u otra aplicación de mensajería actual o has usado IRC antaño, ¡será muy fácil que lo entiendas!.</p>
+
+<hr style="border-color: #d6d6d6;" />
+
+<p><code>MQTT</code>(Message Queue Telemetry Transport), es un protocolo de comunicación muy utilizado en el <code>Iot</code>(Internet of Things). En un supuesto muy básico, donde queremos comunicar dos dispositivos, uno emitiría un mensaje y otro tendría que recibirlo, ¡pues de eso se encarga MQTT!.</p>
+
+<p>Llevando el supuesto anterior a un entorno cotidiano, tú serás el dispositivo2 que va a recibir el mensaje (por Telegram), y tu amigo (el pesado que siempre escribe en los grupos) el dispositivo1 que emite el mensaje. No quiere decir que Telegram utilice MQTT, pero supongamos que si para explicarlo.</p>
+
+<h1 id="mensaje-emisor-receptor">Mensaje - Emisor &amp; Receptor</h1>
+
+<p>Pongamos dos casos:</p>
+
+<ul>
+<li><p>Caso 1:</p>
+
+<p>Conversación privada entre tú y un amigo</p></li>
+</ul>
+
+<p><img src="https://rlodeiro.info/img/posts/2018/10/mqtt1/mqtt1_mensaje1.bmp" alt="" /></p>
+
+<p>En este primer caso, nuestro querido amigo (dispositivo1) nos envía un mensaje para contarnos que tal le ha ido el día, este pasa por el servidor de Telegram y nos llega a nosotros (dispositivo2). Perfecto!</p>
+
+<ul>
+<li><p>Caso 2:</p>
+
+<p>Conversación en grupo con más amigos</p></li>
+</ul>
+
+<p><img src="https://rlodeiro.info/img/posts/2018/10/mqtt1/mqtt1_mensaje2.bmp" alt="" /></p>
+
+<p>Aquí nuevamente nuestro queridísimo amigo (dispositivo1) envía un mensaje, pero esta vez al grupo que tenemos creado para las Parties. El mensaje en esta ocasión llega a todas las personas que están en el grupo (dispositivos 2, 3 y 4). Perfecto again!</p>
+
+<h1 id="broker-vs-topics">Broker VS Topics</h1>
+
+<p>Obviamente estos dos ejemplo anteriores, serían así en un mundo idílico, pero en la realidad no podemos tener un servidor o <code>broker</code> para cada conversación.</p>
+
+<p>Siguiendo en el contexto imaginario donde Telegram usase MQTT, lo que ocurriría sería algo similar a esto:</p>
+
+<p><img src="https://rlodeiro.info/img/posts/2018/10/mqtt1/mqtt1_broker&amp;topics.bmp" alt="" /></p>
+
+<p>El amigo (dispositivo1) envía dos mensajes, uno privado para ti, y otro al grupo. Ambos llegan al mismo servidor, y aquí es donde viene la magia. ¿Como sabe el servidor para quien es cada mensaje? simplemente no lo sabe.</p>
+
+<p>Cada mensaje va destinado a un <code>topic</code>, en nuestro ejemplo topic1 y topic2. Tu (dispositivo2) estas subscrito al topic de la conversación privada y al del grupo, con lo cual ves ambos mensajes, pero los otros dos amigos (dispositivo 3 y 4) solo ven el mensaje publicado en el topic2.</p>
+
+<h1 id="entorno-real">Entorno real</h1>
+
+<p>Antes de que te asustes, explico el porque de las flechas en ambas direcciones. Un <code>cliente</code> (dispositivo) puede tanto enviar como recibir mensajes a diferentes topics. Antes no era así por no complicar los ejemplos, y porque nadie le contesta al amigo pesado.</p>
+
+<p>Este es el entorno real que vamos a suponer:</p>
+
+<p><img src="https://rlodeiro.info/img/posts/2018/10/mqtt1/mqtt1_clientes_broker.bmp" alt="" /></p>
+
+<p>Tenemos tres clientes conectados al Broker. El primero, la Raspberry Pi, es el encargado de controlar todas las luces. Los otros dos, en este caso dos Arduino, encenderán o apagarán la luz que controlan según el mensaje ON/OFF recibido.</p>
+
+<p>El mensaje puede ser el que queramos, desde un simple ON/OFF como en el ejemplo, hasta un JSON o similar.</p>
+
+<p>Los topics, simplemente son rutas donde publicamos y/o recibimos mensajes. Estas también son definidas a nuestro antojo, pero es buena idea seguir un patrón ordenado. En el ejemplo solo hay luces, pero suponiendo que en ambas habitaciones tengamos además un enchufe, su topic podría ser algo como enchufes/dormitorio/cmd, en el caso del dormitorio.</p>
+
+<p>El motivo por el cual he creado un topic terminado en /cmd y otro en /stat para cada dispositivo, es simplemente para poder tando enviar ordenes como recibir su estado. Esto puede ser útil, entre otras razones, si el Arduino en cuestión tiene un botón físico y apagamos en el la luz. De este forma la Raspberry Pi conozcerá su nuevo estado.</p>
+
+<p>Podemos resumirlo en algo como esto:</p>
+
+<pre><code class="language-md">#### Broker MQTT ####
+Servidor que gestiona las comunicaciones
+
+#### Clientes ####
+Dispositivos que se conectan al broker para enviar y/o recibir mensajes
+En nuestro ejemplo:
+Raspberry Pi - Controla todas las luces
+Arduino salon - Enciende/apaga las luces del salón
+Arduino dormitorio - Enciende/apaga las luces del dormitorio
+
+#### Topics ####
+Dispositivos que se conectan al broker para enviar y/o recibir mensajes
+En nuestro ejemplo:
+luces/dormitorio/cmd/ - Para enviarle ordenes al Cliente3
+luces/dormitorio/stat/ - Publica estado el Cliente3
+luces/salon/cmd/ - Para enviarle ordenes al Cliente2
+luces/salon/stat/ - Publica su estado el Cliente2
+</code></pre>
+
+<p>Todo esto se puede volver lo complejo que queramos, pero queda para otra entrada.</p>
+
+<hr style="border-color: #d6d6d6;" />
+
+<p>Espero que sea útil, ¡gracias por leerme!</p>
+
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/categories/servicios">Servicios</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/categories/iot">Iot</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+            
+            
+                <i class="fa fa-tags"></i>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/mqtt">mqtt</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/protocolo">protocolo</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/mensajeria">mensajeria</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/broker">broker</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/iot">Iot</a></li>
+                
+            
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="https://rlodeiro.info/blog/mdadm/"
+                class="button big previous">RAID en Linux</a></li>
+    
+
+    
+</ul>
+
+
+    </div>
+    
+<section id="sidebar">
+
+  
+  <section id="intro">
+    
+    
+      
+        <a href='https://rlodeiro.info/'><img src="https://rlodeiro.info/img/main/logo.jpg" class="intro-circle" width="" alt="" /></a>
+      
+    
+    
+      <header>
+        <h2>Roberto Lodeiro</h2>
+        <p>Reality is wrong. Dreams are for real.</p>
+      </header>
+    
+    
+      <ul class="icons">
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//twitter.com/lodeiro0001" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:me@rlodeiro.info" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+  </section>
+
+  
+  <section class="recent-posts">
+    <div class="mini-posts">
+      <header>
+        <h3>Publicaciones Recientes</h3>
+      </header>
+      <div class="posts-container">
+        
+
+        
+          
+        
+
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/mqtt1/">MQTT | Parte 1</a>
+              </h3>
+              
+              <time class="published" datetime='2018-10-29'>
+                October 29, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/mqtt1/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/10/mqtt1//mqtt1.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/mdadm/">RAID en Linux</a>
+              </h3>
+              
+              <time class="published" datetime='2018-10-21'>
+                October 21, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/mdadm/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/10/mdadm//mdadm.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/ntp/">NTP | Servidor local</a>
+              </h3>
+              
+              <time class="published" datetime='2018-10-14'>
+                October 14, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/ntp/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/10/ntp//ntp.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/gogs/">Gogs | Self-Hosted Git</a>
+              </h3>
+              
+              <time class="published" datetime='2018-10-07'>
+                October 7, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/gogs/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/10/gogs//gogs.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/boostnote/">Boostnote</a>
+              </h3>
+              
+              <time class="published" datetime='2018-09-29'>
+                September 29, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/boostnote/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/09/boostnote//boostnote.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+      </div>
+
+      
+        <a href=
+          
+            /blog/
+          
+        class="button">Ver más entradas</a>
+      
+    </div>
+  </section>
+
+  
+  
+  
+  
+  
+    <section id="categories">
+      <header>
+        <h3>
+          <a href="https://rlodeiro.info/categories/">Categorías</a>
+        </h3>
+      </header>
+        
+          
+        
+
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/herramientas/">Herramientas</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/iot/">Iot</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/linux/">Linux</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/raspberry-pi/">Raspberry Pi</a>
+                <span style="float:right;">3</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/servicios/">Servicios</a>
+                <span style="float:right;">3</span>
+              
+            </header>
+          </article>
+        </p>
+        
+    </section>
+  
+  
+
+  
+  
+    <section id="mini-bio">
+      <h3>Sobre Mi</h3>
+      <p>¿De donde viene? ¿Cual es su color de pelo? ¿A que tribu urbana pertenece? Si estás muy aburrid@ y/o quieres saberlo ¡adelante!</p>
+      <a href="https://rlodeiro.info/about/" class="button">Leer Más</a>
+    </section>
+  
+
+  
+  <section id="footer">
+    
+      <ul class="icons">
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//twitter.com/lodeiro0001" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:me@rlodeiro.info" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+    <p class="copyright">
+      
+        &copy; 2018
+        
+          Roberto Lodeiro
+        
+      .
+      Powered by <a href="//gohugo.io" target="_blank">Hugo</a>
+    </p>
+  </section>
+</section>
+
+    </div>
+    <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+    
+
+    
+      
+    
+
+    
+      
+      
+      
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+        
+        
+        
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/r.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/yaml.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/css.min.js"></script>
+        <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+      
+    
+    
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+      <script src="https://rlodeiro.info/js/util.js"></script>
+      <script src="https://rlodeiro.info/js/main.js"></script>
+      <script src="https://rlodeiro.info/js/backToTop.js"></script>
+    
+
+    
+      
+        
+      
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+      <script src="//yihui.name/js/math-code.js"></script>
+<script async
+src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+  </body>
+</html>
+
