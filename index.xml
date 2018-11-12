@@ -6,10 +6,21 @@
     <description>Recent content on Roberto Lodeiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <lastBuildDate>Mon, 29 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 12 Nov 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://rlodeiro.info/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Escáner en Ubuntu</title>
+      <link>https://rlodeiro.info/blog/escaner_ubuntu/</link>
+      <pubDate>Mon, 12 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/blog/escaner_ubuntu/</guid>
+      <description>Si el escáner de tu impresora multifunción no es reconocido de forma automática, tranquilo, no está todo perdido.
+Ubuntu configura de forma automática la inmensa mayoría de impresoras, tanto conectada por cable como las existentes en nuestra red wifi, pero el escáner de esta (si, todavía hay gente como yo que lo usa) puede que no como es mi caso.
+Este procedimiento ha sido probado con mi vieja y querida HP Photosmart 5510, debería servir para cualquier modelo de la marca.</description>
+    </item>
     
     <item>
       <title>MQTT | Parte 1</title>
