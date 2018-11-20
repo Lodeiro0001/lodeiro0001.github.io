@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Roberto Lodeiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <lastBuildDate>Sun, 07 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Nov 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://rlodeiro.info/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Backup</title>
+      <link>https://rlodeiro.info/tags/backup/</link>
+      <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/backup/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Control de versiones</title>
@@ -86,7 +95,7 @@
     <item>
       <title>Linux</title>
       <link>https://rlodeiro.info/tags/linux/</link>
-      <pubDate>Sun, 21 Oct 2018 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>https://rlodeiro.info/tags/linux/</guid>
       <description></description>
@@ -161,6 +170,15 @@
       <pubDate>Sun, 21 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>https://rlodeiro.info/tags/raspberry-pi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Remoto</title>
+      <link>https://rlodeiro.info/tags/remoto/</link>
+      <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/remoto/</guid>
       <description></description>
     </item>
     

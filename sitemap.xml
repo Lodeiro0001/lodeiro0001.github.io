@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://rlodeiro.info/blog/raspberrypi_backup_remoto/</loc>
+    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://rlodeiro.info/blog/escaner_ubuntu/</loc>
     <lastmod>2018-11-12T00:00:00+00:00</lastmod>
   </url>
@@ -43,8 +48,14 @@
   </url>
   
   <url>
+    <loc>https://rlodeiro.info/tags/backup/</loc>
+    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://rlodeiro.info/blog/</loc>
-    <lastmod>2018-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -119,13 +130,13 @@
   
   <url>
     <loc>https://rlodeiro.info/tags/linux/</loc>
-    <lastmod>2018-10-21T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://rlodeiro.info/categories/linux/</loc>
-    <lastmod>2018-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -179,13 +190,19 @@
   
   <url>
     <loc>https://rlodeiro.info/categories/raspberry-pi/</loc>
-    <lastmod>2018-10-21T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/remoto/</loc>
+    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://rlodeiro.info/</loc>
-    <lastmod>2018-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -203,7 +220,7 @@
   
   <url>
     <loc>https://rlodeiro.info/tags/</loc>
-    <lastmod>2018-10-07T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
