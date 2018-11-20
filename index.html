@@ -626,6 +626,24 @@
 
 <p>Gracias a <code>status=progress</code> tendremos información del progreso de la copia hasta que esta finalice.</p>
 
+<h1 id="restaurar-el-backup">Restaurar el backup</h1>
+
+<p>Si queremos restaurar la copia, solo tenemos que conectar el disco en nuestro pc y hacer lo siguiente:</p>
+
+<ul>
+<li><p>Comprobar el nombre del disco de destino</p>
+
+<pre><code>$ lsblk -p
+</code></pre></li>
+
+<li><p>Situados en el directorio donde está la copia:</p>
+
+<pre><code>$ gunzip -c backupPi.gz | dd of=/dev/mmcblk0
+</code></pre>
+
+<p>Cambiando el nombre de la copia y el del disco de destino por los adecuados.</p></li>
+</ul>
+
 <hr style="border-color: #d6d6d6;" />
 
 <p>Espero que sea útil, ¡gracias por leerme!</p>

@@ -28,7 +28,7 @@
         "datePublished": "2018-11-20 00:00:00 &#43;0000 UTC",
         "dateModified" : "2018-11-20 00:00:00 &#43;0000 UTC",
         "url" : "https://rlodeiro.info/blog/raspberrypi_backup_remoto/",
-        "wordCount" : "383",
+        "wordCount" : "444",
         "keywords" : [ "Backup","Linux","Remoto","Blog" ]
     }
     </script>
@@ -64,7 +64,7 @@
 
 <meta itemprop="datePublished" content="2018-11-20T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-11-20T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="383">
+<meta itemprop="wordCount" content="444">
 
 
 
@@ -721,6 +721,24 @@
 <p>De esta forma, conectaremos con nuestra Rapberry PI por <code>ssh</code>, haremos una copia con <code>dd</code> ya comprimida, y la guardaremos en el directorio local indicado.</p>
 
 <p>Gracias a <code>status=progress</code> tendremos información del progreso de la copia hasta que esta finalice.</p>
+
+<h1 id="restaurar-el-backup">Restaurar el backup</h1>
+
+<p>Si queremos restaurar la copia, solo tenemos que conectar el disco en nuestro pc y hacer lo siguiente:</p>
+
+<ul>
+<li><p>Comprobar el nombre del disco de destino</p>
+
+<pre><code>$ lsblk -p
+</code></pre></li>
+
+<li><p>Situados en el directorio donde está la copia:</p>
+
+<pre><code>$ gunzip -c backupPi.gz | dd of=/dev/mmcblk0
+</code></pre>
+
+<p>Cambiando el nombre de la copia y el del disco de destino por los adecuados.</p></li>
+</ul>
 
 <hr style="border-color: #d6d6d6;" />
 
