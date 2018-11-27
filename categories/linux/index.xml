@@ -6,10 +6,20 @@
     <description>Recent content in Linux on Roberto Lodeiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <lastBuildDate>Tue, 20 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 27 Nov 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://rlodeiro.info/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AirPlay en Linux</title>
+      <link>https://rlodeiro.info/blog/airplay_linux/</link>
+      <pubDate>Tue, 27 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/blog/airplay_linux/</guid>
+      <description>Con Shairport Sync podrás convertir tu Raspberry Pi u otro sistema Linux en un receptor de audio AirPlay.
+Tanto si tienes un equipo de música que quieres actualizar para poder usarlo de forma inalámbrica, como si quieres aprovechar unos viejos altavoces, esto te será muy útil. Cabe destacar que la diferencia de calidad entre Bluetooth y AirPlay a la hora de transmitir audio de forma inalámbrica es abismal, así que no te lo pienses y elije el segundo.</description>
+    </item>
     
     <item>
       <title>Raspberry Pi - Backup remoto</title>
