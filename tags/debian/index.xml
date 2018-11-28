@@ -18,7 +18,7 @@
       
       <guid>https://rlodeiro.info/blog/airplay_linux/</guid>
       <description>Con Shairport Sync podrás convertir tu Raspberry Pi u otro sistema Linux en un receptor de audio AirPlay.
-Tanto si tienes un equipo de música que quieres actualizar para poder usarlo de forma inalámbrica, como si vas aprovechar unos viejos altavoces, continúa leyendo. Siguiendo estos sencillos pasos y teniendo conectando la Raspberry Pi a tu equipo de música, podrás enviar audio desde cualquier sistema compatible. Si tu distribución es diferente a Ubuntu/Debian y derivados, consulta aquí tus requisitos de configuración.</description>
+Tanto si quieres actualizar tu equipo de música (mi caso) conectándole una Raspberry Pi, como configurarlo en tu pc, con Shairport Sync podrás enviar audio desde cualquier sistema compatible(si, también se puede desde Linux) a tu nuevo receptor. En caso de que tu distribución no sea Ubuntu/Debian o derivados, consulta aquí tus requisitos de configuración.</description>
     </item>
     
     <item>

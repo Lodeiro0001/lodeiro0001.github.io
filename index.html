@@ -554,13 +554,13 @@
 
 <p>Con Shairport Sync podrás convertir tu Raspberry Pi u otro sistema Linux en un receptor de audio AirPlay.</p>
 
-<p>Tanto si tienes un equipo de música que quieres actualizar para poder usarlo de forma inalámbrica, como si vas aprovechar unos viejos altavoces, continúa leyendo. Siguiendo estos sencillos pasos y teniendo conectando la Raspberry Pi a tu equipo de música, podrás enviar audio desde cualquier sistema compatible. Si tu distribución es diferente a Ubuntu/Debian y derivados, consulta 
+<p>Tanto si quieres actualizar tu equipo de música (mi caso) conectándole una Raspberry Pi, como configurarlo en tu pc, con <code>Shairport Sync</code> podrás enviar audio desde cualquier sistema compatible(si, también se puede desde Linux) a tu nuevo receptor. En caso de que tu distribución no sea <code>Ubuntu/Debian</code> o derivados, consulta 
 
     
         
     
 
-    <a href="https://github.com/mikebrady/shairport-sync/blob/master/README.md" target='_blank'>aquí tus requisitos de configuración.</a>
+    <a href="https://github.com/mikebrady/shairport-sync/blob/master/README.md" target='_blank'>aquí tus requisitos de configuración. También esta disponible para macOS y OpenWrt.</a>
 
 </p>
 
@@ -578,7 +578,7 @@ $ sudo apt-get install autoconf automake avahi-daemon build-essential git libaso
 
 <h1 id="clonar-el-repositorio">Clonar el repositorio</h1>
 
-<p>Podemos encontrar <code>shairport-sync</code> en los repositorios de Ubuntu, Raspbian y demás, pero no será la versión actualizada. Clonamos el repositorio en nuestro $HOME:</p>
+<p>Podemos encontrar <code>shairport-sync</code> en los repositorios de Ubuntu, Raspbian y demás, pero no será la versión actualizada. Clonamos el repositorio en nuestro <code>$HOME</code>:</p>
 
 <pre><code class="language-bash">$ git clone https://github.com/mikebrady/shairport-sync.git
 </code></pre>
@@ -600,7 +600,7 @@ $ sudo make install
 
 <h1 id="inicio-automático">Inicio automático</h1>
 
-<p>Para habilitar el inicio automático con systemd ejecutamos:</p>
+<p>Para habilitar el inicio automático con <code>systemd</code> ejecutamos:</p>
 
 <pre><code class="language-bash">$ sudo systemctl enable shairport-sync
 $ sudo service shairport-sync start
@@ -613,7 +613,8 @@ $ sudo service shairport-sync start
 <pre><code class="language-bash">$ sudo nano /usr/local/etc/shairport-sync.conf
 </code></pre>
 
-<p>Veremos algo como los siguiente:</p>
+<ul>
+<li><p>Veremos algo como los siguiente:</p>
 
 <pre><code class="language-txt">// General Settings
 general =
@@ -621,9 +622,21 @@ general =
 // name = &quot;%H&quot;; // This means &quot;Hostname&quot; -- see below. This is the name th$
 </code></pre>
 
-<p>Donde eliminando <code>//</code> delante de <code>name</code> y sustituyendo <code>&quot;%H&quot;</code> por <code>&quot;NuevoNombre&quot;</code> podremos indicar un nombre diferente al del host.</p>
+<p>Donde eliminando <code>//</code> delante de <code>name</code> y sustituyendo <code>&quot;%H&quot;</code> por <code>&quot;NuevoNombre&quot;</code> podremos indicar un nombre diferente al del host.</p></li>
+</ul>
 
-<p><code>shairport-sync.conf</code> es el archivo de configuración, donde podemos por ejemplo indicar la tarjeta de sonido a utilizar modificando el parámetro <code>&quot;output_device = &quot;default&quot;;</code>. Dejando todo como viene, funcionara con la tarjeta indicada en el sistema como <code>default</code>. Yo lo he probado tanto en Raspbian Stretch como en Ubuntu 18.04.</p>
+<p><code>shairport-sync.conf</code> es el archivo de configuración, donde podemos por ejemplo indicar la tarjeta de sonido a utilizar modificando el parámetro <code>&quot;output_device = &quot;default&quot;;</code>. Dejando todo como viene, funcionará con la tarjeta indicada en el sistema como <code>default</code>. Yo lo he probado tanto en Raspbian Stretch como en Ubuntu 18.04.</p>
+
+<h1 id="firewall">Firewall</h1>
+
+<p>Si tienes habilitado el firewal UFW, añade las siguientes reglas:</p>
+
+<pre><code class="language-bash">$ sudo ufw allow from 192.168.1.1/16 to any port 3689 proto tcp
+$ sudo ufw allow from 192.168.1.1/16 to any port 5353
+$ sudo ufw allow from 192.168.1.1/16 to any port 5000:5005 proto tcp
+$ sudo ufw allow from 192.168.1.1/16 to any port 6000:6005 proto udp
+$ sudo ufw allow from 192.168.1.1/16 to any port 35000:65535 proto udp
+</code></pre>
 
 <p>Para mas información, si vuestro sistema es diferente o necesitáis consultar otras posibilidades de configuración 
 
