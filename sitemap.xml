@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://rlodeiro.info/blog/mqtt2/</loc>
+    <lastmod>2018-12-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://rlodeiro.info/blog/airplay_linux/</loc>
     <lastmod>2018-11-27T00:00:00+00:00</lastmod>
   </url>
@@ -66,7 +71,7 @@
   
   <url>
     <loc>https://rlodeiro.info/blog/</loc>
-    <lastmod>2018-11-27T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -129,13 +134,13 @@
   
   <url>
     <loc>https://rlodeiro.info/tags/iot/</loc>
-    <lastmod>2018-10-29T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://rlodeiro.info/categories/iot/</loc>
-    <lastmod>2018-10-29T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -219,13 +224,13 @@
   
   <url>
     <loc>https://rlodeiro.info/</loc>
-    <lastmod>2018-11-27T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://rlodeiro.info/categories/servicios/</loc>
-    <lastmod>2018-11-27T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -267,7 +272,7 @@
   
   <url>
     <loc>https://rlodeiro.info/tags/broker/</loc>
-    <lastmod>2018-10-29T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -285,19 +290,19 @@
   
   <url>
     <loc>https://rlodeiro.info/tags/mensajeria/</loc>
-    <lastmod>2018-10-29T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://rlodeiro.info/tags/mqtt/</loc>
-    <lastmod>2018-10-29T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://rlodeiro.info/tags/protocolo/</loc>
-    <lastmod>2018-10-29T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

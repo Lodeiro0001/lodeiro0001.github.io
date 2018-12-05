@@ -1,18 +1,10 @@
-
-
-
-    
-
-
-
-
 <!DOCTYPE HTML>
 
 <html>
     <head>
         
-        <meta property="og:image" content="http://rlodeiro.info/img/main/logo.jpg"/>
-        <meta property="og:image:secure_url" content="https://rlodeiro.info/img/main/logo.jpg"/>
+        <meta property="og:image" content="http://rlodeiro.info/img/posts/2018/12/mqtt2/mqtt2.jpg"/>
+        <meta property="og:image:secure_url" content="https://rlodeiro.info/img/posts/2018/12/mqtt2/mqtt2.jpg"/>
         
         <script type="application/ld+json">
     {
@@ -22,10 +14,10 @@
              "@type": "WebPage",
              "@id": "https://rlodeiro.info"
         },
-        "articleSection" : "about",
-        "name" : "Sobre mi",
-        "headline" : "Sobre mi",
-        "description" : "",
+        "articleSection" : "blog",
+        "name" : "MQTT | Parte 2",
+        "headline" : "MQTT | Parte 2",
+        "description" : "Broker VS cliente",
         "inLanguage" : "es-es",
         "author" : "",
         "creator" : "",
@@ -33,15 +25,17 @@
         "accountablePerson" : "",
         "copyrightHolder" : "",
         "copyrightYear" : "2018",
-        "datePublished": "2018-09-28 00:00:00 &#43;0000 UTC",
-        "dateModified" : "2018-09-28 00:00:00 &#43;0000 UTC",
-        "url" : "https://rlodeiro.info/about/",
-        "wordCount" : "232",
-        "keywords" : [ "Blog" ]
+        "datePublished": "2018-12-05 00:00:00 &#43;0000 UTC",
+        "dateModified" : "2018-12-05 00:00:00 &#43;0000 UTC",
+        "url" : "https://rlodeiro.info/blog/mqtt2/",
+        "wordCount" : "825",
+        "keywords" : [ "mqtt","protocolo","mensajeria","broker","Iot","Blog" ]
     }
     </script>
         
-            <title>Sobre mi - Roberto Lodeiro</title>
+            
+                <title>MQTT | Parte 2</title>
+            
         
 
         <meta charset="utf-8" />
@@ -51,22 +45,30 @@
 
 
         
+            <meta name="author" content="Roberto Lodeiro">
         
-            
-                <meta name="description" content="Blog personal. Escribo sobre tecnología, programación Backend, herramientas varias y cualquier tema relacionado que me resulte útil en mis proyectos.">
-            
+        
+            <meta name="description" content="Broker VS cliente">
         
 
         <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Sobre mi"/>
-<meta name="twitter:description" content="Blog personal. Escribo sobre tecnología, programación Backend, herramientas varias y cualquier tema relacionado que me resulte útil en mis proyectos."/>
+<meta name="twitter:title" content="MQTT | Parte 2"/>
+<meta name="twitter:description" content="Broker VS cliente"/>
 <meta name="twitter:site" content="@lodeiro0001"/>
 
         
         
-<meta itemprop="name" content="Sobre mi">
-<meta itemprop="description" content="Blog personal. Escribo sobre tecnología, programación Backend, herramientas varias y cualquier tema relacionado que me resulte útil en mis proyectos.">
+<meta itemprop="name" content="MQTT | Parte 2">
+<meta itemprop="description" content="Broker VS cliente">
 
+
+<meta itemprop="datePublished" content="2018-12-05T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-12-05T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="825">
+
+
+
+<meta itemprop="keywords" content="mqtt,protocolo,mensajeria,broker,Iot," />
 
         
 
@@ -105,7 +107,8 @@
       
       <div id="wrapper">
 
-
+    
+    
 <header id="header">
     
       <h1><a href="https://rlodeiro.info/">Roberto Lodeiro</a></h1>
@@ -148,6 +151,10 @@
     </nav>
     <nav class="main">
         <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
             
             <li class="menu">
                 <a class="fa-bars" href="#menu">Menu</a>
@@ -415,75 +422,464 @@
         
 </section>
 
-
-<div id="main">
-  <article class="post">
-    <header>
-        <div class="title">
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Comparte esta publicación <i class="fa fa-smile-o"></i></h3>
+            </header>
             
-                <h2><a href="https://rlodeiro.info/about/">Sobre mi</a></h2>
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2frlodeiro.info%2fblog%2fmqtt2%2f&amp;text=MQTT%20%7c%20Parte%202&amp;via=lodeiro0001" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//plus.google.com/share?url=https%3a%2f%2frlodeiro.info%2fblog%2fmqtt2%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frlodeiro.info%2fblog%2fmqtt2%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=https%3a%2f%2frlodeiro.info%2fblog%2fmqtt2%2f&amp;title=MQTT%20%7c%20Parte%202" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2frlodeiro.info%2fblog%2fmqtt2%2f&amp;title=MQTT%20%7c%20Parte%202" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2frlodeiro.info%2fblog%2fmqtt2%2f&amp;description=MQTT%20%7c%20Parte%202" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Chequea este post de Roberto%20Lodeiro&amp;body=https%3a%2f%2frlodeiro.info%2fblog%2fmqtt2%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+  <header>
+    <div class="title">
+        
+            <h1><a href="https://rlodeiro.info/blog/mqtt2/">MQTT | Parte 2</a></h1>
             
-            
-        </div>
-    </header>
-    <div id="content">
-      
+        
+        
+            <p>Broker VS cliente</p>
+        
+    </div>
+    <div class="meta">
+        
 
-<p><img src="https://rlodeiro.info/img/main/about.jpg" alt="" /></p>
+        <time class="published"
+            datetime='2018-12-05'>
+            December 5, 2018</time>
+        <span class="author">Roberto Lodeiro</span>
+        
+        
+    </div>
+</header>
 
-<h3 id="hola">Hola!</h3>
 
-<p>Vengo de Kepler-186f. El motivo por el que me he mudado a la Tierra es simple, allí las máquinas lo controlan todo, incluso se programan solas. Antes trabajaba para una Aspiradora limpiando cepillos.</p>
+  
+    <section id="social-share">
+      <ul class="icons">
+        
 
-<p>Me gusta mucho todo lo Old School, así que he venido a aprender con Stack Overflow y volver a ser yo quien controle a esa maldita máquina.</p>
 
-<hr style="border-color: #d6d6d6;" />
 
-<h1 id="por-qué-todo-en-español">¿Por qué todo en español?</h1>
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2frlodeiro.info%2fblog%2fmqtt2%2f&amp;text=MQTT%20%7c%20Parte%202&amp;via=lodeiro0001" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
 
-<p>No todo, ¡los nombres molones los pongo en <code>inglés</code>! Empezando por el principio, mi nave se estrelló en <code>Galicia</code>, y entre gallego y español, me quedé con el segundo para así llegar a más gente.</p>
 
-<p>Creo que hay <code>poca documentación en español</code> e intentaré aportar mi granito. Si te preguntas sí puedo hablar inglés, ¡claro! pero con una caña en la mano mucho mejor.</p>
 
-<h1 id="mis-intereses">Mis intereses</h1>
 
-<p>Me apasiona todo lo relacionado con el Backend, y la razón es muy simple. Quiero decirle a esa Aspiradora lo que tiene que hacer, como, y que todo funcione correctamente (o intentarlo). Que sea otro quien lo ponga bonito.</p>
+<li>
+  <a href="//plus.google.com/share?url=https%3a%2f%2frlodeiro.info%2fblog%2fmqtt2%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
 
-<p>Por ahora he investigado/trabajado:</p>
 
-<ul>
-<li><code>Java</code></li>
-<li>Protocolo <code>MQTT</code></li>
-<li>Protocolo <code>ZigBee</code> (AKA Battery Saver)</li>
-<li><code>Domótica</code> (todo OpenSource &amp; OnDevice, no me gusta que mi casa se conecte con la nube)</li>
-<li><code>Arduino</code>/ESP</li>
-<li>Contenedores <code>Docker</code></li>
-<li><code>Linux</code>/Raspberry Pi</li>
-<li>Servidor web <code>Nginx</code>/Apache</li>
-<li>Bases de datos <code>MySQL</code>/PostgreSQL</li>
-<li><code>Python</code> (tengo un gran maestro llamado 
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frlodeiro.info%2fblog%2fmqtt2%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=https%3a%2f%2frlodeiro.info%2fblog%2fmqtt2%2f&amp;title=MQTT%20%7c%20Parte%202" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2frlodeiro.info%2fblog%2fmqtt2%2f&amp;title=MQTT%20%7c%20Parte%202" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2frlodeiro.info%2fblog%2fmqtt2%2f&amp;description=MQTT%20%7c%20Parte%202" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Chequea este post de Roberto%20Lodeiro&amp;body=https%3a%2f%2frlodeiro.info%2fblog%2fmqtt2%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+      </ul>
+    </section>
+  
+
+  
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/mqtt2/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/12/mqtt2//mqtt2.jpg" alt="">
+        </a>
+    
+
+
+  <div id="content">
+    
+
+<p>Segunda entrada sobre MQTT, donde veremos como instalar el Broker y un cliente básico en consola.</p>
+
+<p>Como siempre, asumo que las maquinas cliente y servidor tienen una distro Linux Debian o derivada. 
 
     
         
     
 
-    <a href="https://twitter.com/noentiendero" target='_blank'>EnforcerZhukov</a>
+    <a href="https://rlodeiro.info/blog/mqtt1/" target='_blank'>En la primera entrada sobre MQTT hice una introducción básica al protocolo,</a>
 
-)</li>
-</ul>
+ ahora me centraré en explicar un caso de uso básico.</p>
 
-<p>Aquí va una foto que me han hecho unos amigos:</p>
-
-<p><img src="https://rlodeiro.info/img/main/me.jpg" alt="" /></p>
+<p>Mi servidor es una Raspberry Pi (que raro), pero puede ser otro pc, o el mismo donde posteriormente instales también el cliente y así poder probar el funcionamiento.</p>
 
 <hr style="border-color: #d6d6d6;" />
 
-<p>¡Gracias por leerme!</p>
+<h1 id="1-instalar-el-broker">1. Instalar el broker</h1>
+
+<p>Instalaremos en la máquina servidor el Broker <code>Mosquitto</code>. Es uno de los más utilizados, está escrito en C y consume muy pocos recursos con un rendimiento muy bueno.</p>
+
+<ul>
+<li><p>Para instalar Mosquitto</p>
+
+<pre><code class="language-bash">$ sudo apt update
+$ sudo apt install mosquitto
+</code></pre></li>
+
+<li><p>Crear usuario y contraseña</p>
+
+<pre><code class="language-bash">$ sudo mosquitto_passwd -c /etc/mosquitto/tuArchivoPass nombreUsuario
+</code></pre>
+
+<p>Cambia <code>nombreUsuario</code> por el nombre que quieras darle, y <code>tuArchivoPass</code> por el nombre que quieras para el archivo donde se guardaran los usuarios y sus contraseñas. Una vez ejecutado el comando se nos preguntara el password que queremos asignarle al nuevo usuario.</p></li>
+
+<li><p>Si quieres añadir mas usuarios</p>
+
+<pre><code class="language-bash">$ sudo mosquitto_passwd -b /etc/mosquitto/tuArchivoPass nombreUsuario password
+</code></pre></li>
+
+<li><p>Para eliminar un usuario</p>
+
+<pre><code class="language-bash">$ sudo mosquitto_passwd -D /etc/mosquitto/tuArchivoPass nombreUsuario
+</code></pre></li>
+</ul>
+
+<h1 id="2-1-configuración">2.1 Configuración</h1>
+
+<p>La configuración principal de Mosquito se encuentra en <code>/etc/mosquitto/mosquitto.conf</code>. Tal como se recomienda, vamos a crear un fichero aparte para nuestra configuración.</p>
+
+<ul>
+<li><p>Para crear el nuevo archivo</p>
+
+<pre><code class="language-bash">$ sudo nano /etc/mosquitto/conf.d/miConfiguracion.conf
+</code></pre>
+
+<p>Aquí añadiremos dos lineas, una indicando que no se permita la conexión a usuarios anónimos, y otra indicando donde tenemos el archivo que con tiene los usuarios y sus contraseñas.</p>
+
+<pre><code class="language-txt">allow_anonymous false
+password_file etc/mosquitto/tuArchivoPass
+</code></pre></li>
+
+<li><p>Reiniciar el servicio</p>
+
+<pre><code class="language-bash">$ sudo systemctl restart mosquitto
+</code></pre></li>
+</ul>
+
+<h1 id="2-2-configurar-ssl">2.2 Configurar SSL</h1>
+
+<p>Adicionalmente, cosa que recomiendo, podemos <code>cifrar</code> las comunicaciones entre Broker y clientes con un certificado SSL, en este caso usaré un certificado de firma propia generado con <code>openssl</code>.</p>
+
+<ul>
+<li><p>Creamos los directorios y el certificado</p>
+
+<pre><code class="language-bash">$ sudo mkdir /etc/ssl/mqtt
+$ cd /etc/ssl/mqtt
+$ sudo openssl req -new -x509 -days 365 -nodes -out ejemploMQTT.local.pem -keyout ejemploMQTT.local.key
+</code></pre>
+
+<p>Cambia <code>ejemploMQTT.local</code> por tu nombre de dominio, dejando las extensiones <code>.pem</code> y <code>.key</code>. En este ejemplo el certificado tendrá una validez de 365 días, si no quieres tener que generar uno nueva cada año, modifica <code>-days XXX</code> sustituyendo XXX por el número de días que quieras.</p></li>
+</ul>
+
+<p>Ahora vamos a indicar en nuestro archivo de configuración que escuche en el puerto seguro <code>8883</code>, limitando el puerto <code>1883</code> a localhost. Además indicaremos la ruta de nuestro certificado.</p>
+
+<ul>
+<li><p>Abrir el archivo de configuración</p>
+
+<pre><code class="language-bash">$ sudo nano /etc/mosquitto/conf.d/miConfiguracion.conf
+</code></pre>
+
+<p>Añadimos lo siguiente:</p>
+
+<pre><code class="language-txt">listener 1883 localhost
+listener 8883
+certfile /etc/ssl/mqtt/mqtt.example.local.pem
+keyfile /etc/ssl/mqtt/mqtt.example.local.key
+</code></pre></li>
+
+<li><p>Reiniciar el servicio</p>
+
+<pre><code class="language-bash">$ sudo systemctl restart mosquitto
+</code></pre></li>
+</ul>
+
+<h1 id="3-cliente">3. Cliente</h1>
+
+<p>Podemos tener como clientes todo tipo de dispositivos, y como dije en el primer post un cliente puede tanto recibir como enviar mensajes a cualquier topic. Yo lo utilizo mucho con los ESP para proyectos Iot, pero ahora explicaré como utilizarlo de forma básica desde terminal, que al fin y al cabo es lo mismo.</p>
+
+<ul>
+<li><p>Instalamos en la máquina cliente</p>
+
+<pre><code class="language-bash">$ sudo apt install mosquitto-clients
+</code></pre></li>
+</ul>
+
+<p>Una vez instalado, abre dos consolas en la máquina cliente. La idea para probar el sistema es publicar mensajes a un topic desde una consola, y verlos desde la otra, la cual estará suscrita al mismo topic.</p>
+
+<ul>
+<li><p>Para suscribirse en la primera consola:</p>
+
+<pre><code class="language-bash">$ mosquitto_sub -v -h ipBroker -u tuUsuario -P tuContrasenha -p 8883 -t 'raspberry/topicTest'
+</code></pre>
+
+<p>Cambia <code>ipBroker</code> por la ip de la máquina donde tienes instalado Mosquitto Broker, así como el usuario y la contraseña por los tuyos.<code>raspberry/topic1</code> es un topic de ejemplo, pon el que tu quieras. No cierras la consola, esta quedará a la escucha.</p></li>
+
+<li><p>Para publicar mensajes desde la segunda consola:</p>
+
+<pre><code class="language-bash">$ mosquitto_pub -h ipBroker -u tuusuario -P tuContrasenha -p 8883 -t 'raspberry/topicTest' -m 'Mensaje de prueba super cool'
+</code></pre>
+
+<p>Una vez se ejecute el comando, verás que la primera terminal recibe el mensaje, ¡magia!.</p></li>
+</ul>
+
+<h1 id="4-topics">4. Topics</h1>
+
+<p>De forma resumida, podemos decir que los topics pueden ser como te de la real gana, lo importante es estructurarlos bien para tener un orden lógico en el entorno de uso.</p>
+
+<p>Recordando el ejemplo del primer post:</p>
+
+<p><img src="https://rlodeiro.info/img/posts/2018/10/mqtt1/mqtt1_clientes_broker.jpg" alt="" /></p>
+
+<p>Ya explique en el la lógica, 
+
+    
+        
+    
+
+    <a href="_blank" target='_blank'>puedes recordarlo AQUI,</a>
+
+ pero en la imagen podemos ver el servidor que tiene instalado el Broker, y tres clientes. En mi caso tengo el Broker instalado en la Raspberry Pi, pero en al práctica es lo mismo si está en una máquina independiente, o en una que haga tanto de cliente como de Broker.</p>
+
+<p>Para suscribirnos a un topic determinado pondríamos el nombre del topic, en el ejemplo vemos que la Raspberry Pi está suscrita a dos.</p>
+
+<p>Otras formas de suscribirnos:</p>
+
+<ul>
+<li>Indicando <code>'#'</code> como topic: nos suscribimos a todos los topics del broker.</li>
+<li>Indicando <code>'luces/#'</code> como topic: nos suscribimos tanto a <code>luces</code> como a todos los que sigan.</li>
+</ul>
+
+<p>¡Prueba y prueba!, en otro post explicaré como conectarnos desde un Arduino en un caso de uso simple, o quizá desde un ESP8266 :D</p>
+
+<hr style="border-color: #d6d6d6;" />
+
+<p>Espero que sea útil, ¡gracias por leerme!</p>
+
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/categories/servicios">Servicios</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/categories/iot">Iot</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+            
+            
+                <i class="fa fa-tags"></i>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/mqtt">mqtt</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/protocolo">protocolo</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/mensajeria">mensajeria</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/broker">broker</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/iot">Iot</a></li>
+                
+            
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="https://rlodeiro.info/blog/airplay_linux/"
+                class="button big previous">AirPlay en Linux</a></li>
+    
+
+    
+</ul>
+
 
     </div>
-  </article>
-</div>
-
+    
 <section id="sidebar">
 
   

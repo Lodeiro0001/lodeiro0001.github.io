@@ -6,10 +6,21 @@
     <description>Recent content in Iot on Roberto Lodeiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <lastBuildDate>Mon, 29 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 05 Dec 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://rlodeiro.info/tags/iot/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MQTT | Parte 2</title>
+      <link>https://rlodeiro.info/blog/mqtt2/</link>
+      <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/blog/mqtt2/</guid>
+      <description>Segunda entrada sobre MQTT, donde veremos como instalar el Broker y un cliente básico en consola.
+Como siempre, asumo que las maquinas cliente y servidor tienen una distro Linux Debian o derivada. En la primera entrada sobre MQTT hice una introducción básica al protocolo, ahora me centraré en explicar un caso de uso básico.
+Mi servidor es una Raspberry Pi (que raro), pero puede ser otro pc, o el mismo donde posteriormente instales también el cliente y así poder probar el funcionamiento.</description>
+    </item>
     
     <item>
       <title>MQTT | Parte 1</title>
