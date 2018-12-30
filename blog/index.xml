@@ -6,10 +6,31 @@
     <description>Recent content in Blog on Roberto Lodeiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <lastBuildDate>Tue, 27 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 30 Dec 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://rlodeiro.info/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SAI | Sistema de alimentacion ininterrumpida</title>
+      <link>https://rlodeiro.info/blog/sai/</link>
+      <pubDate>Sun, 30 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/blog/sai/</guid>
+      <description>Hoy explico como he integrado al fin el SAI que tengo en el servidor, para poder monitorizar de una forma sencilla su estado, y que este apague el servidor en caso de un corte de luz prolongado.
+Después de pasar la época de exámenes y desconectar unos días celebrando con compañeros, amigos y familia, tocaba hacer la ultima entrada del ano, y de paso conseguir que si se va la luz durante las campanadas, mi Raspberry Pi me avise!</description>
+    </item>
+    
+    <item>
+      <title>MQTT | Parte 2</title>
+      <link>https://rlodeiro.info/blog/mqtt2/</link>
+      <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/blog/mqtt2/</guid>
+      <description>Segunda entrada sobre MQTT, donde veremos como instalar el Broker y un cliente básico en consola.
+Como siempre, asumo que las maquinas cliente y servidor tienen una distro Linux Debian o derivada. En la primera entrada sobre MQTT hice una introducción básica al protocolo, ahora me centraré en explicar un caso de uso básico.
+Mi servidor es una Raspberry Pi (que raro), pero puede ser otro pc, o el mismo donde posteriormente instales también el cliente y así poder probar el funcionamiento.</description>
+    </item>
     
     <item>
       <title>AirPlay en Linux</title>

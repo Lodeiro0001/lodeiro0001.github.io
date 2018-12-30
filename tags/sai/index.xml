@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SAI on Roberto Lodeiro</title>
+    <link>https://rlodeiro.info/tags/sai/</link>
+    <description>Recent content in SAI on Roberto Lodeiro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <lastBuildDate>Sun, 30 Dec 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://rlodeiro.info/tags/sai/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SAI | Sistema de alimentacion ininterrumpida</title>
+      <link>https://rlodeiro.info/blog/sai/</link>
+      <pubDate>Sun, 30 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/blog/sai/</guid>
+      <description>Hoy explico como he integrado al fin el SAI que tengo en el servidor, para poder monitorizar de una forma sencilla su estado, y que este apague el servidor en caso de un corte de luz prolongado.
+Después de pasar la época de exámenes y desconectar unos días celebrando con compañeros, amigos y familia, tocaba hacer la ultima entrada del ano, y de paso conseguir que si se va la luz durante las campanadas, mi Raspberry Pi me avise!</description>
+    </item>
+    
+  </channel>
+</rss>
