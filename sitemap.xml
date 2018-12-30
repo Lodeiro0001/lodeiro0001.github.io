@@ -3,11 +3,14 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+<<<<<<< HEAD
     <loc>https://rlodeiro.info/blog/sai/</loc>
     <lastmod>2018-12-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+=======
+>>>>>>> c9b39eb499ad431fee1d1cebf3ade418bf784eb3
     <loc>https://rlodeiro.info/blog/mqtt2/</loc>
     <lastmod>2018-12-05T00:00:00+00:00</lastmod>
   </url>
@@ -76,7 +79,11 @@
   
   <url>
     <loc>https://rlodeiro.info/blog/</loc>
+<<<<<<< HEAD
     <lastmod>2018-12-30T00:00:00+00:00</lastmod>
+=======
+    <lastmod>2018-12-05T00:00:00+00:00</lastmod>
+>>>>>>> c9b39eb499ad431fee1d1cebf3ade418bf784eb3
     <priority>0</priority>
   </url>
   
@@ -229,6 +236,7 @@
   
   <url>
     <loc>https://rlodeiro.info/</loc>
+<<<<<<< HEAD
     <lastmod>2018-12-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -236,6 +244,9 @@
   <url>
     <loc>https://rlodeiro.info/tags/sai/</loc>
     <lastmod>2018-12-30T00:00:00+00:00</lastmod>
+=======
+    <lastmod>2018-12-05T00:00:00+00:00</lastmod>
+>>>>>>> c9b39eb499ad431fee1d1cebf3ade418bf784eb3
     <priority>0</priority>
   </url>
   
