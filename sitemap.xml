@@ -143,25 +143,25 @@
   </url>
   
   <url>
-    <loc>https://rlodeiro.info/tags/iot/</loc>
-    <lastmod>2018-12-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://rlodeiro.info/categories/iot/</loc>
     <lastmod>2018-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rlodeiro.info/tags/linux/</loc>
-    <lastmod>2019-03-30T00:00:00+00:00</lastmod>
+    <loc>https://rlodeiro.info/tags/iot/</loc>
+    <lastmod>2018-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://rlodeiro.info/categories/linux/</loc>
+    <lastmod>2019-03-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/linux/</loc>
     <lastmod>2019-03-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -209,14 +209,14 @@
   </url>
   
   <url>
-    <loc>https://rlodeiro.info/tags/raspberry-pi/</loc>
-    <lastmod>2018-10-21T00:00:00+00:00</lastmod>
+    <loc>https://rlodeiro.info/categories/raspberry-pi/</loc>
+    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rlodeiro.info/categories/raspberry-pi/</loc>
-    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
+    <loc>https://rlodeiro.info/tags/raspberry-pi/</loc>
+    <lastmod>2018-10-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
