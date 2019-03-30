@@ -1,0 +1,1496 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        
+        <meta property="og:image" content="http://rlodeiro.info/img/posts/2019/03/instalacion_Debian/instalacion_Debian.jpg"/>
+        <meta property="og:image:secure_url" content="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian/instalacion_Debian.jpg"/>
+        
+        <script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "https://rlodeiro.info"
+        },
+        "articleSection" : "blog",
+        "name" : "Instalar Debian 9 Stretch",
+        "headline" : "Instalar Debian 9 Stretch",
+        "description" : "Guía paso a paso",
+        "inLanguage" : "es-es",
+        "author" : "",
+        "creator" : "",
+        "publisher": "",
+        "accountablePerson" : "",
+        "copyrightHolder" : "",
+        "copyrightYear" : "2019",
+        "datePublished": "2019-03-30 00:00:00 &#43;0000 UTC",
+        "dateModified" : "2019-03-30 00:00:00 &#43;0000 UTC",
+        "url" : "https://rlodeiro.info/blog/instalacion_debian/",
+        "wordCount" : "1079",
+        "keywords" : [ "Linux","Debian","Blog" ]
+    }
+    </script>
+        
+            
+                <title>Instalar Debian 9 Stretch</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.54.0" />
+        <link rel="shortcut icon" href="https://rlodeiro.info/favicon.ico?v=kPP08pKEXB">
+
+
+        
+            <meta name="author" content="Roberto Lodeiro">
+        
+        
+            <meta name="description" content="Guía paso a paso">
+        
+
+        <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Instalar Debian 9 Stretch"/>
+<meta name="twitter:description" content="Guía paso a paso"/>
+<meta name="twitter:site" content="@lodeiro0001"/>
+
+        
+        
+<meta itemprop="name" content="Instalar Debian 9 Stretch">
+<meta itemprop="description" content="Guía paso a paso">
+
+
+<meta itemprop="datePublished" content="2019-03-30T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-03-30T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1079">
+
+
+
+<meta itemprop="keywords" content="Linux,Debian," />
+
+        
+
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+            <link rel="stylesheet" href="https://rlodeiro.info/css/main.css">
+            <link rel="stylesheet" href="https://rlodeiro.info/css/add-on.css">
+            <link rel="stylesheet" href="https://rlodeiro.info/css/academicons.min.css">
+        
+
+        
+            
+                
+            
+                
+                    <link rel="stylesheet" href="https://rlodeiro.info/css/github.min.css">
+                
+            
+        
+
+
+  
+    
+    <link href='//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+  
+
+
+      
+    </head>
+    <body>
+
+      
+      <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+      <h1><a href="https://rlodeiro.info/">Roberto Lodeiro</a></h1>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="https://rlodeiro.info/">
+                            <i class="fa fa-home">&nbsp;</i>Inicio
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/about/">
+                            <i class="fa fa-id-card-o">&nbsp;</i>Sobre mi
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/blog/">
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/categories/">
+                            <i class="fa fa-sitemap">&nbsp;</i>Categorias
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/contact/">
+                            <i class="fa fa-envelope-o">&nbsp;</i>Contacto
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="https://rlodeiro.info/">
+                            <h3>
+                                <i class="fa fa-home">&nbsp;</i>Inicio
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/about/">
+                            <h3>
+                                <i class="fa fa-id-card-o">&nbsp;</i>Sobre mi
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/blog/">
+                            <h3>
+                                <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/categories/">
+                            <h3>
+                                <i class="fa fa-sitemap">&nbsp;</i>Categorias
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/contact/">
+                            <h3>
+                                <i class="fa fa-envelope-o">&nbsp;</i>Contacto
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section class="recent-posts">
+            <div class="mini-posts">
+                <header>
+                    <h3>Publicaciones Recientes</h3>
+                </header>
+                
+
+                
+                    
+                
+
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/instalacion_debian/">Instalar Debian 9 Stretch</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-03-30'>
+                                    March 30, 2019</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/instalacion_debian/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian//instalacion_Debian.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/sai/">SAI | Sistema de alimentacion ininterrumpida</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-12-30'>
+                                    December 30, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/sai/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/12/SAI//SAI.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/mqtt2/">MQTT | Parte 2</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-12-05'>
+                                    December 5, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/mqtt2/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/12/mqtt2//mqtt2.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/airplay_linux/">AirPlay en Linux</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-11-27'>
+                                    November 27, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/airplay_linux/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/11/airplay_linux//airplay_linux.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/raspberrypi_backup_remoto/">Raspberry Pi - Backup remoto</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-11-20'>
+                                    November 20, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/raspberrypi_backup_remoto/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/11/raspberryPi_backup_remoto//raspberryPi_backup_remoto.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+
+                
+                    <a href=
+                        
+                            /blog/
+                        
+                        class="button">View more posts</a>
+                
+            </div>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Comparte esta publicación <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2frlodeiro.info%2fblog%2finstalacion_debian%2f&amp;text=Instalar%20Debian%209%20Stretch&amp;via=lodeiro0001" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//plus.google.com/share?url=https%3a%2f%2frlodeiro.info%2fblog%2finstalacion_debian%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frlodeiro.info%2fblog%2finstalacion_debian%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=https%3a%2f%2frlodeiro.info%2fblog%2finstalacion_debian%2f&amp;title=Instalar%20Debian%209%20Stretch" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2frlodeiro.info%2fblog%2finstalacion_debian%2f&amp;title=Instalar%20Debian%209%20Stretch" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2frlodeiro.info%2fblog%2finstalacion_debian%2f&amp;description=Instalar%20Debian%209%20Stretch" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Chequea este post de Roberto%20Lodeiro&amp;body=https%3a%2f%2frlodeiro.info%2fblog%2finstalacion_debian%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+  <header>
+    <div class="title">
+        
+            <h1><a href="https://rlodeiro.info/blog/instalacion_debian/">Instalar Debian 9 Stretch</a></h1>
+            
+        
+        
+            <p>Guía paso a paso</p>
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published"
+            datetime='2019-03-30'>
+            March 30, 2019</time>
+        <span class="author">Roberto Lodeiro</span>
+        
+        
+    </div>
+</header>
+
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2frlodeiro.info%2fblog%2finstalacion_debian%2f&amp;text=Instalar%20Debian%209%20Stretch&amp;via=lodeiro0001" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//plus.google.com/share?url=https%3a%2f%2frlodeiro.info%2fblog%2finstalacion_debian%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frlodeiro.info%2fblog%2finstalacion_debian%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=https%3a%2f%2frlodeiro.info%2fblog%2finstalacion_debian%2f&amp;title=Instalar%20Debian%209%20Stretch" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2frlodeiro.info%2fblog%2finstalacion_debian%2f&amp;title=Instalar%20Debian%209%20Stretch" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2frlodeiro.info%2fblog%2finstalacion_debian%2f&amp;description=Instalar%20Debian%209%20Stretch" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Chequea este post de Roberto%20Lodeiro&amp;body=https%3a%2f%2frlodeiro.info%2fblog%2finstalacion_debian%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+      </ul>
+    </section>
+  
+
+  
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/instalacion_debian/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian//instalacion_Debian.jpg" alt="">
+        </a>
+    
+
+
+  <div id="content">
+    
+
+<p>Tras tres duros meses desaparecido en combate, voy a explicar como y porque he cambiado mi distribución Linux por la archiconocida Debian.</p>
+
+<p>Primero me deshice de mi Macbook (¡que contesto estoy de la decisión!), y tras un año aproximadamente utilizando Ubuntu, siento la necesidad de pasarme a Debian, me lo pide el cuerpo!</p>
+
+<p>He escuchado comentarios del estilo: &ldquo;Esa distribución es para servidores&rdquo;, &ldquo;El software está obsoleto&rdquo;, &ldquo;Es una distribución para freaks&rdquo;, entre otros. Siento decir que la mayor parte son cosas que les ha dicho el primo de su primo, salvo la última ya que soy un verdadero freak.</p>
+
+<hr style="border-color: #d6d6d6;" />
+
+<h1 id="consideraciones-previas">Consideraciones previas</h1>
+
+<p>La versión estable de Debian en este momento es <code>Debian 9 Stretch</code>.</p>
+
+<p>Dentro de esta versión tenemos tres ramas:</p>
+
+<ul>
+<li><p><code>Estable:</code> Versión de producción de Debian.</p></li>
+
+<li><p><code>Testing:</code> Publicación en pruebas. Los paquetes de la version testing están a la espera de pasar a la rama estable.
+En un primer momento podríamos pensar que es la mejor rama ya tiene versiones más recientes del software.</p></li>
+
+<li><p><code>Inestable (Sid):</code> En esta rama es donde tiene lugar el desarrollo activo de Debian.
+Su nombre no quiere decir que vaya a romperse a cada momento. Se avisa en cada actualización de los posibles fallos y el software siempre está a la última.</p></li>
+</ul>
+
+<h3 id="que-versión-elegir">¿Que versión elegir?</h3>
+
+<p>Tras unos días probando unas y otras, tengo muy claro que me quedo en la rama <code>estable</code>. La razón es muy simple, quiero que mi sistema de trabajo sea una roca, y las actualizaciones de seguridad en estable son las mejores.</p>
+
+<p>Es cierto que algunas versiones del software en el repo están algo deprecadas, pero no es problema alguno. Debian ofrece una solución oficial a esto de la que hablaré más adelante, así como soluciones de terceros para tener el software actualizado en todo momento sin depender del repo de nuestra distribución.</p>
+
+<h1 id="primeros-pasos">Primeros pasos</h1>
+
+<p>Lo primero es descargar la imagen del sistema 
+
+    
+        
+    
+
+    <a href="https://www.debian.org/distrib/" target='_blank'>desde aquí</a>
+
+.
+<img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian/debian1.png" alt="" />
+Recomiendo la 
+
+    
+        
+    
+
+    <a href="https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-9.8.0-amd64-netinst.iso" target='_blank'>imagen mínima</a>
+
+ ya que así realizaremos la instalación a través de internet contando con los últimos paquetes disponibles.</p>
+
+<p>Una vez descargada, la quemamos en una memoria USB 
+
+    
+        
+    
+
+    <a href="https://www.balena.io/etcher/" target='_blank'>con Etcher</a>
+
+. Ya estamos listos para arrancar nuestra máquina desde el y comenzar la instalación.</p>
+
+<h1 id="instalación">Instalación</h1>
+
+<ul>
+<li>En la primera ventana, elegimos instalación gráfica
+<img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian/debian2.png" alt="" /></li>
+</ul>
+
+<h3 id="idioma-localización-y-distribución-del-teclado">Idioma, localización y distribución del teclado</h3>
+
+<p>En las siguientes 6 ventanas elegimos:</p>
+
+<ul>
+<li>Language: En mi caso he escogido inglés como idioma principal del sistema</li>
+<li>Location: other, Europe, Spain</li>
+<li>Locales: En mi caso en_US_UTF-8</li>
+<li>Keyboard: Yo he escogido American English, ya que mi teclado tiene la distribución inglesa
+<img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian/debian3.png" alt="" /></li>
+</ul>
+
+<h3 id="nombre-de-la-máquina-dominio-password-para-root-y-nuevo-usuario">Nombre de la máquina, dominio, password para root y nuevo usuario.</h3>
+
+<p>6 ventanas mas donde se nos preguntará:</p>
+
+<ul>
+<li>Hostname: Nombre de la máquina para el resto de equipos de la red</li>
+<li>Domain name: En mi caso en blanco</li>
+<li>Root password: Debemos de elegir un password seguro para el usuario root.</li>
+<li>Nombre completo de nuestro usuario</li>
+<li>Nombre del usuario</li>
+<li>Password para nuestro usuario
+<img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian/debian4.png" alt="" /></li>
+</ul>
+
+<h3 id="particiones-del-disco">Particiones del disco</h3>
+
+<p>Si solo vas a utilizar Debian escoge:</p>
+
+<ul>
+<li>Guided - use entire disk</li>
+</ul>
+
+<p>En mi caso tengo una instalación previa de Windows 10 y quiero tener dual boot:</p>
+
+<ul>
+<li>Partición <code>manual</code></li>
+<li>Creo una partición ext4 para <code>/</code> donde irá todo el sistema y otra para <code>swap</code>.</li>
+<li>Selecciono que escriba los cambios en el disco y pulso continuar.</li>
+<li>Marco <code>yes</code> para confirmar y continuo.
+<img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian/debian5.png" alt="" /></li>
+</ul>
+
+<h3 id="empieza-la-instalación">Empieza la instalación</h3>
+
+<p>Mi equipo es un XPS y no encuentra el firmware de la tarjeta Wifi ya que es privativo.</p>
+
+<p>Esto lo solucionaremos más adelante. Yo tengo conectada una tarjeta Ethernet a uno de los puerto usb-c, así que cuando me pregunta para instalar el firmware de la tarjeta marco que no y continuar.
+<img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian/debian6.png" alt="" /></p>
+
+<p>Configuramos el package manager:</p>
+
+<ul>
+<li>Spain: Se recomienda el mas cercano a donde estamos.</li>
+<li>ftp.es.debian.org: Es el mas recomendado ya que es el oficial.</li>
+<li>Proxy: En mi caso lo dejo en blanco ya que no utilizo ninguno.
+<img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian/debian7.png" alt="" /></li>
+</ul>
+
+<p>Seleccionamos los paquetes a instalar:</p>
+
+<ul>
+<li>Entorno de escritorio: Marco XFCE.</li>
+<li>Desmarco print server ya que no lo necesito.
+<img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian/debian8.png" alt="" />
+He elejido XFCE por ser un entorno de escritorio muy estable, altamente personalizable y el cual consume muy pocos recursos.</li>
+</ul>
+
+<p>Grub:</p>
+
+<ul>
+<li>Se nos preguntará si queremos instalar el Grub (encargado del arranque del sistema) en el disco. Seleccionamos que si, y marcamos el disco sobre el que queremos instalarlo.</li>
+</ul>
+
+<p>Tras finalizar, nos avisará que la instalación ha terminado, ya estamos listos para iniciar Debian!
+<img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian/debian9.png" alt="" /></p>
+
+<h1 id="sudo">SUDO</h1>
+
+<p>Por defecto <code>sudo</code> no viene habilitado en Debian.</p>
+
+<ul>
+<li>Como root, instalamos sudo y añadimos nuestro usuario al grupo:</li>
+</ul>
+
+<pre><code class="language-bash">$ su
+$ apt install sudo
+$ usermod -a -G sudo tu_nombre_de_usuario
+</code></pre>
+
+<p>Una vez reiniciado el equipo, ya se puede usar sudo con nuestro usuario.</p>
+
+<h1 id="repositorio-backports">Repositorio Backports</h1>
+
+<p>Al principio del post comentaba que el software en la rama estable está algo obsoleto en muchos casos, y para eso han creado el repositorio Backports!</p>
+
+<p>Me explico, no vamos a pasar a testing o a sid, solo vamos a instalar ciertos paquetes desde este repositorio, los cuales están revisados por Debian para funcionar sin problema en la rama estable.</p>
+
+<ul>
+<li>Editamos el archivo <code>source.list</code></li>
+</ul>
+
+<pre><code class="language-bash">$ sudo nano /etc/apt/source.list
+</code></pre>
+
+<p>Debe figurar algo como esto:</p>
+
+<pre><code class="language-txt">deb http://ftp.es.debian.org/debian/ stretch main 
+deb-src http://ftp.es.debian.org/debian/ stretch main 
+
+deb http://security.debian.org/debian-security stretch/updates main 
+deb-src http://security.debian.org/debian-security stretch/updates main c
+
+# stretch-updates, previously known as 'volatile'
+deb http://ftp.es.debian.org/debian/ stretch-updates main
+deb-src http://ftp.es.debian.org/debian/ stretch-updates main 
+</code></pre>
+
+<p>Aprovechamos para agregar, ademas del repositorio Backports, <code>contrib</code> y <code>non-free</code> en todas las url para poder instalar controladores privativos. El resultado ha de ser:</p>
+
+<pre><code class="language-txt">deb http://ftp.es.debian.org/debian/ stretch main contrib non-free
+deb-src http://ftp.es.debian.org/debian/ stretch main contrib non-free
+
+deb http://security.debian.org/debian-security stretch/updates main contrib non-free
+deb-src http://security.debian.org/debian-security stretch/updates main contrib non-free
+
+# stretch-updates, previously known as 'volatile'
+deb http://ftp.es.debian.org/debian/ stretch-updates main contrib non-free
+deb-src http://ftp.es.debian.org/debian/ stretch-updates main contrib non-free
+
+# stretch-backports
+deb http://ftp.es.debian.org/debian/ stretch-backports main contrib non-free
+</code></pre>
+
+<p>Instalamos los paquetes necesarios para añadir la clave pública del nuevo repositorio y actualizamos:</p>
+
+<pre><code class="language-bash">$ sudo apt install debian-keyring debian-archive-keyring
+$ sudo apt update
+</code></pre>
+
+<h1 id="actualizar-kernel-y-firmware">Actualizar kernel y firmware</h1>
+
+<p>Actualizo el Kernel para mejorar el soporte de hardware. Solo necesario en el caso de equipos recientes. También elimino el anterior, este ultimo paso podéis dejarlo tras comprobar que arranque correctamente con el nuevo:</p>
+
+<pre><code class="language-bash">$ sudo apt -t stretch-backports install linux-image-amd64
+$ sudo apt remove --purge linux-image-4.9.0-8-amd64
+</code></pre>
+
+<p>Ya que mi XPS necesita una de las últimas versiones de <code>firmware-atheros</code> para que funcione la tarjeta Wi-Fi, lo instalo desde Backports. Hago lo mismo con los paquetes <code>firmware-linux</code> y <code>firmware-linux-nonfree</code>, los cuales se actualizarán a la versión mas reciente:</p>
+
+<pre><code class="language-bash">s sudo apt -t stretch-backports install firmware-atheros firmware-linux firmware-linux-nonfree
+</code></pre>
+
+<p>En otro post explicaré como poner XFCE really cool.</p>
+
+<hr style="border-color: #d6d6d6;" />
+
+<p>Espero que sea útil, ¡gracias por leerme!</p>
+
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/categories/linux">Linux</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+            
+            
+                <i class="fa fa-tags"></i>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/linux">Linux</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/debian">Debian</a></li>
+                
+            
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="https://rlodeiro.info/blog/sai/"
+                class="button big previous">SAI | Sistema de alimentacion ininterrumpida</a></li>
+    
+
+    
+</ul>
+
+
+    </div>
+    
+<section id="sidebar">
+
+  
+  <section id="intro">
+    
+    
+      
+        <a href='https://rlodeiro.info/'><img src="https://rlodeiro.info/img/main/logo.jpg" class="intro-circle" width="" alt="" /></a>
+      
+    
+    
+      <header>
+        <h2>Roberto Lodeiro</h2>
+        <p>Reality is wrong. Dreams are for real.</p>
+      </header>
+    
+    
+      <ul class="icons">
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//twitter.com/lodeiro0001" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:me@rlodeiro.info" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+  </section>
+
+  
+  <section class="recent-posts">
+    <div class="mini-posts">
+      <header>
+        <h3>Publicaciones Recientes</h3>
+      </header>
+      <div class="posts-container">
+        
+
+        
+          
+        
+
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/instalacion_debian/">Instalar Debian 9 Stretch</a>
+              </h3>
+              
+              <time class="published" datetime='2019-03-30'>
+                March 30, 2019
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/instalacion_debian/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian//instalacion_Debian.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/sai/">SAI | Sistema de alimentacion ininterrumpida</a>
+              </h3>
+              
+              <time class="published" datetime='2018-12-30'>
+                December 30, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/sai/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/12/SAI//SAI.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/mqtt2/">MQTT | Parte 2</a>
+              </h3>
+              
+              <time class="published" datetime='2018-12-05'>
+                December 5, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/mqtt2/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/12/mqtt2//mqtt2.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/airplay_linux/">AirPlay en Linux</a>
+              </h3>
+              
+              <time class="published" datetime='2018-11-27'>
+                November 27, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/airplay_linux/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/11/airplay_linux//airplay_linux.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/raspberrypi_backup_remoto/">Raspberry Pi - Backup remoto</a>
+              </h3>
+              
+              <time class="published" datetime='2018-11-20'>
+                November 20, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/raspberrypi_backup_remoto/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/11/raspberryPi_backup_remoto//raspberryPi_backup_remoto.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+      </div>
+
+      
+        <a href=
+          
+            /blog/
+          
+        class="button">Ver más entradas</a>
+      
+    </div>
+  </section>
+
+  
+  
+  
+  
+  
+    <section id="categories">
+      <header>
+        <h3>
+          <a href="https://rlodeiro.info/categories/">Categorías</a>
+        </h3>
+      </header>
+        
+          
+        
+
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/herramientas/">Herramientas</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/iot/">Iot</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/linux/">Linux</a>
+                <span style="float:right;">7</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/raspberry-pi/">Raspberry Pi</a>
+                <span style="float:right;">4</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/servicios/">Servicios</a>
+                <span style="float:right;">5</span>
+              
+            </header>
+          </article>
+        </p>
+        
+    </section>
+  
+  
+
+  
+  
+    <section id="mini-bio">
+      <h3>Sobre Mi</h3>
+      <p>¿De donde viene? ¿Cual es su color de pelo? ¿A que tribu urbana pertenece? Si estás muy aburrid@ y/o quieres saberlo ¡adelante!</p>
+      <a href="https://rlodeiro.info/about/" class="button">Leer Más</a>
+    </section>
+  
+
+  
+  <section id="footer">
+    
+      <ul class="icons">
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//twitter.com/lodeiro0001" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:me@rlodeiro.info" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+    <p class="copyright">
+      
+        &copy; 2019
+        
+          Roberto Lodeiro
+        
+      .
+      Powered by <a href="//gohugo.io" target="_blank">Hugo</a>
+    </p>
+  </section>
+</section>
+
+    </div>
+    <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+    
+
+    
+      
+    
+
+    
+      
+      
+      
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+        
+        
+        
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/r.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/yaml.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/css.min.js"></script>
+        <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+      
+    
+    
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+      <script src="https://rlodeiro.info/js/util.js"></script>
+      <script src="https://rlodeiro.info/js/main.js"></script>
+      <script src="https://rlodeiro.info/js/backToTop.js"></script>
+    
+
+    
+      
+        
+      
+        
+          <script src="https://rlodeiro.info/js/highlight.min.js"></script>
+        
+      
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+      <script src="//yihui.name/js/math-code.js"></script>
+<script async
+src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+  </body>
+</html>
+
