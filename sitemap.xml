@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://rlodeiro.info/blog/personalizar_xfce/</loc>
+    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://rlodeiro.info/blog/instalacion_debian/</loc>
     <lastmod>2019-03-30T00:00:00+00:00</lastmod>
   </url>
@@ -81,7 +86,7 @@
   
   <url>
     <loc>https://rlodeiro.info/blog/</loc>
-    <lastmod>2019-03-30T00:00:00+00:00</lastmod>
+    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -102,7 +107,7 @@
   
   <url>
     <loc>https://rlodeiro.info/tags/debian/</loc>
-    <lastmod>2019-03-30T00:00:00+00:00</lastmod>
+    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -143,26 +148,26 @@
   </url>
   
   <url>
-    <loc>https://rlodeiro.info/categories/iot/</loc>
-    <lastmod>2018-12-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://rlodeiro.info/tags/iot/</loc>
     <lastmod>2018-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rlodeiro.info/categories/linux/</loc>
-    <lastmod>2019-03-30T00:00:00+00:00</lastmod>
+    <loc>https://rlodeiro.info/categories/iot/</loc>
+    <lastmod>2018-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://rlodeiro.info/tags/linux/</loc>
-    <lastmod>2019-03-30T00:00:00+00:00</lastmod>
+    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/categories/linux/</loc>
+    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -209,14 +214,14 @@
   </url>
   
   <url>
-    <loc>https://rlodeiro.info/categories/raspberry-pi/</loc>
-    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
+    <loc>https://rlodeiro.info/tags/raspberry-pi/</loc>
+    <lastmod>2018-10-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rlodeiro.info/tags/raspberry-pi/</loc>
-    <lastmod>2018-10-21T00:00:00+00:00</lastmod>
+    <loc>https://rlodeiro.info/categories/raspberry-pi/</loc>
+    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -234,7 +239,7 @@
   
   <url>
     <loc>https://rlodeiro.info/</loc>
-    <lastmod>2019-03-30T00:00:00+00:00</lastmod>
+    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -283,6 +288,12 @@
   <url>
     <loc>https://rlodeiro.info/tags/ubuntu/</loc>
     <lastmod>2018-11-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/xfce/</loc>
+    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

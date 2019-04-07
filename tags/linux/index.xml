@@ -6,10 +6,21 @@
     <description>Recent content in Linux on Roberto Lodeiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <lastBuildDate>Sat, 30 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://rlodeiro.info/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Personalizar XFCE</title>
+      <link>https://rlodeiro.info/blog/personalizar_xfce/</link>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/blog/personalizar_xfce/</guid>
+      <description>Vamos a personalizar el entorno de escritorio XFCE para darle un toque actual y modificar a nuestro gusto algunas de las opciones por defecto.
+ En la entrada anterior vimos como instalar Debian 9 Stretch  , donde escogí XFCE por su estabilidad, bajo consumo de recursos y sus altas posibilidades de personalización. Hoy toca adaptarlo y vitaminarlo para mejorar nuestro entorno de trabajo.
+1. Tema 1.1 Apariencia General Primero vamos a cambiar el tema de nuestro escritorio.</description>
+    </item>
     
     <item>
       <title>Instalar Debian 9 Stretch</title>
