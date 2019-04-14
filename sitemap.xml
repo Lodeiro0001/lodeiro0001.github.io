@@ -3,105 +3,73 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://rlodeiro.info/blog/personalizar_xfce/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/blog/instalacion_debian/</loc>
-    <lastmod>2019-03-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/blog/sai/</loc>
-    <lastmod>2018-12-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/blog/mqtt2/</loc>
-    <lastmod>2018-12-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/blog/airplay_linux/</loc>
-    <lastmod>2018-11-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/blog/raspberrypi_backup_remoto/</loc>
-    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/blog/escaner_ubuntu/</loc>
-    <lastmod>2018-11-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/blog/mqtt1/</loc>
-    <lastmod>2018-10-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/blog/mdadm/</loc>
-    <lastmod>2018-10-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/blog/ntp/</loc>
-    <lastmod>2018-10-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/blog/gogs/</loc>
-    <lastmod>2018-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/blog/boostnote/</loc>
-    <lastmod>2018-09-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/blog/raspberryusbboot/</loc>
-    <lastmod>2018-09-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/about/</loc>
-    <lastmod>2018-09-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://rlodeiro.info/tags/airplay/</loc>
-    <lastmod>2018-11-27T00:00:00+00:00</lastmod>
+    <lastmod>2019-04-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rlodeiro.info/tags/backup/</loc>
-    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
+    <loc>https://rlodeiro.info/tags/audio/</loc>
+    <lastmod>2019-04-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/blog/audio_multiroom/</loc>
+    <lastmod>2019-04-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://rlodeiro.info/blog/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
+    <lastmod>2019-04-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://rlodeiro.info/categories/</loc>
+    <lastmod>2019-04-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rlodeiro.info/contact/</loc>
+    <loc>https://rlodeiro.info/categories/linux/</loc>
+    <lastmod>2019-04-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rlodeiro.info/tags/control-de-versiones/</loc>
-    <lastmod>2018-10-07T00:00:00+00:00</lastmod>
+    <loc>https://rlodeiro.info/tags/linux/</loc>
+    <lastmod>2019-04-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/multiroom/</loc>
+    <lastmod>2019-04-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/</loc>
+    <lastmod>2019-04-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/categories/servicios/</loc>
+    <lastmod>2019-04-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/</loc>
+    <lastmod>2019-04-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/forked-daapd/</loc>
+    <lastmod>2019-04-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -112,134 +80,24 @@
   </url>
   
   <url>
-    <loc>https://rlodeiro.info/tags/escaner/</loc>
-    <lastmod>2018-11-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>https://rlodeiro.info/blog/personalizar_xfce/</loc>
+    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rlodeiro.info/tags/go/</loc>
-    <lastmod>2018-10-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/tags/golang/</loc>
-    <lastmod>2018-10-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/tags/hp/</loc>
-    <lastmod>2018-11-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/categories/herramientas/</loc>
-    <lastmod>2018-11-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/tags/hora/</loc>
-    <lastmod>2018-10-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/tags/iot/</loc>
-    <lastmod>2018-12-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/categories/iot/</loc>
-    <lastmod>2018-12-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/tags/linux/</loc>
+    <loc>https://rlodeiro.info/tags/xfce/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rlodeiro.info/categories/linux/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/tags/local/</loc>
-    <lastmod>2018-10-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/tags/markdown/</loc>
-    <lastmod>2018-09-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/tags/ntp/</loc>
-    <lastmod>2018-10-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/tags/notas/</loc>
-    <lastmod>2018-09-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/tags/proyectos/</loc>
-    <lastmod>2018-10-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/tags/raid/</loc>
-    <lastmod>2018-10-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>https://rlodeiro.info/blog/instalacion_debian/</loc>
+    <lastmod>2019-03-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://rlodeiro.info/tags/raspberry/</loc>
     <lastmod>2018-12-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/tags/raspberry-pi/</loc>
-    <lastmod>2018-10-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/categories/raspberry-pi/</loc>
-    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/tags/raspbian/</loc>
-    <lastmod>2018-11-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/tags/remoto/</loc>
-    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -250,27 +108,8 @@
   </url>
   
   <url>
-    <loc>https://rlodeiro.info/categories/servicios/</loc>
-    <lastmod>2018-12-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/tags/snippets/</loc>
-    <lastmod>2018-09-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/tags/</loc>
-    <lastmod>2018-11-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/tags/time/</loc>
-    <lastmod>2018-10-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>https://rlodeiro.info/blog/sai/</loc>
+    <lastmod>2018-12-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -280,44 +119,25 @@
   </url>
   
   <url>
-    <loc>https://rlodeiro.info/tags/usb/</loc>
-    <lastmod>2018-09-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/tags/ubuntu/</loc>
-    <lastmod>2018-11-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/tags/xfce/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/tags/boot/</loc>
-    <lastmod>2018-09-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rlodeiro.info/tags/broker/</loc>
+    <loc>https://rlodeiro.info/categories/iot/</loc>
     <lastmod>2018-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rlodeiro.info/tags/git/</loc>
-    <lastmod>2018-10-07T00:00:00+00:00</lastmod>
+    <loc>https://rlodeiro.info/tags/iot/</loc>
+    <lastmod>2018-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rlodeiro.info/tags/mdadm/</loc>
-    <lastmod>2018-10-21T00:00:00+00:00</lastmod>
+    <loc>https://rlodeiro.info/blog/mqtt2/</loc>
+    <lastmod>2018-12-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/broker/</loc>
+    <lastmod>2018-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -337,6 +157,209 @@
     <loc>https://rlodeiro.info/tags/protocolo/</loc>
     <lastmod>2018-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/blog/airplay_linux/</loc>
+    <lastmod>2018-11-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/raspbian/</loc>
+    <lastmod>2018-11-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/ubuntu/</loc>
+    <lastmod>2018-11-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/backup/</loc>
+    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/categories/raspberry-pi/</loc>
+    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/blog/raspberrypi_backup_remoto/</loc>
+    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/remoto/</loc>
+    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/escaner/</loc>
+    <lastmod>2018-11-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/blog/escaner_ubuntu/</loc>
+    <lastmod>2018-11-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/hp/</loc>
+    <lastmod>2018-11-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/categories/herramientas/</loc>
+    <lastmod>2018-11-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/blog/mqtt1/</loc>
+    <lastmod>2018-10-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/raid/</loc>
+    <lastmod>2018-10-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/blog/mdadm/</loc>
+    <lastmod>2018-10-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/raspberry-pi/</loc>
+    <lastmod>2018-10-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/mdadm/</loc>
+    <lastmod>2018-10-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/hora/</loc>
+    <lastmod>2018-10-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/local/</loc>
+    <lastmod>2018-10-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/ntp/</loc>
+    <lastmod>2018-10-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/blog/ntp/</loc>
+    <lastmod>2018-10-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/time/</loc>
+    <lastmod>2018-10-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/control-de-versiones/</loc>
+    <lastmod>2018-10-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/go/</loc>
+    <lastmod>2018-10-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/blog/gogs/</loc>
+    <lastmod>2018-10-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/golang/</loc>
+    <lastmod>2018-10-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/proyectos/</loc>
+    <lastmod>2018-10-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/git/</loc>
+    <lastmod>2018-10-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/blog/boostnote/</loc>
+    <lastmod>2018-09-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/markdown/</loc>
+    <lastmod>2018-09-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/notas/</loc>
+    <lastmod>2018-09-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/snippets/</loc>
+    <lastmod>2018-09-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/blog/raspberryusbboot/</loc>
+    <lastmod>2018-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/usb/</loc>
+    <lastmod>2018-09-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/tags/boot/</loc>
+    <lastmod>2018-09-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/contact/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rlodeiro.info/about/</loc>
   </url>
   
 </urlset>

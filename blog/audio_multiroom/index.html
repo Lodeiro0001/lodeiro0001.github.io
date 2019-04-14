@@ -1,0 +1,1490 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        
+        <meta property="og:image" content="http://rlodeiro.info/img/posts/2019/04/audo_multiroom/audo_multiroom.jpg"/>
+        <meta property="og:image:secure_url" content="https://rlodeiro.info/img/posts/2019/04/audo_multiroom/audo_multiroom.jpg"/>
+        
+        <script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "https:\/\/rlodeiro.info"
+        },
+        "articleSection" : "blog",
+        "name" : "Audio Multiroom",
+        "headline" : "Audio Multiroom",
+        "description" : "Servidor multimedia con soporte multiroom",
+        "inLanguage" : "es-es",
+        "author" : "",
+        "creator" : "",
+        "publisher": "",
+        "accountablePerson" : "",
+        "copyrightHolder" : "",
+        "copyrightYear" : "2019",
+        "datePublished": "2019-04-14 00:00:00 \x2b0000 UTC",
+        "dateModified" : "2019-04-14 00:00:00 \x2b0000 UTC",
+        "url" : "https:\/\/rlodeiro.info\/blog\/audio_multiroom\/",
+        "wordCount" : "881",
+        "keywords" : [ "Linux","Audio","Multiroom","AirPlay","forked-daapd","Blog" ]
+    }
+    </script>
+        
+            
+                <title>Audio Multiroom</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.55.1" />
+        <link rel="shortcut icon" href="https://rlodeiro.info/favicon.ico?v=kPP08pKEXB">
+
+
+        
+            <meta name="author" content="Roberto Lodeiro">
+        
+        
+            <meta name="description" content="Servidor multimedia con soporte multiroom">
+        
+
+        <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Audio Multiroom"/>
+<meta name="twitter:description" content="Servidor multimedia con soporte multiroom"/>
+<meta name="twitter:site" content="@lodeiro0001"/>
+
+        
+        
+<meta itemprop="name" content="Audio Multiroom">
+<meta itemprop="description" content="Servidor multimedia con soporte multiroom">
+
+
+<meta itemprop="datePublished" content="2019-04-14T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-04-14T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="881">
+
+
+
+<meta itemprop="keywords" content="Linux,Audio,Multiroom,AirPlay,forked-daapd," />
+
+        
+
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+            <link rel="stylesheet" href="https://rlodeiro.info/css/main.css">
+            <link rel="stylesheet" href="https://rlodeiro.info/css/add-on.css">
+            <link rel="stylesheet" href="https://rlodeiro.info/css/academicons.min.css">
+        
+
+        
+            
+                
+            
+                
+                    <link rel="stylesheet" href="https://rlodeiro.info/css/github.min.css">
+                
+            
+        
+
+
+  
+    
+    <link href='//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+  
+
+
+      
+    </head>
+    <body>
+
+      
+      <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+      <h1><a href="https://rlodeiro.info/">Roberto Lodeiro</a></h1>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="https://rlodeiro.info/">
+                            <i class="fa fa-home">&nbsp;</i>Inicio
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/about/">
+                            <i class="fa fa-id-card-o">&nbsp;</i>Sobre mi
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/blog/">
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/categories/">
+                            <i class="fa fa-sitemap">&nbsp;</i>Categorias
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/contact/">
+                            <i class="fa fa-envelope-o">&nbsp;</i>Contacto
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="https://rlodeiro.info/">
+                            <h3>
+                                <i class="fa fa-home">&nbsp;</i>Inicio
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/about/">
+                            <h3>
+                                <i class="fa fa-id-card-o">&nbsp;</i>Sobre mi
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/blog/">
+                            <h3>
+                                <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/categories/">
+                            <h3>
+                                <i class="fa fa-sitemap">&nbsp;</i>Categorias
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/contact/">
+                            <h3>
+                                <i class="fa fa-envelope-o">&nbsp;</i>Contacto
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section class="recent-posts">
+            <div class="mini-posts">
+                <header>
+                    <h3>Publicaciones Recientes</h3>
+                </header>
+                
+
+                
+                    
+                
+
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/audio_multiroom/">Audio Multiroom</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-04-14'>
+                                    April 14, 2019</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/audio_multiroom/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2019/04/audio_multiroom//audio_multiroom.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/personalizar_xfce/">Personalizar XFCE</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-04-07'>
+                                    April 7, 2019</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/personalizar_xfce/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2019/04/personalizar_xfce//personalizar_xfce.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/instalacion_debian/">Instalar Debian 9 Stretch</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-03-30'>
+                                    March 30, 2019</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/instalacion_debian/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian//instalacion_Debian.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/sai/">SAI | Sistema de alimentacion ininterrumpida</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-12-30'>
+                                    December 30, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/sai/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/12/SAI//SAI.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/mqtt2/">MQTT | Parte 2</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-12-05'>
+                                    December 5, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/mqtt2/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/12/mqtt2//mqtt2.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+
+                
+                    <a href=
+                        
+                            /blog/
+                        
+                        class="button">View more posts</a>
+                
+            </div>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Comparte esta publicación <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2frlodeiro.info%2fblog%2faudio_multiroom%2f&amp;text=Audio%20Multiroom&amp;via=lodeiro0001" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frlodeiro.info%2fblog%2faudio_multiroom%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=https%3a%2f%2frlodeiro.info%2fblog%2faudio_multiroom%2f&amp;title=Audio%20Multiroom" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2frlodeiro.info%2fblog%2faudio_multiroom%2f&amp;title=Audio%20Multiroom" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2frlodeiro.info%2fblog%2faudio_multiroom%2f&amp;description=Audio%20Multiroom" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Chequea este post de Roberto%20Lodeiro&amp;body=https%3a%2f%2frlodeiro.info%2fblog%2faudio_multiroom%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+  <header>
+    <div class="title">
+        
+            <h1><a href="https://rlodeiro.info/blog/audio_multiroom/">Audio Multiroom</a></h1>
+            
+        
+        
+            <p>Servidor multimedia con soporte multiroom</p>
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published"
+            datetime='2019-04-14'>
+            April 14, 2019</time>
+        <span class="author">Roberto Lodeiro</span>
+        
+        
+    </div>
+</header>
+
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2frlodeiro.info%2fblog%2faudio_multiroom%2f&amp;text=Audio%20Multiroom&amp;via=lodeiro0001" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frlodeiro.info%2fblog%2faudio_multiroom%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=https%3a%2f%2frlodeiro.info%2fblog%2faudio_multiroom%2f&amp;title=Audio%20Multiroom" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2frlodeiro.info%2fblog%2faudio_multiroom%2f&amp;title=Audio%20Multiroom" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2frlodeiro.info%2fblog%2faudio_multiroom%2f&amp;description=Audio%20Multiroom" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Chequea este post de Roberto%20Lodeiro&amp;body=https%3a%2f%2frlodeiro.info%2fblog%2faudio_multiroom%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+      </ul>
+    </section>
+  
+
+  
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/audio_multiroom/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2019/04/audio_multiroom//audio_multiroom.jpg" alt="">
+        </a>
+    
+
+
+  <div id="content">
+    
+
+<p>Hoy vamos a instalar y configurar <code>forked-daapd</code>, un servidor multimedia para nuestra biblioteca musical.</p>
+
+<p><code>DAAP</code> (Digital Audio Access Protocol) es un protocolo ideado por Apple, el cual es utilizado por iTunes. Nuestro servidor será compatible por lo tanto con iTunes, dispositivos comerciales preparados para trabajar con Airplay, clientes MPD, entre otros.</p>
+
+<p>
+
+    
+        
+    
+
+    <a href="https://rlodeiro.info/blog/airplay_linux/" target='_blank'>Tal como expliqué en una entrada anterior,</a>
+
+ podemos montar nuestros propios dispositivos compatibles con Airplay con una simple <code>Raspberry Pi</code> con <code>Shairport Sync</code> instalado conectándola a nuestro equipo Hi-Fi, altavoz auto-amplificado o similar.</p>
+
+<p>La idea es que tengamos en las <code>estancias</code> deseadas uno de estos dispositivos para poder enviar nuestra música a cada una de ellas.</p>
+
+<hr style="border-color: #d6d6d6;" />
+
+<h1 id="1-instalación">1. Instalación</h1>
+
+<p>Primero, vamos a instalar <code>forked-daapd</code> en nuestro servidor, en mi caso es una Raspberry Pi.</p>
+
+<ul>
+<li><p>Agregamos la key del repositorio</p>
+
+<pre><code class="language-bash">$ wget -q -O - http://www.gyfgafguf.dk/raspbian/forked-daapd.gpg | sudo apt-key add -
+</code></pre></li>
+
+<li><p>Añadimos el repositorio en <code>/etc/apt/sources.list.d/forked-daapd.list</code></p>
+
+<pre><code class="language-bash">$ sudo nano /etc/apt/sources.list.d/forked-daapd.list
+</code></pre>
+
+<p>Dentro pegamos lo siguiente y guardamos:</p>
+
+<pre><code class="language-txt">deb http://www.gyfgafguf.dk/raspbian/forked-daapd/ stretch contrib
+</code></pre></li>
+
+<li><p>Instalamos forked-daapd</p>
+
+<pre><code class="language-bash">$ sudo apt update
+$ sudo apt install forked-daapd
+</code></pre></li>
+</ul>
+
+<h1 id="2-configuración">2. Configuración</h1>
+
+<p>El archivo de configuración se encuentra en <code>/etc/forked-daapd.conf</code>.</p>
+
+<p>En mi caso he deshabilitado la salida local, ya que en mi Raspberry Pi no tengo conectado ningún equipo de audio. Si quieres que tu server también sea un de los dispositivos Airplay disponibles, puedes habilitarlo o en su lugar instalar shairport-sync 
+
+    
+        
+    
+
+    <a href="https://rlodeiro.info/blog/airplay_linux/" target='_blank'>tal como indiqué en el otro post</a>
+
+.</p>
+
+<ul>
+<li><p>Abrimos el archivo con nano</p>
+
+<pre><code class="language-bash">$ sudo nano /etc/forked-daapd.conf
+</code></pre></li>
+
+<li><p>Modificamos las siguientes líneas, eliminando <code>#</code> en caso de que figuren como comentarios</p></li>
+</ul>
+
+<pre><code class="language-txt">#Configuración general
+uid = &quot;root&quot;
+
+# Librería
+name = &quot;Nombre de tu servidor&quot; # por defecto coge el nombre del host
+port = 3689
+directories = {&quot;/ruta/directorio/de_tu_biblioteca&quot;}
+
+# Salida de audio local
+type = &quot;disabled&quot;
+</code></pre>
+
+<ul>
+<li>Finalizada la configuración, habilitamos el inicio automático con el arranque del sistema y reiniciamos el servicio para aplicar los cambios</li>
+</ul>
+
+<pre><code class="language-bash">$ sudo systemctl enable forked-daapd
+$ sudo service forked-daapd restart
+</code></pre>
+
+<p>Para poder utilizar forked-daapd al completo, tenemos que esperar a que termine de escanear la biblioteca, el tiempo que tarde dependerá de la cantidad de música que tengas. Podemos ver el progreso con:</p>
+
+<pre><code class="language-bash">tail -f /var/log/forked-daapd.log
+</code></pre>
+
+<h1 id="3-interfaz-web">3. Interfaz web</h1>
+
+<p>La interfaz web está disponible en <code>http://ip_de_tu_servidor:3689</code>.</p>
+
+<h2 id="3-1-biblioteca">3.1 Biblioteca</h2>
+
+<p>Lo primero que veremos será la parte destinada a navegar por nuestra biblioteca y nuestra música.</p>
+
+<p><img src="https://rlodeiro.info/img/posts/2019/04/audio_multiroom/forked-daapd1.png" alt="" /></p>
+
+<p>Para <code>elegir en que dispositivo o dispositivos</code> queremos reproducir la misma, solo tenemos que desplegar el menú pinchando en el icono del altavoz, y seleccionarlos, pudiendo manejar el volumen de forma independiente para cada uno de ellos.</p>
+
+<p>En la imagen superior, vemos que solo tengo dos conectados a la red en este momento, uno llamado <code>Studio</code> (maquina linux con Shairport Sync instalado) donde se está reproduciendo audio, y un <code>Apple TV</code> el cual no está reproduciendo nada. Si selecciono este último para escuchar la música en ambas estancias, veremos algo así:</p>
+
+<p><img src="https://rlodeiro.info/img/posts/2019/04/audio_multiroom/forked-daapd2.png" alt="" /></p>
+
+<p>Ahora la música se está reproduciendo en ambas estancias, con un volumen diferente en cada una de ellas.</p>
+
+<h2 id="3-2-administración">3.2 Administración</h2>
+
+<p>Pinchando en el icono de la rueda/Admin, accedemos al panel de administración de forked-daapd.</p>
+
+<p><img src="https://rlodeiro.info/img/posts/2019/04/audio_multiroom/forked-daapd3.png" alt="" /></p>
+
+<p>Aquí tenemos información relativa a nuestra biblioteca, pudiendo actualizar la misma. También veremos las solicitudes remotas de algunos clientes como <code>remote</code> en dispositivos Apple, salidas disponibles y la posibilidad de conectar servicios externos como Sportify, yo no lo tengo configurado ya que no lo utilizo.</p>
+
+<p>Tienes toda la 
+
+    
+        
+    
+
+    <a href="https://ejurgensen.github.io/forked-daapd/" target='_blank'>documentación en la web oficial de forked-daapd</a>
+
+.</p>
+
+<h1 id="4-clientes">4. Clientes</h1>
+
+<p>La 
+
+    
+        
+    
+
+    <a href="https://ejurgensen.github.io/forked-daapd/#supported-clients" target='_blank'>lista de clientes soportados</a>
+
+ es muy extensa. Paso a listar los que yo utilizo.</p>
+
+<h2 id="4-1-shairport-sync-linux">4.1 Shairport Sync (Linux)</h2>
+
+<p>Este reproductor de audio compatible con <code>Airplay</code>, 
+
+    
+        
+    
+
+    <a href="https://rlodeiro.info/blog/airplay_linux/" target='_blank'>tal como expliqué en una entrada anterior que pudes ver aquí</a>
+
+, lo podemos instalar en cualquier máquina Linux.</p>
+
+<p>Es el principal cliente que utilizo, ya que es compatible con <code>multiroom</code> y me permite reproducir la música en diferentes instancias de forma sincronizada.</p>
+
+<h2 id="4-2-rhythmbox-linux">4.2 Rhythmbox (Linux)</h2>
+
+<p>En mis máquinas Linux siempre utilizo como reproductor de audio <code>Rhythmbox</code>.</p>
+
+<ul>
+<li>Para instalarlo en Debian o derivados:</li>
+</ul>
+
+<pre><code class="language-bash">$ sudo apt install rhythmbox
+</code></pre>
+
+<p>Además de reproducir audio local, Rhythmbox es compatible con el protocolo <code>DAAP</code>, por lo que tenemos disponible nuestra biblioteca servida por forked-daapd en el apartado <code>Shared</code>.</p>
+
+<p><img src="https://rlodeiro.info/img/posts/2019/04/audio_multiroom/rhythmbox.png" alt="" /></p>
+
+<h2 id="4-3-itunes-remote-ios">4.3 iTunes Remote (iOS)</h2>
+
+<p>Además de la interfaz web, también podemos controlar la música desde nuestros dispositivos iOS 
+
+    
+        
+    
+
+    <a href="https://itunes.apple.com/es/app/itunes-remote/id284417350?mt=8" target='_blank'>con iTunes Remote, disponible en la App Store.</a>
+
+</p>
+
+<p><img src="https://rlodeiro.info/img/posts/2019/04/audio_multiroom/itunes_remote.png" alt="" /></p>
+
+<p>Añadimos nuestra biblioteca de iTunes (forked-daapd) e introducimos el código de activación en la interfaz web de forked-daapd/administración tal como hemos visto antes.</p>
+
+<p><code>iTunes Remote</code> solo nos permite <code>controlar</code>, pero no reproducir el audio en el propio dispositivo. Si te interesa esto, presta atención al siguiente apartado.</p>
+
+<h1 id="5-mp3-stream">5. MP3 Stream</h1>
+
+<p>Además de todo lo anterior, forked-daapd hace un <code>streaming</code> del audio en formato <code>mp3</code>,  el cual está disponible desde:</p>
+
+<pre><code class="language-txt">http://ip_servidor:3689/stream.mp3
+</code></pre>
+
+<p>Se accede a el desde cualquier cliente compatible en iOS, Linux u otros sistemas. También  podemos activarlo en la interfaz web (figura como una de las salidas disponibles) y así escucharemos el streaming en el propio dispositivo a través de la propia web.</p>
+
+<p>Yo lo he probado con <code>VLC</code> y va perfecto.</p>
+
+<p><img src="https://rlodeiro.info/img/posts/2019/04/audio_multiroom/vlc.png" alt="" /></p>
+
+<p>Recuerda consultar la documentación oficial de <code>forked-daapd</code> 
+
+    
+        
+    
+
+    <a href="https://ejurgensen.github.io/forked-daapd/#supported-clients" target='_blank'>aquí</a>
+
+ si necesitas alguna configuración adicional que yo no he utilizado.</p>
+
+<p>También puedes 
+
+    
+        
+    
+
+    <a href="https://rlodeiro.info/blog/airplay_linux/" target='_blank'>revisar mi post sobre Shairport Sync</a>
+
+ para configurar tus propios dispositivos y ¡empezar a disfrutar de tu nuevo sistema de audio multiroom!.</p>
+
+<hr style="border-color: #d6d6d6;" />
+
+<p>Espero que sea útil, ¡gracias por leerme!</p>
+
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/categories/servicios">Servicios</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/categories/linux">Linux</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+            
+            
+                <i class="fa fa-tags"></i>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/linux">Linux</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/audio">Audio</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/multiroom">Multiroom</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/airplay">AirPlay</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/forked-daapd">forked-daapd</a></li>
+                
+            
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="https://rlodeiro.info/blog/personalizar_xfce/"
+                class="button big previous">Personalizar XFCE</a></li>
+    
+
+    
+</ul>
+
+
+    </div>
+    
+<section id="sidebar">
+
+  
+  <section id="intro">
+    
+    
+      
+        <a href='https://rlodeiro.info/'><img src="https://rlodeiro.info/img/main/logo.jpg" class="intro-circle" width="" alt="" /></a>
+      
+    
+    
+      <header>
+        <h2>Roberto Lodeiro</h2>
+        <p>Reality is wrong. Dreams are for real.</p>
+      </header>
+    
+    
+      <ul class="icons">
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//twitter.com/lodeiro0001" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:me@rlodeiro.info" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+  </section>
+
+  
+  <section class="recent-posts">
+    <div class="mini-posts">
+      <header>
+        <h3>Publicaciones Recientes</h3>
+      </header>
+      <div class="posts-container">
+        
+
+        
+          
+        
+
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/audio_multiroom/">Audio Multiroom</a>
+              </h3>
+              
+              <time class="published" datetime='2019-04-14'>
+                April 14, 2019
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/audio_multiroom/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2019/04/audio_multiroom//audio_multiroom.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/personalizar_xfce/">Personalizar XFCE</a>
+              </h3>
+              
+              <time class="published" datetime='2019-04-07'>
+                April 7, 2019
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/personalizar_xfce/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2019/04/personalizar_xfce//personalizar_xfce.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/instalacion_debian/">Instalar Debian 9 Stretch</a>
+              </h3>
+              
+              <time class="published" datetime='2019-03-30'>
+                March 30, 2019
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/instalacion_debian/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian//instalacion_Debian.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/sai/">SAI | Sistema de alimentacion ininterrumpida</a>
+              </h3>
+              
+              <time class="published" datetime='2018-12-30'>
+                December 30, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/sai/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/12/SAI//SAI.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/mqtt2/">MQTT | Parte 2</a>
+              </h3>
+              
+              <time class="published" datetime='2018-12-05'>
+                December 5, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/mqtt2/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/12/mqtt2//mqtt2.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+      </div>
+
+      
+        <a href=
+          
+            /blog/
+          
+        class="button">Ver más entradas</a>
+      
+    </div>
+  </section>
+
+  
+  
+  
+  
+  
+    <section id="categories">
+      <header>
+        <h3>
+          <a href="https://rlodeiro.info/categories/">Categorías</a>
+        </h3>
+      </header>
+        
+          
+        
+
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/herramientas/">herramientas</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/iot/">iot</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/linux/">linux</a>
+                <span style="float:right;">9</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/raspberry-pi/">raspberry-pi</a>
+                <span style="float:right;">4</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/servicios/">servicios</a>
+                <span style="float:right;">6</span>
+              
+            </header>
+          </article>
+        </p>
+        
+    </section>
+  
+  
+
+  
+  
+    <section id="mini-bio">
+      <h3>Sobre Mi</h3>
+      <p>¿De donde viene? ¿Cual es su color de pelo? ¿A que tribu urbana pertenece? Si estás muy aburrid@ y/o quieres saberlo ¡adelante!</p>
+      <a href="https://rlodeiro.info/about/" class="button">Leer Más</a>
+    </section>
+  
+
+  
+  <section id="footer">
+    
+      <ul class="icons">
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//twitter.com/lodeiro0001" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:me@rlodeiro.info" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+    <p class="copyright">
+      
+        &copy; 2019
+        
+          Roberto Lodeiro
+        
+      .
+      Powered by <a href="//gohugo.io" target="_blank">Hugo</a>
+    </p>
+  </section>
+</section>
+
+    </div>
+    <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+    
+
+    
+      
+    
+
+    
+      
+      
+      
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+        
+        
+        
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/r.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/yaml.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/css.min.js"></script>
+        <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+      
+    
+    
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+      <script src="https://rlodeiro.info/js/util.js"></script>
+      <script src="https://rlodeiro.info/js/main.js"></script>
+      <script src="https://rlodeiro.info/js/backToTop.js"></script>
+    
+
+    
+      
+        
+      
+        
+          <script src="https://rlodeiro.info/js/highlight.min.js"></script>
+        
+      
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+      <script src="//yihui.name/js/math-code.js"></script>
+<script async
+src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+  </body>
+</html>
+
