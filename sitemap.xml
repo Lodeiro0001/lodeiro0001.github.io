@@ -32,13 +32,13 @@
   </url>
   
   <url>
-    <loc>https://rlodeiro.info/categories/linux/</loc>
+    <loc>https://rlodeiro.info/tags/linux/</loc>
     <lastmod>2019-04-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rlodeiro.info/tags/linux/</loc>
+    <loc>https://rlodeiro.info/categories/linux/</loc>
     <lastmod>2019-04-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -119,13 +119,13 @@
   </url>
   
   <url>
-    <loc>https://rlodeiro.info/categories/iot/</loc>
+    <loc>https://rlodeiro.info/tags/iot/</loc>
     <lastmod>2018-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rlodeiro.info/tags/iot/</loc>
+    <loc>https://rlodeiro.info/categories/iot/</loc>
     <lastmod>2018-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
