@@ -1,5 +1,4 @@
 <!DOCTYPE HTML>
-
 <html>
     <head>
         
@@ -15,10 +14,10 @@
              "@id": "https:\/\/rlodeiro.info"
         },
         "articleSection" : "blog",
-        "name" : "Raspberry Pi - Backup remoto",
+        "name" : ".Title",
         "headline" : "Raspberry Pi - Backup remoto",
         "description" : "Como crear una copia de seguridad sin apagar el sistema",
-        "inLanguage" : "es-es",
+        "inLanguage" : "es-ES",
         "author" : "",
         "creator" : "",
         "publisher": "",
@@ -34,13 +33,13 @@
     </script>
         
             
-                <title>Raspberry Pi - Backup remoto</title>
+                <title>Raspberry Pi - Backup remoto | Roberto Lodeiro</title>
             
         
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.55.1" />
+        <meta name="generator" content="Hugo 0.55.5" />
         <link rel="shortcut icon" href="https://rlodeiro.info/favicon.ico?v=kPP08pKEXB">
 
 
@@ -413,6 +412,42 @@
 
                         </article>
                 
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/airplay_linux/">AirPlay en Linux</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-11-27'>
+                                    November 27, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/airplay_linux/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/11/airplay_linux//airplay_linux.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
 
                 
                     <a href=
@@ -668,12 +703,14 @@
 <li><p>Entrar a la Raspberry PI por ssh</p>
 
 <pre><code class="language-bash">$ ssh pi@xxx.xxx.x.xxx
-</code></pre></li>
+</code></pre>
 
+<ul>
 <li><p>Ver el nombre del disco</p>
 
 <pre><code>$ lsblk -p
-</code></pre>
+</code></pre></li>
+</ul>
 
 <p>Saldrá algo como lo siguiente:</p>
 
@@ -688,13 +725,13 @@
 <li><p>Cerrar la conexion ssh</p>
 
 <pre><code class="language-bash">$ exit
-</code></pre></li>
-</ul>
+</code></pre>
 
 <h1 id="iniciar-el-backup">Iniciar el backup</h1>
 
 <ul>
-<li><p>Ejecutar lo siguiente</p>
+<li>Ejecutar lo siguiente</li>
+</ul>
 
 <pre><code class="language-bash">$ ssh pi@xxx.xxx.x.xxx &quot;sudo dd if=/dev/mmcblk0 bs=1M | gzip -&quot; | dd of=$HOME/backupPi.gz status=progress
 </code></pre>
@@ -817,6 +854,11 @@
     
     
       <ul class="icons">
+        
+          
+    <li><a href="https://rlodeiro.info/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
         
         
 
@@ -1108,6 +1150,44 @@
 
           </article>
         
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/airplay_linux/">AirPlay en Linux</a>
+              </h3>
+              
+              <time class="published" datetime='2018-11-27'>
+                November 27, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/airplay_linux/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/11/airplay_linux//airplay_linux.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
       </div>
 
       
@@ -1208,6 +1288,11 @@
   <section id="footer">
     
       <ul class="icons">
+        
+          
+    <li><a href="https://rlodeiro.info/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
         
         
 

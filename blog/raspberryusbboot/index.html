@@ -1,5 +1,4 @@
 <!DOCTYPE HTML>
-
 <html>
     <head>
         
@@ -15,10 +14,10 @@
              "@id": "https:\/\/rlodeiro.info"
         },
         "articleSection" : "blog",
-        "name" : "Raspberry Pi \x26 USB Boot Mode",
+        "name" : ".Title",
         "headline" : "Raspberry Pi \x26 USB Boot Mode",
         "description" : "Como arrancar una Raspberry Pi desde un disco USB",
-        "inLanguage" : "es-es",
+        "inLanguage" : "es-ES",
         "author" : "",
         "creator" : "",
         "publisher": "",
@@ -28,19 +27,19 @@
         "datePublished": "2018-09-28 00:00:00 \x2b0000 UTC",
         "dateModified" : "2018-09-28 00:00:00 \x2b0000 UTC",
         "url" : "https:\/\/rlodeiro.info\/blog\/raspberryusbboot\/",
-        "wordCount" : "915",
+        "wordCount" : "918",
         "keywords" : [ "boot","USB","Raspberry","Blog" ]
     }
     </script>
         
             
-                <title>Raspberry Pi &amp; USB Boot Mode</title>
+                <title>Raspberry Pi &amp; USB Boot Mode | Roberto Lodeiro</title>
             
         
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.55.1" />
+        <meta name="generator" content="Hugo 0.55.5" />
         <link rel="shortcut icon" href="https://rlodeiro.info/favicon.ico?v=kPP08pKEXB">
 
 
@@ -66,7 +65,7 @@
 
 <meta itemprop="datePublished" content="2018-09-28T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-09-28T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="915">
+<meta itemprop="wordCount" content="918">
 
 
 
@@ -413,6 +412,42 @@
 
                         </article>
                 
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/airplay_linux/">AirPlay en Linux</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-11-27'>
+                                    November 27, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/airplay_linux/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/11/airplay_linux//airplay_linux.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
 
                 
                     <a href=
@@ -662,23 +697,26 @@
 <li><p>Actualizar nuestra Raspberry Pi</p>
 
 <pre><code class="language-bash">$ sudo apt-get update &amp;&amp; sudo apt-get upgrade
-</code></pre></li>
-
-<li><p>Habilitar USB boot mode</p>
-
-<pre><code class="language-bash">$ echo program_usb_boot_mode=1 | sudo tee -a /boot/config.txt
 </code></pre>
 
-<p>Esto añadirá <code>program_usb_boot_mode=1</code> al final de <code>/boot/config.txt</code>. En cuanto reiniciemos la Raspberry Pi, quedará activado USB Boot Mode de forma permanente, podremos arrancar desde un disco USB sin necesidad de la tarjeta MicroSD, pero si esta está presente, se arrancará desde ella. Si utilizamos esta MicroSD en otra Raspberry Pi, en esta también se activará USB Boot Mode.</p></li>
+<ul>
+<li>Habilitar USB boot mode
+<code>bash
+$ echo program_usb_boot_mode=1 | sudo tee -a /boot/config.txt
+</code></li>
+</ul></li>
+</ul>
 
+<p>Esto añadirá <code>program_usb_boot_mode=1</code> al final de <code>/boot/config.txt</code>. En cuanto reiniciemos la Raspberry Pi, quedará activado USB Boot Mode de forma permanente, podremos arrancar desde un disco USB sin necesidad de la tarjeta MicroSD, pero si esta está presente, se arrancará desde ella. Si utilizamos esta MicroSD en otra Raspberry Pi, en esta también se activará USB Boot Mode.</p>
+
+<ul>
 <li><p>Para comprobar que se ha realizado correctamente</p>
 
 <pre><code class="language-bash">$ vcgencmd otp_dump | grep 17:
 17:3020000a
 </code></pre>
 
-<p>Verificamos que la salida sea <code>0x3020000a</code>. De no ser así, repetiremos el proceso. Si sigue sin funcionar, significa que la Raspberry Pi tiene un problema de hardware. A mi me ha funcionado sin problema tanto en una Pi 3B como en una 3B+.</p></li>
-</ul>
+<p>Verificamos que la salida sea <code>0x3020000a</code>. De no ser así, repetiremos el proceso. Si sigue sin funcionar, significa que la Raspberry Pi tiene un problema de hardware. A mi me ha funcionado sin problema tanto en una Pi 3B como en una 3B+.</p>
 
 <p>Solo tenemos que 
 
@@ -725,22 +763,27 @@ Esto nos devolverá el listado de discos/particiones que tenemos en el sistema. 
 <pre><code class="language-bash">$ sudo mkdir /mnt/rootUSB
 $ sudo mount /dev/sda2 /mnt/rootUSB
 </code></pre></li>
+</ul></li>
 
 <li><p>Para conocer su PARTUUID</p>
 
 <pre><code class="language-bash">$ sudo blkid -p /dev/sda2
 </code></pre>
 
-<p>No confundir UUID con PARTUUID. Encontraremos PARTUUID como <code>PART_ENTRY_UUID=&quot;XXXXXXXX-02&quot;</code>. Guardamos el código PARTUUID correspondiente a la partición root de nuestro disco USB.</p></li>
+<p>No confundir UUID con PARTUUID. Encontraremos PARTUUID como <code>PART_ENTRY_UUID=&quot;XXXXXXXX-02&quot;</code>. Guardamos el código PARTUUID correspondiente a la partición root de nuestro disco USB.</p>
 
-<li><p>Hacemos un backup de la configuración de inicio de la sd y la editamos</p>
-
-<pre><code class="language-bash">$ sudo cp /boot/cmdline.txt /boot/cmdline.sdBoot.bak
+<ul>
+<li>Hacemos un backup de la configuración de inicio de la sd y la editamos
+<code>bash
+$ sudo cp /boot/cmdline.txt /boot/cmdline.sdBoot.bak
 $ sudo nano /boot/cmdline.txt
-</code></pre>
+</code></li>
+</ul></li>
+</ul>
 
-<p>Veremos algo como <code>root=PARTUUID=XXXXXXXX-02</code>, correspondiente al <code>/</code>de  la sd, lo sustituimos por el PARTUUID correpondiente a la partición root del USB que copiamos antes.</p></li>
+<p>Veremos algo como <code>root=PARTUUID=XXXXXXXX-02</code>, correspondiente al <code>/</code>de  la sd, lo sustituimos por el PARTUUID correpondiente a la partición root del USB que copiamos antes.</p>
 
+<ul>
 <li><p>Editamos <code>fstab</code> en el disco USB para indicar el <code>/boot</code> de la sd</p>
 
 <pre><code class="language-bash">$ sudo nano /mnt/rootUSB/etc/fstab
@@ -767,24 +810,26 @@ PARTUUID=XXXXXXXX-01       /boot           vfat    defaults          0       2
 <li><p>Instalamos <code>rsync</code> si no lo estuviera</p>
 
 <pre><code class="language-bash">$ sudo apt install rsync
-</code></pre></li>
+</code></pre>
 
-<li><p>Montamos el disco USB (sustituir <code>sdX</code> por la de vuestro disco USB)</p>
-
-<pre><code class="language-bash">$ sudo mount /dev/sdX /mnt
-</code></pre></li>
+<ul>
+<li>Montamos el disco USB (sustituir <code>sdX</code> por la de vuestro disco USB)
+<code>bash
+$ sudo mount /dev/sdX /mnt
+</code></li>
+</ul></li>
 
 <li><p>Copiamos <code>/</code> de nuestra MicroSD al disco USB</p>
 
 <pre><code class="language-bash">$ sudo rsync -axv / /mnt/
 </code></pre>
 
-<p>Una vez copiada la partición root en el disco USB, procedemos igual que en la parte 2.1</p></li>
-</ul>
+<p>Una vez copiada la partición root en el disco USB, procedemos igual que en la parte 2.1</p>
 
 <hr style="border-color: #d6d6d6;" />
 
-<p>Espero que sea útil, ¡gracias por leerme!</p>
+<p>Espero que sea útil, ¡gracias por leerme!</p></li>
+</ul>
 
   </div>
 
@@ -861,6 +906,11 @@ PARTUUID=XXXXXXXX-01       /boot           vfat    defaults          0       2
     
     
       <ul class="icons">
+        
+          
+    <li><a href="https://rlodeiro.info/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
         
         
 
@@ -1152,6 +1202,44 @@ PARTUUID=XXXXXXXX-01       /boot           vfat    defaults          0       2
 
           </article>
         
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/airplay_linux/">AirPlay en Linux</a>
+              </h3>
+              
+              <time class="published" datetime='2018-11-27'>
+                November 27, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/airplay_linux/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/11/airplay_linux//airplay_linux.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
       </div>
 
       
@@ -1252,6 +1340,11 @@ PARTUUID=XXXXXXXX-01       /boot           vfat    defaults          0       2
   <section id="footer">
     
       <ul class="icons">
+        
+          
+    <li><a href="https://rlodeiro.info/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
         
         
 

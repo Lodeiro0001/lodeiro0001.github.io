@@ -1,5 +1,4 @@
 <!DOCTYPE HTML>
-
 <html>
     <head>
         
@@ -15,10 +14,10 @@
              "@id": "https:\/\/rlodeiro.info"
         },
         "articleSection" : "blog",
-        "name" : "SAI | Sistema de alimentacion ininterrumpida",
+        "name" : ".Title",
         "headline" : "SAI | Sistema de alimentacion ininterrumpida",
         "description" : "Monitorizar un SAI desde Linux",
-        "inLanguage" : "es-es",
+        "inLanguage" : "es-ES",
         "author" : "",
         "creator" : "",
         "publisher": "",
@@ -28,19 +27,19 @@
         "datePublished": "2018-12-30 00:00:00 \x2b0000 UTC",
         "dateModified" : "2018-12-30 00:00:00 \x2b0000 UTC",
         "url" : "https:\/\/rlodeiro.info\/blog\/sai\/",
-        "wordCount" : "492",
+        "wordCount" : "493",
         "keywords" : [ "SAI","UPS","Linux","Raspberry","Blog" ]
     }
     </script>
         
             
-                <title>SAI | Sistema de alimentacion ininterrumpida</title>
+                <title>SAI | Sistema de alimentacion ininterrumpida | Roberto Lodeiro</title>
             
         
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.55.1" />
+        <meta name="generator" content="Hugo 0.55.5" />
         <link rel="shortcut icon" href="https://rlodeiro.info/favicon.ico?v=kPP08pKEXB">
 
 
@@ -66,7 +65,7 @@
 
 <meta itemprop="datePublished" content="2018-12-30T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-12-30T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="492">
+<meta itemprop="wordCount" content="493">
 
 
 
@@ -413,6 +412,42 @@
 
                         </article>
                 
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/airplay_linux/">AirPlay en Linux</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-11-27'>
+                                    November 27, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/airplay_linux/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/11/airplay_linux//airplay_linux.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
 
                 
                     <a href=
@@ -654,12 +689,15 @@
 <li><p>Instalar el demonio</p>
 
 <pre><code class="language-bash">$ sudo apt install apcupsd
-</code></pre></li>
-
-<li><p>Configurar el SAI</p>
-
-<pre><code class="language-bash">$ sudo nano /etc/apcupsd/apcupsd.conf
 </code></pre>
+
+<ul>
+<li>Configurar el SAI
+<code>bash
+$ sudo nano /etc/apcupsd/apcupsd.conf
+</code></li>
+</ul></li>
+</ul>
 
 <p>Buscamos y modificamos los siguientes parámetros:</p>
 
@@ -673,8 +711,9 @@ ONBATTERYDELAY 6
 BATTERYLEVEL 5
 MINUTES 3
 TIMEOUT 0
-</code></pre></li>
+</code></pre>
 
+<ul>
 <li><p>Indicar que la configuración esta realizada</p>
 
 <pre><code class="language-bash">$ sudo nano /etc/default/apcupsd
@@ -836,6 +875,11 @@ END APC : fecha hora
     
       <ul class="icons">
         
+          
+    <li><a href="https://rlodeiro.info/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
         
 
 
@@ -942,8 +986,8 @@ END APC : fecha hora
                 <a href="https://rlodeiro.info/blog/audio_multiroom/">Audio Multiroom</a>
               </h3>
               
-              <time class="published" datetime='2018-12-30'>
-                December 30, 2018
+              <time class="published" datetime='2019-04-14'>
+                April 14, 2019
               </time>
             </header>
             
@@ -1126,6 +1170,44 @@ END APC : fecha hora
 
           </article>
         
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/airplay_linux/">AirPlay en Linux</a>
+              </h3>
+              
+              <time class="published" datetime='2018-11-27'>
+                November 27, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/airplay_linux/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/11/airplay_linux//airplay_linux.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
       </div>
 
       
@@ -1226,6 +1308,11 @@ END APC : fecha hora
   <section id="footer">
     
       <ul class="icons">
+        
+          
+    <li><a href="https://rlodeiro.info/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
         
         
 

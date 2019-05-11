@@ -1,5 +1,4 @@
 <!DOCTYPE HTML>
-
 <html>
     <head>
         
@@ -15,10 +14,10 @@
              "@id": "https:\/\/rlodeiro.info"
         },
         "articleSection" : "blog",
-        "name" : "RAID en Linux",
+        "name" : ".Title",
         "headline" : "RAID en Linux",
         "description" : "Configura un RAID por software con mdadm",
-        "inLanguage" : "es-es",
+        "inLanguage" : "es-ES",
         "author" : "",
         "creator" : "",
         "publisher": "",
@@ -28,19 +27,19 @@
         "datePublished": "2018-10-21 00:00:00 \x2b0000 UTC",
         "dateModified" : "2018-10-21 00:00:00 \x2b0000 UTC",
         "url" : "https:\/\/rlodeiro.info\/blog\/mdadm\/",
-        "wordCount" : "477",
+        "wordCount" : "481",
         "keywords" : [ "RAID","Linux","mdadm","Raspberry Pi","Debian","Blog" ]
     }
     </script>
         
             
-                <title>RAID en Linux</title>
+                <title>RAID en Linux | Roberto Lodeiro</title>
             
         
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.55.1" />
+        <meta name="generator" content="Hugo 0.55.5" />
         <link rel="shortcut icon" href="https://rlodeiro.info/favicon.ico?v=kPP08pKEXB">
 
 
@@ -66,7 +65,7 @@
 
 <meta itemprop="datePublished" content="2018-10-21T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-10-21T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="477">
+<meta itemprop="wordCount" content="481">
 
 
 
@@ -413,6 +412,42 @@
 
                         </article>
                 
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/airplay_linux/">AirPlay en Linux</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-11-27'>
+                                    November 27, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/airplay_linux/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/11/airplay_linux//airplay_linux.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
 
                 
                     <a href=
@@ -664,34 +699,40 @@
 <pre><code class="language-bash">$ lsblk
 $ sudo apt-get update
 $ sudo apt-get install mdadm
-</code></pre></li>
+</code></pre>
 
-<li><p>Crear el RAID
-Cambiar sda1 y sdb1 según configuración propia</p>
-
-<pre><code class="language-bash">$ sudo mdadm --create /dev/md1 --level=mirror --raid-devices=2 /dev/sda1 /dev/sdb1
-</code></pre></li>
+<ul>
+<li>Crear el RAID
+Cambiar sda1 y sdb1 según configuración propia
+<code>bash
+$ sudo mdadm --create /dev/md1 --level=mirror --raid-devices=2 /dev/sda1 /dev/sdb1
+</code></li>
+</ul></li>
 
 <li><p>Dar formato ext4</p>
 
 <pre><code class="language-bash">$ sudo mkfs.ext4 /dev/md0
-</code></pre></li>
+</code></pre>
 
-<li><p>Crear el nuevo directorio y montar el RAID</p>
-
-<pre><code class="language-bash">$ sudo mkdir -p /mnt/raid1
+<ul>
+<li>Crear el nuevo directorio y montar el RAID
+<code>bash
+$ sudo mkdir -p /mnt/raid1
 $ sudo mount /dev/md1 /mnt/raid1
-</code></pre></li>
+</code></li>
+</ul></li>
 
 <li><p>Para que el volumen se monte en el arranque del sistema</p>
 
 <pre><code class="language-bash">$ echo &quot;/dev/md1 /mnt/raid1/ ext4 defaults,noatime 0 1&quot; | sudo tee -a /etc/fstab
-</code></pre></li>
+</code></pre>
 
-<li><p>Actualizar la configuración de mdadm</p>
-
-<pre><code class="language-bash">$ sudo mdadm --detail --scan | sudo tee -a /etc/mdadm/mdadm.conf
-</code></pre></li>
+<ul>
+<li>Actualizar la configuración de mdadm
+<code>bash
+$ sudo mdadm --detail --scan | sudo tee -a /etc/mdadm/mdadm.conf
+</code></li>
+</ul></li>
 </ul>
 
 <h1 id="mantenimiento">Mantenimiento</h1>
@@ -702,49 +743,49 @@ $ sudo mount /dev/md1 /mnt/raid1
 <pre><code class="language-bash">$ sudo mdadm --detail /dev/md1
 </code></pre>
 
-<p>Se mostrará algo similar a esto una vez finalice la sincronización inicial de los discos:</p></li>
-</ul>
+<p>Se mostrará algo similar a esto una vez finalice la sincronización inicial de los discos:</p>
 
 <pre><code class="language-txt">/dev/md1:
-        Version : 1.2
-  Creation Time : xXxxXx
-     Raid Level : raid1
-     Array Size : 976596992 (931.36 GiB 1000.04 GB)
-  Used Dev Size : 976596992 (931.36 GiB 1000.04 GB)
-   Raid Devices : 2
-  Total Devices : 2
-    Persistence : Superblock is persistent
+    Version : 1.2
+Creation Time : xXxxXx
+ Raid Level : raid1
+ Array Size : 976596992 (931.36 GiB 1000.04 GB)
+Used Dev Size : 976596992 (931.36 GiB 1000.04 GB)
+Raid Devices : 2
+Total Devices : 2
+Persistence : Superblock is persistent
 
-  Intent Bitmap : Internal
+Intent Bitmap : Internal
 
-    Update Time : xXxxXx
-          State : clean 
- Active Devices : 2
+Update Time : xXxxXx
+      State : clean 
+Active Devices : 2
 Working Devices : 2
- Failed Devices : 0
-  Spare Devices : 0
+Failed Devices : 0
+Spare Devices : 0
 
-           Name : xXxxXx:0  (local to host xXxxXx)
-           UUID : xXxxXx:xXxxXx:xXxxXx:xXxxXx
-         Events : xXxxXx
+       Name : xXxxXx:0  (local to host xXxxXx)
+       UUID : xXxxXx:xXxxXx:xXxxXx:xXxxXx
+     Events : xXxxXx
 
-    Number   Major   Minor   RaidDevice State
-       2       8       17        0      active sync   /dev/sdb1
-       1       8        1        1      active sync   /dev/sda1
+Number   Major   Minor   RaidDevice State
+   2       8       17        0      active sync   /dev/sdb1
+   1       8        1        1      active sync   /dev/sda1
 
-</code></pre>
+</code></pre></li>
 
-<ul>
 <li><p>Marcar disco como fallido y eliminarlo del RAID:</p>
 
 <pre><code class="language-bash">$ sudo mdadm --manage /dev/md1 --fail /dev/sdb1
 $ sudio mdadm --manage /dev/md1 --remove /dev/sdb1
-</code></pre></li>
+</code></pre>
 
-<li><p>Añadir disco:</p>
-
-<pre><code class="language-bash">$ sudo mdadm --manage /dev/md1 --add /dev/sdb1
-</code></pre></li>
+<ul>
+<li>Añadir disco:
+<code>bash
+$ sudo mdadm --manage /dev/md1 --add /dev/sdb1
+</code></li>
+</ul></li>
 </ul>
 
 <p>La primera vez que creemos el <code>RAID</code>, o cuando agreguemos un disco por fallo u otra circunstancia, el tiempo que tarde este en indicar <code>State: clean</code> será considerable, ya que <code>mdadm</code> necesita sincronizar completamente los discos. Obviamente esto dependerá de la capacidad de los disco, y se nos indicará el porcentaje alcanzado al consultar el estado del RAID.</p>
@@ -840,6 +881,11 @@ $ sudio mdadm --manage /dev/md1 --remove /dev/sdb1
     
     
       <ul class="icons">
+        
+          
+    <li><a href="https://rlodeiro.info/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
         
         
 
@@ -1131,6 +1177,44 @@ $ sudio mdadm --manage /dev/md1 --remove /dev/sdb1
 
           </article>
         
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/airplay_linux/">AirPlay en Linux</a>
+              </h3>
+              
+              <time class="published" datetime='2018-11-27'>
+                November 27, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/airplay_linux/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/11/airplay_linux//airplay_linux.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
       </div>
 
       
@@ -1231,6 +1315,11 @@ $ sudio mdadm --manage /dev/md1 --remove /dev/sdb1
   <section id="footer">
     
       <ul class="icons">
+        
+          
+    <li><a href="https://rlodeiro.info/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
         
         
 

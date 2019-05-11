@@ -1,5 +1,4 @@
 <!DOCTYPE HTML>
-
 <html>
     <head>
         
@@ -15,10 +14,10 @@
              "@id": "https:\/\/rlodeiro.info"
         },
         "articleSection" : "blog",
-        "name" : "Gogs | Self-Hosted Git",
+        "name" : ".Title",
         "headline" : "Gogs | Self-Hosted Git",
         "description" : "Tu propio servicio de hospedaje para repositorios Git",
-        "inLanguage" : "es-es",
+        "inLanguage" : "es-ES",
         "author" : "",
         "creator" : "",
         "publisher": "",
@@ -28,19 +27,19 @@
         "datePublished": "2018-10-07 00:00:00 \x2b0000 UTC",
         "dateModified" : "2018-10-07 00:00:00 \x2b0000 UTC",
         "url" : "https:\/\/rlodeiro.info\/blog\/gogs\/",
-        "wordCount" : "743",
+        "wordCount" : "752",
         "keywords" : [ "GO","Control de versiones","Proyectos","git","Golang","Blog" ]
     }
     </script>
         
             
-                <title>Gogs | Self-Hosted Git</title>
+                <title>Gogs | Self-Hosted Git | Roberto Lodeiro</title>
             
         
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.55.1" />
+        <meta name="generator" content="Hugo 0.55.5" />
         <link rel="shortcut icon" href="https://rlodeiro.info/favicon.ico?v=kPP08pKEXB">
 
 
@@ -66,7 +65,7 @@
 
 <meta itemprop="datePublished" content="2018-10-07T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-10-07T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="743">
+<meta itemprop="wordCount" content="752">
 
 
 
@@ -413,6 +412,42 @@
 
                         </article>
                 
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/airplay_linux/">AirPlay en Linux</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-11-27'>
+                                    November 27, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/airplay_linux/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/11/airplay_linux//airplay_linux.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
 
                 
                     <a href=
@@ -662,26 +697,31 @@
 <li><p>Si no los tenemos, instalar git y wget:</p>
 
 <pre><code class="language-bash">$ sudo apt install -y git wget
-</code></pre></li>
-
-<li><p>Crear el usuario Gogs:</p>
-
-<pre><code class="language-bash">$ sudo adduser --disabled-login --gecos 'Gogs' git
 </code></pre>
 
-<p>Si ya tenemos corriendo en nuestro servidor <code>MySQL/MariaDB</code> y <code>Nginx</code> podemos saltar a la instalación de GO, si no:</p></li>
+<ul>
+<li>Crear el usuario Gogs:
+<code>bash
+$ sudo adduser --disabled-login --gecos 'Gogs' git
+</code></li>
+</ul></li>
+</ul>
 
+<p>Si ya tenemos corriendo en nuestro servidor <code>MySQL/MariaDB</code> y <code>Nginx</code> podemos saltar a la instalación de GO, si no:</p>
+
+<ul>
 <li><p>Instalamos MariaDB y Nginx:</p>
 
 <pre><code class="language-bash">$ sudo apt install mariadb-server nginx
-</code></pre></li>
-
-<li><p>Para dejar lista nuestra nueva instalación de MariaDB:</p>
-
-<pre><code class="language-bash">$ sudo mysql_secure_installation
 </code></pre>
 
-<p>Iremos respondiendo a todas las preguntas, con el fin de establecer el password de nuestro usuario <code>root</code> para MariaDB.</p></li>
+<ul>
+<li>Para dejar lista nuestra nueva instalación de MariaDB:
+<code>bash
+$ sudo mysql_secure_installation
+</code>
+Iremos respondiendo a todas las preguntas, con el fin de establecer el password de nuestro usuario <code>root</code> para MariaDB.</li>
+</ul></li>
 </ul>
 
 <h1 id="1-instalación-de-go-golang">1. Instalación de GO (Golang)</h1>
@@ -691,9 +731,10 @@
 
 <pre><code class="language-bash">$ sudo su - git
 $ mkdir $HOME/local &amp;&amp; cd $_
-</code></pre></li>
+</code></pre>
 
-<li><p>Descargar Go y extraer el contenido:</p></li>
+<ul>
+<li>Descargar Go y extraer el contenido:</li>
 </ul>
 
 <p>En el momento de escribir este tutorial la última versión estable 
@@ -708,88 +749,99 @@ $ mkdir $HOME/local &amp;&amp; cd $_
 
 <pre><code class="language-bash">$ wget https://dl.google.com/go/go1.11.1.linux-armv6l.tar.gz
 $ tar -C /home/git/local -xvzf go1.11.1.linux-armv6l.tar.gz
-</code></pre>
+</code></pre></li>
 
-<ul>
 <li><p>Establecer la variable de entorno GOPATH para especificar la ubicación de nuestro espacio de trabajo:</p>
 
 <pre><code class="language-bash">$ echo 'export GOROOT=$HOME/local/go' &gt;&gt; $HOME/.bashrc
 $ echo 'export GOPATH=$HOME/go' &gt;&gt; $HOME/.bashrc
 $ echo 'export PATH=$PATH:$GOROOT/bin:$GOPATH/bin' &gt;&gt; $HOME/.bashrc
 $ source $HOME/.bashrc
-</code></pre></li>
+</code></pre>
 
-<li><p>Comprobar que Go está bien instalado:</p>
-
-<pre><code class="language-bash">$ go version
-</code></pre></li>
+<ul>
+<li>Comprobar que Go está bien instalado:
+<code>bash
+$ go version
+</code></li>
+</ul></li>
 
 <li><p>Si está bien instalado, se mostrará algo como lo siguiente:</p>
 
 <pre><code class="language-txt">go version go1.11.1 linux/arm
-</code></pre></li>
-</ul>
+</code></pre>
 
 <h1 id="2-descargar-y-compilar-gogs">2. Descargar y compilar Gogs</h1>
 
 <ul>
-<li><p>Descargar Gogs:</p>
+<li>Descargar Gogs:
+<code>bash
+$ go get -u github.com/gogs/gogs
+</code></li>
+</ul></li>
+</ul>
 
-<pre><code class="language-bash">$ go get -u github.com/gogs/gogs
-</code></pre>
+<p>Tardará unos minutos y parecerá que la consola no responde, ya que no muestra progreso.</p>
 
-<p>Tardará unos minutos y parecerá que la consola no responde, ya que no muestra progreso.</p></li>
-
+<ul>
 <li><p>Compilar Gogs:</p>
 
 <pre><code class="language-bash">$ cd $GOPATH/src/github.com/gogs/gogs
 $ go build
-</code></pre></li>
-
-<li><p>Ejecutamos:</p>
-
-<pre><code class="language-bash">$ ./gogs web
 </code></pre>
+
+<ul>
+<li>Ejecutamos:
+<code>bash
+$ ./gogs web
+</code></li>
+</ul></li>
+</ul>
 
 <p>Esto arrancará el servidor web integrado escuchando en el <code>puerto 3000</code>
 Abrir <code>localhost:3000</code> en el explorador. Gogs mostrará la página de instalación. Como no tenemos todavía configurada la base de datos, cerraremos el explorador y pararemos el servidor web con <code>CTRL+C</code>
-Volveremos a la página de instalación de Gogs tras configurar MariaDB y Nginx.</p></li>
+Volveremos a la página de instalación de Gogs tras configurar MariaDB y Nginx.</p>
 
+<ul>
 <li><p>Salir del usuario git :</p>
 
 <pre><code class="language-bash">$ exit
-</code></pre></li>
-</ul>
+</code></pre>
 
 <h1 id="3-configuración-de-la-base-de-datos">3. Configuración de la base de datos</h1>
 
 <ul>
-<li><p>Entramos en MariaDB</p>
-
-<pre><code class="language-bash">$ sudo mysql -u root -p
-</code></pre></li>
+<li>Entramos en MariaDB
+<code>bash 
+$ sudo mysql -u root -p
+</code></li>
+</ul></li>
 
 <li><p>Creamos el nuevo usuario para Gogs:</p>
 
 <pre><code class="language-sql">&gt; CREATE USER 'gogs'@'localhost' IDENTIFIED BY 'password';
 </code></pre>
 
-<p>Sustituye <code>password</code> por la contraseña que decidas y guárdala, se necesitará después para configurar Gogs.</p></li>
+<p>Sustituye <code>password</code> por la contraseña que decidas y guárdala, se necesitará después para configurar Gogs.</p>
 
-<li><p>Crear nueva base de datos para Gogs:</p>
-
-<pre><code class="language-sql">&gt; CREATE DATABASE gogs CHARACTER SET utf8 COLLATE utf8_general_ci;
-</code></pre></li>
+<ul>
+<li>Crear nueva base de datos para Gogs:
+<code>sql
+&gt; CREATE DATABASE gogs CHARACTER SET utf8 COLLATE utf8_general_ci;
+</code></li>
+</ul></li>
 
 <li><p>Dar permisos al usuario gogs:</p>
 
 <pre><code class="language-sql">&gt; GRANT ALL PRIVILEGES ON gogs.* TO gogs@localhost ;
-</code></pre></li>
+</code></pre>
 
-<li><p>Salir de Mariadb:</p>
-
-<pre><code class="language-sql">&gt; quit
-</code></pre></li>
+<ul>
+<li>Salir de Mariadb:
+<code>sql
+&gt; quit
+</code></li>
+</ul></li>
 </ul>
 
 <h1 id="4-configuración-de-nginx">4. Configuración de Nginx</h1>
@@ -821,12 +873,14 @@ proxy_pass http://localhost:3000/;
 <li><p>Habilitamos el nuevo sitio:</p>
 
 <pre><code class="language-bash">$ sudo ln -s /etc/nginx/sites-available/gogs /etc/nginx/sites-enabled/
-</code></pre></li>
+</code></pre>
 
-<li><p>Reiniciamos Nginx:</p>
-
-<pre><code class="language-bash">$ sudo systemctl restart nginx
-</code></pre></li>
+<ul>
+<li>Reiniciamos Nginx:
+<code>bash
+$ sudo systemctl restart nginx
+</code></li>
+</ul></li>
 
 <li><p>Configuramos Gogs con la url tudominio.com/gogs/</p>
 
@@ -872,8 +926,7 @@ WantedBy=multi-user.target
 <pre><code class="language-bash">$ sudo systemctl enable gogs
 $ sudo systemctl restart gogs
 $ sudo systemctl status gogs 
-</code></pre></li>
-</ul>
+</code></pre>
 
 <p>Por último, entra en tudominio.com/gogs/ para iniciar la configuración de Gogs, y completar lo siguiente:</p>
 
@@ -882,7 +935,8 @@ Host = 127.0.0.1:3306
 User = gogs
 Password = &lt;password para el usuario gogs&gt;
 Database Name = gogs
-</code></pre>
+</code></pre></li>
+</ul>
 
 <hr style="border-color: #d6d6d6;" />
 
@@ -972,6 +1026,11 @@ Database Name = gogs
     
     
       <ul class="icons">
+        
+          
+    <li><a href="https://rlodeiro.info/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
         
         
 
@@ -1263,6 +1322,44 @@ Database Name = gogs
 
           </article>
         
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/airplay_linux/">AirPlay en Linux</a>
+              </h3>
+              
+              <time class="published" datetime='2018-11-27'>
+                November 27, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/airplay_linux/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/11/airplay_linux//airplay_linux.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
       </div>
 
       
@@ -1363,6 +1460,11 @@ Database Name = gogs
   <section id="footer">
     
       <ul class="icons">
+        
+          
+    <li><a href="https://rlodeiro.info/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
         
         
 

@@ -1,5 +1,4 @@
 <!DOCTYPE HTML>
-
 <html>
     <head>
         
@@ -15,10 +14,10 @@
              "@id": "https:\/\/rlodeiro.info"
         },
         "articleSection" : "",
-        "name" : "Roberto Lodeiro",
+        "name" : ".Title",
         "headline" : "Roberto Lodeiro",
         "description" : "",
-        "inLanguage" : "es-es",
+        "inLanguage" : "es-ES",
         "author" : "",
         "creator" : "",
         "publisher": "",
@@ -40,14 +39,14 @@
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.55.1" />
+        <meta name="generator" content="Hugo 0.55.5" />
         <link rel="shortcut icon" href="https://rlodeiro.info/favicon.ico?v=kPP08pKEXB">
 
 
         
         
             
-                <meta name="description" content="Blog personal. Escribo sobre tecnología, programación Backend, herramientas varias y cualquier tema relacionado que me resulte útil en mis proyectos.">
+                <meta name="description" content="Blog personal. Escribo sobre tecnología, programación, herramientas varias y cualquier tema relacionado que me resulte útil.">
             
         
 
@@ -55,13 +54,13 @@
 <meta name="twitter:image" content="https://rlodeiro.info/img/main/logo2.jpg"/>
 
 <meta name="twitter:title" content="Roberto Lodeiro"/>
-<meta name="twitter:description" content="Blog personal. Escribo sobre tecnología, programación Backend, herramientas varias y cualquier tema relacionado que me resulte útil en mis proyectos."/>
+<meta name="twitter:description" content="Blog personal. Escribo sobre tecnología, programación, herramientas varias y cualquier tema relacionado que me resulte útil."/>
 <meta name="twitter:site" content="@lodeiro0001"/>
 
         
         
 <meta itemprop="name" content="Roberto Lodeiro">
-<meta itemprop="description" content="Blog personal. Escribo sobre tecnología, programación Backend, herramientas varias y cualquier tema relacionado que me resulte útil en mis proyectos.">
+<meta itemprop="description" content="Blog personal. Escribo sobre tecnología, programación, herramientas varias y cualquier tema relacionado que me resulte útil.">
 
 
         
@@ -405,6 +404,42 @@
 
                         </article>
                 
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/airplay_linux/">AirPlay en Linux</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-11-27'>
+                                    November 27, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/airplay_linux/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/11/airplay_linux//airplay_linux.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
 
                 
                     <a href=
@@ -577,24 +612,27 @@
 <li><p>Agregamos la key del repositorio</p>
 
 <pre><code class="language-bash">$ wget -q -O - http://www.gyfgafguf.dk/raspbian/forked-daapd.gpg | sudo apt-key add -
-</code></pre></li>
-
-<li><p>Añadimos el repositorio en <code>/etc/apt/sources.list.d/forked-daapd.list</code></p>
-
-<pre><code class="language-bash">$ sudo nano /etc/apt/sources.list.d/forked-daapd.list
 </code></pre>
+
+<ul>
+<li>Añadimos el repositorio en <code>/etc/apt/sources.list.d/forked-daapd.list</code>
+<code>bash
+$ sudo nano /etc/apt/sources.list.d/forked-daapd.list
+</code></li>
+</ul></li>
+</ul>
 
 <p>Dentro pegamos lo siguiente y guardamos:</p>
 
 <pre><code class="language-txt">deb http://www.gyfgafguf.dk/raspbian/forked-daapd/ stretch contrib
-</code></pre></li>
+</code></pre>
 
+<ul>
 <li><p>Instalamos forked-daapd</p>
 
 <pre><code class="language-bash">$ sudo apt update
 $ sudo apt install forked-daapd
-</code></pre></li>
-</ul>
+</code></pre>
 
 <h1 id="2-configuración">2. Configuración</h1>
 
@@ -611,10 +649,11 @@ $ sudo apt install forked-daapd
 .</p>
 
 <ul>
-<li><p>Abrimos el archivo con nano</p>
-
-<pre><code class="language-bash">$ sudo nano /etc/forked-daapd.conf
-</code></pre></li>
+<li>Abrimos el archivo con nano
+<code>bash
+$ sudo nano /etc/forked-daapd.conf
+</code></li>
+</ul></li>
 
 <li><p>Modificamos las siguientes líneas, eliminando <code>#</code> en caso de que figuren como comentarios</p></li>
 </ul>
@@ -942,6 +981,11 @@ $ sudo service forked-daapd restart
     
       <ul class="icons">
         
+          
+    <li><a href="https://rlodeiro.info/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
         
 
 
@@ -1232,6 +1276,44 @@ $ sudo service forked-daapd restart
 
           </article>
         
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/airplay_linux/">AirPlay en Linux</a>
+              </h3>
+              
+              <time class="published" datetime='2018-11-27'>
+                November 27, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/airplay_linux/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/11/airplay_linux//airplay_linux.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
       </div>
 
       
@@ -1332,6 +1414,11 @@ $ sudo service forked-daapd restart
   <section id="footer">
     
       <ul class="icons">
+        
+          
+    <li><a href="https://rlodeiro.info/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
         
         
 

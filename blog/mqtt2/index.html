@@ -1,5 +1,4 @@
 <!DOCTYPE HTML>
-
 <html>
     <head>
         
@@ -15,10 +14,10 @@
              "@id": "https:\/\/rlodeiro.info"
         },
         "articleSection" : "blog",
-        "name" : "MQTT | Parte 2",
+        "name" : ".Title",
         "headline" : "MQTT | Parte 2",
         "description" : "Broker VS cliente",
-        "inLanguage" : "es-es",
+        "inLanguage" : "es-ES",
         "author" : "",
         "creator" : "",
         "publisher": "",
@@ -34,13 +33,13 @@
     </script>
         
             
-                <title>MQTT | Parte 2</title>
+                <title>MQTT | Parte 2 | Roberto Lodeiro</title>
             
         
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.55.1" />
+        <meta name="generator" content="Hugo 0.55.5" />
         <link rel="shortcut icon" href="https://rlodeiro.info/favicon.ico?v=kPP08pKEXB">
 
 
@@ -413,6 +412,42 @@
 
                         </article>
                 
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/airplay_linux/">AirPlay en Linux</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-11-27'>
+                                    November 27, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/airplay_linux/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/11/airplay_linux//airplay_linux.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
 
                 
                     <a href=
@@ -665,21 +700,27 @@
 
 <pre><code class="language-bash">$ sudo apt update
 $ sudo apt install mosquitto
-</code></pre></li>
-
-<li><p>Crear usuario y contraseña</p>
-
-<pre><code class="language-bash">$ sudo mosquitto_passwd -c /etc/mosquitto/tuArchivoPass nombreUsuario
 </code></pre>
 
-<p>Cambia <code>nombreUsuario</code> por el nombre que quieras darle, y <code>tuArchivoPass</code> por el nombre que quieras para el archivo donde se guardaran los usuarios y sus contraseñas. Una vez ejecutado el comando se nos preguntara el password que queremos asignarle al nuevo usuario.</p></li>
+<ul>
+<li>Crear usuario y contraseña</li>
+</ul>
 
+<pre><code class="language-bash">$ sudo mosquitto_passwd -c /etc/mosquitto/tuArchivoPass nombreUsuario
+</code></pre></li>
+</ul>
+
+<p>Cambia <code>nombreUsuario</code> por el nombre que quieras darle, y <code>tuArchivoPass</code> por el nombre que quieras para el archivo donde se guardaran los usuarios y sus contraseñas. Una vez ejecutado el comando se nos preguntara el password que queremos asignarle al nuevo usuario.</p>
+
+<ul>
 <li><p>Si quieres añadir mas usuarios</p>
 
 <pre><code class="language-bash">$ sudo mosquitto_passwd -b /etc/mosquitto/tuArchivoPass nombreUsuario password
-</code></pre></li>
+</code></pre>
 
-<li><p>Para eliminar un usuario</p>
+<ul>
+<li>Para eliminar un usuario</li>
+</ul>
 
 <pre><code class="language-bash">$ sudo mosquitto_passwd -D /etc/mosquitto/tuArchivoPass nombreUsuario
 </code></pre></li>
@@ -704,15 +745,15 @@ password_file etc/mosquitto/tuArchivoPass
 <li><p>Reiniciar el servicio</p>
 
 <pre><code class="language-bash">$ sudo systemctl restart mosquitto
-</code></pre></li>
-</ul>
+</code></pre>
 
 <h1 id="2-2-configurar-ssl">2.2 Configurar SSL</h1>
 
 <p>Adicionalmente, cosa que recomiendo, podemos <code>cifrar</code> las comunicaciones entre Broker y clientes con un certificado SSL, en este caso usaré un certificado de firma propia generado con <code>openssl</code>.</p>
 
 <ul>
-<li><p>Creamos los directorios y el certificado</p>
+<li>Creamos los directorios y el certificado</li>
+</ul>
 
 <pre><code class="language-bash">$ sudo mkdir /etc/ssl/mqtt
 $ cd /etc/ssl/mqtt
@@ -741,15 +782,15 @@ keyfile /etc/ssl/mqtt/mqtt.example.local.key
 <li><p>Reiniciar el servicio</p>
 
 <pre><code class="language-bash">$ sudo systemctl restart mosquitto
-</code></pre></li>
-</ul>
+</code></pre>
 
 <h1 id="3-cliente">3. Cliente</h1>
 
 <p>Podemos tener como clientes todo tipo de dispositivos, y como dije en el primer post un cliente puede tanto recibir como enviar mensajes a cualquier topic. Yo lo utilizo mucho con los ESP para proyectos Iot, pero ahora explicaré como utilizarlo de forma básica desde terminal, que al fin y al cabo es lo mismo.</p>
 
 <ul>
-<li><p>Instalamos en la máquina cliente</p>
+<li>Instalamos en la máquina cliente</li>
+</ul>
 
 <pre><code class="language-bash">$ sudo apt install mosquitto-clients
 </code></pre></li>
@@ -763,9 +804,11 @@ keyfile /etc/ssl/mqtt/mqtt.example.local.key
 <pre><code class="language-bash">$ mosquitto_sub -v -h ipBroker -u tuUsuario -P tuContrasenha -p 8883 -t 'raspberry/topicTest'
 </code></pre>
 
-<p>Cambia <code>ipBroker</code> por la ip de la máquina donde tienes instalado Mosquitto Broker, así como el usuario y la contraseña por los tuyos.<code>raspberry/topic1</code> es un topic de ejemplo, pon el que tu quieras. No cierras la consola, esta quedará a la escucha.</p></li>
+<p>Cambia <code>ipBroker</code> por la ip de la máquina donde tienes instalado Mosquitto Broker, así como el usuario y la contraseña por los tuyos.<code>raspberry/topic1</code> es un topic de ejemplo, pon el que tu quieras. No cierras la consola, esta quedará a la escucha.</p>
 
-<li><p>Para publicar mensajes desde la segunda consola:</p>
+<ul>
+<li>Para publicar mensajes desde la segunda consola:</li>
+</ul>
 
 <pre><code class="language-bash">$ mosquitto_pub -h ipBroker -u tuusuario -P tuContrasenha -p 8883 -t 'raspberry/topicTest' -m 'Mensaje de prueba super cool'
 </code></pre>
@@ -893,6 +936,11 @@ keyfile /etc/ssl/mqtt/mqtt.example.local.key
     
     
       <ul class="icons">
+        
+          
+    <li><a href="https://rlodeiro.info/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
         
         
 
@@ -1184,6 +1232,44 @@ keyfile /etc/ssl/mqtt/mqtt.example.local.key
 
           </article>
         
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/airplay_linux/">AirPlay en Linux</a>
+              </h3>
+              
+              <time class="published" datetime='2018-11-27'>
+                November 27, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/airplay_linux/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/11/airplay_linux//airplay_linux.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
       </div>
 
       
@@ -1284,6 +1370,11 @@ keyfile /etc/ssl/mqtt/mqtt.example.local.key
   <section id="footer">
     
       <ul class="icons">
+        
+          
+    <li><a href="https://rlodeiro.info/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
         
         
 
