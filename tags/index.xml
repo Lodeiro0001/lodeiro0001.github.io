@@ -6,10 +6,64 @@
     <description>Recent content in Tags on Roberto Lodeiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <lastBuildDate>Sun, 14 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://rlodeiro.info/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Debian</title>
+      <link>https://rlodeiro.info/tags/debian/</link>
+      <pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/debian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Intel</title>
+      <link>https://rlodeiro.info/tags/intel/</link>
+      <pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/intel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://rlodeiro.info/tags/linux/</link>
+      <pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nvidia</title>
+      <link>https://rlodeiro.info/tags/nvidia/</link>
+      <pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/nvidia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tearing</title>
+      <link>https://rlodeiro.info/tags/tearing/</link>
+      <pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/tearing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>XFCE</title>
+      <link>https://rlodeiro.info/tags/xfce/</link>
+      <pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/xfce/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>AirPlay</title>
@@ -30,15 +84,6 @@
     </item>
     
     <item>
-      <title>Linux</title>
-      <link>https://rlodeiro.info/tags/linux/</link>
-      <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://rlodeiro.info/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Multiroom</title>
       <link>https://rlodeiro.info/tags/multiroom/</link>
       <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
@@ -53,24 +98,6 @@
       <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>https://rlodeiro.info/tags/forked-daapd/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Debian</title>
-      <link>https://rlodeiro.info/tags/debian/</link>
-      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://rlodeiro.info/tags/debian/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>XFCE</title>
-      <link>https://rlodeiro.info/tags/xfce/</link>
-      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://rlodeiro.info/tags/xfce/</guid>
       <description></description>
     </item>
     

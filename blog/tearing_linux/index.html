@@ -1,0 +1,1559 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        
+        <meta property="og:image" content="http://rlodeiro.info/img/posts/2019/05/tearing_linux/tearing_linux.jpg"/>
+        <meta property="og:image:secure_url" content="https://rlodeiro.info/img/posts/2019/05/tearing_linux/tearing_linux.jpg"/>
+        
+        <script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "https:\/\/rlodeiro.info"
+        },
+        "articleSection" : "blog",
+        "name" : ".Title",
+        "headline" : "Screen tearing en Linux",
+        "description" : "La solución definitiva",
+        "inLanguage" : "es-ES",
+        "author" : "",
+        "creator" : "",
+        "publisher": "",
+        "accountablePerson" : "",
+        "copyrightHolder" : "",
+        "copyrightYear" : "2019",
+        "datePublished": "2019-05-17 00:00:00 \x2b0000 UTC",
+        "dateModified" : "2019-05-17 00:00:00 \x2b0000 UTC",
+        "url" : "https:\/\/rlodeiro.info\/blog\/tearing_linux\/",
+        "wordCount" : "499",
+        "keywords" : [ "Tearing","Linux","Nvidia","Intel","XFCE","Debian","Blog" ]
+    }
+    </script>
+        
+            
+                <title>Screen tearing en Linux | Roberto Lodeiro</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.55.5" />
+        <link rel="shortcut icon" href="https://rlodeiro.info/favicon.ico?v=kPP08pKEXB">
+
+
+        
+            <meta name="author" content="Roberto Lodeiro">
+        
+        
+            <meta name="description" content="La solución definitiva">
+        
+
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://rlodeiro.info/img/posts/2019/05/tearing_linux/tearing_linux.jpg"/>
+
+<meta name="twitter:title" content="Screen tearing en Linux"/>
+<meta name="twitter:description" content="La solución definitiva"/>
+<meta name="twitter:site" content="@lodeiro0001"/>
+
+        
+        
+<meta itemprop="name" content="Screen tearing en Linux">
+<meta itemprop="description" content="La solución definitiva">
+
+
+<meta itemprop="datePublished" content="2019-05-17T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-05-17T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="499">
+
+  <meta itemprop="image" content="https://rlodeiro.info/img/posts/2019/05/tearing_linux/tearing_linux.jpg">
+
+
+
+<meta itemprop="keywords" content="Tearing,Linux,Nvidia,Intel,XFCE,Debian," />
+
+        
+
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+            <link rel="stylesheet" href="https://rlodeiro.info/css/main.css">
+            <link rel="stylesheet" href="https://rlodeiro.info/css/add-on.css">
+            <link rel="stylesheet" href="https://rlodeiro.info/css/academicons.min.css">
+        
+
+        
+            
+                
+            
+                
+                    <link rel="stylesheet" href="https://rlodeiro.info/css/github.min.css">
+                
+            
+        
+
+
+  
+    
+    <link href='//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+  
+
+
+      
+    </head>
+    <body>
+
+      
+      <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+      <h1><a href="https://rlodeiro.info/">Roberto Lodeiro</a></h1>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="https://rlodeiro.info/">
+                            <i class="fa fa-home">&nbsp;</i>Inicio
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/about/">
+                            <i class="fa fa-id-card-o">&nbsp;</i>Sobre mi
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/blog/">
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/categories/">
+                            <i class="fa fa-sitemap">&nbsp;</i>Categorias
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/contact/">
+                            <i class="fa fa-envelope-o">&nbsp;</i>Contacto
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="https://rlodeiro.info/">
+                            <h3>
+                                <i class="fa fa-home">&nbsp;</i>Inicio
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/about/">
+                            <h3>
+                                <i class="fa fa-id-card-o">&nbsp;</i>Sobre mi
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/blog/">
+                            <h3>
+                                <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/categories/">
+                            <h3>
+                                <i class="fa fa-sitemap">&nbsp;</i>Categorias
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/contact/">
+                            <h3>
+                                <i class="fa fa-envelope-o">&nbsp;</i>Contacto
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section class="recent-posts">
+            <div class="mini-posts">
+                <header>
+                    <h3>Publicaciones Recientes</h3>
+                </header>
+                
+
+                
+                    
+                
+
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/tearing_linux/">Screen tearing en Linux</a></h3>
+                                
+                                <time class="published" datetime='2019-05-17'>
+                                    17 de mayo de 2019
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/tearing_linux/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2019/05/tearing_linux//tearing_linux.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/audio_multiroom/">Audio Multiroom</a></h3>
+                                
+                                <time class="published" datetime='2019-04-14'>
+                                    14 de abril de 2019
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/audio_multiroom/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2019/04/audio_multiroom//audio_multiroom.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/personalizar_xfce/">Personalizar XFCE</a></h3>
+                                
+                                <time class="published" datetime='2019-04-07'>
+                                    7 de abril de 2019
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/personalizar_xfce/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2019/04/personalizar_xfce//personalizar_xfce.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/instalacion_debian/">Instalar Debian 9 Stretch</a></h3>
+                                
+                                <time class="published" datetime='2019-03-30'>
+                                    30 de marzo de 2019
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/instalacion_debian/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian//instalacion_Debian.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/sai/">SAI | Sistema de alimentacion ininterrumpida</a></h3>
+                                
+                                <time class="published" datetime='2018-12-30'>
+                                    30 de diciembre de 2018
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/sai/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/12/SAI//SAI.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/mqtt2/">MQTT | Parte 2</a></h3>
+                                
+                                <time class="published" datetime='2018-12-05'>
+                                    5 de diciembre de 2018
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/mqtt2/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/12/mqtt2//mqtt2.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+
+                
+                    <a href=
+                        
+                            /blog/
+                        
+                        class="button">Ver más entradas</a>
+                
+            </div>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Comparte esta publicación <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2frlodeiro.info%2fblog%2ftearing_linux%2f&amp;text=Screen%20tearing%20en%20Linux&amp;via=lodeiro0001" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frlodeiro.info%2fblog%2ftearing_linux%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=https%3a%2f%2frlodeiro.info%2fblog%2ftearing_linux%2f&amp;title=Screen%20tearing%20en%20Linux" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2frlodeiro.info%2fblog%2ftearing_linux%2f&amp;title=Screen%20tearing%20en%20Linux" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2frlodeiro.info%2fblog%2ftearing_linux%2f&amp;description=Screen%20tearing%20en%20Linux" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Chequea este post de Roberto%20Lodeiro&amp;body=https%3a%2f%2frlodeiro.info%2fblog%2ftearing_linux%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+  <header>
+    <div class="title">
+        
+            <h1><a href="https://rlodeiro.info/blog/tearing_linux/">Screen tearing en Linux</a></h1>
+            
+        
+        
+            <p>La solución definitiva</p>
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published" datetime='2019-05-17'>
+            17 de mayo de 2019
+          </time>
+        <span class="author">Roberto Lodeiro</span>
+        
+        
+    </div>
+</header>
+
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2frlodeiro.info%2fblog%2ftearing_linux%2f&amp;text=Screen%20tearing%20en%20Linux&amp;via=lodeiro0001" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frlodeiro.info%2fblog%2ftearing_linux%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=https%3a%2f%2frlodeiro.info%2fblog%2ftearing_linux%2f&amp;title=Screen%20tearing%20en%20Linux" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2frlodeiro.info%2fblog%2ftearing_linux%2f&amp;title=Screen%20tearing%20en%20Linux" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2frlodeiro.info%2fblog%2ftearing_linux%2f&amp;description=Screen%20tearing%20en%20Linux" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Chequea este post de Roberto%20Lodeiro&amp;body=https%3a%2f%2frlodeiro.info%2fblog%2ftearing_linux%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+      </ul>
+    </section>
+  
+
+  
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/tearing_linux/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2019/05/tearing_linux//tearing_linux.jpg" alt="">
+        </a>
+    
+
+
+  <div id="content">
+    
+
+<p>Muchos de los que usamos Linux hemos sufrido o sufrimos tearing, y al fin he encontrado la solución. Tanto si usas una gráfica <code>Nvidia</code>, como una integrada de <code>Intel</code>, podrás decir adiós a este molesto problema.</p>
+
+<p>Anteriormente escribí dos posts sobre 
+
+    
+        
+    
+
+    <a href="https://rlodeiro.info/blog/instalacion_debian/" target='_blank'>como instalar Debian</a>
+
+ y 
+
+    
+        
+    
+
+    <a href="https://rlodeiro.info/blog/personalizar_xfce/" target='_blank'>como personalizar XFCE</a>
+
+ (el mejor entorno de escritorio que he probado hasta la fecha), así que basaré este en máquinas con esta configuración, aunque seguramente te sea de utilidad si utilizas otra distribución u otro entorno de escritorio.</p>
+
+<hr style="border-color: #d6d6d6;" />
+
+<h2 id="1-cambiar-el-compositor">1. Cambiar el compositor</h2>
+
+<p>Primero, vamos a cambiar el compositor por defecto de <code>XFCE</code>, lo que viene siendo el gestor de ventanas del sistema. He elegido <code>Compton</code> por ser ligero y altamente personalizable.</p>
+
+<ul>
+<li><p>Deshabilitamos el compositor por defecto de XFCE en <code>Settings Manager/Window Manager Twearks/Compositor</code></p>
+
+<p><img src="https://rlodeiro.info/img/posts/2019/05/tearing_linux/xfce_compositor.png" alt="" /></p></li>
+
+<li><p>Instalamos <code>Compton</code></p>
+
+<pre><code class="language-bash">$ sudo apt-get install compton compton-conf 
+</code></pre>
+
+<ul>
+<li>Habilitamos su inicio automático</li>
+</ul>
+
+<pre><code class="language-bash">$ sudo nano ~/.config/autostart/compton.desktop
+</code></pre>
+
+<p>Pegamos dentro lo siguiente y guardamos:</p>
+
+<pre><code class="language-txt">[Desktop Entry]
+Encoding=UTF-8
+Version=0.9.4
+Type=Application
+Name=Compton
+Comment=X11 compositor
+Exec=compton -b
+OnlyShowIn=XFCE;
+StartupNotify=false
+Terminal=false
+Hidden=false
+</code></pre>
+
+<ul>
+<li>Cambiamos los permisos al fichero creado</li>
+</ul>
+
+<pre><code class="language-bash">$sudo chmod +x ~/.config/autostart/compton.desktop
+</code></pre></li>
+
+<li><p>Creamos configuración por defecto ejecutando <code>compton-conf</code> y pulsamos en <code>apply</code></p></li>
+</ul>
+
+<pre><code class="language-bash">$ compton-conf
+</code></pre>
+
+<h3 id="1-1-transparencia-en-ventanas-inactivas">1.1 Transparencia en ventanas inactivas</h3>
+
+<p>Por defecto, Compton muestra las ventanas inactivas con transparencia. Si no te gusta este comportamiento puedes modificarlo en la configuración generada anteriormente.</p>
+
+<ul>
+<li><p>Edita el archivo <code>compton.conf</code></p>
+
+<pre><code class="language-bash">$ sudo nano ~/.config/compton.conf
+</code></pre>
+
+<ul>
+<li>Busca <code>inactive-opacity</code> y lo modifícalo para que no aplique la transparencia, quedando algo así:</li>
+</ul>
+
+<pre><code class="language-txt">...
+inactive-opacity = 1.0;
+...
+</code></pre></li>
+</ul>
+
+<p>Al reiniciar o cerrar y abrir la sesión Compton sera nuestro compositor por defecto.</p>
+
+<hr style="border-color: #d6d6d6;" />
+
+<h2 id="2-nvidia">2. Nvidia</h2>
+
+<p>Ahora vamos a configurar nuestra tarjeta de vídeo Nvidia. Si tienes una Intel salta al punto 3.</p>
+
+<h3 id="2-1-instalar-drivers">2.1 Instalar drivers</h3>
+
+<p>Vamos a instalar los drivers privativos. Si ya los tienes, salta al punto 2.2.</p>
+
+<p>Hemos de tener habilitados los repositorios <code>contrib</code>, <code>non-free</code> y <code>backports</code>, he explicado como hacerlo 
+
+    
+        
+    
+
+    <a href="https://rlodeiro.info/blog/instalacion_debian/" target='_blank'>en este post sobre Debian.</a>
+
+</p>
+
+<ul>
+<li>Comprobamos el driver en uso con lshw</li>
+</ul>
+
+<pre><code class="language-bash">$ sudo apt install lshw
+$ sudo lshw -c display
+</code></pre>
+
+<ul>
+<li><p>Ponemos los controladores noveau en lista negra:</p>
+
+<pre><code class="language-bash">sudo nano /etc/modprobe.d/blacklist-nouveau.conf
+</code></pre>
+
+<p>Pegamos dentro lo siguiente y guardamos:</p>
+
+<pre><code class="language-txt">blacklist nouveau
+blacklist lbm-nouveau
+options nouveau modeset=0
+alias nouveau off
+alias lbm-nouveau off
+</code></pre></li>
+
+<li><p>Instalamos el driver privativo:</p></li>
+</ul>
+
+<pre><code class="language-bash">$ sudo apt install -t stretch-backports nvidia-driver
+</code></pre>
+
+<ul>
+<li>Creamos el fichero de configuración en <code>/etc/X11/xorg.conf</code></li>
+</ul>
+
+<pre><code class="language-bash">$ sudo nvidia-xconfig
+</code></pre>
+
+<h3 id="2-2-configuracion">2.2 Configuracion</h3>
+
+<p>Tiendo los drivers de Nvidia y Compton correctamente instalados:</p>
+
+<ul>
+<li>Abrimos <code>nvidia-settings</code> con sudo</li>
+</ul>
+
+<pre><code class="language-bash">sudo nvidia-settings
+</code></pre>
+
+<ul>
+<li><p>Vamos a <code>X ServerDisplay Configuration</code> y pinchamos en <code>Advanced</code>.</p>
+
+<ul>
+<li>Marcamos la opcion <code>Force Composition Pipeline</code></li>
+</ul>
+
+<p><img src="https://rlodeiro.info/img/posts/2019/05/tearing_linux/nvidia_1.png" alt="" /></p>
+
+<ul>
+<li>Pinchamos en <code>Save to X Configuration File</code> y guardamos, se añadirá a la configuración previa en <code>/etc/X11/xorg.conf</code></li>
+</ul>
+
+<p><img src="https://rlodeiro.info/img/posts/2019/05/tearing_linux/nvidia_2.png" alt="" /></p></li>
+</ul>
+
+<p>Has de reiniciar para que se apliquen los cambios.</p>
+
+<hr style="border-color: #d6d6d6;" />
+
+<h2 id="3-intel">3. Intel</h2>
+
+<p>Si tu tarjeta de vídeo es <code>Intel</code>, como es el caso de mi portátil XPS, la solución es muy sencilla.</p>
+
+<p>Teniendo el compositor <code>Compton</code> instalado:</p>
+
+<ul>
+<li><p>Creamos el archivo <code>/etc/X11/xorg.conf</code></p>
+
+<pre><code class="language-bash">$ sudo nano /etc/X11/xorg.conf
+</code></pre>
+
+<p>Pegamos dentro lo siguiente y guardamos:</p>
+
+<pre><code class="language-txt">Section &quot;Device&quot;
+Identifier  &quot;Intel Graphics&quot;
+Driver      &quot;intel&quot;
+EndSection
+</code></pre></li>
+</ul>
+
+<p>Una vez reinicies el sistema, el tearing habrá desaparecido.</p>
+
+<hr style="border-color: #d6d6d6;" />
+
+<p>Espero que sea útil, ¡gracias por leerme!</p>
+
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/categories/linux">Linux</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+            
+            
+                <i class="fa fa-tags"></i>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/tearing">Tearing</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/linux">Linux</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/nvidia">Nvidia</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/intel">Intel</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/xfce">XFCE</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/debian">Debian</a></li>
+                
+            
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="https://rlodeiro.info/blog/audio_multiroom/"
+                class="button big previous">Audio Multiroom</a></li>
+    
+
+    
+</ul>
+
+
+    </div>
+    
+<section id="sidebar">
+
+  
+  <section id="intro">
+    
+    
+      
+        <a href='https://rlodeiro.info/'><img src="https://rlodeiro.info/img/main/logo.jpg" class="intro-circle" width="" alt="" /></a>
+      
+    
+    
+      <header>
+        <h2>Roberto Lodeiro</h2>
+        <p>Reality is wrong. Dreams are for real.</p>
+      </header>
+    
+    
+      <ul class="icons">
+        
+          
+    <li><a href="" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//twitter.com/lodeiro0001" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:me@rlodeiro.info" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+  </section>
+
+  
+  <section class="recent-posts">
+    <div class="mini-posts">
+      <header>
+        <h3>Publicaciones Recientes</h3>
+      </header>
+      <div class="posts-container">
+        
+
+        
+          
+        
+
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/tearing_linux/">Screen tearing en Linux</a>
+              </h3>
+              
+              <time class="published" datetime='2019-05-17'>
+                17 de mayo de 2019
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/tearing_linux/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2019/05/tearing_linux//tearing_linux.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/audio_multiroom/">Audio Multiroom</a>
+              </h3>
+              
+              <time class="published" datetime='2019-04-14'>
+                14 de abril de 2019
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/audio_multiroom/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2019/04/audio_multiroom//audio_multiroom.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/personalizar_xfce/">Personalizar XFCE</a>
+              </h3>
+              
+              <time class="published" datetime='2019-04-07'>
+                7 de abril de 2019
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/personalizar_xfce/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2019/04/personalizar_xfce//personalizar_xfce.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/instalacion_debian/">Instalar Debian 9 Stretch</a>
+              </h3>
+              
+              <time class="published" datetime='2019-03-30'>
+                30 de marzo de 2019
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/instalacion_debian/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian//instalacion_Debian.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/sai/">SAI | Sistema de alimentacion ininterrumpida</a>
+              </h3>
+              
+              <time class="published" datetime='2018-12-30'>
+                30 de diciembre de 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/sai/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/12/SAI//SAI.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/mqtt2/">MQTT | Parte 2</a>
+              </h3>
+              
+              <time class="published" datetime='2018-12-05'>
+                5 de diciembre de 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/mqtt2/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2018/12/mqtt2//mqtt2.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+      </div>
+
+      
+        <a href=
+          
+            /blog/
+          
+        class="button">Ver más entradas</a>
+      
+    </div>
+  </section>
+
+  
+  
+  
+  
+  
+    <section id="categories">
+      <header>
+        <h3>
+          <a href="https://rlodeiro.info/categories/">Categorías</a>
+        </h3>
+      </header>
+        
+          
+        
+
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/herramientas/">herramientas</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/iot/">iot</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/linux/">linux</a>
+                <span style="float:right;">10</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/raspberry-pi/">raspberry-pi</a>
+                <span style="float:right;">4</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/servicios/">servicios</a>
+                <span style="float:right;">6</span>
+              
+            </header>
+          </article>
+        </p>
+        
+    </section>
+  
+  
+
+  
+  
+    <section id="mini-bio">
+      <h3>Sobre Mi</h3>
+      <p>¿De donde viene? ¿Cual es su color de pelo? ¿A que tribu urbana pertenece? Si estás muy aburrid@ y/o quieres saberlo ¡adelante!</p>
+      <a href="https://rlodeiro.info/about/" class="button">Leer Más</a>
+    </section>
+  
+
+  
+  <section id="footer">
+    
+      <ul class="icons">
+        
+          
+    <li><a href="" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//twitter.com/lodeiro0001" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:me@rlodeiro.info" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+    <p class="copyright">
+      
+        &copy; 2019
+        
+          Roberto Lodeiro
+        
+      .
+      Powered by <a href="//gohugo.io" target="_blank">Hugo</a>
+    </p>
+  </section>
+</section>
+
+    </div>
+    <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+    
+
+    
+      
+    
+
+    
+      
+      
+      
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+        
+        
+        
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/r.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/yaml.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/css.min.js"></script>
+        <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+      
+    
+    
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+      <script src="https://rlodeiro.info/js/util.js"></script>
+      <script src="https://rlodeiro.info/js/main.js"></script>
+      <script src="https://rlodeiro.info/js/backToTop.js"></script>
+    
+
+    
+      
+        
+      
+        
+          <script src="https://rlodeiro.info/js/highlight.min.js"></script>
+        
+      
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+      <script src="//yihui.name/js/math-code.js"></script>
+<script async
+src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+  </body>
+</html>
+

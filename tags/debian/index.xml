@@ -6,10 +6,20 @@
     <description>Recent content in Debian on Roberto Lodeiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://rlodeiro.info/tags/debian/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Screen tearing en Linux</title>
+      <link>https://rlodeiro.info/blog/tearing_linux/</link>
+      <pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/blog/tearing_linux/</guid>
+      <description>Muchos de los que usamos Linux hemos sufrido o sufrimos tearing, y al fin he encontrado la solución. Tanto si usas una gráfica Nvidia, como una integrada de Intel, podrás decir adiós a este molesto problema.
+Anteriormente escribí dos posts sobre como instalar Debian y como personalizar XFCE (el mejor entorno de escritorio que he probado hasta la fecha), así que basaré este en máquinas con esta configuración, aunque seguramente te sea de utilidad si utilizas otra distribución u otro entorno de escritorio.</description>
+    </item>
     
     <item>
       <title>Personalizar XFCE</title>
