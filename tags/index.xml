@@ -48,11 +48,29 @@
     </item>
     
     <item>
+      <title>DNS</title>
+      <link>https://rlodeiro.info/tags/dns/</link>
+      <pubDate>Sun, 21 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/dns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Debian</title>
       <link>https://rlodeiro.info/tags/debian/</link>
       <pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://rlodeiro.info/tags/debian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://rlodeiro.info/tags/docker/</link>
+      <pubDate>Sun, 21 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/docker/</guid>
       <description></description>
     </item>
     
@@ -183,6 +201,15 @@
     </item>
     
     <item>
+      <title>Pi-hole</title>
+      <link>https://rlodeiro.info/tags/pi-hole/</link>
+      <pubDate>Sun, 21 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/pi-hole/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Proyectos</title>
       <link>https://rlodeiro.info/tags/proyectos/</link>
       <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
@@ -212,7 +239,7 @@
     <item>
       <title>Raspberry Pi</title>
       <link>https://rlodeiro.info/tags/raspberry-pi/</link>
-      <pubDate>Sun, 21 Oct 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 21 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://rlodeiro.info/tags/raspberry-pi/</guid>
       <description></description>
