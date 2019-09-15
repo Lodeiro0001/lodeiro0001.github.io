@@ -1,0 +1,1513 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        
+        <meta property="og:image" content="http://rlodeiro.info/img/posts/2019/09/flatpak/flatpak.jpg"/>
+        <meta property="og:image:secure_url" content="https://rlodeiro.info/img/posts/2019/09/flatpak/flatpak.jpg"/>
+        
+        <script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "https://rlodeiro.info"
+        },
+        "articleSection" : "blog",
+        "name" : ".Title",
+        "headline" : "Flatpak",
+        "description" : "El presente de las aplicaciones en Linux",
+        "inLanguage" : "es-ES",
+        "author" : "",
+        "creator" : "",
+        "publisher": "",
+        "accountablePerson" : "",
+        "copyrightHolder" : "",
+        "copyrightYear" : "2019",
+        "datePublished": "2019-09-15 00:00:00 &#43;0000 UTC",
+        "dateModified" : "2019-09-15 00:00:00 &#43;0000 UTC",
+        "url" : "https://rlodeiro.info/blog/flatpak/",
+        "wordCount" : "557",
+        "keywords" : [ "Flatpak","Linux","Aplicaciones","Sandbox","Blog" ]
+    }
+    </script>
+        
+            
+                <title>Flatpak | Roberto Lodeiro</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.54.0" />
+        <link rel="shortcut icon" href="https://rlodeiro.info/favicon.ico?v=kPP08pKEXB">
+
+
+        
+            <meta name="author" content="Roberto Lodeiro">
+        
+        
+            <meta name="description" content="El presente de las aplicaciones en Linux">
+        
+
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://rlodeiro.info/img/posts/2019/09/flatpak/flatpak.jpg"/>
+
+<meta name="twitter:title" content="Flatpak"/>
+<meta name="twitter:description" content="El presente de las aplicaciones en Linux"/>
+<meta name="twitter:site" content="@lodeiro0001"/>
+
+        
+        
+<meta itemprop="name" content="Flatpak">
+<meta itemprop="description" content="El presente de las aplicaciones en Linux">
+
+
+<meta itemprop="datePublished" content="2019-09-15T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-09-15T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="557">
+
+  <meta itemprop="image" content="https://rlodeiro.info/img/posts/2019/09/flatpak/flatpak.jpg">
+
+
+
+<meta itemprop="keywords" content="Flatpak,Linux,Aplicaciones,Sandbox," />
+
+        
+
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+            <link rel="stylesheet" href="https://rlodeiro.info/css/main.css">
+            <link rel="stylesheet" href="https://rlodeiro.info/css/add-on.css">
+            <link rel="stylesheet" href="https://rlodeiro.info/css/academicons.min.css">
+        
+
+        
+            
+                
+            
+                
+                    <link rel="stylesheet" href="https://rlodeiro.info/css/github.min.css">
+                
+            
+        
+
+
+
+      
+    </head>
+    <body>
+
+      
+      <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+      <h1><a href="https://rlodeiro.info/">Roberto Lodeiro</a></h1>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="https://rlodeiro.info/">
+                            <i class="fa fa-home">&nbsp;</i>Inicio
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/about/">
+                            <i class="fa fa-id-card-o">&nbsp;</i>Sobre mi
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/blog/">
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/categories/">
+                            <i class="fa fa-sitemap">&nbsp;</i>Categorias
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/contact/">
+                            <i class="fa fa-envelope-o">&nbsp;</i>Contacto
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="https://rlodeiro.info/">
+                            <h3>
+                                <i class="fa fa-home">&nbsp;</i>Inicio
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/about/">
+                            <h3>
+                                <i class="fa fa-id-card-o">&nbsp;</i>Sobre mi
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/blog/">
+                            <h3>
+                                <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/categories/">
+                            <h3>
+                                <i class="fa fa-sitemap">&nbsp;</i>Categorias
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/contact/">
+                            <h3>
+                                <i class="fa fa-envelope-o">&nbsp;</i>Contacto
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section class="recent-posts">
+            <div class="mini-posts">
+                <header>
+                    <h3>Publicaciones Recientes</h3>
+                </header>
+                
+
+                
+                    
+                
+
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/flatpak/">Flatpak</a></h3>
+                                
+                                <time class="published" datetime='2019-09-15'>
+                                    15 de septiembre de 2019
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/flatpak/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2019/09/flatpak//flatpak.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/pihole_docker/">Pi-hole &amp; Docker</a></h3>
+                                
+                                <time class="published" datetime='2019-07-21'>
+                                    21 de julio de 2019
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/pihole_docker/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2019/07/pihole_docker//pihole_docker.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/tearing_linux/">Screen tearing en Linux</a></h3>
+                                
+                                <time class="published" datetime='2019-05-17'>
+                                    17 de mayo de 2019
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/tearing_linux/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2019/05/tearing_linux//tearing_linux.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/audio_multiroom/">Audio Multiroom</a></h3>
+                                
+                                <time class="published" datetime='2019-04-14'>
+                                    14 de abril de 2019
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/audio_multiroom/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2019/04/audio_multiroom//audio_multiroom.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/personalizar_xfce/">Personalizar XFCE</a></h3>
+                                
+                                <time class="published" datetime='2019-04-07'>
+                                    7 de abril de 2019
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/personalizar_xfce/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2019/04/personalizar_xfce//personalizar_xfce.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/instalacion_debian/">Instalar Debian 9 Stretch</a></h3>
+                                
+                                <time class="published" datetime='2019-03-30'>
+                                    30 de marzo de 2019
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/instalacion_debian/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian//instalacion_Debian.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+
+                
+                    <a href=
+                        
+                            /blog/
+                        
+                        class="button">Ver más entradas</a>
+                
+            </div>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Comparte esta publicación <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2frlodeiro.info%2fblog%2fflatpak%2f&amp;text=Flatpak&amp;via=lodeiro0001" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frlodeiro.info%2fblog%2fflatpak%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=https%3a%2f%2frlodeiro.info%2fblog%2fflatpak%2f&amp;title=Flatpak" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2frlodeiro.info%2fblog%2fflatpak%2f&amp;title=Flatpak" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2frlodeiro.info%2fblog%2fflatpak%2f&amp;description=Flatpak" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Chequea este post de Roberto%20Lodeiro&amp;body=https%3a%2f%2frlodeiro.info%2fblog%2fflatpak%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+  <header>
+    <div class="title">
+        
+            <h1><a href="https://rlodeiro.info/blog/flatpak/">Flatpak</a></h1>
+            
+        
+        
+            <p>El presente de las aplicaciones en Linux</p>
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published" datetime='2019-09-15'>
+            15 de septiembre de 2019
+          </time>
+        <span class="author">Roberto Lodeiro</span>
+        
+        
+    </div>
+</header>
+
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2frlodeiro.info%2fblog%2fflatpak%2f&amp;text=Flatpak&amp;via=lodeiro0001" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frlodeiro.info%2fblog%2fflatpak%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=https%3a%2f%2frlodeiro.info%2fblog%2fflatpak%2f&amp;title=Flatpak" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2frlodeiro.info%2fblog%2fflatpak%2f&amp;title=Flatpak" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2frlodeiro.info%2fblog%2fflatpak%2f&amp;description=Flatpak" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Chequea este post de Roberto%20Lodeiro&amp;body=https%3a%2f%2frlodeiro.info%2fblog%2fflatpak%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+      </ul>
+    </section>
+  
+
+  
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/flatpak/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2019/09/flatpak//flatpak.jpg" alt="">
+        </a>
+    
+
+
+  <div id="content">
+    
+
+<p>Ya que el verano está finalizando, vamos a hablar de las aplicaciones en Linux. Flatpak solventa los problemas encontrados al instalar aplicaciones de la forma habitual, y facilita enormemente la distribución de las mismas.</p>
+
+<p>A los más puristas no les gusta Flatpak (quien sabe por qué), pero yo llevo utilizándolo un tiempo y no le encuentro más que ventajas.</p>
+
+<p>Tenemos un catálogo inmenso de aplicaciones, periódicamente actualizadas, sin problemas de dependencias y disponibles para la gran mayoría de distribuciones Linux desde un único repositorio.</p>
+
+<hr style="border-color: #d6d6d6;" />
+
+<h2 id="1-instalación">1. Instalación</h2>
+
+<p>Como siempre va a ser en Debian, pero si tu distro es otra 
+
+    
+        
+    
+
+    <a href="https://www.flatpak.org/setup/" target='_blank'>en la página oficial tienes disponible los pasos</a>
+
+ para la instalación en la mayoría de distribuciones actuales:</p>
+
+<p><center><img src="https://rlodeiro.info/img/posts/2019/09/flatpak/flatpak_distros.jpg" alt="" /></center></p>
+
+<p>Si utilizas <code>Debian Jessie</code> o <code>Stretch</code>, tiene que instalarlo  a través del 
+
+    
+        
+    
+
+    <a href="https://backports.debian.org/Instructions/" target='_blank'>repositorio backports</a>
+
+, el cual ya expliqué 
+
+    
+        
+    
+
+    <a href="https://rlodeiro.info/blog/instalacion_debian/" target='_blank'>en una entrada anterior.</a>
+
+</p>
+
+<ul>
+<li>Instalamos Flatpak</li>
+</ul>
+
+<pre><code class="language-bash">$ sudo apt update &amp;&amp; sudo apt install flatpak
+</code></pre>
+
+<p>Si utiliza el entorno de escritorio <code>Gnome</code>, que no es mi caso ya que <code>XFCE</code> me tiene enamorado, te será de gran utilidad instalar el Plug-in para que se integre con la tienda de aplicaciones</p>
+
+<pre><code class="language-bash">$ sudo apt install gnome-software-plugin-flatpak
+</code></pre>
+
+<h2 id="2-agregar-repositorios">2. Agregar repositorios</h2>
+
+<p>Flatpak necesita tener uno o más repositorios desde los cuales instalará las aplicaciones. En este caso, aunque existen otros, utilizaremos solo el oficial del proyecto.</p>
+
+<ul>
+<li>Agregar <code>flathub</code></li>
+</ul>
+
+<pre><code class="language-bash">$ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+</code></pre>
+
+<p>Además de las funciones por consola que explicaré a continuación, <code>flathub</code> 
+
+    
+        
+    
+
+    <a href="https://flathub.org/home" target='_blank'>dispone de una página web</a>
+
+ donde podemos buscar todas las aplicaciones que tienen disponibles:</p>
+
+<p><center><img src="https://rlodeiro.info/img/posts/2019/09/flatpak/flathub.jpg" alt="" /></center></p>
+
+<h2 id="3-instalar-aplicaciones">3. Instalar aplicaciones</h2>
+
+<p>Si utilizas <code>Gnome</code> y has instalado el Plug-in, puedes instalar las aplicaciones directamente desde la tienda de aplicaciones.</p>
+
+<p>Si buscas las aplicaciones en la web de <code>flathub</code>, al final de la página de la aplicación en cuestión saldrá el comando completo para instalar dicha aplicación.</p>
+
+<ul>
+<li>Por ejemplo, para instalar <code>LibreOffice</code></li>
+</ul>
+
+<pre><code class="language-bash">$ flatpak install flathub org.libreoffice.LibreOffice
+</code></pre>
+
+<p>La sintaxis es:</p>
+
+<pre><code class="language-bash">$ flatpak install &lt;repositorio&gt; &lt;aplicacion&gt;
+</code></pre>
+
+<p>Desde hace algunas versiones, el equipo de Flatpak ha incluido la <code>búsqueda desde consola</code> para facilitar el proceso.</p>
+
+<ul>
+<li>Búsqueda desde consola</li>
+</ul>
+
+<pre><code class="language-bash">$ flatpak search spotify
+</code></pre>
+
+<p>Nos devolverá algo como lo siguiente:</p>
+
+<pre><code class="language-txt">Description                                                                Application                                  Version                Branch             Remotes
+Spotify - Online music streaming service                                   com.spotify.Client                           1.1.10.546             stable             flathub
+Clementine Music Player - Plays music files and Internet radio             org.clementine_player.Clementine             1.3.1-git              stable             flathub
+</code></pre>
+
+<p>Para <code>instalar</code> la aplicación, podemos hacerlo de <code>dos formas</code>.</p>
+
+<ul>
+<li>Indicando todos los parámetros:</li>
+</ul>
+
+<pre><code class="language-bash">$ flatpak install flathub com.spotify.Client 
+</code></pre>
+
+<ul>
+<li>Indicando solo el <code>nombre corto</code> de la aplicación:</li>
+</ul>
+
+<pre><code class="language-bash">$ flatpak install spotify
+</code></pre>
+
+<p>Flatpak <code>nos sugerirá</code> el repositorio y la aplicación encontrada:</p>
+
+<pre><code class="language-txt">Looking for matches…
+Found similar ref(s) for ‘spotify’ in remote ‘flathub’ (system).
+Use this remote? [Y/n]: y
+Found ref ‘app/com.spotify.Client/x86_64/stable’ in remote ‘flathub’ (system).
+Use this ref? [Y/n]: y
+</code></pre>
+
+<p>Simplemente respondiendo si (y) a ambas preguntas, comenzará la instalación.</p>
+
+<h2 id="4-otros-comandos">4. Otros comandos</h2>
+
+<ul>
+<li>Listar aplicaciones instaladas:</li>
+</ul>
+
+<pre><code class="language-bash">$ flatpak list
+</code></pre>
+
+<ul>
+<li>Actualizar aplicaciones</li>
+</ul>
+
+<p>Para actualizar todas:</p>
+
+<pre><code class="language-bash">$ flatpak update
+</code></pre>
+
+<p>Si queremos actualizar solo una, debemos indicar el nombre completo de la misma:</p>
+
+<pre><code class="language-bash">$ flatpak update org.libreoffice.LibreOffice  
+</code></pre>
+
+<ul>
+<li>Desinstalar aplicaciones:</li>
+</ul>
+
+<pre><code class="language-bash">$ flatpak remove com.spotify.Client 
+</code></pre>
+
+<ul>
+<li>Eliminar contenido no utilizado:</li>
+</ul>
+
+<pre><code class="language-bash">$ flatpak remove --unused
+</code></pre>
+
+<p>Ahora ya puedes empezar a disfrutar de aplicaciones actualizadas, y olvidar los problemas de dependencias o que lo que quieres instalar no esté disponible en el repositorio de tu distribución.</p>
+
+<p>Además, si eres desarrollador, esta es una magnífica forma de distribuir tu aplicación para todas las distribuciones!</p>
+
+<hr style="border-color: #d6d6d6;" />
+
+<p>Espero que sea útil, ¡gracias por leerme!</p>
+
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/categories/linux">Linux</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/categories/herramientas">Herramientas</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+            
+            
+                <i class="fa fa-tags"></i>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/flatpak">Flatpak</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/linux">Linux</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/aplicaciones">Aplicaciones</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/sandbox">Sandbox</a></li>
+                
+            
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="https://rlodeiro.info/blog/pihole_docker/"
+                class="button big previous">Pi-hole &amp; Docker</a></li>
+    
+
+    
+</ul>
+
+
+    </div>
+    
+<section id="sidebar">
+
+  
+  <section id="intro">
+    
+    
+      
+        <a href='https://rlodeiro.info/'><img src="https://rlodeiro.info/img/main/logo.jpg" class="intro-circle" width="" alt="" /></a>
+      
+    
+    
+      <header>
+        <h2>Roberto Lodeiro</h2>
+        <p>Reality is wrong. Dreams are for real.</p>
+      </header>
+    
+    
+      <ul class="icons">
+        
+          
+    <li><a href="" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+  <li><a href="//github.com/lodeiro0001" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//twitter.com/lodeiro0001" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:me@rlodeiro.info" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+  </section>
+
+  
+  <section class="recent-posts">
+    <div class="mini-posts">
+      <header>
+        <h3>Publicaciones Recientes</h3>
+      </header>
+      <div class="posts-container">
+        
+
+        
+          
+        
+
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/flatpak/">Flatpak</a>
+              </h3>
+              
+              <time class="published" datetime='2019-09-15'>
+                15 de septiembre de 2019
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/flatpak/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2019/09/flatpak//flatpak.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/pihole_docker/">Pi-hole &amp; Docker</a>
+              </h3>
+              
+              <time class="published" datetime='2019-07-21'>
+                21 de julio de 2019
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/pihole_docker/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2019/07/pihole_docker//pihole_docker.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/tearing_linux/">Screen tearing en Linux</a>
+              </h3>
+              
+              <time class="published" datetime='2019-05-17'>
+                17 de mayo de 2019
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/tearing_linux/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2019/05/tearing_linux//tearing_linux.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/audio_multiroom/">Audio Multiroom</a>
+              </h3>
+              
+              <time class="published" datetime='2019-04-14'>
+                14 de abril de 2019
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/audio_multiroom/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2019/04/audio_multiroom//audio_multiroom.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/personalizar_xfce/">Personalizar XFCE</a>
+              </h3>
+              
+              <time class="published" datetime='2019-04-07'>
+                7 de abril de 2019
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/personalizar_xfce/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2019/04/personalizar_xfce//personalizar_xfce.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/instalacion_debian/">Instalar Debian 9 Stretch</a>
+              </h3>
+              
+              <time class="published" datetime='2019-03-30'>
+                30 de marzo de 2019
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/instalacion_debian/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian//instalacion_Debian.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+      </div>
+
+      
+        <a href=
+          
+            /blog/
+          
+        class="button">Ver más entradas</a>
+      
+    </div>
+  </section>
+
+  
+  
+  
+  
+  
+    <section id="categories">
+      <header>
+        <h3>
+          <a href="https://rlodeiro.info/categories/">Categorías</a>
+        </h3>
+      </header>
+        
+          
+        
+
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/herramientas/">Herramientas</a>
+                <span style="float:right;">3</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/iot/">Iot</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/linux/">Linux</a>
+                <span style="float:right;">11</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/raspberry-pi/">Raspberry Pi</a>
+                <span style="float:right;">5</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/servicios/">Servicios</a>
+                <span style="float:right;">7</span>
+              
+            </header>
+          </article>
+        </p>
+        
+    </section>
+  
+  
+
+  
+  
+    <section id="mini-bio">
+      <h3>Sobre Mi</h3>
+      <p>¿De donde viene? ¿Cual es su color de pelo? ¿A que tribu urbana pertenece? Si estás muy aburrid@ y/o quieres saberlo ¡adelante!</p>
+      <a href="https://rlodeiro.info/about/" class="button">Leer Más</a>
+    </section>
+  
+
+  
+  <section id="footer">
+    
+      <ul class="icons">
+        
+          
+    <li><a href="" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+  <li><a href="//github.com/lodeiro0001" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//twitter.com/lodeiro0001" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:me@rlodeiro.info" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+    <p class="copyright">
+      
+        &copy; 2019
+        
+          Roberto Lodeiro
+        
+      .
+      Powered by <a href="//gohugo.io" target="_blank">Hugo</a>
+    </p>
+  </section>
+</section>
+
+    </div>
+    <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+    
+
+    
+      
+    
+
+    
+    
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+      <script src="https://rlodeiro.info/js/util.js"></script>
+      <script src="https://rlodeiro.info/js/main.js"></script>
+      <script src="https://rlodeiro.info/js/backToTop.js"></script>
+    
+
+    
+      
+        
+      
+        
+          <script src="https://rlodeiro.info/js/highlight.min.js"></script>
+        
+      
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+      
+
+
+  </body>
+</html>
+
