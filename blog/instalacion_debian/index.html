@@ -27,7 +27,7 @@
         "datePublished": "2019-03-30 00:00:00 \u002b0000 UTC",
         "dateModified" : "2019-03-30 00:00:00 \u002b0000 UTC",
         "url" : "https:\/\/rlodeiro.info\/blog\/instalacion_debian\/",
-        "wordCount" : "1069",
+        "wordCount" : "1076",
         "keywords" : [ "Linux","Debian","Blog" ]
     }
     </script>
@@ -61,7 +61,7 @@
         <meta itemprop="name" content="Instalar Debian 9 Stretch">
 <meta itemprop="description" content="Guía paso a paso"><meta itemprop="datePublished" content="2019-03-30T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-03-30T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="1069"><meta itemprop="image" content="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian/instalacion_Debian.jpg">
+<meta itemprop="wordCount" content="1076"><meta itemprop="image" content="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian/instalacion_Debian.jpg">
 <meta itemprop="keywords" content="Linux,Debian," />
         
 
@@ -663,8 +663,12 @@
     <p>Tras tres duros meses desaparecido en combate, voy a explicar como y porque he cambiado mi distribución Linux por la archiconocida Debian.</p>
 <p>Primero me deshice de mi Macbook (¡que contesto estoy de la decisión!), y tras un año aproximadamente utilizando Ubuntu, siento la necesidad de pasarme a Debian, me lo pide el cuerpo!</p>
 <p>He escuchado comentarios del estilo: &ldquo;Esa distribución es para servidores&rdquo;, &ldquo;El software está obsoleto&rdquo;, &ldquo;Es una distribución para freaks&rdquo;, entre otros. Siento decir que la mayor parte son cosas que les ha dicho el primo de su primo, salvo la última ya que soy un verdadero freak.</p>
-<!-- raw HTML omitted -->
-<h1 id="consideraciones-previas">Consideraciones previas</h1>
+
+
+  <hr style="border-color: #d6d6d6;" />
+
+
+<h2 id="consideraciones-previas">Consideraciones previas</h2>
 <p>La versión estable de Debian en este momento es <code>Debian 9 Stretch</code>.</p>
 <p>Tenemos disponibles tres versiones en activo:</p>
 <ul>
@@ -683,7 +687,7 @@ Su nombre no quiere decir que vaya a romperse a cada momento. Se avisa en cada a
 <h3 id="que-versión-elegir">¿Que versión elegir?</h3>
 <p>Tras unos días probando unas y otras, tengo muy claro que me quedo en <code>estable</code>. La razón es muy simple, quiero que mi sistema de trabajo sea una roca, y las actualizaciones de seguridad en estable son las mejores.</p>
 <p>Es cierto que algunas versiones del software en el repo están algo deprecadas, pero no es problema alguno. Debian ofrece una solución oficial a esto de la que hablaré más adelante, así como soluciones de terceros para tener el software actualizado en todo momento sin depender del repo de nuestra distribución.</p>
-<h1 id="primeros-pasos">Primeros pasos</h1>
+<h2 id="primeros-pasos">Primeros pasos</h2>
 <p>Lo primero es descargar la imagen del sistema 
 
     
@@ -712,7 +716,7 @@ Recomiendo la
     <a href="https://www.balena.io/etcher/" target='_blank'>con Etcher</a>
 
 . Ya estamos listos para arrancar nuestra máquina desde el y comenzar la instalación.</p>
-<h1 id="instalación">Instalación</h1>
+<h2 id="instalación">Instalación</h2>
 <ul>
 <li>En la primera ventana, elegimos instalación gráfica
 <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian/debian2.png" alt=""></li>
@@ -774,7 +778,7 @@ He elejido XFCE por ser un entorno de escritorio muy estable, altamente personal
 </ul>
 <p>Tras finalizar, nos avisará que la instalación ha terminado, ya estamos listos para iniciar Debian!
 <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian/debian9.png" alt=""></p>
-<h1 id="sudo">SUDO</h1>
+<h2 id="sudo">SUDO</h2>
 <p>Por defecto <code>sudo</code> no viene habilitado en Debian.</p>
 <ul>
 <li>Como root, instalamos sudo y añadimos nuestro usuario al grupo:</li>
@@ -783,7 +787,7 @@ He elejido XFCE por ser un entorno de escritorio muy estable, altamente personal
 $ apt install sudo
 $ usermod -a -G sudo tu_nombre_de_usuario
 </code></pre></div><p>Una vez reiniciado el equipo, ya se puede usar sudo con nuestro usuario.</p>
-<h1 id="repositorio-backports">Repositorio Backports</h1>
+<h2 id="repositorio-backports">Repositorio Backports</h2>
 <p>Al principio del post comentaba que el software en la rama estable está algo obsoleto en muchos casos, y para eso han creado el repositorio Backports!</p>
 <p>Me explico, no vamos a pasar a testing o a sid, solo vamos a instalar ciertos paquetes desde este repositorio, los cuales están revisados por Debian para funcionar sin problema en la rama estable.</p>
 <ul>
@@ -816,14 +820,19 @@ deb http://ftp.es.debian.org/debian/ stretch-backports main contrib non-free
 </code></pre></div><p>Instalamos los paquetes necesarios para añadir la clave pública del nuevo repositorio y actualizamos:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install debian-keyring debian-archive-keyring
 $ sudo apt update
-</code></pre></div><h1 id="actualizar-kernel-y-firmware">Actualizar kernel y firmware</h1>
+</code></pre></div><h2 id="actualizar-kernel-y-firmware">Actualizar kernel y firmware</h2>
 <p>Actualizo el Kernel para mejorar el soporte de hardware. Solo necesario en el caso de equipos recientes. También elimino el anterior, este ultimo paso podéis dejarlo tras comprobar que arranque correctamente con el nuevo:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt -t stretch-backports install linux-image-amd64
 $ sudo apt remove --purge linux-image-4.9.0-8-amd64
 </code></pre></div><p>Ya que mi XPS necesita una de las últimas versiones de <code>firmware-atheros</code> para que funcione la tarjeta Wi-Fi, lo instalo desde Backports. Hago lo mismo con los paquetes <code>firmware-linux</code> y <code>firmware-linux-nonfree</code>, los cuales se actualizarán a la versión mas reciente:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">s sudo apt -t stretch-backports install firmware-atheros firmware-linux firmware-linux-nonfree
 </code></pre></div><p>En otro post explicaré como poner XFCE really cool.</p>
-<!-- raw HTML omitted -->
+<p>
+
+  <hr style="border-color: #d6d6d6;" />
+
+
+Espero que sea útil, ¡gracias por leerme!</p>
 
   </div>
 

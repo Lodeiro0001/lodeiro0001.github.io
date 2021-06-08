@@ -27,7 +27,7 @@
         "datePublished": "2018-10-29 00:00:00 \u002b0000 UTC",
         "dateModified" : "2018-10-29 00:00:00 \u002b0000 UTC",
         "url" : "https:\/\/rlodeiro.info\/blog\/mqtt1\/",
-        "wordCount" : "723",
+        "wordCount" : "730",
         "keywords" : [ "mqtt","protocolo","mensajeria","broker","Iot","Blog" ]
     }
     </script>
@@ -61,7 +61,7 @@
         <meta itemprop="name" content="MQTT | Parte 1">
 <meta itemprop="description" content="Introducción al protocolo MQTT"><meta itemprop="datePublished" content="2018-10-29T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-10-29T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="723"><meta itemprop="image" content="https://rlodeiro.info/img/main/logo2.jpg"/>
+<meta itemprop="wordCount" content="730"><meta itemprop="image" content="https://rlodeiro.info/img/main/logo2.jpg"/>
 <meta itemprop="keywords" content="mqtt,protocolo,mensajeria,broker,Iot," />
         
 
@@ -662,10 +662,14 @@
   <div id="content">
     <p>Esta primera entrada sobre MQTT, pretende ser una forma sencilla de entender los conceptos básicos. Explicaré en que consiste y como podemos usarlo, pero sin entrar en demasiados tecnicismos (para eso ya vendrán entradas posteriores).</p>
 <p>Si usas Telegram u otra aplicación de mensajería actual o has usado IRC antaño, ¡será muy fácil que lo entiendas!.</p>
-<!-- raw HTML omitted -->
+
+
+  <hr style="border-color: #d6d6d6;" />
+
+
 <p><code>MQTT</code>(Message Queuing Telemetry Transport), es un protocolo de comunicación muy utilizado en el <code>Iot</code>(Internet of Things). En un supuesto muy básico, donde queremos comunicar dos dispositivos, uno emitiría un mensaje y otro tendría que recibirlo, ¡pues de eso se encarga MQTT!.</p>
 <p>Llevando el supuesto anterior a un entorno cotidiano, tú serás el dispositivo2 que va a recibir el mensaje (por Telegram), y tu amigo (el pesado que siempre escribe en los grupos) el dispositivo1 que emite el mensaje. No quiere decir que Telegram utilice MQTT, pero supongamos que si para explicarlo.</p>
-<h1 id="mensaje---emisor--receptor">Mensaje - Emisor &amp; Receptor</h1>
+<h2 id="mensaje---emisor--receptor">Mensaje - Emisor &amp; Receptor</h2>
 <p>Pongamos dos casos:</p>
 <ul>
 <li>
@@ -683,13 +687,13 @@
 </li>
 </ul>
 <p>Aquí nuevamente nuestro queridísimo amigo (dispositivo1) envía un mensaje, pero esta vez al grupo que tenemos creado para las Parties. El mensaje en esta ocasión llega a todas las personas que están en el grupo (dispositivos 2, 3 y 4). Perfecto again!</p>
-<h1 id="broker-vs-topics">Broker VS Topics</h1>
+<h2 id="broker-vs-topics">Broker VS Topics</h2>
 <p>Obviamente estos dos ejemplo anteriores, serían así en un mundo idílico, pero en la realidad no podemos tener un servidor o <code>broker</code> para cada conversación.</p>
 <p>Siguiendo en el contexto imaginario donde Telegram usase MQTT, lo que ocurriría sería algo similar a esto:</p>
 <p><img src="https://rlodeiro.info/img/posts/2018/10/mqtt1/mqtt1_broker&amp;topics.jpg" alt=""></p>
 <p>El amigo (dispositivo1) envía dos mensajes, uno privado para ti, y otro al grupo. Ambos llegan al mismo servidor, y aquí es donde viene la magia. ¿Como sabe el servidor para quien es cada mensaje? simplemente no lo sabe.</p>
 <p>Cada mensaje va destinado a un <code>topic</code>, en nuestro ejemplo topic1 y topic2. Tu (dispositivo2) estas suscrito al topic de la conversación privada y al del grupo, con lo cual ves ambos mensajes, pero los otros dos amigos (dispositivo 3 y 4) solo ven el mensaje publicado en el topic2.</p>
-<h1 id="entorno-real">Entorno real</h1>
+<h2 id="entorno-real">Entorno real</h2>
 <p>Antes de que te asustes, explico el porque de las flechas en ambas direcciones. Un <code>cliente</code> (dispositivo) puede tanto enviar como recibir mensajes a diferentes topics. Antes no era así por no complicar los ejemplos, y porque nadie le contesta al amigo pesado.</p>
 <p>Este es el entorno real que vamos a suponer:</p>
 <p><img src="https://rlodeiro.info/img/posts/2018/10/mqtt1/mqtt1_clientes_broker.jpg" alt=""></p>
@@ -716,7 +720,12 @@ luces/dormitorio/stat/ - Publica estado el Cliente3
 luces/salon/cmd/ - Para enviarle ordenes al Cliente2
 luces/salon/stat/ - Publica su estado el Cliente2
 </code></pre></div><p>Todo esto se puede volver lo complejo que queramos, pero queda para otra entrada.</p>
-<!-- raw HTML omitted -->
+<p>
+
+  <hr style="border-color: #d6d6d6;" />
+
+
+Espero que sea útil, ¡gracias por leerme!</p>
 
   </div>
 

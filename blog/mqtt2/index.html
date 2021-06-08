@@ -27,7 +27,7 @@
         "datePublished": "2018-12-05 00:00:00 \u002b0000 UTC",
         "dateModified" : "2018-12-05 00:00:00 \u002b0000 UTC",
         "url" : "https:\/\/rlodeiro.info\/blog\/mqtt2\/",
-        "wordCount" : "818",
+        "wordCount" : "825",
         "keywords" : [ "mqtt","protocolo","mensajeria","broker","Iot","Blog" ]
     }
     </script>
@@ -61,7 +61,7 @@
         <meta itemprop="name" content="MQTT | Parte 2">
 <meta itemprop="description" content="Broker VS cliente"><meta itemprop="datePublished" content="2018-12-05T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-12-05T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="818"><meta itemprop="image" content="https://rlodeiro.info/img/main/logo2.jpg"/>
+<meta itemprop="wordCount" content="825"><meta itemprop="image" content="https://rlodeiro.info/img/main/logo2.jpg"/>
 <meta itemprop="keywords" content="mqtt,protocolo,mensajeria,broker,Iot," />
         
 
@@ -671,8 +671,12 @@
 
  ahora me centraré en explicar un caso de uso básico.</p>
 <p>Mi servidor es una Raspberry Pi (que raro), pero puede ser otro pc, o el mismo donde posteriormente instales también el cliente y así poder probar el funcionamiento.</p>
-<!-- raw HTML omitted -->
-<h1 id="1-instalar-el-broker">1. Instalar el broker</h1>
+
+
+  <hr style="border-color: #d6d6d6;" />
+
+
+<h2 id="1-instalar-el-broker">1. Instalar el broker</h2>
 <p>Instalaremos en la máquina servidor el Broker <code>Mosquitto</code>. Es uno de los más utilizados, está escrito en C y consume muy pocos recursos con un rendimiento muy bueno.</p>
 <ul>
 <li>
@@ -696,7 +700,7 @@ $ sudo apt install mosquitto
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mosquitto_passwd -D /etc/mosquitto/tuArchivoPass nombreUsuario
 </code></pre></div></li>
 </ul>
-<h1 id="21-configuración">2.1 Configuración</h1>
+<h2 id="21-configuración">2.1 Configuración</h2>
 <p>La configuración principal de Mosquito se encuentra en <code>/etc/mosquitto/mosquitto.conf</code>. Tal como se recomienda, vamos a crear un fichero aparte para nuestra configuración.</p>
 <ul>
 <li>
@@ -711,7 +715,7 @@ password_file etc/mosquitto/tuArchivoPass
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo systemctl restart mosquitto
 </code></pre></div></li>
 </ul>
-<h1 id="22-configurar-ssl">2.2 Configurar SSL</h1>
+<h2 id="22-configurar-ssl">2.2 Configurar SSL</h2>
 <p>Adicionalmente, cosa que recomiendo, podemos <code>cifrar</code> las comunicaciones entre Broker y clientes con un certificado SSL, en este caso usaré un certificado de firma propia generado con <code>openssl</code>.</p>
 <ul>
 <li>
@@ -738,7 +742,7 @@ keyfile /etc/ssl/mqtt/mqtt.example.local.key
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo systemctl restart mosquitto
 </code></pre></div></li>
 </ul>
-<h1 id="3-cliente">3. Cliente</h1>
+<h2 id="3-cliente">3. Cliente</h2>
 <p>Podemos tener como clientes todo tipo de dispositivos, y como dije en el primer post un cliente puede tanto recibir como enviar mensajes a cualquier topic. Yo lo utilizo mucho con los ESP para proyectos Iot, pero ahora explicaré como utilizarlo de forma básica desde terminal, que al fin y al cabo es lo mismo.</p>
 <ul>
 <li>
@@ -759,7 +763,7 @@ keyfile /etc/ssl/mqtt/mqtt.example.local.key
 </code></pre></div><p>Una vez se ejecute el comando, verás que la primera terminal recibe el mensaje, ¡magia!.</p>
 </li>
 </ul>
-<h1 id="4-topics">4. Topics</h1>
+<h2 id="4-topics">4. Topics</h2>
 <p>De forma resumida, podemos decir que los topics pueden ser como te de la real gana, lo importante es estructurarlos bien para tener un orden lógico en el entorno de uso.</p>
 <p>Recordando el ejemplo del primer post:</p>
 <p><img src="https://rlodeiro.info/img/posts/2018/10/mqtt1/mqtt1_clientes_broker.jpg" alt=""></p>
@@ -779,7 +783,12 @@ keyfile /etc/ssl/mqtt/mqtt.example.local.key
 <li>Indicando <code>'luces/#'</code> como topic: nos suscribimos tanto a <code>luces</code> como a todos los que sigan.</li>
 </ul>
 <p>¡Prueba y prueba!, en otro post explicaré como conectarnos desde un Arduino en un caso de uso simple, o quizá desde un ESP8266 :D</p>
-<!-- raw HTML omitted -->
+<p>
+
+  <hr style="border-color: #d6d6d6;" />
+
+
+Espero que sea útil, ¡gracias por leerme!</p>
 
   </div>
 

@@ -27,7 +27,7 @@
         "datePublished": "2018-11-20 00:00:00 \u002b0000 UTC",
         "dateModified" : "2018-11-20 00:00:00 \u002b0000 UTC",
         "url" : "https:\/\/rlodeiro.info\/blog\/raspberrypi_backup_remoto\/",
-        "wordCount" : "444",
+        "wordCount" : "445",
         "keywords" : [ "Backup","Linux","Remoto","Blog" ]
     }
     </script>
@@ -61,7 +61,7 @@
         <meta itemprop="name" content="Raspberry Pi - Backup remoto">
 <meta itemprop="description" content="Como crear una copia de seguridad sin apagar el sistema"><meta itemprop="datePublished" content="2018-11-20T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-11-20T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="444"><meta itemprop="image" content="https://rlodeiro.info/img/main/logo2.jpg"/>
+<meta itemprop="wordCount" content="445"><meta itemprop="image" content="https://rlodeiro.info/img/main/logo2.jpg"/>
 <meta itemprop="keywords" content="Backup,Linux,Remoto," />
         
 
@@ -663,7 +663,12 @@
     <p>Si odias apagar tu Raspberry PI para hacer una copia de seguridad del sistema, continua leyendo.</p>
 <p>Ya te habrá quedado claro que soy un Full Lover de la Raspberry PI, la uso como servidor principal y es casi mas importante que yo en casa, pero el ritual de hacer una copia de seguridad me cansaba. Tenia que apagarla, desconectar los discos y la microSD, conectar todo a mi pc y hacer el backup. Después había que volver a conectar todo, encenderla y comprobar que todos los servicios se iniciaban de forma correcta.</p>
 <p>Esos malos tiempos se han acabado, ¡te explico como!</p>
-<!-- raw HTML omitted -->
+
+
+  <hr style="border-color: #d6d6d6;" />
+
+
+<h2 id="requisitos">Requisitos</h2>
 <p>Basta con tener habilitado el acceso remoto con SSH en nuestra Raspberry PI. En caso contrario, podemos crear un archivo con nombre <code>ssh</code> en la particion <code>/boot</code> de la misma y reiniciar. Este proceso se puede hacer tando desde sistemas Linux como macOS.</p>
 <p>Este ejemplo es con una Raspberry que solo tiene microSD como disco del sistema, pero en el caso de tener también 
 
@@ -674,7 +679,7 @@
     <a href="https://rlodeiro.info/blog/raspberryusbboot/" target='_blank'>un disco USB como explique en esta entrada,</a>
 
  solo hemos de hacer dos copias, una de la microSD y otra del disco USB siguiendo estos mismos pasos.</p>
-<h1 id="localizar-el-nombre-del-disco">Localizar el nombre del disco</h1>
+<h2 id="localizar-el-nombre-del-disco">Localizar el nombre del disco</h2>
 <ul>
 <li>
 <p>Entrar a la Raspberry PI por ssh</p>
@@ -693,7 +698,7 @@ Copiar el nombre, en este caso es <code>/dev/mmcblk0 </code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ exit
 </code></pre></div></li>
 </ul>
-<h1 id="iniciar-el-backup">Iniciar el backup</h1>
+<h2 id="iniciar-el-backup">Iniciar el backup</h2>
 <ul>
 <li>
 <p>Ejecutar lo siguiente</p>
@@ -701,14 +706,14 @@ Copiar el nombre, en este caso es <code>/dev/mmcblk0 </code></p>
 </code></pre></div><p>Nos pedirá la contraseña remota y comenzará el backup. Previamente hemos de modificar algunos parámetros.</p>
 </li>
 </ul>
-<h2 id="parámetros-a-modificar">Parámetros a modificar</h2>
+<h3 id="parámetros-a-modificar">Parámetros a modificar</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">* pi -&gt; Nombre de nuestro usuario en la Raspberry PI
 * xxx.xxx.x.xxx -&gt; Direccion IP a la que nos queremos conectar
 * if=/dev/mmcblk0 -&gt; Nombre del disco
 * of=$HOME/backupPi.gz -&gt; &#34;Directorio/nombreArchivo.gz&#34; donde se guardara el backup
 </code></pre></div><p>De esta forma, conectaremos con nuestra Rapberry PI por <code>ssh</code>, haremos una copia con <code>dd</code> ya comprimida, y la guardaremos en el directorio local indicado.</p>
 <p>Gracias a <code>status=progress</code> tendremos información del progreso de la copia hasta que esta finalice.</p>
-<h1 id="restaurar-el-backup">Restaurar el backup</h1>
+<h2 id="restaurar-el-backup">Restaurar el backup</h2>
 <p>Si queremos restaurar la copia, solo tenemos que conectar el disco en nuestro pc y hacer lo siguiente:</p>
 <ul>
 <li>
@@ -721,7 +726,11 @@ Copiar el nombre, en este caso es <code>/dev/mmcblk0 </code></p>
 </code></pre><p>Cambiando el nombre de la copia y el del disco de destino por los adecuados.</p>
 </li>
 </ul>
-<!-- raw HTML omitted -->
+
+
+  <hr style="border-color: #d6d6d6;" />
+
+
 <p>Espero que sea útil, ¡gracias por leerme!</p>
 
   </div>

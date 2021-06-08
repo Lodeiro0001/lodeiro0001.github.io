@@ -671,15 +671,19 @@
 
 </p>
 <p>Cabe destacar que la diferencia de calidad entre Bluetooth y AirPlay a la hora de transmitir audio de forma inalámbrica es abismal, así que no te lo pienses y elije el segundo.</p>
-<!-- raw HTML omitted -->
-<h1 id="actualizar-el-sistema">Actualizar el sistema</h1>
+
+
+  <hr style="border-color: #d6d6d6;" />
+
+
+<h2 id="actualizar-el-sistema">Actualizar el sistema</h2>
 <p>Primero actualizamos el sistema e instalamos los paquetes necesarios.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt-get update &amp; sudo apt-get upgrade
 $ sudo apt-get install autoconf automake avahi-daemon build-essential git libasound2-dev libavahi-client-dev libconfig-dev libdaemon-dev libpopt-dev libssl-dev libtool xmltoman
-</code></pre></div><h1 id="clonar-el-repositorio">Clonar el repositorio</h1>
+</code></pre></div><h2 id="clonar-el-repositorio">Clonar el repositorio</h2>
 <p>Podemos encontrar <code>shairport-sync</code> en los repositorios de Ubuntu, Raspbian y demás, pero no será la versión actualizada. Clonamos el repositorio en nuestro <code>$HOME</code>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git clone https://github.com/mikebrady/shairport-sync.git
-</code></pre></div><h1 id="configurar-y-compilar">Configurar y compilar</h1>
+</code></pre></div><h2 id="configurar-y-compilar">Configurar y compilar</h2>
 <p>Entramos en el directorio y ejecutamos:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd shairport-sync
 $ autoreconf -i -f
@@ -687,11 +691,11 @@ $ ./configure --with-alsa --with-avahi --with-ssl<span style="color:#f92672">=</
 </code></pre></div><p>Una vez configurado, compilamos e instalamos con:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ make
 $ sudo make install
-</code></pre></div><h1 id="inicio-automático">Inicio automático</h1>
+</code></pre></div><h2 id="inicio-automático">Inicio automático</h2>
 <p>Para habilitar el inicio automático con <code>systemd</code> ejecutamos:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo systemctl enable shairport-sync
 $ sudo service shairport-sync start
-</code></pre></div><h1 id="configuración-adicional">Configuración adicional</h1>
+</code></pre></div><h2 id="configuración-adicional">Configuración adicional</h2>
 <p>Por defecto se mostrará con el nombre del host, podemos cambiarlo con:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /usr/local/etc/shairport-sync.conf
 </code></pre></div><ul>
@@ -705,7 +709,7 @@ general =
 </ul>
 <p>Donde eliminando <code>//</code> delante de <code>name</code> y sustituyendo <code>&quot;%H&quot;</code> por <code>&quot;NuevoNombre&quot;</code> podremos indicar un nombre diferente al del host.</p>
 <p><code>shairport-sync.conf</code> es el archivo de configuración, donde podemos por ejemplo indicar la tarjeta de sonido a utilizar modificando el parámetro <code>&quot;output_device = &quot;default&quot;;</code>. Dejando todo como viene, funcionará con la tarjeta indicada en el sistema como <code>default</code>. Yo lo he probado tanto en Raspbian Stretch como en Ubuntu 18.04.</p>
-<h1 id="firewall">Firewall</h1>
+<h2 id="firewall">Firewall</h2>
 <p>Si tienes habilitado el firewal UFW, añade las siguientes reglas:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo ufw allow from 192.168.1.1/16 to any port <span style="color:#ae81ff">3689</span> proto tcp
 $ sudo ufw allow from 192.168.1.1/16 to any port <span style="color:#ae81ff">5353</span>
@@ -722,7 +726,11 @@ $ sudo ufw allow from 192.168.1.1/16 to any port 35000:65535 proto udp
 
 </p>
 <p><code>En el momento de escribir esta entrada, Shairport-Sync no soporta el nuevo multi-room de AirPlay 2, con el cual podríamos reproducir audio desde el móvil a la vez en diferentes receptores. Pero no es un problema, ya que existen formas de hacerlo desde dispositivos Linux, lo dejo para otra!</code></p>
-<!-- raw HTML omitted -->
+
+
+  <hr style="border-color: #d6d6d6;" />
+
+
 <p>Espero que sea útil, ¡gracias por leerme!</p>
 
   </div>

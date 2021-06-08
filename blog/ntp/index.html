@@ -679,8 +679,12 @@
     <a href="https://github.com/arendst/Sonoff-Tasmota" target='_blank'>Tasmota</a>
 
  (del que hablare en otro post), sera muy sencillo sincronizar la hora con un servidor NTP local. Paso a explicar como configurarlo en nuestro servidor Linux.</p>
-<!-- raw HTML omitted -->
-<h1 id="instalar-el-cliente-ntp">Instalar el cliente NTP</h1>
+
+
+  <hr style="border-color: #d6d6d6;" />
+
+
+<h2 id="instalar-el-cliente-ntp">Instalar el cliente NTP</h2>
 <p>Primero instalaremos el cliente NTP en nuestra Raspberry/Debian/derivado para que sincronizara la hora con los servers externos que elijamos.</p>
 <ul>
 <li>Deshabilitar la sincronización horaria systemd-timesyncd</li>
@@ -763,7 +767,7 @@ $ ntpq -pn
 -91.216.168.42 178.238.46.152 3 u 23 64 1 43.510 1.010 1.094
 </code></pre></div><p>Podemos comprobar que la hora y fecha del sistema es correcta con:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ date
-</code></pre></div><h1 id="configurar-el-servidor-ntp">Configurar el servidor NTP</h1>
+</code></pre></div><h2 id="configurar-el-servidor-ntp">Configurar el servidor NTP</h2>
 <p>Ahora vamos a configurar NTP para que esté disponible como servidor local.</p>
 <ul>
 <li>Editar el archivo de configuración</li>
@@ -782,7 +786,11 @@ broadcast 224.0.1.1
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo service ntp restart
 </code></pre></div><p>Por último, configuramos en los dispositivos cliente la ip local del servidor como server NTP, y ya tendremos lo hora sincronizada sin necesidad de que estos tengan acceso a internet.</p>
-<!-- raw HTML omitted -->
+
+
+  <hr style="border-color: #d6d6d6;" />
+
+
 <p>Espero que sea útil, ¡gracias por leerme!</p>
 
   </div>

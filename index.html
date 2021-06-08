@@ -579,7 +579,11 @@
     <p>Si utilizamos nuestra Raspberry Pi como servidor, resulta de vital importancia optimizar la configuración de la misma.</p>
 <p>Veamos a modificar la forma en que el sistema haga uso de la memoria virtual o <code>Swap</code> mediante la propiedad <code>Swappiness</code>, y a incrementar el tamaño de la misma en <code>Raspberry Pi</code>.</p>
 <p>Por supuesto, la propiedad Swappiness es útil modificarla también en <code>Debian</code>, <code>Ubuntu</code>, <code>Fedora</code> u otras distribuciones Linux en nuestro equipo de escritorio, ya que con ello reduciremos el uso de Swap.</p>
-<!-- raw HTML omitted -->
+
+
+  <hr style="border-color: #d6d6d6;" />
+
+
 <h2 id="swappiness">Swappiness</h2>
 <p>El valor de Swappiness es una propiedad del Kernel de Linux donde configuramos la proporción de uso entre memoria Ram y Swap de nuestro sistema. Se puede configurar de <code>0 a 100</code>, teniendo en cuenta que en <code>0</code> Swap quedará totalmente desactivado.</p>
 <p>En la mayor parte de distribuciones Linux, el valor por defecto es de <code>60</code>. Esto indica que cuando el uso de la memoria Ram llegue al 40 por ciento o más, se empezará a usar Swap.</p>
@@ -635,7 +639,11 @@ Swap: 1.0Gi 3.0Mi 1.0Gi
     <a href="https://rlodeiro.info/blog/raspberryusbboot/" target='_blank'>un HD conectado por USB</a>
 
 , con lo que dejo el archivo de Swap en la ubicación por defecto. Si quieres cambiarla puedes hacerlo descomentando y modificando el parámetro <code>CONF_SWAPFILE</code>.</p>
-<!-- raw HTML omitted -->
+
+
+  <hr style="border-color: #d6d6d6;" />
+
+
 <p>Espero que sea útil, ¡gracias por leerme!</p>
 
   </div>

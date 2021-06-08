@@ -671,8 +671,12 @@
     <a href="https://www.raspberrypi.org/documentation/hardware/raspberrypi/bootmodes/msd.md" target='_blank'>la documentación oficial</a>
 
  se explica como activar el arranque desde un dispositivo usb.</p>
-<!-- raw HTML omitted -->
-<h1 id="1-documentación-oficial">1. Documentación oficial</h1>
+
+
+  <hr style="border-color: #d6d6d6;" />
+
+
+<h2 id="1-documentación-oficial">1. Documentación oficial</h2>
 <ul>
 <li>Actualizar nuestra Raspberry Pi</li>
 </ul>
@@ -706,11 +710,11 @@
 
  para esto.</p>
 <p>Todo pinta muy bonito, pero, siempre hay un pero.</p>
-<h3 id="problema-solo-un-hdd">Problema, solo un HDD</h3>
+<h4 id="problema-solo-un-hdd">Problema, solo un HDD</h4>
 <p>Si queremos utilizar, además del disco USB principal para el sistema, otro u otros discos USB para por ejemplo guardar archivos, nuestra Raspberry Pi ya no arrancará. He intentado especificar en la configuración del boot con cual de los discos se a de arrancar,pero no funciona, así que me temo que esto es algo que no se ha tenido en cuenta al implementar esta característica.</p>
 <p>Antes de nada, mencionar que la Raspberry Pi solo alimenta de forma correcta un disco USB. Para utilizar mas discos, tenemos que conectar un hub con alimentación externa propia, y ahí ya podemos conectar el resto de discos.</p>
-<h1 id="2-para-poder-conectar-mas-de-un-disco-usb">2. Para poder conectar mas de un disco usb</h1>
-<h2 id="21-instalación-nueva">2.1 Instalación nueva</h2>
+<h2 id="2-para-poder-conectar-mas-de-un-disco-usb">2. Para poder conectar mas de un disco usb</h2>
+<h3 id="21-instalación-nueva">2.1 Instalación nueva</h3>
 <p>Partimos teniendo instalado raspbian, tanto en la MicroSD como en el disco USB. Básicamente lo que haremos, será arrancar como siempre con la MicroSD, pero indicando en la configuración de arranque que se utilice la partición root del disco USB en lugar de utilizar la de la MicroSD. En este caso, si necesitaremos la tarjeta MicroSD para arrancar.</p>
 <p>Es importante, que tanto la MicroSD como el disco USB, tengan la misma version de Raspbian. Si anteriormente hemos hecho un <code>sudo apt upgrade</code> en nuestra MicroSD, antes de continuar, arrancaremos solo con el disco USB para actualizar el sistema también en el. Yo lo he hecho sin actualizar ninguna de las dos instalaciones, actualizando el sistema posteriormente.</p>
 <p>Una vez arrancada la Raspberry Pi con la MicroSD y el disco USB conectado:</p>
@@ -748,7 +752,7 @@ $ sudo nano /boot/cmdline.txt
 </code></pre></div><p>El root, puede aparecer identificado como <code>/dev/mmcblk0p2</code> o similar. Para evitar problemas, recomiendo cambiarlo por su PARTUUID como muestro arriba.</p>
 <p>Al reiniciar, si ejecutamos <code>lsblk</code> veremos como ya está montando, tanto el root <code>/</code> del disco USB como <code>/boot</code> de la MicroSD, con lo cual, ya estamos arrancando con la MicroSD, pero utilizando el root del disco USB, y podemos tener todos los discos que necesitemos conectados, y nuestra Raspberry Pi continuará arrancado sin problemas!</p>
 <p>Esta instalación, ha sido suponiendo que estamos haciendo una instalación de raspbian nueva, desde 0 en ambos discos. Si se quiere copiar la partición root de la MicroSD  al nuevo disco USB, conservando posibles cambios, es muy sencillo.</p>
-<h2 id="22-copiando-la-partición-root-de-la-sd-al-disco-usb">2.2 Copiando la partición root de la SD al disco USB</h2>
+<h3 id="22-copiando-la-partición-root-de-la-sd-al-disco-usb">2.2 Copiando la partición root de la SD al disco USB</h3>
 <ul>
 <li>Instalamos <code>rsync</code> si no lo estuviera</li>
 </ul>
@@ -762,7 +766,11 @@ $ sudo nano /boot/cmdline.txt
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo rsync -axv / /mnt/
 </code></pre></div><p>Una vez copiada la partición root en el disco USB, procedemos igual que en la parte 2.1</p>
-<!-- raw HTML omitted -->
+
+
+  <hr style="border-color: #d6d6d6;" />
+
+
 <p>Espero que sea útil, ¡gracias por leerme!</p>
 
   </div>

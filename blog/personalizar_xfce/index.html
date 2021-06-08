@@ -27,7 +27,7 @@
         "datePublished": "2019-04-07 00:00:00 \u002b0000 UTC",
         "dateModified" : "2019-04-07 00:00:00 \u002b0000 UTC",
         "url" : "https:\/\/rlodeiro.info\/blog\/personalizar_xfce\/",
-        "wordCount" : "656",
+        "wordCount" : "663",
         "keywords" : [ "Linux","Debian","XFCE","Blog" ]
     }
     </script>
@@ -61,7 +61,7 @@
         <meta itemprop="name" content="Personalizar XFCE">
 <meta itemprop="description" content="Tema, iconos y más"><meta itemprop="datePublished" content="2019-04-07T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-04-07T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="656"><meta itemprop="image" content="https://rlodeiro.info/img/posts/2019/04/personalizar_xfce/personalizar_xfce.jpg">
+<meta itemprop="wordCount" content="663"><meta itemprop="image" content="https://rlodeiro.info/img/posts/2019/04/personalizar_xfce/personalizar_xfce.jpg">
 <meta itemprop="keywords" content="Linux,Debian,XFCE," />
         
 
@@ -670,9 +670,13 @@
     <a href="https://rlodeiro.info/blog/instalacion_debian/" target='_blank'>En la entrada anterior vimos como instalar Debian 9 Stretch </a>
 
 , donde escogí XFCE por su <code>estabilidad</code>, <code>bajo consumo de recursos</code> y sus altas posibilidades de <code>personalización</code>. Hoy toca adaptarlo y vitaminarlo para mejorar nuestro entorno de trabajo.</p>
-<!-- raw HTML omitted -->
-<h1 id="1-tema">1. Tema</h1>
-<h2 id="11-apariencia-general">1.1 Apariencia General</h2>
+
+
+  <hr style="border-color: #d6d6d6;" />
+
+
+<h2 id="1-tema">1. Tema</h2>
+<h3 id="11-apariencia-general">1.1 Apariencia General</h3>
 <p>Primero vamos a cambiar el tema de nuestro escritorio.</p>
 <ul>
 <li>
@@ -685,7 +689,7 @@
 <p><img src="https://rlodeiro.info/img/posts/2019/04/personalizar_xfce/xfce2.png" alt=""></p>
 </li>
 </ul>
-<h2 id="12-ventanas">1.2 Ventanas</h2>
+<h3 id="12-ventanas">1.2 Ventanas</h3>
 <p>Para que las ventanas tengan el tema aplicado en la barra superior:</p>
 <ul>
 <li>
@@ -700,7 +704,7 @@
 <p><img src="https://rlodeiro.info/img/posts/2019/04/personalizar_xfce/xfce4.png" alt=""></p>
 </li>
 </ul>
-<h1 id="2-iconos">2. Iconos</h1>
+<h2 id="2-iconos">2. Iconos</h2>
 <p>Descargamos el paquete de iconos que más nos gusten de 
 
     
@@ -721,7 +725,7 @@ $ mkdir .icons
 <p><img src="https://rlodeiro.info/img/posts/2019/04/personalizar_xfce/xfce5.png" alt=""></p>
 </li>
 </ul>
-<h1 id="3-dock">3. Dock</h1>
+<h2 id="3-dock">3. Dock</h2>
 <p>El dock por defecto de XFCE no es mas que otro panel. Vamos a sustituirlo.</p>
 <p>Entramos en <code>Settings Manager/Panel/</code>, seleccionamos en el desplegable el <code>Panel 2</code> y lo eliminamos pinchando en el botón de eliminar a la derecha.</p>
 <ul>
@@ -739,7 +743,7 @@ Command: plank
 <ul>
 <li>Vamos a <code>Settings Manager/Window manager Tweaks/Compositor</code> y desmarcamos <code>Show shadows under dock windows</code> para solucionarlo.</li>
 </ul>
-<h1 id="4-menú-de-aplicaciones">4. Menú de aplicaciones</h1>
+<h2 id="4-menú-de-aplicaciones">4. Menú de aplicaciones</h2>
 <p>Muchos creen que <code>Whisker Menu</code> debería ser el menú por defecto de XFCE, pero no es así, por lo que vamos a cambiarlo. Si  Whisker Menu no viene instalado en tu distribución, asegúrate de tener el paquete <code>xfce4-goodies</code> en tu sistema.</p>
 <p>Entrando en: <code>Settings Manager/Panel/Items</code> tenemos los items por defecto.</p>
 <ul>
@@ -758,8 +762,8 @@ Command: plank
 </ul>
 </li>
 </ul>
-<h1 id="5-inicio-de-sesión">5. Inicio de sesión</h1>
-<h2 id="51-introducir-solo-el-password">5.1 Introducir solo el password</h2>
+<h2 id="5-inicio-de-sesión">5. Inicio de sesión</h2>
+<h3 id="51-introducir-solo-el-password">5.1 Introducir solo el password</h3>
 <p>Por defecto, tenemos que introducir nombre de usuario y password. Si queremos que el nombre de usuario ya salga seleccionado:</p>
 <ul>
 <li>Editamos el archivo de configuración:</li>
@@ -769,7 +773,7 @@ Command: plank
 <li>Modificamos la siguiente linea a <code>false</code>:</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">greeter-hide-users=false
-</code></pre></div><h2 id="52-background-y-foto-de-usuario">5.2 Background y foto de usuario</h2>
+</code></pre></div><h3 id="52-background-y-foto-de-usuario">5.2 Background y foto de usuario</h3>
 <ul>
 <li>Instalamos <code>lightdm-gtk-greeter-settings</code></li>
 </ul>
@@ -780,7 +784,7 @@ Command: plank
 <p><img src="https://rlodeiro.info/img/posts/2019/04/personalizar_xfce/xfce7.png" alt=""></p>
 </li>
 </ul>
-<h1 id="6-búsqueda-desde-thunar">6. Búsqueda desde Thunar</h1>
+<h2 id="6-búsqueda-desde-thunar">6. Búsqueda desde Thunar</h2>
 <p><code>Thunar</code> es el administrador de archivos de XFCE. Por extraño que parezca, no cuenta con una función para buscar archivos/directorios, con lo cual tendríamos que hacer esta tarea siempre desde la línea de comandos.</p>
 <ul>
 <li>Instalamos <code>gnome-search-tool</code>:</li>
@@ -792,7 +796,12 @@ Command: plank
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">Name: Search
 Command: gnome-search-tool --path=%f --contains=
 </code></pre></div><p>Elegimos el icono que más nos guste, guardamos, y ya tendremos disponible desde el menú contextual de Thunar la opción de búsqueda en cualquier directorio.</p>
-<!-- raw HTML omitted -->
+<p>
+
+  <hr style="border-color: #d6d6d6;" />
+
+
+Espero que sea útil, ¡gracias por leerme!</p>
 
   </div>
 

@@ -27,7 +27,7 @@
         "datePublished": "2018-12-30 00:00:00 \u002b0000 UTC",
         "dateModified" : "2018-12-30 00:00:00 \u002b0000 UTC",
         "url" : "https:\/\/rlodeiro.info\/blog\/sai\/",
-        "wordCount" : "485",
+        "wordCount" : "492",
         "keywords" : [ "SAI","UPS","Linux","Raspberry","Blog" ]
     }
     </script>
@@ -61,7 +61,7 @@
         <meta itemprop="name" content="SAI | Sistema de alimentacion ininterrumpida">
 <meta itemprop="description" content="Monitorizar un SAI desde Linux"><meta itemprop="datePublished" content="2018-12-30T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-12-30T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="485"><meta itemprop="image" content="https://rlodeiro.info/img/main/logo2.jpg"/>
+<meta itemprop="wordCount" content="492"><meta itemprop="image" content="https://rlodeiro.info/img/main/logo2.jpg"/>
 <meta itemprop="keywords" content="SAI,UPS,Linux,Raspberry," />
         
 
@@ -663,8 +663,12 @@
     <p>Hoy explico como he integrado al fin el SAI que tengo en el servidor, para poder monitorizar de una forma sencilla su estado, y que este apague el servidor en caso de un corte de luz prolongado.</p>
 <p>Después de pasar la época de exámenes y desconectar unos días celebrando con compañeros, amigos y familia, tocaba hacer la ultima entrada del ano, y de paso conseguir que si se va la luz durante las campanadas, mi Raspberry Pi me avise!</p>
 <p>En principio es para cualquier SAI o UPS (Uninterrupted Power System) de la marca APC, el mio en concreto es un BACK-UPS 700VA conectado por USB. Yo lo he configurado en Raspbian, así que si tu sistema es Debian o derivado, adelante!</p>
-<!-- raw HTML omitted -->
-<h1 id="instalar-y-configurar-apcupsd">Instalar y configurar <code>apcupsd</code></h1>
+
+
+  <hr style="border-color: #d6d6d6;" />
+
+
+<h2 id="instalar-y-configurar-apcupsd">Instalar y configurar <code>apcupsd</code></h2>
 <ul>
 <li>Instalar el demonio</li>
 </ul>
@@ -690,12 +694,12 @@ TIMEOUT 0
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/default/apcupsd
 </code></pre></div><p>Buscar el parámetro <code>ISCONFIGURED</code> y modificarlo</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">ISCONFIGURED=yes
-</code></pre></div><h1 id="controlar-el-servicio">Controlar el servicio</h1>
+</code></pre></div><h2 id="controlar-el-servicio">Controlar el servicio</h2>
 <p>Podemos arrancar, parar y reiniciar el servicio con los siguientes comandos</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo /etc/init.d/apcupsd start
 $ sudo /etc/init.d/apcupsd stop
 $ sudo /etc/init.d/apcupsd restart
-</code></pre></div><h1 id="ver-estado-actual-del-ups">Ver estado actual del UPS</h1>
+</code></pre></div><h2 id="ver-estado-actual-del-ups">Ver estado actual del UPS</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ apcaccess 
 </code></pre></div><p>Esto nos mostrara por pantalla algo similar a lo siguiente</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">APC : xxxXXXxxx
@@ -740,7 +744,12 @@ END APC : fecha hora
 <p>Una vez hecho esto, el SAI ya queda completamente integrado en el sistema. Pero como siempre, podemos seguir complicando la cosa.</p>
 <p>En mi caso, he programado una regla en mi sistema de domótica, que ejecuta <code>apcaccess</code> cada pocos segundos, y parsea las lineas que nos devuelve el comando a valores independientes, para así controlar los parámetros que me interesan (por ejemplo si se va la corriente y no estoy en casa que me avise, entre otras features). Queda para otra.</p>
 <p>Mucha mierda para 2019, no bebáis mucho terrícolas!</p>
-<!-- raw HTML omitted -->
+<p>
+
+  <hr style="border-color: #d6d6d6;" />
+
+
+Espero que sea útil, ¡gracias por leerme!</p>
 
   </div>
 

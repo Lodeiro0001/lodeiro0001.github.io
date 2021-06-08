@@ -671,8 +671,12 @@
     <a href="https://golang.org" target='_blank'>escrito en GO.</a>
 
  Explicaré como instalarlo en una Raspberry Pi con Raspbian, pero simplemente cambiando la versión ARM de GO por una x86, se podrá instalar en Debian y derivados.</p>
-<!-- raw HTML omitted -->
-<h1 id="primeros-pasos">Primeros pasos</h1>
+
+
+  <hr style="border-color: #d6d6d6;" />
+
+
+<h2 id="primeros-pasos">Primeros pasos</h2>
 <ul>
 <li>Si no los tenemos, instalar git y wget:</li>
 </ul>
@@ -691,7 +695,7 @@
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mysql_secure_installation
 </code></pre></div><p>Iremos respondiendo a todas las preguntas, con el fin de establecer el password de nuestro usuario <code>root</code> para MariaDB.</p>
-<h1 id="1-instalación-de-go-golang">1. Instalación de GO (Golang)</h1>
+<h2 id="1-instalación-de-go-golang">1. Instalación de GO (Golang)</h2>
 <ul>
 <li>Creamos el directorio /home/git/local:</li>
 </ul>
@@ -726,7 +730,7 @@ $ source $HOME/.bashrc
 <li>Si está bien instalado, se mostrará algo como lo siguiente:</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">go version go1.11.1 linux/arm
-</code></pre></div><h1 id="2-descargar-y-compilar-gogs">2. Descargar y compilar Gogs</h1>
+</code></pre></div><h2 id="2-descargar-y-compilar-gogs">2. Descargar y compilar Gogs</h2>
 <ul>
 <li>Descargar Gogs:</li>
 </ul>
@@ -748,7 +752,7 @@ Volveremos a la página de instalación de Gogs tras configurar MariaDB y Nginx.
 <li>Salir del usuario git :</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ exit
-</code></pre></div><h1 id="3-configuración-de-la-base-de-datos">3. Configuración de la base de datos</h1>
+</code></pre></div><h2 id="3-configuración-de-la-base-de-datos">3. Configuración de la base de datos</h2>
 <ul>
 <li>Entramos en MariaDB</li>
 </ul>
@@ -770,7 +774,7 @@ Volveremos a la página de instalación de Gogs tras configurar MariaDB y Nginx.
 <li>Salir de Mariadb:</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#f92672">&gt;</span> quit
-</code></pre></div><h1 id="4-configuración-de-nginx">4. Configuración de Nginx</h1>
+</code></pre></div><h2 id="4-configuración-de-nginx">4. Configuración de Nginx</h2>
 <p>Configuraremos un <code>Reverse Proxy</code> en Nginx, de esta forma podremos acceder a Gogs con nuestro nombre de dominio. Si queremos establecer un subdominio del estilo <code>gogs.tudominio.com</code> solo tendremos que establecer <code>location \</code> e indicar el <code>server_name</code> deseado.</p>
 <ul>
 <li>Entrar en /etc/nginx/sites-available y añadir la configuración del Reverse Proxy:</li>
@@ -801,7 +805,7 @@ proxy_pass http://localhost:3000/;
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /home/git/go/src/github.com/gogits/gogs/custom/conf/app.ini
 </code></pre></div><p>Buscar la <code>ROOT URL</code> y modificarla así:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">[server] ROOT_URL = tudominio.com/gogs/
-</code></pre></div><h1 id="5-inicio-automático-con-systemd">5. Inicio automático con systemd</h1>
+</code></pre></div><h2 id="5-inicio-automático-con-systemd">5. Inicio automático con systemd</h2>
 <ul>
 <li>Crear el archivo gogs.service:</li>
 </ul>
@@ -835,7 +839,11 @@ Host = 127.0.0.1:3306
 User = gogs
 Password = &lt;password para el usuario gogs&gt;
 Database Name = gogs
-</code></pre></div><!-- raw HTML omitted -->
+</code></pre></div>
+
+  <hr style="border-color: #d6d6d6;" />
+
+
 <p>Espero que sea útil, ¡gracias por leerme!</p>
 
   </div>

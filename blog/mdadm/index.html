@@ -671,8 +671,12 @@
 </p>
 <p>En esta entrada me centraré en crear un <code>RAID1</code>, lo cual implica dos discos iguales que guardarán la misma información. Si uno falla, el otro tendrá toda la información a salvo y podremos sustituir el defectuoso. Para un entorno doméstico me parece la mejor opción, salvo que decidamos gastar un extra en hardware específico.</p>
 <p>Solo necesitaremos un sistema Linux, en este caso Ubuntu/Debian o derivado, y dos discos de la misma capacidad en el caso de RAID1. Si se quiere crear otro tipo de RAID, solo se han de indicar los discos necesarios y el <code>--level</code> a la hora de crearlo.</p>
-<!-- raw HTML omitted -->
-<h1 id="instalación-y-configuración">Instalación y configuración</h1>
+
+
+  <hr style="border-color: #d6d6d6;" />
+
+
+<h2 id="instalación-y-configuración">Instalación y configuración</h2>
 <ul>
 <li>Primero listar los discos, apuntar cuales usaremos para el RAID, e instalar <code>mdadm</code></li>
 </ul>
@@ -701,7 +705,7 @@ $ sudo mount /dev/md1 /mnt/raid1
 <li>Actualizar la configuración de mdadm</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mdadm --detail --scan | sudo tee -a /etc/mdadm/mdadm.conf
-</code></pre></div><h1 id="mantenimiento">Mantenimiento</h1>
+</code></pre></div><h2 id="mantenimiento">Mantenimiento</h2>
 <ul>
 <li>Para ver el estado del raid</li>
 </ul>
@@ -745,7 +749,11 @@ $ sudio mdadm --manage /dev/md1 --remove /dev/sdb1
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mdadm --manage /dev/md1 --add /dev/sdb1
 </code></pre></div><p>La primera vez que creemos el <code>RAID</code>, o cuando agreguemos un disco por fallo u otra circunstancia, el tiempo que tarde este en indicar <code>State: clean</code> será considerable, ya que <code>mdadm</code> necesita sincronizar completamente los discos. Obviamente esto dependerá de la capacidad de los disco, y se nos indicará el porcentaje alcanzado al consultar el estado del RAID.</p>
-<!-- raw HTML omitted -->
+
+
+  <hr style="border-color: #d6d6d6;" />
+
+
 <p>Espero que sea útil, ¡gracias por leerme!</p>
 
   </div>

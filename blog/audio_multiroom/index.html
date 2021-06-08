@@ -672,8 +672,12 @@
 
  podemos montar nuestros propios dispositivos compatibles con Airplay con una simple <code>Raspberry Pi</code> con <code>Shairport Sync</code> instalado conectándola a nuestro equipo Hi-Fi, altavoz auto-amplificado o similar.</p>
 <p>La idea es que tengamos en las <code>estancias</code> deseadas uno de estos dispositivos para poder enviar nuestra música a cada una de ellas.</p>
-<!-- raw HTML omitted -->
-<h1 id="1-instalación">1. Instalación</h1>
+
+
+  <hr style="border-color: #d6d6d6;" />
+
+
+<h2 id="1-instalación">1. Instalación</h2>
 <p>Primero, vamos a instalar <code>forked-daapd</code> en nuestro servidor, en mi caso es una Raspberry Pi.</p>
 <ul>
 <li>Agregamos la key del repositorio</li>
@@ -690,7 +694,7 @@
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt update
 $ sudo apt install forked-daapd
-</code></pre></div><h1 id="2-configuración">2. Configuración</h1>
+</code></pre></div><h2 id="2-configuración">2. Configuración</h2>
 <p>El archivo de configuración se encuentra en <code>/etc/forked-daapd.conf</code>.</p>
 <p>En mi caso he deshabilitado la salida local, ya que en mi Raspberry Pi no tengo conectado ningún equipo de audio. Si quieres que tu server también sea un de los dispositivos Airplay disponibles, puedes habilitarlo o en su lugar instalar shairport-sync 
 
@@ -725,16 +729,16 @@ type = &#34;disabled&#34;
 $ sudo service forked-daapd restart
 </code></pre></div><p>Para poder utilizar forked-daapd al completo, tenemos que esperar a que termine de escanear la biblioteca, el tiempo que tarde dependerá de la cantidad de música que tengas. Podemos ver el progreso con:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tail -f /var/log/forked-daapd.log
-</code></pre></div><h1 id="3-interfaz-web">3. Interfaz web</h1>
+</code></pre></div><h2 id="3-interfaz-web">3. Interfaz web</h2>
 <p>La interfaz web está disponible en <code>http://ip_de_tu_servidor:3689</code>.</p>
-<h2 id="31-biblioteca">3.1 Biblioteca</h2>
+<h3 id="31-biblioteca">3.1 Biblioteca</h3>
 <p>Lo primero que veremos será la parte destinada a navegar por nuestra biblioteca y nuestra música.</p>
 <p><img src="https://rlodeiro.info/img/posts/2019/04/audio_multiroom/forked-daapd1.png" alt=""></p>
 <p>Para <code>elegir en que dispositivo o dispositivos</code> queremos reproducir la misma, solo tenemos que desplegar el menú pinchando en el icono del altavoz, y seleccionarlos, pudiendo manejar el volumen de forma independiente para cada uno de ellos.</p>
 <p>En la imagen superior, vemos que solo tengo dos conectados a la red en este momento, uno llamado <code>Studio</code> (maquina linux con Shairport Sync instalado) donde se está reproduciendo audio, y un <code>Apple TV</code> el cual no está reproduciendo nada. Si selecciono este último para escuchar la música en ambas estancias, veremos algo así:</p>
 <p><img src="https://rlodeiro.info/img/posts/2019/04/audio_multiroom/forked-daapd2.png" alt=""></p>
 <p>Ahora la música se está reproduciendo en ambas estancias, con un volumen diferente en cada una de ellas.</p>
-<h2 id="32-administración">3.2 Administración</h2>
+<h3 id="32-administración">3.2 Administración</h3>
 <p>Pinchando en el icono de la rueda/Admin, accedemos al panel de administración de forked-daapd.</p>
 <p><img src="https://rlodeiro.info/img/posts/2019/04/audio_multiroom/forked-daapd3.png" alt=""></p>
 <p>Aquí tenemos información relativa a nuestra biblioteca, pudiendo actualizar la misma. También veremos las solicitudes remotas de algunos clientes como <code>remote</code> en dispositivos Apple, salidas disponibles y la posibilidad de conectar servicios externos como Sportify, yo no lo tengo configurado ya que no lo utilizo.</p>
@@ -747,7 +751,7 @@ $ sudo service forked-daapd restart
     <a href="https://ejurgensen.github.io/forked-daapd/" target='_blank'>documentación en la web oficial de forked-daapd</a>
 
 .</p>
-<h1 id="4-clientes">4. Clientes</h1>
+<h2 id="4-clientes">4. Clientes</h2>
 <p>La 
 
     
@@ -757,7 +761,7 @@ $ sudo service forked-daapd restart
     <a href="https://ejurgensen.github.io/forked-daapd/#supported-clients" target='_blank'>lista de clientes soportados</a>
 
  es muy extensa. Paso a listar los que yo utilizo.</p>
-<h2 id="41-shairport-sync-linux">4.1 Shairport Sync (Linux)</h2>
+<h3 id="41-shairport-sync-linux">4.1 Shairport Sync (Linux)</h3>
 <p>Este reproductor de audio compatible con <code>Airplay</code>, 
 
     
@@ -768,7 +772,7 @@ $ sudo service forked-daapd restart
 
 , lo podemos instalar en cualquier máquina Linux.</p>
 <p>Es el principal cliente que utilizo, ya que es compatible con <code>multiroom</code> y me permite reproducir la música en diferentes instancias de forma sincronizada.</p>
-<h2 id="42-rhythmbox-linux">4.2 Rhythmbox (Linux)</h2>
+<h3 id="42-rhythmbox-linux">4.2 Rhythmbox (Linux)</h3>
 <p>En mis máquinas Linux siempre utilizo como reproductor de audio <code>Rhythmbox</code>.</p>
 <ul>
 <li>Para instalarlo en Debian o derivados:</li>
@@ -776,7 +780,7 @@ $ sudo service forked-daapd restart
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install rhythmbox
 </code></pre></div><p>Además de reproducir audio local, Rhythmbox es compatible con el protocolo <code>DAAP</code>, por lo que tenemos disponible nuestra biblioteca servida por forked-daapd en el apartado <code>Shared</code>.</p>
 <p><img src="https://rlodeiro.info/img/posts/2019/04/audio_multiroom/rhythmbox.png" alt=""></p>
-<h2 id="43-itunes-remote-ios">4.3 iTunes Remote (iOS)</h2>
+<h3 id="43-itunes-remote-ios">4.3 iTunes Remote (iOS)</h3>
 <p>Además de la interfaz web, también podemos controlar la música desde nuestros dispositivos iOS 
 
     
@@ -789,7 +793,7 @@ $ sudo service forked-daapd restart
 <p><img src="https://rlodeiro.info/img/posts/2019/04/audio_multiroom/itunes_remote.png" alt=""></p>
 <p>Añadimos nuestra biblioteca de iTunes (forked-daapd) e introducimos el código de activación en la interfaz web de forked-daapd/administración tal como hemos visto antes.</p>
 <p><code>iTunes Remote</code> solo nos permite <code>controlar</code>, pero no reproducir el audio en el propio dispositivo. Si te interesa esto, presta atención al siguiente apartado.</p>
-<h1 id="5-mp3-stream">5. MP3 Stream</h1>
+<h2 id="5-mp3-stream">5. MP3 Stream</h2>
 <p>Además de todo lo anterior, forked-daapd hace un <code>streaming</code> del audio en formato <code>mp3</code>,  el cual está disponible desde:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">http://ip_servidor:3689/stream.mp3
 </code></pre></div><p>Se accede a el desde cualquier cliente compatible en iOS, Linux u otros sistemas. También  podemos activarlo en la interfaz web (figura como una de las salidas disponibles) y así escucharemos el streaming en el propio dispositivo a través de la propia web.</p>
@@ -813,7 +817,11 @@ $ sudo service forked-daapd restart
     <a href="https://rlodeiro.info/blog/airplay_linux/" target='_blank'>revisar mi post sobre Shairport Sync</a>
 
  para configurar tus propios dispositivos y ¡empezar a disfrutar de tu nuevo sistema de audio multiroom!.</p>
-<!-- raw HTML omitted -->
+
+
+  <hr style="border-color: #d6d6d6;" />
+
+
 <p>Espero que sea útil, ¡gracias por leerme!</p>
 
   </div>
