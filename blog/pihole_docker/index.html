@@ -11,11 +11,11 @@
         "@type" : "BlogPosting",
         "mainEntityOfPage": {
              "@type": "WebPage",
-             "@id": "https://rlodeiro.info"
+             "@id": "https:\/\/rlodeiro.info"
         },
         "articleSection" : "blog",
         "name" : ".Title",
-        "headline" : "Pi-hole &amp; Docker",
+        "headline" : "Pi-hole \u0026 Docker",
         "description" : "Adiós publicidad, hola dominios locales!",
         "inLanguage" : "es-ES",
         "author" : "",
@@ -24,10 +24,10 @@
         "accountablePerson" : "",
         "copyrightHolder" : "",
         "copyrightYear" : "2019",
-        "datePublished": "2019-07-21 00:00:00 &#43;0000 UTC",
-        "dateModified" : "2019-07-21 00:00:00 &#43;0000 UTC",
-        "url" : "https://rlodeiro.info/blog/pihole_docker/",
-        "wordCount" : "480",
+        "datePublished": "2019-07-21 00:00:00 \u002b0000 UTC",
+        "dateModified" : "2019-07-21 00:00:00 \u002b0000 UTC",
+        "url" : "https:\/\/rlodeiro.info\/blog\/pihole_docker\/",
+        "wordCount" : "479",
         "keywords" : [ "Pi-hole","Docker","DNS","Raspberry Pi","Blog" ]
     }
     </script>
@@ -39,7 +39,7 @@
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.54.0" />
+        <meta name="generator" content="Hugo 0.83.1" />
         <link rel="shortcut icon" href="https://rlodeiro.info/favicon.ico?v=kPP08pKEXB">
 
 
@@ -58,21 +58,11 @@
 <meta name="twitter:site" content="@lodeiro0001"/>
 
         
-        
-<meta itemprop="name" content="Pi-hole &amp; Docker">
-<meta itemprop="description" content="Adiós publicidad, hola dominios locales!">
-
-
-<meta itemprop="datePublished" content="2019-07-21T00:00:00&#43;00:00" />
+        <meta itemprop="name" content="Pi-hole &amp; Docker">
+<meta itemprop="description" content="Adiós publicidad, hola dominios locales!"><meta itemprop="datePublished" content="2019-07-21T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-07-21T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="480">
-
-  <meta itemprop="image" content="https://rlodeiro.info/img/posts/2019/07/pihole_docker/pihole_docker.jpg">
-
-
-
+<meta itemprop="wordCount" content="479"><meta itemprop="image" content="https://rlodeiro.info/img/posts/2019/07/pihole_docker/pihole_docker.jpg">
 <meta itemprop="keywords" content="Pi-hole,Docker,DNS,Raspberry Pi," />
-
         
 
         
@@ -228,6 +218,42 @@
                     
                 
 
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/">Raspberry Pi: Swap y Swappiness</a></h3>
+                                
+                                <time class="published" datetime='2021-06-08'>
+                                    8 de junio de 2021
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/06/raspberry-pi_swap-swappiness//raspberry-pi_swap-swappiness.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
                 
                         <article class="mini-post">
                             <header>
@@ -403,42 +429,6 @@
 
         <a href="https://rlodeiro.info/blog/personalizar_xfce/" class="image featured">
             <img src="https://rlodeiro.info/img/posts/2019/04/personalizar_xfce//personalizar_xfce.jpg" alt="">
-        </a>
-    
-
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="https://rlodeiro.info/blog/instalacion_debian/">Instalar Debian 9 Stretch</a></h3>
-                                
-                                <time class="published" datetime='2019-03-30'>
-                                    30 de marzo de 2019
-                                  </time>
-                            </header>
-                            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="https://rlodeiro.info/blog/instalacion_debian/" class="image featured">
-            <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian//instalacion_Debian.jpg" alt="">
         </a>
     
 
@@ -670,138 +660,87 @@
 
 
   <div id="content">
-    
-
-<p>Pi-hole es la mejor solución para terminar con la publicidad intrusiva, tanto de aplicaciones como de sitios web, en todos los dispositivos de nuestra red. Vamos a instalarlo en nuestra Raspberry Pi, la cual actuará como servidor DNS. Además, explicaré como configurar dominios locales.</p>
-
+    <p>Pi-hole es la mejor solución para terminar con la publicidad intrusiva, tanto de aplicaciones como de sitios web, en todos los dispositivos de nuestra red. Vamos a instalarlo en nuestra Raspberry Pi, la cual actuará como servidor DNS. Además, explicaré como configurar dominios locales.</p>
 <p>Aunque existen otras formas de instalación, he elegido Docker por las múltiples ventajas que aporta. Algunas de estas ventajas son: facilidad a la hora de actualizar, no modificamos los archivos del sistema y tendremos la posibilidad de aprovechar al máximo nuestra Raspberry Pi instalando otros servicios.</p>
-
-<hr style="border-color: #d6d6d6;" />
-
+<!-- raw HTML omitted -->
 <h2 id="1-instalar-docker">1. Instalar Docker</h2>
-
 <p>Empezaremos por instalar Docker desde su repositorio oficial</p>
-
 <ul>
 <li>Actualizar los paquetes e instalar los requisitos:</li>
 </ul>
-
-<pre><code class="language-bash">$ sudo apt update &amp;&amp; sudo apt install \
-apt-transport-https \
-ca-certificates \
-curl \
-gnupg2 \
-software-properties-common
-</code></pre>
-
-<ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt update <span style="color:#f92672">&amp;&amp;</span> sudo apt install <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>apt-transport-https <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>ca-certificates <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>curl <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>gnupg2 <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>software-properties-common
+</code></pre></div><ul>
 <li>Añadir la clave GPG:</li>
 </ul>
-
-<pre><code class="language-bash">$ curl -fsSL https://download.docker.com/linux/debian/gpg \
-| sudo apt-key add -
-</code></pre>
-
-<ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl -fsSL https://download.docker.com/linux/debian/gpg <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>| sudo apt-key add -
+</code></pre></div><ul>
 <li>Añadir el repositorio:</li>
 </ul>
-
-<pre><code class="language-bash">$ sudo add-apt-repository \
-&quot;deb [arch=armhf] https://download.docker.com/linux/debian \
-$(lsb_release -cs) \
-stable&quot;
-</code></pre>
-
-<ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo add-apt-repository <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span><span style="color:#e6db74">&#34;deb [arch=armhf] https://download.docker.com/linux/debian \
+</span><span style="color:#e6db74"></span><span style="color:#66d9ef">$(</span>lsb_release -cs<span style="color:#66d9ef">)</span><span style="color:#e6db74"> \
+</span><span style="color:#e6db74">stable&#34;</span>
+</code></pre></div><ul>
 <li>Instalar Docker:</li>
 </ul>
-
-<pre><code class="language-bash">$ sudo apt update &amp;&amp; sudo apt install \
-docker-ce docker-ce-cli containerd.io
-</code></pre>
-
-<ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt update <span style="color:#f92672">&amp;&amp;</span> sudo apt install <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>docker-ce docker-ce-cli containerd.io
+</code></pre></div><ul>
 <li>Añadir nuestro usuario al grupo Docker:</li>
 </ul>
-
-<pre><code class="language-bash">$ sudo usermod -aG docker &lt;tu_usuario&gt;
-</code></pre>
-
-<h2 id="2-instalar-pi-hole">2. Instalar Pi-hole</h2>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo usermod -aG docker &lt;tu_usuario&gt;
+</code></pre></div><h2 id="2-instalar-pi-hole">2. Instalar Pi-hole</h2>
 <p>Una vez instalado Docker, vamos a desplegar el contenedor de Pi-hole.</p>
-
 <p>Montaremos los directorios <code>pihole</code> y <code>dnsmasq.d</code> del contenedor en dos volúmenes locales. El directorio oculto <code>.pihole</code> situado en el home de nuestro usuario alojará ambos.</p>
-
 <p>Además serviremos la interfaz web en el <code>puerto 89</code> para no dar lugar a conflicto, estableceremos las <code>DNS de Cloudfare</code> por defecto y configuraremos la zona horaria a <code>Europe/Madrid</code>.</p>
-
 <p>Puedes cambiar las opciones mencionadas anteriormente a tu gusto.</p>
-
 <ul>
 <li>Desplegar el contenedor:</li>
 </ul>
-
-<pre><code class="language-bash">$ docker run -d \
---name pihole \
--p 53:53/tcp -p 53:53/udp \
--p 89:80 \
--p 443:443 \
--e TZ=&quot;Europe/Madrid&quot; \
--v &quot;$HOME/.pihole/pihole/:/etc/pihole/&quot; \
--v &quot;$HOME/.pihole/dnsmasq.d/:/etc/dnsmasq.d/&quot; \
---dns=1.1.1.1 --dns=1.0.0.1 \
---restart=unless-stopped \
-pihole/pihole:latest
-</code></pre>
-
-<p>Una vez finalice, la interfaz de Pi-hole estará disponible en <code>http://localhost:89</code>.</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker run -d <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--name pihole <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-p 53:53/tcp -p 53:53/udp <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-p 89:80 <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-p 443:443 <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-e TZ<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Europe/Madrid&#34;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-v <span style="color:#e6db74">&#34;</span>$HOME<span style="color:#e6db74">/.pihole/pihole/:/etc/pihole/&#34;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-v <span style="color:#e6db74">&#34;</span>$HOME<span style="color:#e6db74">/.pihole/dnsmasq.d/:/etc/dnsmasq.d/&#34;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--dns<span style="color:#f92672">=</span>1.1.1.1 --dns<span style="color:#f92672">=</span>1.0.0.1 <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--restart<span style="color:#f92672">=</span>unless-stopped <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>pihole/pihole:latest
+</code></pre></div><p>Una vez finalice, la interfaz de Pi-hole estará disponible en <code>http://localhost:89</code>.</p>
 <p>Tras configurar el <code>servidor DNS</code> con la <code>ip</code> de nuestra <code>Raspberry Pi</code>, todo funcionará según lo esperado. Esto podemos hacerlo en cada uno de los dispositivos, o en la <code>configuración del router.</code> Recomiendo esta última opción.</p>
-
 <h2 id="3-dominios-locales">3. Dominios locales</h2>
-
 <p>Por último, vamos a utilizar Pi-hole para resolver nombres de dominio locales.</p>
-
 <p>Gracias a los volúmenes que hemos creado, no tendremos que entrar en el contenedor para hacer esta configuración, ni se borrará en caso de que actualicemos Pi-hole.</p>
-
 <ul>
 <li>Creamos el archivo <code>local.list</code> en $HOME/.pihole/pihole/:</li>
 </ul>
-
-<pre><code class="language-bash">$ nano $HOME/.pihole/pihole/local.list
-</code></pre>
-
-<p>En este archivo definimos los dominios deseados con el formato <code>&lt;dirección-ip&gt; &lt;dominio-completo&gt; &lt;dominio&gt;</code>.</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ nano $HOME/.pihole/pihole/local.list
+</code></pre></div><p>En este archivo definimos los dominios deseados con el formato <code>&lt;dirección-ip&gt; &lt;dominio-completo&gt; &lt;dominio&gt;</code>.</p>
 <ul>
 <li>Ejemplo de dominios locales en <code>local.list</code>:</li>
 </ul>
-
-<pre><code class="language-bash">192.168.1.1 router router
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">192.168.1.1 router router
 192.168.1.2 raspberry.local raspberry
 192.168.1.100 pcmain.local pcmain
-</code></pre>
-
-<ul>
+</code></pre></div><ul>
 <li>Creamos un segundo archivo de configuración para <code>dnsmasq</code> que referencie a <code>local.list</code>:</li>
 </ul>
-
-<pre><code class="language-bash">$ echo &quot;addn-hosts=/etc/pihole/local.list&quot; | sudo tee $HOME/.pihole/dnsmasq.d/02-local.conf
-</code></pre>
-
-<ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ echo <span style="color:#e6db74">&#34;addn-hosts=/etc/pihole/local.list&#34;</span> | sudo tee $HOME/.pihole/dnsmasq.d/02-local.conf
+</code></pre></div><ul>
 <li>Reiniciamos el contenedor :</li>
 </ul>
-
-<pre><code class="language-bash">$ docker restart pihole
-</code></pre>
-
-<p>Listo!</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker restart pihole
+</code></pre></div><p>Listo!</p>
 <p>Ya tenemos todos los dispositivos de la red libres publicidad intrusiva, así como nuestros propios dominios locales para acceder sin escribir la dirección ip.</p>
-
-<hr style="border-color: #d6d6d6;" />
-
+<!-- raw HTML omitted -->
 <p>Espero que sea útil, ¡gracias por leerme!</p>
 
   </div>
@@ -895,8 +834,6 @@ pihole/pihole:latest
 
         
         
-  <li><a href="//github.com/lodeiro0001" target="_blank" title="GitHub" class="fa fa-github"></a></li>
-
 
 
 
@@ -995,6 +932,44 @@ pihole/pihole:latest
           
         
 
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/">Raspberry Pi: Swap y Swappiness</a>
+              </h3>
+              
+              <time class="published" datetime='2021-06-08'>
+                8 de junio de 2021
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/06/raspberry-pi_swap-swappiness//raspberry-pi_swap-swappiness.jpg" alt="">
+        </a>
+    
+
+
+          </article>
         
           <article class="mini-post">
             <header>
@@ -1186,44 +1161,6 @@ pihole/pihole:latest
 
           </article>
         
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="https://rlodeiro.info/blog/instalacion_debian/">Instalar Debian 9 Stretch</a>
-              </h3>
-              
-              <time class="published" datetime='2019-03-30'>
-                30 de marzo de 2019
-              </time>
-            </header>
-            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="https://rlodeiro.info/blog/instalacion_debian/" class="image featured">
-            <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian//instalacion_Debian.jpg" alt="">
-        </a>
-    
-
-
-          </article>
-        
       </div>
 
       
@@ -1256,7 +1193,7 @@ pihole/pihole:latest
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/herramientas/">Herramientas</a>
+                <a href="https://rlodeiro.info/categories/herramientas/">herramientas</a>
                 <span style="float:right;">3</span>
               
             </header>
@@ -1267,7 +1204,7 @@ pihole/pihole:latest
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/iot/">Iot</a>
+                <a href="https://rlodeiro.info/categories/iot/">iot</a>
                 <span style="float:right;">2</span>
               
             </header>
@@ -1278,8 +1215,8 @@ pihole/pihole:latest
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/linux/">Linux</a>
-                <span style="float:right;">11</span>
+                <a href="https://rlodeiro.info/categories/linux/">linux</a>
+                <span style="float:right;">12</span>
               
             </header>
           </article>
@@ -1289,8 +1226,8 @@ pihole/pihole:latest
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/raspberry-pi/">Raspberry Pi</a>
-                <span style="float:right;">5</span>
+                <a href="https://rlodeiro.info/categories/raspberry-pi/">raspberry-pi</a>
+                <span style="float:right;">6</span>
               
             </header>
           </article>
@@ -1300,7 +1237,7 @@ pihole/pihole:latest
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/servicios/">Servicios</a>
+                <a href="https://rlodeiro.info/categories/servicios/">servicios</a>
                 <span style="float:right;">7</span>
               
             </header>
@@ -1331,8 +1268,6 @@ pihole/pihole:latest
 
         
         
-  <li><a href="//github.com/lodeiro0001" target="_blank" title="GitHub" class="fa fa-github"></a></li>
-
 
 
 
@@ -1418,7 +1353,7 @@ pihole/pihole:latest
     
     <p class="copyright">
       
-        &copy; 2019
+        &copy; 2021
         
           Roberto Lodeiro
         

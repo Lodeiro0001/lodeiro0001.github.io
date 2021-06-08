@@ -11,7 +11,7 @@
         "@type" : "BlogPosting",
         "mainEntityOfPage": {
              "@type": "WebPage",
-             "@id": "https://rlodeiro.info"
+             "@id": "https:\/\/rlodeiro.info"
         },
         "articleSection" : "blog",
         "name" : ".Title",
@@ -24,10 +24,10 @@
         "accountablePerson" : "",
         "copyrightHolder" : "",
         "copyrightYear" : "2018",
-        "datePublished": "2018-10-14 00:00:00 &#43;0000 UTC",
-        "dateModified" : "2018-10-14 00:00:00 &#43;0000 UTC",
-        "url" : "https://rlodeiro.info/blog/ntp/",
-        "wordCount" : "653",
+        "datePublished": "2018-10-14 00:00:00 \u002b0000 UTC",
+        "dateModified" : "2018-10-14 00:00:00 \u002b0000 UTC",
+        "url" : "https:\/\/rlodeiro.info\/blog\/ntp\/",
+        "wordCount" : "650",
         "keywords" : [ "NTP","Time","Hora","Local","Linux","Blog" ]
     }
     </script>
@@ -39,7 +39,7 @@
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.54.0" />
+        <meta name="generator" content="Hugo 0.83.1" />
         <link rel="shortcut icon" href="https://rlodeiro.info/favicon.ico?v=kPP08pKEXB">
 
 
@@ -58,19 +58,11 @@
 <meta name="twitter:site" content="@lodeiro0001"/>
 
         
-        
-<meta itemprop="name" content="NTP | Servidor local">
-<meta itemprop="description" content="Un servidor NTP local para sincronizar tus dispositivos">
-
-
-<meta itemprop="datePublished" content="2018-10-14T00:00:00&#43;00:00" />
+        <meta itemprop="name" content="NTP | Servidor local">
+<meta itemprop="description" content="Un servidor NTP local para sincronizar tus dispositivos"><meta itemprop="datePublished" content="2018-10-14T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-10-14T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="653">
-
-
-
+<meta itemprop="wordCount" content="650"><meta itemprop="image" content="https://rlodeiro.info/img/main/logo2.jpg"/>
 <meta itemprop="keywords" content="NTP,Time,Hora,Local,Linux," />
-
         
 
         
@@ -226,6 +218,42 @@
                     
                 
 
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/">Raspberry Pi: Swap y Swappiness</a></h3>
+                                
+                                <time class="published" datetime='2021-06-08'>
+                                    8 de junio de 2021
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/06/raspberry-pi_swap-swappiness//raspberry-pi_swap-swappiness.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
                 
                         <article class="mini-post">
                             <header>
@@ -401,42 +429,6 @@
 
         <a href="https://rlodeiro.info/blog/personalizar_xfce/" class="image featured">
             <img src="https://rlodeiro.info/img/posts/2019/04/personalizar_xfce//personalizar_xfce.jpg" alt="">
-        </a>
-    
-
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="https://rlodeiro.info/blog/instalacion_debian/">Instalar Debian 9 Stretch</a></h3>
-                                
-                                <time class="published" datetime='2019-03-30'>
-                                    30 de marzo de 2019
-                                  </time>
-                            </header>
-                            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="https://rlodeiro.info/blog/instalacion_debian/" class="image featured">
-            <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian//instalacion_Debian.jpg" alt="">
         </a>
     
 
@@ -668,9 +660,7 @@
 
 
   <div id="content">
-    
-
-<p>Nuestro ordenador, nuestro router y muchos de los dispositivos que utilizamos a diario, sincronizan la hora del sistema con un servidor NTP (Network Time Protocol). Los mas conocidos y utilizados son los de 
+    <p>Nuestro ordenador, nuestro router y muchos de los dispositivos que utilizamos a diario, sincronizan la hora del sistema con un servidor NTP (Network Time Protocol). Los mas conocidos y utilizados son los de 
 
     
         
@@ -679,9 +669,7 @@
     <a href="https://www.ntppool.org/es/" target='_blank'>NTP Pool Project.</a>
 
 </p>
-
 <p>Si tenemos en mente por ejemplo un proyecto relacionado con la domótica, puede que no queramos que nuestros dispositivos (salvo el servidor local que los gestione) tengan acceso a internet, pero que tengamos la necesidad de que estos tengan la hora correcta para poder consultar los logs de una forma sencilla y eficiente.</p>
-
 <p>Tanto si programamos nosotros los dispositivos desde cero basándonos en Arduino/Wemos o similar, como si compramos dispositivos comerciales y los modificamos por ejemplo con el firmware opensource 
 
     
@@ -691,28 +679,20 @@
     <a href="https://github.com/arendst/Sonoff-Tasmota" target='_blank'>Tasmota</a>
 
  (del que hablare en otro post), sera muy sencillo sincronizar la hora con un servidor NTP local. Paso a explicar como configurarlo en nuestro servidor Linux.</p>
-
-<hr style="border-color: #d6d6d6;" />
-
+<!-- raw HTML omitted -->
 <h1 id="instalar-el-cliente-ntp">Instalar el cliente NTP</h1>
-
 <p>Primero instalaremos el cliente NTP en nuestra Raspberry/Debian/derivado para que sincronizara la hora con los servers externos que elijamos.</p>
-
 <ul>
-<li><p>Deshabilitar la sincronización horaria systemd-timesyncd</p>
-
-<pre><code class="language-bash">$ sudo systemctl stop systemd-timesyncd
+<li>Deshabilitar la sincronización horaria systemd-timesyncd</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo systemctl stop systemd-timesyncd
 $ sudo systemctl disable systemd-timesyncd
-</code></pre>
-
-<ul>
-<li>Instalar NTP
-<code>bash
-$ sudo apt-get install ntp
-</code></li>
-</ul></li>
-
-<li><p>Editar el archivo de configuración con los servers adecuados a tu zona horaria. Los encontrarás en 
+</code></pre></div><ul>
+<li>Instalar NTP</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt-get install ntp
+</code></pre></div><ul>
+<li>Editar el archivo de configuración con los servers adecuados a tu zona horaria. Los encontrarás en 
 
     
         
@@ -720,14 +700,12 @@ $ sudo apt-get install ntp
 
     <a href="http://www.pool.ntp.org/" target='_blank'>pool.ntp.org</a>
 
-</p>
-
-<pre><code class="language-bash">$ sudo nano /etc/ntp.conf
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/ntp.conf
+</code></pre></div><pre><code>Quedará algo como lo siguiente
 </code></pre>
-
-<p>Quedará algo como lo siguiente</p>
-
-<pre><code class="language-txt">#/etc/ntp.conf, configuration for ntpd
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">#/etc/ntp.conf, configuration for ntpd
 
 driftfile /var/lib/ntp/ntp.drift
 statsdir /var/log/ntpstats/
@@ -748,7 +726,7 @@ server 0.es.pool.ntp.org
 server 0.europe.pool.ntp.org
 server 1.europe.pool.ntp.org
 
-# By default, exchange time with everybody, but don't allow configuration.
+# By default, exchange time with everybody, but don&#39;t allow configuration.
 # See /usr/share/doc/ntp-doc/html/accopt.html for details.
 restrict -4 default kod notrap nomodify nopeer noquery
 restrict -6 default kod notrap nomodify nopeer noquery
@@ -770,68 +748,42 @@ restrict ::1
 # on the network!
 #disable auth
 #broadcastclient
-</code></pre></li>
-
-<li><p>Reiniciar el servicio y probar que sincroniza correctamente</p>
-
-<pre><code class="language-bash">$ sudo service ntp restart
+</code></pre></div><ul>
+<li>Reiniciar el servicio y probar que sincroniza correctamente</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo service ntp restart
 $ ntpq -pn
+</code></pre></div><pre><code>Se mostrará por pantalla algo similar a esto:
 </code></pre>
-
-<p>Se mostrará por pantalla algo similar a esto:</p>
-
-<pre><code class="language-text">remote refid st t when poll reach delay offset jitter
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">remote refid st t when poll reach delay offset jitter
 ==============================================================================
 *81.27.192.20 195.113.144.238 2 u 26 64 1 58.571 0.797 68.634
 +93.185.101.74 195.113.144.201 2 u 25 64 1 42.282 -1.507 0.477
 +93.185.101.77 195.113.144.201 2 u 24 64 1 41.390 -1.544 68.243
 -91.216.168.42 178.238.46.152 3 u 23 64 1 43.510 1.010 1.094
-</code></pre></li>
-</ul>
-
-<p>Podemos comprobar que la hora y fecha del sistema es correcta con:</p>
-
-<pre><code class="language-bash">$ date
-</code></pre>
-
-<h1 id="configurar-el-servidor-ntp">Configurar el servidor NTP</h1>
-
+</code></pre></div><p>Podemos comprobar que la hora y fecha del sistema es correcta con:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ date
+</code></pre></div><h1 id="configurar-el-servidor-ntp">Configurar el servidor NTP</h1>
 <p>Ahora vamos a configurar NTP para que esté disponible como servidor local.</p>
-
 <ul>
-<li><p>Editar el archivo de configuración</p>
-
-<pre><code class="language-bash">$ sudo nano /etc/ntp.conf
-</code></pre>
-
-<ul>
-<li>Añadimos lo siguiente:
-<code>text
-restrict 192.168.1.0 mask 255.255.255.0
-</code></li>
-</ul></li>
+<li>Editar el archivo de configuración</li>
 </ul>
-
-<p>Con esto restringimos el acceso al server a nuestra red local. Cambiar las direcciones según las correspondientes a nuestra red.</p>
-
-<pre><code class="language-text">broadcast 192.168.1.255
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/ntp.conf
+</code></pre></div><ul>
+<li>Añadimos lo siguiente:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">restrict 192.168.1.0 mask 255.255.255.0
+</code></pre></div><p>Con esto restringimos el acceso al server a nuestra red local. Cambiar las direcciones según las correspondientes a nuestra red.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">broadcast 192.168.1.255
 broadcast 224.0.1.1
-</code></pre>
-
-<p>Aquí cambiaremos la primera dirección por la dirección broadcast de nuestra red. No cambiar la dirección 224.0.1.1, ya que algunos dispositivos de red sincronizan con NTP en esta dirección multicast de forma automática.</p>
-
+</code></pre></div><p>Aquí cambiaremos la primera dirección por la dirección broadcast de nuestra red. No cambiar la dirección 224.0.1.1, ya que algunos dispositivos de red sincronizan con NTP en esta dirección multicast de forma automática.</p>
 <ul>
-<li>Reiniciar el servicio
-<code>bash
-$ sudo service ntp restart
-</code>
-
-Por último, configuramos en los dispositivos cliente la ip local del servidor como server NTP, y ya tendremos lo hora sincronizada sin necesidad de que estos tengan acceso a internet.
-
-<hr style="border-color: #d6d6d6;" />
-
-Espero que sea útil, ¡gracias por leerme!</li>
+<li>Reiniciar el servicio</li>
 </ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo service ntp restart
+</code></pre></div><p>Por último, configuramos en los dispositivos cliente la ip local del servidor como server NTP, y ya tendremos lo hora sincronizada sin necesidad de que estos tengan acceso a internet.</p>
+<!-- raw HTML omitted -->
+<p>Espero que sea útil, ¡gracias por leerme!</p>
 
   </div>
 
@@ -930,8 +882,6 @@ Espero que sea útil, ¡gracias por leerme!</li>
 
         
         
-  <li><a href="//github.com/lodeiro0001" target="_blank" title="GitHub" class="fa fa-github"></a></li>
-
 
 
 
@@ -1030,6 +980,44 @@ Espero que sea útil, ¡gracias por leerme!</li>
           
         
 
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/">Raspberry Pi: Swap y Swappiness</a>
+              </h3>
+              
+              <time class="published" datetime='2021-06-08'>
+                8 de junio de 2021
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/06/raspberry-pi_swap-swappiness//raspberry-pi_swap-swappiness.jpg" alt="">
+        </a>
+    
+
+
+          </article>
         
           <article class="mini-post">
             <header>
@@ -1221,44 +1209,6 @@ Espero que sea útil, ¡gracias por leerme!</li>
 
           </article>
         
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="https://rlodeiro.info/blog/instalacion_debian/">Instalar Debian 9 Stretch</a>
-              </h3>
-              
-              <time class="published" datetime='2019-03-30'>
-                30 de marzo de 2019
-              </time>
-            </header>
-            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="https://rlodeiro.info/blog/instalacion_debian/" class="image featured">
-            <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian//instalacion_Debian.jpg" alt="">
-        </a>
-    
-
-
-          </article>
-        
       </div>
 
       
@@ -1291,7 +1241,7 @@ Espero que sea útil, ¡gracias por leerme!</li>
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/herramientas/">Herramientas</a>
+                <a href="https://rlodeiro.info/categories/herramientas/">herramientas</a>
                 <span style="float:right;">3</span>
               
             </header>
@@ -1302,7 +1252,7 @@ Espero que sea útil, ¡gracias por leerme!</li>
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/iot/">Iot</a>
+                <a href="https://rlodeiro.info/categories/iot/">iot</a>
                 <span style="float:right;">2</span>
               
             </header>
@@ -1313,8 +1263,8 @@ Espero que sea útil, ¡gracias por leerme!</li>
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/linux/">Linux</a>
-                <span style="float:right;">11</span>
+                <a href="https://rlodeiro.info/categories/linux/">linux</a>
+                <span style="float:right;">12</span>
               
             </header>
           </article>
@@ -1324,8 +1274,8 @@ Espero que sea útil, ¡gracias por leerme!</li>
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/raspberry-pi/">Raspberry Pi</a>
-                <span style="float:right;">5</span>
+                <a href="https://rlodeiro.info/categories/raspberry-pi/">raspberry-pi</a>
+                <span style="float:right;">6</span>
               
             </header>
           </article>
@@ -1335,7 +1285,7 @@ Espero que sea útil, ¡gracias por leerme!</li>
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/servicios/">Servicios</a>
+                <a href="https://rlodeiro.info/categories/servicios/">servicios</a>
                 <span style="float:right;">7</span>
               
             </header>
@@ -1366,8 +1316,6 @@ Espero que sea útil, ¡gracias por leerme!</li>
 
         
         
-  <li><a href="//github.com/lodeiro0001" target="_blank" title="GitHub" class="fa fa-github"></a></li>
-
 
 
 
@@ -1453,7 +1401,7 @@ Espero que sea útil, ¡gracias por leerme!</li>
     
     <p class="copyright">
       
-        &copy; 2019
+        &copy; 2021
         
           Roberto Lodeiro
         

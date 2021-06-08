@@ -11,7 +11,7 @@
         "@type" : "BlogPosting",
         "mainEntityOfPage": {
              "@type": "WebPage",
-             "@id": "https://rlodeiro.info"
+             "@id": "https:\/\/rlodeiro.info"
         },
         "articleSection" : "blog",
         "name" : ".Title",
@@ -24,10 +24,10 @@
         "accountablePerson" : "",
         "copyrightHolder" : "",
         "copyrightYear" : "2018",
-        "datePublished": "2018-12-05 00:00:00 &#43;0000 UTC",
-        "dateModified" : "2018-12-05 00:00:00 &#43;0000 UTC",
-        "url" : "https://rlodeiro.info/blog/mqtt2/",
-        "wordCount" : "825",
+        "datePublished": "2018-12-05 00:00:00 \u002b0000 UTC",
+        "dateModified" : "2018-12-05 00:00:00 \u002b0000 UTC",
+        "url" : "https:\/\/rlodeiro.info\/blog\/mqtt2\/",
+        "wordCount" : "818",
         "keywords" : [ "mqtt","protocolo","mensajeria","broker","Iot","Blog" ]
     }
     </script>
@@ -39,7 +39,7 @@
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.54.0" />
+        <meta name="generator" content="Hugo 0.83.1" />
         <link rel="shortcut icon" href="https://rlodeiro.info/favicon.ico?v=kPP08pKEXB">
 
 
@@ -58,19 +58,11 @@
 <meta name="twitter:site" content="@lodeiro0001"/>
 
         
-        
-<meta itemprop="name" content="MQTT | Parte 2">
-<meta itemprop="description" content="Broker VS cliente">
-
-
-<meta itemprop="datePublished" content="2018-12-05T00:00:00&#43;00:00" />
+        <meta itemprop="name" content="MQTT | Parte 2">
+<meta itemprop="description" content="Broker VS cliente"><meta itemprop="datePublished" content="2018-12-05T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-12-05T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="825">
-
-
-
+<meta itemprop="wordCount" content="818"><meta itemprop="image" content="https://rlodeiro.info/img/main/logo2.jpg"/>
 <meta itemprop="keywords" content="mqtt,protocolo,mensajeria,broker,Iot," />
-
         
 
         
@@ -226,6 +218,42 @@
                     
                 
 
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/">Raspberry Pi: Swap y Swappiness</a></h3>
+                                
+                                <time class="published" datetime='2021-06-08'>
+                                    8 de junio de 2021
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/06/raspberry-pi_swap-swappiness//raspberry-pi_swap-swappiness.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
                 
                         <article class="mini-post">
                             <header>
@@ -401,42 +429,6 @@
 
         <a href="https://rlodeiro.info/blog/personalizar_xfce/" class="image featured">
             <img src="https://rlodeiro.info/img/posts/2019/04/personalizar_xfce//personalizar_xfce.jpg" alt="">
-        </a>
-    
-
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="https://rlodeiro.info/blog/instalacion_debian/">Instalar Debian 9 Stretch</a></h3>
-                                
-                                <time class="published" datetime='2019-03-30'>
-                                    30 de marzo de 2019
-                                  </time>
-                            </header>
-                            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="https://rlodeiro.info/blog/instalacion_debian/" class="image featured">
-            <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian//instalacion_Debian.jpg" alt="">
         </a>
     
 
@@ -668,10 +660,7 @@
 
 
   <div id="content">
-    
-
-<p>Segunda entrada sobre MQTT, donde veremos como instalar el Broker y un cliente básico en consola.</p>
-
+    <p>Segunda entrada sobre MQTT, donde veremos como instalar el Broker y un cliente básico en consola.</p>
 <p>Como siempre, asumo que las maquinas cliente y servidor tienen una distro Linux Debian o derivada. 
 
     
@@ -681,144 +670,99 @@
     <a href="https://rlodeiro.info/blog/mqtt1/" target='_blank'>En la primera entrada sobre MQTT hice una introducción básica al protocolo,</a>
 
  ahora me centraré en explicar un caso de uso básico.</p>
-
 <p>Mi servidor es una Raspberry Pi (que raro), pero puede ser otro pc, o el mismo donde posteriormente instales también el cliente y así poder probar el funcionamiento.</p>
-
-<hr style="border-color: #d6d6d6;" />
-
+<!-- raw HTML omitted -->
 <h1 id="1-instalar-el-broker">1. Instalar el broker</h1>
-
 <p>Instalaremos en la máquina servidor el Broker <code>Mosquitto</code>. Es uno de los más utilizados, está escrito en C y consume muy pocos recursos con un rendimiento muy bueno.</p>
-
 <ul>
-<li><p>Para instalar Mosquitto</p>
-
-<pre><code class="language-bash">$ sudo apt update
+<li>
+<p>Para instalar Mosquitto</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt update
 $ sudo apt install mosquitto
-</code></pre>
-
-<ul>
-<li>Crear usuario y contraseña</li>
+</code></pre></div></li>
+<li>
+<p>Crear usuario y contraseña</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mosquitto_passwd -c /etc/mosquitto/tuArchivoPass nombreUsuario
+</code></pre></div></li>
 </ul>
-
-<pre><code class="language-bash">$ sudo mosquitto_passwd -c /etc/mosquitto/tuArchivoPass nombreUsuario
-</code></pre></li>
-</ul>
-
 <p>Cambia <code>nombreUsuario</code> por el nombre que quieras darle, y <code>tuArchivoPass</code> por el nombre que quieras para el archivo donde se guardaran los usuarios y sus contraseñas. Una vez ejecutado el comando se nos preguntara el password que queremos asignarle al nuevo usuario.</p>
-
 <ul>
-<li><p>Si quieres añadir mas usuarios</p>
-
-<pre><code class="language-bash">$ sudo mosquitto_passwd -b /etc/mosquitto/tuArchivoPass nombreUsuario password
-</code></pre>
-
-<ul>
-<li>Para eliminar un usuario</li>
+<li>
+<p>Si quieres añadir mas usuarios</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mosquitto_passwd -b /etc/mosquitto/tuArchivoPass nombreUsuario password
+</code></pre></div></li>
+<li>
+<p>Para eliminar un usuario</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mosquitto_passwd -D /etc/mosquitto/tuArchivoPass nombreUsuario
+</code></pre></div></li>
 </ul>
-
-<pre><code class="language-bash">$ sudo mosquitto_passwd -D /etc/mosquitto/tuArchivoPass nombreUsuario
-</code></pre></li>
-</ul>
-
-<h1 id="2-1-configuración">2.1 Configuración</h1>
-
+<h1 id="21-configuración">2.1 Configuración</h1>
 <p>La configuración principal de Mosquito se encuentra en <code>/etc/mosquitto/mosquitto.conf</code>. Tal como se recomienda, vamos a crear un fichero aparte para nuestra configuración.</p>
-
 <ul>
-<li><p>Para crear el nuevo archivo</p>
-
-<pre><code class="language-bash">$ sudo nano /etc/mosquitto/conf.d/miConfiguracion.conf
-</code></pre>
-
-<p>Aquí añadiremos dos lineas, una indicando que no se permita la conexión a usuarios anónimos, y otra indicando donde tenemos el archivo que con tiene los usuarios y sus contraseñas.</p>
-
-<pre><code class="language-txt">allow_anonymous false
+<li>
+<p>Para crear el nuevo archivo</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/mosquitto/conf.d/miConfiguracion.conf
+</code></pre></div><p>Aquí añadiremos dos lineas, una indicando que no se permita la conexión a usuarios anónimos, y otra indicando donde tenemos el archivo que con tiene los usuarios y sus contraseñas.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">allow_anonymous false
 password_file etc/mosquitto/tuArchivoPass
-</code></pre></li>
-
-<li><p>Reiniciar el servicio</p>
-
-<pre><code class="language-bash">$ sudo systemctl restart mosquitto
-</code></pre>
-
-<h1 id="2-2-configurar-ssl">2.2 Configurar SSL</h1>
-
+</code></pre></div></li>
+<li>
+<p>Reiniciar el servicio</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo systemctl restart mosquitto
+</code></pre></div></li>
+</ul>
+<h1 id="22-configurar-ssl">2.2 Configurar SSL</h1>
 <p>Adicionalmente, cosa que recomiendo, podemos <code>cifrar</code> las comunicaciones entre Broker y clientes con un certificado SSL, en este caso usaré un certificado de firma propia generado con <code>openssl</code>.</p>
-
 <ul>
-<li>Creamos los directorios y el certificado</li>
-</ul>
-
-<pre><code class="language-bash">$ sudo mkdir /etc/ssl/mqtt
+<li>
+<p>Creamos los directorios y el certificado</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mkdir /etc/ssl/mqtt
 $ cd /etc/ssl/mqtt
-$ sudo openssl req -new -x509 -days 365 -nodes -out ejemploMQTT.local.pem -keyout ejemploMQTT.local.key
-</code></pre>
-
-<p>Cambia <code>ejemploMQTT.local</code> por tu nombre de dominio, dejando las extensiones <code>.pem</code> y <code>.key</code>. En este ejemplo el certificado tendrá una validez de 365 días, si no quieres tener que generar uno nueva cada año, modifica <code>-days XXX</code> sustituyendo XXX por el número de días que quieras.</p></li>
+$ sudo openssl req -new -x509 -days <span style="color:#ae81ff">365</span> -nodes -out ejemploMQTT.local.pem -keyout ejemploMQTT.local.key
+</code></pre></div><p>Cambia <code>ejemploMQTT.local</code> por tu nombre de dominio, dejando las extensiones <code>.pem</code> y <code>.key</code>. En este ejemplo el certificado tendrá una validez de 365 días, si no quieres tener que generar uno nueva cada año, modifica <code>-days XXX</code> sustituyendo XXX por el número de días que quieras.</p>
+</li>
 </ul>
-
 <p>Ahora vamos a indicar en nuestro archivo de configuración que escuche en el puerto seguro <code>8883</code>, limitando el puerto <code>1883</code> a localhost. Además indicaremos la ruta de nuestro certificado.</p>
-
 <ul>
-<li><p>Abrir el archivo de configuración</p>
-
-<pre><code class="language-bash">$ sudo nano /etc/mosquitto/conf.d/miConfiguracion.conf
-</code></pre>
-
-<p>Añadimos lo siguiente:</p>
-
-<pre><code class="language-txt">listener 1883 localhost
+<li>
+<p>Abrir el archivo de configuración</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/mosquitto/conf.d/miConfiguracion.conf
+</code></pre></div><p>Añadimos lo siguiente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">listener 1883 localhost
 listener 8883
 certfile /etc/ssl/mqtt/mqtt.example.local.pem
 keyfile /etc/ssl/mqtt/mqtt.example.local.key
-</code></pre></li>
-
-<li><p>Reiniciar el servicio</p>
-
-<pre><code class="language-bash">$ sudo systemctl restart mosquitto
-</code></pre>
-
+</code></pre></div></li>
+<li>
+<p>Reiniciar el servicio</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo systemctl restart mosquitto
+</code></pre></div></li>
+</ul>
 <h1 id="3-cliente">3. Cliente</h1>
-
 <p>Podemos tener como clientes todo tipo de dispositivos, y como dije en el primer post un cliente puede tanto recibir como enviar mensajes a cualquier topic. Yo lo utilizo mucho con los ESP para proyectos Iot, pero ahora explicaré como utilizarlo de forma básica desde terminal, que al fin y al cabo es lo mismo.</p>
-
 <ul>
-<li>Instalamos en la máquina cliente</li>
+<li>
+<p>Instalamos en la máquina cliente</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install mosquitto-clients
+</code></pre></div></li>
 </ul>
-
-<pre><code class="language-bash">$ sudo apt install mosquitto-clients
-</code></pre></li>
-</ul>
-
 <p>Una vez instalado, abre dos consolas en la máquina cliente. La idea para probar el sistema es publicar mensajes a un topic desde una consola, y verlos desde la otra, la cual estará suscrita al mismo topic.</p>
-
 <ul>
-<li><p>Para suscribirse en la primera consola:</p>
-
-<pre><code class="language-bash">$ mosquitto_sub -v -h ipBroker -u tuUsuario -P tuContrasenha -p 8883 -t 'raspberry/topicTest'
-</code></pre>
-
-<p>Cambia <code>ipBroker</code> por la ip de la máquina donde tienes instalado Mosquitto Broker, así como el usuario y la contraseña por los tuyos.<code>raspberry/topic1</code> es un topic de ejemplo, pon el que tu quieras. No cierras la consola, esta quedará a la escucha.</p>
-
-<ul>
-<li>Para publicar mensajes desde la segunda consola:</li>
+<li>
+<p>Para suscribirse en la primera consola:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mosquitto_sub -v -h ipBroker -u tuUsuario -P tuContrasenha -p <span style="color:#ae81ff">8883</span> -t <span style="color:#e6db74">&#39;raspberry/topicTest&#39;</span>
+</code></pre></div><p>Cambia <code>ipBroker</code> por la ip de la máquina donde tienes instalado Mosquitto Broker, así como el usuario y la contraseña por los tuyos.<code>raspberry/topic1</code> es un topic de ejemplo, pon el que tu quieras. No cierras la consola, esta quedará a la escucha.</p>
+</li>
+<li>
+<p>Para publicar mensajes desde la segunda consola:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mosquitto_pub -h ipBroker -u tuusuario -P tuContrasenha -p <span style="color:#ae81ff">8883</span> -t <span style="color:#e6db74">&#39;raspberry/topicTest&#39;</span> -m <span style="color:#e6db74">&#39;Mensaje de prueba super cool&#39;</span>
+</code></pre></div><p>Una vez se ejecute el comando, verás que la primera terminal recibe el mensaje, ¡magia!.</p>
+</li>
 </ul>
-
-<pre><code class="language-bash">$ mosquitto_pub -h ipBroker -u tuusuario -P tuContrasenha -p 8883 -t 'raspberry/topicTest' -m 'Mensaje de prueba super cool'
-</code></pre>
-
-<p>Una vez se ejecute el comando, verás que la primera terminal recibe el mensaje, ¡magia!.</p></li>
-</ul>
-
 <h1 id="4-topics">4. Topics</h1>
-
 <p>De forma resumida, podemos decir que los topics pueden ser como te de la real gana, lo importante es estructurarlos bien para tener un orden lógico en el entorno de uso.</p>
-
 <p>Recordando el ejemplo del primer post:</p>
-
-<p><img src="https://rlodeiro.info/img/posts/2018/10/mqtt1/mqtt1_clientes_broker.jpg" alt="" /></p>
-
+<p><img src="https://rlodeiro.info/img/posts/2018/10/mqtt1/mqtt1_clientes_broker.jpg" alt=""></p>
 <p>Ya explique en el la lógica, 
 
     
@@ -828,21 +772,14 @@ keyfile /etc/ssl/mqtt/mqtt.example.local.key
     <a href="_blank" target='_blank'>puedes recordarlo AQUI,</a>
 
  pero en la imagen podemos ver el servidor que tiene instalado el Broker, y tres clientes. En mi caso tengo el Broker instalado en la Raspberry Pi, pero en al práctica es lo mismo si está en una máquina independiente, o en una que haga tanto de cliente como de Broker.</p>
-
 <p>Para suscribirnos a un topic determinado pondríamos el nombre del topic, en el ejemplo vemos que la Raspberry Pi está suscrita a dos.</p>
-
 <p>Otras formas de suscribirnos:</p>
-
 <ul>
 <li>Indicando <code>'#'</code> como topic: nos suscribimos a todos los topics del broker.</li>
 <li>Indicando <code>'luces/#'</code> como topic: nos suscribimos tanto a <code>luces</code> como a todos los que sigan.</li>
 </ul>
-
 <p>¡Prueba y prueba!, en otro post explicaré como conectarnos desde un Arduino en un caso de uso simple, o quizá desde un ESP8266 :D</p>
-
-<hr style="border-color: #d6d6d6;" />
-
-<p>Espero que sea útil, ¡gracias por leerme!</p>
+<!-- raw HTML omitted -->
 
   </div>
 
@@ -938,8 +875,6 @@ keyfile /etc/ssl/mqtt/mqtt.example.local.key
 
         
         
-  <li><a href="//github.com/lodeiro0001" target="_blank" title="GitHub" class="fa fa-github"></a></li>
-
 
 
 
@@ -1038,6 +973,44 @@ keyfile /etc/ssl/mqtt/mqtt.example.local.key
           
         
 
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/">Raspberry Pi: Swap y Swappiness</a>
+              </h3>
+              
+              <time class="published" datetime='2021-06-08'>
+                8 de junio de 2021
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/06/raspberry-pi_swap-swappiness//raspberry-pi_swap-swappiness.jpg" alt="">
+        </a>
+    
+
+
+          </article>
         
           <article class="mini-post">
             <header>
@@ -1229,44 +1202,6 @@ keyfile /etc/ssl/mqtt/mqtt.example.local.key
 
           </article>
         
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="https://rlodeiro.info/blog/instalacion_debian/">Instalar Debian 9 Stretch</a>
-              </h3>
-              
-              <time class="published" datetime='2019-03-30'>
-                30 de marzo de 2019
-              </time>
-            </header>
-            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="https://rlodeiro.info/blog/instalacion_debian/" class="image featured">
-            <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian//instalacion_Debian.jpg" alt="">
-        </a>
-    
-
-
-          </article>
-        
       </div>
 
       
@@ -1299,7 +1234,7 @@ keyfile /etc/ssl/mqtt/mqtt.example.local.key
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/herramientas/">Herramientas</a>
+                <a href="https://rlodeiro.info/categories/herramientas/">herramientas</a>
                 <span style="float:right;">3</span>
               
             </header>
@@ -1310,7 +1245,7 @@ keyfile /etc/ssl/mqtt/mqtt.example.local.key
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/iot/">Iot</a>
+                <a href="https://rlodeiro.info/categories/iot/">iot</a>
                 <span style="float:right;">2</span>
               
             </header>
@@ -1321,8 +1256,8 @@ keyfile /etc/ssl/mqtt/mqtt.example.local.key
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/linux/">Linux</a>
-                <span style="float:right;">11</span>
+                <a href="https://rlodeiro.info/categories/linux/">linux</a>
+                <span style="float:right;">12</span>
               
             </header>
           </article>
@@ -1332,8 +1267,8 @@ keyfile /etc/ssl/mqtt/mqtt.example.local.key
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/raspberry-pi/">Raspberry Pi</a>
-                <span style="float:right;">5</span>
+                <a href="https://rlodeiro.info/categories/raspberry-pi/">raspberry-pi</a>
+                <span style="float:right;">6</span>
               
             </header>
           </article>
@@ -1343,7 +1278,7 @@ keyfile /etc/ssl/mqtt/mqtt.example.local.key
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/servicios/">Servicios</a>
+                <a href="https://rlodeiro.info/categories/servicios/">servicios</a>
                 <span style="float:right;">7</span>
               
             </header>
@@ -1374,8 +1309,6 @@ keyfile /etc/ssl/mqtt/mqtt.example.local.key
 
         
         
-  <li><a href="//github.com/lodeiro0001" target="_blank" title="GitHub" class="fa fa-github"></a></li>
-
 
 
 
@@ -1461,7 +1394,7 @@ keyfile /etc/ssl/mqtt/mqtt.example.local.key
     
     <p class="copyright">
       
-        &copy; 2019
+        &copy; 2021
         
           Roberto Lodeiro
         

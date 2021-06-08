@@ -11,7 +11,7 @@
         "@type" : "BlogPosting",
         "mainEntityOfPage": {
              "@type": "WebPage",
-             "@id": "https://rlodeiro.info"
+             "@id": "https:\/\/rlodeiro.info"
         },
         "articleSection" : "blog",
         "name" : ".Title",
@@ -24,10 +24,10 @@
         "accountablePerson" : "",
         "copyrightHolder" : "",
         "copyrightYear" : "2018",
-        "datePublished": "2018-12-30 00:00:00 &#43;0000 UTC",
-        "dateModified" : "2018-12-30 00:00:00 &#43;0000 UTC",
-        "url" : "https://rlodeiro.info/blog/sai/",
-        "wordCount" : "493",
+        "datePublished": "2018-12-30 00:00:00 \u002b0000 UTC",
+        "dateModified" : "2018-12-30 00:00:00 \u002b0000 UTC",
+        "url" : "https:\/\/rlodeiro.info\/blog\/sai\/",
+        "wordCount" : "485",
         "keywords" : [ "SAI","UPS","Linux","Raspberry","Blog" ]
     }
     </script>
@@ -39,7 +39,7 @@
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.54.0" />
+        <meta name="generator" content="Hugo 0.83.1" />
         <link rel="shortcut icon" href="https://rlodeiro.info/favicon.ico?v=kPP08pKEXB">
 
 
@@ -58,19 +58,11 @@
 <meta name="twitter:site" content="@lodeiro0001"/>
 
         
-        
-<meta itemprop="name" content="SAI | Sistema de alimentacion ininterrumpida">
-<meta itemprop="description" content="Monitorizar un SAI desde Linux">
-
-
-<meta itemprop="datePublished" content="2018-12-30T00:00:00&#43;00:00" />
+        <meta itemprop="name" content="SAI | Sistema de alimentacion ininterrumpida">
+<meta itemprop="description" content="Monitorizar un SAI desde Linux"><meta itemprop="datePublished" content="2018-12-30T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-12-30T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="493">
-
-
-
+<meta itemprop="wordCount" content="485"><meta itemprop="image" content="https://rlodeiro.info/img/main/logo2.jpg"/>
 <meta itemprop="keywords" content="SAI,UPS,Linux,Raspberry," />
-
         
 
         
@@ -226,6 +218,42 @@
                     
                 
 
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/">Raspberry Pi: Swap y Swappiness</a></h3>
+                                
+                                <time class="published" datetime='2021-06-08'>
+                                    8 de junio de 2021
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/06/raspberry-pi_swap-swappiness//raspberry-pi_swap-swappiness.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
                 
                         <article class="mini-post">
                             <header>
@@ -401,42 +429,6 @@
 
         <a href="https://rlodeiro.info/blog/personalizar_xfce/" class="image featured">
             <img src="https://rlodeiro.info/img/posts/2019/04/personalizar_xfce//personalizar_xfce.jpg" alt="">
-        </a>
-    
-
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="https://rlodeiro.info/blog/instalacion_debian/">Instalar Debian 9 Stretch</a></h3>
-                                
-                                <time class="published" datetime='2019-03-30'>
-                                    30 de marzo de 2019
-                                  </time>
-                            </header>
-                            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="https://rlodeiro.info/blog/instalacion_debian/" class="image featured">
-            <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian//instalacion_Debian.jpg" alt="">
         </a>
     
 
@@ -668,35 +660,21 @@
 
 
   <div id="content">
-    
-
-<p>Hoy explico como he integrado al fin el SAI que tengo en el servidor, para poder monitorizar de una forma sencilla su estado, y que este apague el servidor en caso de un corte de luz prolongado.</p>
-
+    <p>Hoy explico como he integrado al fin el SAI que tengo en el servidor, para poder monitorizar de una forma sencilla su estado, y que este apague el servidor en caso de un corte de luz prolongado.</p>
 <p>Después de pasar la época de exámenes y desconectar unos días celebrando con compañeros, amigos y familia, tocaba hacer la ultima entrada del ano, y de paso conseguir que si se va la luz durante las campanadas, mi Raspberry Pi me avise!</p>
-
 <p>En principio es para cualquier SAI o UPS (Uninterrupted Power System) de la marca APC, el mio en concreto es un BACK-UPS 700VA conectado por USB. Yo lo he configurado en Raspbian, así que si tu sistema es Debian o derivado, adelante!</p>
-
-<hr style="border-color: #d6d6d6;" />
-
+<!-- raw HTML omitted -->
 <h1 id="instalar-y-configurar-apcupsd">Instalar y configurar <code>apcupsd</code></h1>
-
 <ul>
-<li><p>Instalar el demonio</p>
-
-<pre><code class="language-bash">$ sudo apt install apcupsd
-</code></pre>
-
-<ul>
-<li>Configurar el SAI
-<code>bash
-$ sudo nano /etc/apcupsd/apcupsd.conf
-</code></li>
-</ul></li>
+<li>Instalar el demonio</li>
 </ul>
-
-<p>Buscamos y modificamos los siguientes parámetros:</p>
-
-<pre><code class="language-txt">UPSNAME homeups1
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install apcupsd
+</code></pre></div><ul>
+<li>Configurar el SAI</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/apcupsd/apcupsd.conf
+</code></pre></div><p>Buscamos y modificamos los siguientes parámetros:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">UPSNAME homeups1
 UPSCABLE usb
 ## establecer tipo de UPS como usb, DEVICE en blanco ##
 UPSTYPE usb
@@ -706,37 +684,21 @@ ONBATTERYDELAY 6
 BATTERYLEVEL 5
 MINUTES 3
 TIMEOUT 0
-</code></pre>
-
-<ul>
-<li><p>Indicar que la configuración esta realizada</p>
-
-<pre><code class="language-bash">$ sudo nano /etc/default/apcupsd
-</code></pre>
-
-<p>Buscar el parámetro <code>ISCONFIGURED</code> y modificarlo</p>
-
-<pre><code class="language-txt">ISCONFIGURED=yes
-</code></pre></li>
+</code></pre></div><ul>
+<li>Indicar que la configuración esta realizada</li>
 </ul>
-
-<h1 id="controlar-el-servicio">Controlar el servicio</h1>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/default/apcupsd
+</code></pre></div><p>Buscar el parámetro <code>ISCONFIGURED</code> y modificarlo</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">ISCONFIGURED=yes
+</code></pre></div><h1 id="controlar-el-servicio">Controlar el servicio</h1>
 <p>Podemos arrancar, parar y reiniciar el servicio con los siguientes comandos</p>
-
-<pre><code class="language-bash">$ sudo /etc/init.d/apcupsd start
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo /etc/init.d/apcupsd start
 $ sudo /etc/init.d/apcupsd stop
 $ sudo /etc/init.d/apcupsd restart
-</code></pre>
-
-<h1 id="ver-estado-actual-del-ups">Ver estado actual del UPS</h1>
-
-<pre><code class="language-bash">$ apcaccess 
-</code></pre>
-
-<p>Esto nos mostrara por pantalla algo similar a lo siguiente</p>
-
-<pre><code class="language-txt">APC : xxxXXXxxx
+</code></pre></div><h1 id="ver-estado-actual-del-ups">Ver estado actual del UPS</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ apcaccess 
+</code></pre></div><p>Esto nos mostrara por pantalla algo similar a lo siguiente</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">APC : xxxXXXxxx
 DATE : fecha hora 
 HOSTNAME : hostname
 VERSION : 3.14.14 (31 May 2016) debian
@@ -774,19 +736,11 @@ NOMBATTV : 12.0 Volts
 NOMPOWER : 390 Watts
 FIRMWARE : firmware
 END APC : fecha hora
-</code></pre>
-
-<p>Según cual sea tu modelo de SAI, el listado anterior puede variar.</p>
-
+</code></pre></div><p>Según cual sea tu modelo de SAI, el listado anterior puede variar.</p>
 <p>Una vez hecho esto, el SAI ya queda completamente integrado en el sistema. Pero como siempre, podemos seguir complicando la cosa.</p>
-
 <p>En mi caso, he programado una regla en mi sistema de domótica, que ejecuta <code>apcaccess</code> cada pocos segundos, y parsea las lineas que nos devuelve el comando a valores independientes, para así controlar los parámetros que me interesan (por ejemplo si se va la corriente y no estoy en casa que me avise, entre otras features). Queda para otra.</p>
-
 <p>Mucha mierda para 2019, no bebáis mucho terrícolas!</p>
-
-<hr style="border-color: #d6d6d6;" />
-
-<p>Espero que sea útil, ¡gracias por leerme!</p>
+<!-- raw HTML omitted -->
 
   </div>
 
@@ -876,8 +830,6 @@ END APC : fecha hora
 
         
         
-  <li><a href="//github.com/lodeiro0001" target="_blank" title="GitHub" class="fa fa-github"></a></li>
-
 
 
 
@@ -976,6 +928,44 @@ END APC : fecha hora
           
         
 
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/">Raspberry Pi: Swap y Swappiness</a>
+              </h3>
+              
+              <time class="published" datetime='2021-06-08'>
+                8 de junio de 2021
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/06/raspberry-pi_swap-swappiness//raspberry-pi_swap-swappiness.jpg" alt="">
+        </a>
+    
+
+
+          </article>
         
           <article class="mini-post">
             <header>
@@ -1167,44 +1157,6 @@ END APC : fecha hora
 
           </article>
         
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="https://rlodeiro.info/blog/instalacion_debian/">Instalar Debian 9 Stretch</a>
-              </h3>
-              
-              <time class="published" datetime='2019-03-30'>
-                30 de marzo de 2019
-              </time>
-            </header>
-            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="https://rlodeiro.info/blog/instalacion_debian/" class="image featured">
-            <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian//instalacion_Debian.jpg" alt="">
-        </a>
-    
-
-
-          </article>
-        
       </div>
 
       
@@ -1237,7 +1189,7 @@ END APC : fecha hora
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/herramientas/">Herramientas</a>
+                <a href="https://rlodeiro.info/categories/herramientas/">herramientas</a>
                 <span style="float:right;">3</span>
               
             </header>
@@ -1248,7 +1200,7 @@ END APC : fecha hora
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/iot/">Iot</a>
+                <a href="https://rlodeiro.info/categories/iot/">iot</a>
                 <span style="float:right;">2</span>
               
             </header>
@@ -1259,8 +1211,8 @@ END APC : fecha hora
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/linux/">Linux</a>
-                <span style="float:right;">11</span>
+                <a href="https://rlodeiro.info/categories/linux/">linux</a>
+                <span style="float:right;">12</span>
               
             </header>
           </article>
@@ -1270,8 +1222,8 @@ END APC : fecha hora
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/raspberry-pi/">Raspberry Pi</a>
-                <span style="float:right;">5</span>
+                <a href="https://rlodeiro.info/categories/raspberry-pi/">raspberry-pi</a>
+                <span style="float:right;">6</span>
               
             </header>
           </article>
@@ -1281,7 +1233,7 @@ END APC : fecha hora
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/servicios/">Servicios</a>
+                <a href="https://rlodeiro.info/categories/servicios/">servicios</a>
                 <span style="float:right;">7</span>
               
             </header>
@@ -1312,8 +1264,6 @@ END APC : fecha hora
 
         
         
-  <li><a href="//github.com/lodeiro0001" target="_blank" title="GitHub" class="fa fa-github"></a></li>
-
 
 
 
@@ -1399,7 +1349,7 @@ END APC : fecha hora
     
     <p class="copyright">
       
-        &copy; 2019
+        &copy; 2021
         
           Roberto Lodeiro
         

@@ -11,7 +11,7 @@
         "@type" : "BlogPosting",
         "mainEntityOfPage": {
              "@type": "WebPage",
-             "@id": "https://rlodeiro.info"
+             "@id": "https:\/\/rlodeiro.info"
         },
         "articleSection" : "blog",
         "name" : ".Title",
@@ -24,10 +24,10 @@
         "accountablePerson" : "",
         "copyrightHolder" : "",
         "copyrightYear" : "2018",
-        "datePublished": "2018-10-07 00:00:00 &#43;0000 UTC",
-        "dateModified" : "2018-10-07 00:00:00 &#43;0000 UTC",
-        "url" : "https://rlodeiro.info/blog/gogs/",
-        "wordCount" : "752",
+        "datePublished": "2018-10-07 00:00:00 \u002b0000 UTC",
+        "dateModified" : "2018-10-07 00:00:00 \u002b0000 UTC",
+        "url" : "https:\/\/rlodeiro.info\/blog\/gogs\/",
+        "wordCount" : "743",
         "keywords" : [ "GO","Control de versiones","Proyectos","git","Golang","Blog" ]
     }
     </script>
@@ -39,7 +39,7 @@
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.54.0" />
+        <meta name="generator" content="Hugo 0.83.1" />
         <link rel="shortcut icon" href="https://rlodeiro.info/favicon.ico?v=kPP08pKEXB">
 
 
@@ -58,19 +58,11 @@
 <meta name="twitter:site" content="@lodeiro0001"/>
 
         
-        
-<meta itemprop="name" content="Gogs | Self-Hosted Git">
-<meta itemprop="description" content="Tu propio servicio de hospedaje para repositorios Git">
-
-
-<meta itemprop="datePublished" content="2018-10-07T00:00:00&#43;00:00" />
+        <meta itemprop="name" content="Gogs | Self-Hosted Git">
+<meta itemprop="description" content="Tu propio servicio de hospedaje para repositorios Git"><meta itemprop="datePublished" content="2018-10-07T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-10-07T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="752">
-
-
-
+<meta itemprop="wordCount" content="743"><meta itemprop="image" content="https://rlodeiro.info/img/main/logo2.jpg"/>
 <meta itemprop="keywords" content="GO,Control de versiones,Proyectos,git,Golang," />
-
         
 
         
@@ -226,6 +218,42 @@
                     
                 
 
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/">Raspberry Pi: Swap y Swappiness</a></h3>
+                                
+                                <time class="published" datetime='2021-06-08'>
+                                    8 de junio de 2021
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/06/raspberry-pi_swap-swappiness//raspberry-pi_swap-swappiness.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
                 
                         <article class="mini-post">
                             <header>
@@ -401,42 +429,6 @@
 
         <a href="https://rlodeiro.info/blog/personalizar_xfce/" class="image featured">
             <img src="https://rlodeiro.info/img/posts/2019/04/personalizar_xfce//personalizar_xfce.jpg" alt="">
-        </a>
-    
-
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="https://rlodeiro.info/blog/instalacion_debian/">Instalar Debian 9 Stretch</a></h3>
-                                
-                                <time class="published" datetime='2019-03-30'>
-                                    30 de marzo de 2019
-                                  </time>
-                            </header>
-                            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="https://rlodeiro.info/blog/instalacion_debian/" class="image featured">
-            <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian//instalacion_Debian.jpg" alt="">
         </a>
     
 
@@ -668,12 +660,8 @@
 
 
   <div id="content">
-    
-
-<p>Todos los que de uno u otro modo estamos relacionados con el desarrollo de software, antes o después hemos usado algún servicio de repositorios Git en la nube. Por lo general, son gratuitos para repositorios públicos, y pagando podemos crear repositorios privados.</p>
-
+    <p>Todos los que de uno u otro modo estamos relacionados con el desarrollo de software, antes o después hemos usado algún servicio de repositorios Git en la nube. Por lo general, son gratuitos para repositorios públicos, y pagando podemos crear repositorios privados.</p>
 <p>Gogs es un servicio de Git opensource para alojar nuestros repositorios Git en nuestro propio servidor. He probado otras alternativas similares, pero para mi, Gogs es la ganadora ya que consume poquísimos recursos y funciona perfectamente ¿que más se puede pedir? Que sea gratuito, y lo es.</p>
-
 <p>Estoy seguro de que una de las razones principales por las que consume tan pocos recursos, es el hecho de estar 
 
     
@@ -683,55 +671,35 @@
     <a href="https://golang.org" target='_blank'>escrito en GO.</a>
 
  Explicaré como instalarlo en una Raspberry Pi con Raspbian, pero simplemente cambiando la versión ARM de GO por una x86, se podrá instalar en Debian y derivados.</p>
-
-<hr style="border-color: #d6d6d6;" />
-
+<!-- raw HTML omitted -->
 <h1 id="primeros-pasos">Primeros pasos</h1>
-
 <ul>
-<li><p>Si no los tenemos, instalar git y wget:</p>
-
-<pre><code class="language-bash">$ sudo apt install -y git wget
-</code></pre>
-
-<ul>
-<li>Crear el usuario Gogs:
-<code>bash
-$ sudo adduser --disabled-login --gecos 'Gogs' git
-</code></li>
-</ul></li>
+<li>Si no los tenemos, instalar git y wget:</li>
 </ul>
-
-<p>Si ya tenemos corriendo en nuestro servidor <code>MySQL/MariaDB</code> y <code>Nginx</code> podemos saltar a la instalación de GO, si no:</p>
-
-<ul>
-<li><p>Instalamos MariaDB y Nginx:</p>
-
-<pre><code class="language-bash">$ sudo apt install mariadb-server nginx
-</code></pre>
-
-<ul>
-<li>Para dejar lista nuestra nueva instalación de MariaDB:
-<code>bash
-$ sudo mysql_secure_installation
-</code>
-Iremos respondiendo a todas las preguntas, con el fin de establecer el password de nuestro usuario <code>root</code> para MariaDB.</li>
-</ul></li>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install -y git wget
+</code></pre></div><ul>
+<li>Crear el usuario Gogs:</li>
 </ul>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo adduser --disabled-login --gecos <span style="color:#e6db74">&#39;Gogs&#39;</span> git
+</code></pre></div><p>Si ya tenemos corriendo en nuestro servidor <code>MySQL/MariaDB</code> y <code>Nginx</code> podemos saltar a la instalación de GO, si no:</p>
+<ul>
+<li>Instalamos MariaDB y Nginx:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install mariadb-server nginx
+</code></pre></div><ul>
+<li>Para dejar lista nuestra nueva instalación de MariaDB:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mysql_secure_installation
+</code></pre></div><p>Iremos respondiendo a todas las preguntas, con el fin de establecer el password de nuestro usuario <code>root</code> para MariaDB.</p>
 <h1 id="1-instalación-de-go-golang">1. Instalación de GO (Golang)</h1>
-
 <ul>
-<li><p>Creamos el directorio /home/git/local:</p>
-
-<pre><code class="language-bash">$ sudo su - git
-$ mkdir $HOME/local &amp;&amp; cd $_
-</code></pre>
-
-<ul>
+<li>Creamos el directorio /home/git/local:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo su - git
+$ mkdir $HOME/local <span style="color:#f92672">&amp;&amp;</span> cd $_
+</code></pre></div><ul>
 <li>Descargar Go y extraer el contenido:</li>
 </ul>
-
 <p>En el momento de escribir este tutorial la última versión estable 
 
     
@@ -741,119 +709,76 @@ $ mkdir $HOME/local &amp;&amp; cd $_
     <a href="https://golang.org/dl/" target='_blank'>disponible en golang.org</a>
 
  es GO 1.11.1</p>
-
-<pre><code class="language-bash">$ wget https://dl.google.com/go/go1.11.1.linux-armv6l.tar.gz
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ wget https://dl.google.com/go/go1.11.1.linux-armv6l.tar.gz
 $ tar -C /home/git/local -xvzf go1.11.1.linux-armv6l.tar.gz
-</code></pre></li>
-
-<li><p>Establecer la variable de entorno GOPATH para especificar la ubicación de nuestro espacio de trabajo:</p>
-
-<pre><code class="language-bash">$ echo 'export GOROOT=$HOME/local/go' &gt;&gt; $HOME/.bashrc
-$ echo 'export GOPATH=$HOME/go' &gt;&gt; $HOME/.bashrc
-$ echo 'export PATH=$PATH:$GOROOT/bin:$GOPATH/bin' &gt;&gt; $HOME/.bashrc
+</code></pre></div><ul>
+<li>Establecer la variable de entorno GOPATH para especificar la ubicación de nuestro espacio de trabajo:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ echo <span style="color:#e6db74">&#39;export GOROOT=$HOME/local/go&#39;</span> &gt;&gt; $HOME/.bashrc
+$ echo <span style="color:#e6db74">&#39;export GOPATH=$HOME/go&#39;</span> &gt;&gt; $HOME/.bashrc
+$ echo <span style="color:#e6db74">&#39;export PATH=$PATH:$GOROOT/bin:$GOPATH/bin&#39;</span> &gt;&gt; $HOME/.bashrc
 $ source $HOME/.bashrc
-</code></pre>
-
-<ul>
-<li>Comprobar que Go está bien instalado:
-<code>bash
-$ go version
-</code></li>
-</ul></li>
-
-<li><p>Si está bien instalado, se mostrará algo como lo siguiente:</p>
-
-<pre><code class="language-txt">go version go1.11.1 linux/arm
-</code></pre>
-
-<h1 id="2-descargar-y-compilar-gogs">2. Descargar y compilar Gogs</h1>
-
-<ul>
-<li>Descargar Gogs:
-<code>bash
-$ go get -u github.com/gogs/gogs
-</code></li>
-</ul></li>
+</code></pre></div><ul>
+<li>Comprobar que Go está bien instalado:</li>
 </ul>
-
-<p>Tardará unos minutos y parecerá que la consola no responde, ya que no muestra progreso.</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ go version
+</code></pre></div><ul>
+<li>Si está bien instalado, se mostrará algo como lo siguiente:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">go version go1.11.1 linux/arm
+</code></pre></div><h1 id="2-descargar-y-compilar-gogs">2. Descargar y compilar Gogs</h1>
 <ul>
-<li><p>Compilar Gogs:</p>
-
-<pre><code class="language-bash">$ cd $GOPATH/src/github.com/gogs/gogs
+<li>Descargar Gogs:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ go get -u github.com/gogs/gogs
+</code></pre></div><p>Tardará unos minutos y parecerá que la consola no responde, ya que no muestra progreso.</p>
+<ul>
+<li>Compilar Gogs:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd $GOPATH/src/github.com/gogs/gogs
 $ go build
-</code></pre>
-
-<ul>
-<li>Ejecutamos:
-<code>bash
-$ ./gogs web
-</code></li>
-</ul></li>
+</code></pre></div><ul>
+<li>Ejecutamos:</li>
 </ul>
-
-<p>Esto arrancará el servidor web integrado escuchando en el <code>puerto 3000</code>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ./gogs web
+</code></pre></div><p>Esto arrancará el servidor web integrado escuchando en el <code>puerto 3000</code>
 Abrir <code>localhost:3000</code> en el explorador. Gogs mostrará la página de instalación. Como no tenemos todavía configurada la base de datos, cerraremos el explorador y pararemos el servidor web con <code>CTRL+C</code>
 Volveremos a la página de instalación de Gogs tras configurar MariaDB y Nginx.</p>
-
 <ul>
-<li><p>Salir del usuario git :</p>
-
-<pre><code class="language-bash">$ exit
-</code></pre>
-
-<h1 id="3-configuración-de-la-base-de-datos">3. Configuración de la base de datos</h1>
-
-<ul>
-<li>Entramos en MariaDB
-<code>bash 
-$ sudo mysql -u root -p
-</code></li>
-</ul></li>
-
-<li><p>Creamos el nuevo usuario para Gogs:</p>
-
-<pre><code class="language-sql">&gt; CREATE USER 'gogs'@'localhost' IDENTIFIED BY 'password';
-</code></pre>
-
-<p>Sustituye <code>password</code> por la contraseña que decidas y guárdala, se necesitará después para configurar Gogs.</p>
-
-<ul>
-<li>Crear nueva base de datos para Gogs:
-<code>sql
-&gt; CREATE DATABASE gogs CHARACTER SET utf8 COLLATE utf8_general_ci;
-</code></li>
-</ul></li>
-
-<li><p>Dar permisos al usuario gogs:</p>
-
-<pre><code class="language-sql">&gt; GRANT ALL PRIVILEGES ON gogs.* TO gogs@localhost ;
-</code></pre>
-
-<ul>
-<li>Salir de Mariadb:
-<code>sql
-&gt; quit
-</code></li>
-</ul></li>
+<li>Salir del usuario git :</li>
 </ul>
-
-<h1 id="4-configuración-de-nginx">4. Configuración de Nginx</h1>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ exit
+</code></pre></div><h1 id="3-configuración-de-la-base-de-datos">3. Configuración de la base de datos</h1>
+<ul>
+<li>Entramos en MariaDB</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mysql -u root -p
+</code></pre></div><ul>
+<li>Creamos el nuevo usuario para Gogs:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">USER</span> <span style="color:#e6db74">&#39;gogs&#39;</span><span style="color:#f92672">@</span><span style="color:#e6db74">&#39;localhost&#39;</span> IDENTIFIED <span style="color:#66d9ef">BY</span> <span style="color:#e6db74">&#39;password&#39;</span>;
+</code></pre></div><p>Sustituye <code>password</code> por la contraseña que decidas y guárdala, se necesitará después para configurar Gogs.</p>
+<ul>
+<li>Crear nueva base de datos para Gogs:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">DATABASE</span> gogs CHARACTER <span style="color:#66d9ef">SET</span> utf8 <span style="color:#66d9ef">COLLATE</span> utf8_general_ci;
+</code></pre></div><ul>
+<li>Dar permisos al usuario gogs:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">ALL</span> <span style="color:#66d9ef">PRIVILEGES</span> <span style="color:#66d9ef">ON</span> gogs.<span style="color:#f92672">*</span> <span style="color:#66d9ef">TO</span> gogs<span style="color:#f92672">@</span>localhost ;
+</code></pre></div><ul>
+<li>Salir de Mariadb:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#f92672">&gt;</span> quit
+</code></pre></div><h1 id="4-configuración-de-nginx">4. Configuración de Nginx</h1>
 <p>Configuraremos un <code>Reverse Proxy</code> en Nginx, de esta forma podremos acceder a Gogs con nuestro nombre de dominio. Si queremos establecer un subdominio del estilo <code>gogs.tudominio.com</code> solo tendremos que establecer <code>location \</code> e indicar el <code>server_name</code> deseado.</p>
-
 <ul>
 <li>Entrar en /etc/nginx/sites-available y añadir la configuración del Reverse Proxy:</li>
 </ul>
-
-<pre><code class="language-bash">$ cd /etc/nginx/sites-available
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd /etc/nginx/sites-available
 $ sudo nano gogs
-</code></pre>
-
-<p>Pegar lo siguiente modificando segun nuestra configuración:</p>
-
-<pre><code class="language-txt">http{
+</code></pre></div><p>Pegar lo siguiente modificando segun nuestra configuración:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">http{
 server {
 listen 80;
 server_name tudominio.com;
@@ -862,43 +787,27 @@ location /gogs/ {
 proxy_pass http://localhost:3000/;
 }
 }
-</code></pre>
-
-<ul>
-<li><p>Habilitamos el nuevo sitio:</p>
-
-<pre><code class="language-bash">$ sudo ln -s /etc/nginx/sites-available/gogs /etc/nginx/sites-enabled/
-</code></pre>
-
-<ul>
-<li>Reiniciamos Nginx:
-<code>bash
-$ sudo systemctl restart nginx
-</code></li>
-</ul></li>
-
-<li><p>Configuramos Gogs con la url tudominio.com/gogs/</p>
-
-<pre><code class="language-bash">$ sudo nano /home/git/go/src/github.com/gogits/gogs/custom/conf/app.ini
-</code></pre>
-
-<p>Buscar la <code>ROOT URL</code> y modificarla así:</p>
-
-<pre><code class="language-txt">[server] ROOT_URL = tudominio.com/gogs/
-</code></pre></li>
+</code></pre></div><ul>
+<li>Habilitamos el nuevo sitio:</li>
 </ul>
-
-<h1 id="5-inicio-automático-con-systemd">5. Inicio automático con systemd</h1>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo ln -s /etc/nginx/sites-available/gogs /etc/nginx/sites-enabled/
+</code></pre></div><ul>
+<li>Reiniciamos Nginx:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo systemctl restart nginx
+</code></pre></div><ul>
+<li>Configuramos Gogs con la url tudominio.com/gogs/</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /home/git/go/src/github.com/gogits/gogs/custom/conf/app.ini
+</code></pre></div><p>Buscar la <code>ROOT URL</code> y modificarla así:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">[server] ROOT_URL = tudominio.com/gogs/
+</code></pre></div><h1 id="5-inicio-automático-con-systemd">5. Inicio automático con systemd</h1>
 <ul>
-<li><p>Crear el archivo gogs.service:</p>
-
-<pre><code class="language-bash">$ sudo nano /etc/systemd/system/gogs.service
-</code></pre>
-
-<p>Pegar el siguiente contenido y guardar los cambios:</p>
-
-<pre><code class="language-txt">[Unit]
+<li>Crear el archivo gogs.service:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/systemd/system/gogs.service
+</code></pre></div><p>Pegar el siguiente contenido y guardar los cambios:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">[Unit]
 Description=Gogs (Go Git Service)
 After=syslog.target
 After=network.target
@@ -914,27 +823,19 @@ Restart=always
 Environment=USER=git HOME=/home/git
 [Install]
 WantedBy=multi-user.target
-</code></pre></li>
-
-<li><p>Habilitar Gogs, iniciar el servicio y comprobar el estado:</p>
-
-<pre><code class="language-bash">$ sudo systemctl enable gogs
+</code></pre></div><ul>
+<li>Habilitar Gogs, iniciar el servicio y comprobar el estado:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo systemctl enable gogs
 $ sudo systemctl restart gogs
 $ sudo systemctl status gogs 
-</code></pre>
-
-<p>Por último, entra en tudominio.com/gogs/ para iniciar la configuración de Gogs, y completar lo siguiente:</p>
-
-<pre><code class="language-txt">Database type = MySQL
+</code></pre></div><p>Por último, entra en tudominio.com/gogs/ para iniciar la configuración de Gogs, y completar lo siguiente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">Database type = MySQL
 Host = 127.0.0.1:3306
 User = gogs
 Password = &lt;password para el usuario gogs&gt;
 Database Name = gogs
-</code></pre></li>
-</ul>
-
-<hr style="border-color: #d6d6d6;" />
-
+</code></pre></div><!-- raw HTML omitted -->
 <p>Espero que sea útil, ¡gracias por leerme!</p>
 
   </div>
@@ -1028,8 +929,6 @@ Database Name = gogs
 
         
         
-  <li><a href="//github.com/lodeiro0001" target="_blank" title="GitHub" class="fa fa-github"></a></li>
-
 
 
 
@@ -1128,6 +1027,44 @@ Database Name = gogs
           
         
 
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/">Raspberry Pi: Swap y Swappiness</a>
+              </h3>
+              
+              <time class="published" datetime='2021-06-08'>
+                8 de junio de 2021
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/06/raspberry-pi_swap-swappiness//raspberry-pi_swap-swappiness.jpg" alt="">
+        </a>
+    
+
+
+          </article>
         
           <article class="mini-post">
             <header>
@@ -1319,44 +1256,6 @@ Database Name = gogs
 
           </article>
         
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="https://rlodeiro.info/blog/instalacion_debian/">Instalar Debian 9 Stretch</a>
-              </h3>
-              
-              <time class="published" datetime='2019-03-30'>
-                30 de marzo de 2019
-              </time>
-            </header>
-            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="https://rlodeiro.info/blog/instalacion_debian/" class="image featured">
-            <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian//instalacion_Debian.jpg" alt="">
-        </a>
-    
-
-
-          </article>
-        
       </div>
 
       
@@ -1389,7 +1288,7 @@ Database Name = gogs
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/herramientas/">Herramientas</a>
+                <a href="https://rlodeiro.info/categories/herramientas/">herramientas</a>
                 <span style="float:right;">3</span>
               
             </header>
@@ -1400,7 +1299,7 @@ Database Name = gogs
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/iot/">Iot</a>
+                <a href="https://rlodeiro.info/categories/iot/">iot</a>
                 <span style="float:right;">2</span>
               
             </header>
@@ -1411,8 +1310,8 @@ Database Name = gogs
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/linux/">Linux</a>
-                <span style="float:right;">11</span>
+                <a href="https://rlodeiro.info/categories/linux/">linux</a>
+                <span style="float:right;">12</span>
               
             </header>
           </article>
@@ -1422,8 +1321,8 @@ Database Name = gogs
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/raspberry-pi/">Raspberry Pi</a>
-                <span style="float:right;">5</span>
+                <a href="https://rlodeiro.info/categories/raspberry-pi/">raspberry-pi</a>
+                <span style="float:right;">6</span>
               
             </header>
           </article>
@@ -1433,7 +1332,7 @@ Database Name = gogs
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/servicios/">Servicios</a>
+                <a href="https://rlodeiro.info/categories/servicios/">servicios</a>
                 <span style="float:right;">7</span>
               
             </header>
@@ -1464,8 +1363,6 @@ Database Name = gogs
 
         
         
-  <li><a href="//github.com/lodeiro0001" target="_blank" title="GitHub" class="fa fa-github"></a></li>
-
 
 
 
@@ -1551,7 +1448,7 @@ Database Name = gogs
     
     <p class="copyright">
       
-        &copy; 2019
+        &copy; 2021
         
           Roberto Lodeiro
         

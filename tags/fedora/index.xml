@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fedora on Roberto Lodeiro</title>
+    <link>https://rlodeiro.info/tags/fedora/</link>
+    <description>Recent content in Fedora on Roberto Lodeiro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <lastBuildDate>Tue, 08 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/fedora/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Raspberry Pi: Swap y Swappiness</title>
+      <link>https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/</link>
+      <pubDate>Tue, 08 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/</guid>
+      <description>Si utilizamos nuestra Raspberry Pi como servidor, resulta de vital importancia optimizar la configuración de la misma.
+Veamos a modificar la forma en que el sistema haga uso de la memoria virtual o Swap mediante la propiedad Swappiness, y a incrementar el tamaño de la misma en Raspberry Pi.
+Por supuesto, la propiedad Swappiness es útil modificarla también en Debian, Ubuntu, Fedora u otras distribuciones Linux en nuestro equipo de escritorio, ya que con ello reduciremos el uso de Swap.</description>
+    </item>
+    
+  </channel>
+</rss>

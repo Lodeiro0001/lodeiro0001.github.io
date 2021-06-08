@@ -11,7 +11,7 @@
         "@type" : "BlogPosting",
         "mainEntityOfPage": {
              "@type": "WebPage",
-             "@id": "https://rlodeiro.info"
+             "@id": "https:\/\/rlodeiro.info"
         },
         "articleSection" : "blog",
         "name" : ".Title",
@@ -24,9 +24,9 @@
         "accountablePerson" : "",
         "copyrightHolder" : "",
         "copyrightYear" : "2018",
-        "datePublished": "2018-11-12 00:00:00 &#43;0000 UTC",
-        "dateModified" : "2018-11-12 00:00:00 &#43;0000 UTC",
-        "url" : "https://rlodeiro.info/blog/escaner_ubuntu/",
+        "datePublished": "2018-11-12 00:00:00 \u002b0000 UTC",
+        "dateModified" : "2018-11-12 00:00:00 \u002b0000 UTC",
+        "url" : "https:\/\/rlodeiro.info\/blog\/escaner_ubuntu\/",
         "wordCount" : "211",
         "keywords" : [ "Escaner","Ubuntu","HP","Blog" ]
     }
@@ -39,7 +39,7 @@
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.54.0" />
+        <meta name="generator" content="Hugo 0.83.1" />
         <link rel="shortcut icon" href="https://rlodeiro.info/favicon.ico?v=kPP08pKEXB">
 
 
@@ -58,19 +58,11 @@
 <meta name="twitter:site" content="@lodeiro0001"/>
 
         
-        
-<meta itemprop="name" content="Escáner en Ubuntu">
-<meta itemprop="description" content="Como configurar el escáner de tu multifunción">
-
-
-<meta itemprop="datePublished" content="2018-11-12T00:00:00&#43;00:00" />
+        <meta itemprop="name" content="Escáner en Ubuntu">
+<meta itemprop="description" content="Como configurar el escáner de tu multifunción"><meta itemprop="datePublished" content="2018-11-12T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-11-12T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="211">
-
-
-
+<meta itemprop="wordCount" content="211"><meta itemprop="image" content="https://rlodeiro.info/img/main/logo2.jpg"/>
 <meta itemprop="keywords" content="Escaner,Ubuntu,HP," />
-
         
 
         
@@ -226,6 +218,42 @@
                     
                 
 
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/">Raspberry Pi: Swap y Swappiness</a></h3>
+                                
+                                <time class="published" datetime='2021-06-08'>
+                                    8 de junio de 2021
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/06/raspberry-pi_swap-swappiness//raspberry-pi_swap-swappiness.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
                 
                         <article class="mini-post">
                             <header>
@@ -401,42 +429,6 @@
 
         <a href="https://rlodeiro.info/blog/personalizar_xfce/" class="image featured">
             <img src="https://rlodeiro.info/img/posts/2019/04/personalizar_xfce//personalizar_xfce.jpg" alt="">
-        </a>
-    
-
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="https://rlodeiro.info/blog/instalacion_debian/">Instalar Debian 9 Stretch</a></h3>
-                                
-                                <time class="published" datetime='2019-03-30'>
-                                    30 de marzo de 2019
-                                  </time>
-                            </header>
-                            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="https://rlodeiro.info/blog/instalacion_debian/" class="image featured">
-            <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian//instalacion_Debian.jpg" alt="">
         </a>
     
 
@@ -668,63 +660,45 @@
 
 
   <div id="content">
-    
-
-<p>Si el escáner de tu impresora multifunción no es reconocido de forma automática, tranquilo, no está todo perdido.</p>
-
+    <p>Si el escáner de tu impresora multifunción no es reconocido de forma automática, tranquilo, no está todo perdido.</p>
 <p>Ubuntu configura de forma automática la inmensa mayoría de impresoras, tanto conectada por cable como las existentes en nuestra red wifi, pero el escáner de esta (si, todavía hay gente como yo que lo usa) puede que no como es mi caso.</p>
-
 <p>Este procedimiento ha sido probado con mi vieja y querida HP Photosmart 5510, debería servir para cualquier modelo de la marca.</p>
-
-<hr style="border-color: #d6d6d6;" />
-
+<!-- raw HTML omitted -->
 <p><code>CUPS</code> &ldquo;Common UNIX Printing System” asigna una <code>URi</code> a la impresora, que por bug (al menos con mi modelo), permite imprimir pero no trabajar con el escáner. Por lo tanto, debemos cambiar dicha dirección por la correcta.</p>
-
 <h1 id="modificar-la-uri">Modificar la URi</h1>
-
 <ul>
-<li><p>Localizar la URi, modificando la IP por la de tu impresora</p>
-
-<pre><code class="language-bash">$ hp-makeuri 192.168.0.255
-</code></pre>
-
-<p>Devolverá algo como lo siguiente:</p>
-
-<pre><code class="language-txt">CUPS URI: hp:/net/Photosmart_5510_series?ip=192.168.0.255
+<li>
+<p>Localizar la URi, modificando la IP por la de tu impresora</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ hp-makeuri 192.168.0.255
+</code></pre></div><p>Devolverá algo como lo siguiente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">CUPS URI: hp:/net/Photosmart_5510_series?ip=192.168.0.255
 SANE URI: hpaio:/net/Photosmart_5510_series?ip=192.168.0.255
-</code></pre>
-
-<p>Copiamos la CUPS URi.</p></li>
-
-<li><p>Vamos <code>ajustes-&gt;dispositivos-&gt;impresoras</code> y entramos en <code>Ajustes adicionales</code></p>
-
-<p><img src="https://rlodeiro.info/img/posts/2018/11/escaner_ubuntu/scanner1.png" alt="" /></p></li>
-
-<li><p>Seleccionamos nuestra impresora y entramos en <code>Propiedades</code></p>
-
-<p><img src="https://rlodeiro.info/img/posts/2018/11/escaner_ubuntu/scanner2.png" alt="" /></p></li>
-
-<li><p>Borramos la URi que figure y pegamos la nueva que hemos copiado antes</p>
-
-<p><img src="https://rlodeiro.info/img/posts/2018/11/escaner_ubuntu/scanner3.png" alt="" /></p></li>
+</code></pre></div><p>Copiamos la CUPS URi.</p>
+</li>
+<li>
+<p>Vamos <code>ajustes-&gt;dispositivos-&gt;impresoras</code> y entramos en <code>Ajustes adicionales</code></p>
+<p><img src="https://rlodeiro.info/img/posts/2018/11/escaner_ubuntu/scanner1.png" alt=""></p>
+</li>
+<li>
+<p>Seleccionamos nuestra impresora y entramos en <code>Propiedades</code></p>
+<p><img src="https://rlodeiro.info/img/posts/2018/11/escaner_ubuntu/scanner2.png" alt=""></p>
+</li>
+<li>
+<p>Borramos la URi que figure y pegamos la nueva que hemos copiado antes</p>
+<p><img src="https://rlodeiro.info/img/posts/2018/11/escaner_ubuntu/scanner3.png" alt=""></p>
+</li>
 </ul>
-
 <h1 id="software">Software</h1>
-
 <p>Ahora ya podemos utilizar nuestro escáner desde cualquier aplicación preparada para ello. Para escanear de forma simple recomiendo <code>simple-scan</code>.</p>
-
 <ul>
-<li><p>Para instalarla</p>
-
-<pre><code class="language-bash">$ sudo apt install simple-scan
-</code></pre>
-
-<p><img src="https://rlodeiro.info/img/posts/2018/11/escaner_ubuntu/scanner4.png" alt="" /></p>
-
-<hr style="border-color: #d6d6d6;" />
-
-<p>Espero que sea útil, ¡gracias por leerme!</p></li>
+<li>
+<p>Para instalarla</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install simple-scan
+</code></pre></div><p><img src="https://rlodeiro.info/img/posts/2018/11/escaner_ubuntu/scanner4.png" alt=""></p>
+</li>
 </ul>
+<!-- raw HTML omitted -->
+<p>Espero que sea útil, ¡gracias por leerme!</p>
 
   </div>
 
@@ -814,8 +788,6 @@ SANE URI: hpaio:/net/Photosmart_5510_series?ip=192.168.0.255
 
         
         
-  <li><a href="//github.com/lodeiro0001" target="_blank" title="GitHub" class="fa fa-github"></a></li>
-
 
 
 
@@ -914,6 +886,44 @@ SANE URI: hpaio:/net/Photosmart_5510_series?ip=192.168.0.255
           
         
 
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/">Raspberry Pi: Swap y Swappiness</a>
+              </h3>
+              
+              <time class="published" datetime='2021-06-08'>
+                8 de junio de 2021
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/06/raspberry-pi_swap-swappiness//raspberry-pi_swap-swappiness.jpg" alt="">
+        </a>
+    
+
+
+          </article>
         
           <article class="mini-post">
             <header>
@@ -1105,44 +1115,6 @@ SANE URI: hpaio:/net/Photosmart_5510_series?ip=192.168.0.255
 
           </article>
         
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="https://rlodeiro.info/blog/instalacion_debian/">Instalar Debian 9 Stretch</a>
-              </h3>
-              
-              <time class="published" datetime='2019-03-30'>
-                30 de marzo de 2019
-              </time>
-            </header>
-            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="https://rlodeiro.info/blog/instalacion_debian/" class="image featured">
-            <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian//instalacion_Debian.jpg" alt="">
-        </a>
-    
-
-
-          </article>
-        
       </div>
 
       
@@ -1175,7 +1147,7 @@ SANE URI: hpaio:/net/Photosmart_5510_series?ip=192.168.0.255
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/herramientas/">Herramientas</a>
+                <a href="https://rlodeiro.info/categories/herramientas/">herramientas</a>
                 <span style="float:right;">3</span>
               
             </header>
@@ -1186,7 +1158,7 @@ SANE URI: hpaio:/net/Photosmart_5510_series?ip=192.168.0.255
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/iot/">Iot</a>
+                <a href="https://rlodeiro.info/categories/iot/">iot</a>
                 <span style="float:right;">2</span>
               
             </header>
@@ -1197,8 +1169,8 @@ SANE URI: hpaio:/net/Photosmart_5510_series?ip=192.168.0.255
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/linux/">Linux</a>
-                <span style="float:right;">11</span>
+                <a href="https://rlodeiro.info/categories/linux/">linux</a>
+                <span style="float:right;">12</span>
               
             </header>
           </article>
@@ -1208,8 +1180,8 @@ SANE URI: hpaio:/net/Photosmart_5510_series?ip=192.168.0.255
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/raspberry-pi/">Raspberry Pi</a>
-                <span style="float:right;">5</span>
+                <a href="https://rlodeiro.info/categories/raspberry-pi/">raspberry-pi</a>
+                <span style="float:right;">6</span>
               
             </header>
           </article>
@@ -1219,7 +1191,7 @@ SANE URI: hpaio:/net/Photosmart_5510_series?ip=192.168.0.255
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/servicios/">Servicios</a>
+                <a href="https://rlodeiro.info/categories/servicios/">servicios</a>
                 <span style="float:right;">7</span>
               
             </header>
@@ -1250,8 +1222,6 @@ SANE URI: hpaio:/net/Photosmart_5510_series?ip=192.168.0.255
 
         
         
-  <li><a href="//github.com/lodeiro0001" target="_blank" title="GitHub" class="fa fa-github"></a></li>
-
 
 
 
@@ -1337,7 +1307,7 @@ SANE URI: hpaio:/net/Photosmart_5510_series?ip=192.168.0.255
     
     <p class="copyright">
       
-        &copy; 2019
+        &copy; 2021
         
           Roberto Lodeiro
         

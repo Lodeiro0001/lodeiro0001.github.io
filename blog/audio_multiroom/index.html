@@ -11,7 +11,7 @@
         "@type" : "BlogPosting",
         "mainEntityOfPage": {
              "@type": "WebPage",
-             "@id": "https://rlodeiro.info"
+             "@id": "https:\/\/rlodeiro.info"
         },
         "articleSection" : "blog",
         "name" : ".Title",
@@ -24,10 +24,10 @@
         "accountablePerson" : "",
         "copyrightHolder" : "",
         "copyrightYear" : "2019",
-        "datePublished": "2019-04-14 00:00:00 &#43;0000 UTC",
-        "dateModified" : "2019-04-14 00:00:00 &#43;0000 UTC",
-        "url" : "https://rlodeiro.info/blog/audio_multiroom/",
-        "wordCount" : "883",
+        "datePublished": "2019-04-14 00:00:00 \u002b0000 UTC",
+        "dateModified" : "2019-04-14 00:00:00 \u002b0000 UTC",
+        "url" : "https:\/\/rlodeiro.info\/blog\/audio_multiroom\/",
+        "wordCount" : "881",
         "keywords" : [ "Linux","Audio","Multiroom","AirPlay","forked-daapd","Blog" ]
     }
     </script>
@@ -39,7 +39,7 @@
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.54.0" />
+        <meta name="generator" content="Hugo 0.83.1" />
         <link rel="shortcut icon" href="https://rlodeiro.info/favicon.ico?v=kPP08pKEXB">
 
 
@@ -58,21 +58,11 @@
 <meta name="twitter:site" content="@lodeiro0001"/>
 
         
-        
-<meta itemprop="name" content="Audio Multiroom">
-<meta itemprop="description" content="Servidor multimedia con soporte Airplay">
-
-
-<meta itemprop="datePublished" content="2019-04-14T00:00:00&#43;00:00" />
+        <meta itemprop="name" content="Audio Multiroom">
+<meta itemprop="description" content="Servidor multimedia con soporte Airplay"><meta itemprop="datePublished" content="2019-04-14T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-04-14T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="883">
-
-  <meta itemprop="image" content="https://rlodeiro.info/img/posts/2019/04/audio_multiroom/audio_multiroom.jpg">
-
-
-
+<meta itemprop="wordCount" content="881"><meta itemprop="image" content="https://rlodeiro.info/img/posts/2019/04/audio_multiroom/audio_multiroom.jpg">
 <meta itemprop="keywords" content="Linux,Audio,Multiroom,AirPlay,forked-daapd," />
-
         
 
         
@@ -228,6 +218,42 @@
                     
                 
 
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/">Raspberry Pi: Swap y Swappiness</a></h3>
+                                
+                                <time class="published" datetime='2021-06-08'>
+                                    8 de junio de 2021
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/06/raspberry-pi_swap-swappiness//raspberry-pi_swap-swappiness.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
                 
                         <article class="mini-post">
                             <header>
@@ -403,42 +429,6 @@
 
         <a href="https://rlodeiro.info/blog/personalizar_xfce/" class="image featured">
             <img src="https://rlodeiro.info/img/posts/2019/04/personalizar_xfce//personalizar_xfce.jpg" alt="">
-        </a>
-    
-
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="https://rlodeiro.info/blog/instalacion_debian/">Instalar Debian 9 Stretch</a></h3>
-                                
-                                <time class="published" datetime='2019-03-30'>
-                                    30 de marzo de 2019
-                                  </time>
-                            </header>
-                            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="https://rlodeiro.info/blog/instalacion_debian/" class="image featured">
-            <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian//instalacion_Debian.jpg" alt="">
         </a>
     
 
@@ -670,12 +660,8 @@
 
 
   <div id="content">
-    
-
-<p>Hoy vamos a instalar y configurar <code>forked-daapd</code>, un servidor multimedia para nuestra biblioteca musical.</p>
-
+    <p>Hoy vamos a instalar y configurar <code>forked-daapd</code>, un servidor multimedia para nuestra biblioteca musical.</p>
 <p><code>DAAP</code> (Digital Audio Access Protocol) es un protocolo ideado por Apple, el cual es utilizado por iTunes. Nuestro servidor será compatible por lo tanto con iTunes, dispositivos comerciales preparados para trabajar con Airplay, clientes MPD, entre otros.</p>
-
 <p>
 
     
@@ -685,45 +671,27 @@
     <a href="https://rlodeiro.info/blog/airplay_linux/" target='_blank'>Tal como expliqué en una entrada anterior,</a>
 
  podemos montar nuestros propios dispositivos compatibles con Airplay con una simple <code>Raspberry Pi</code> con <code>Shairport Sync</code> instalado conectándola a nuestro equipo Hi-Fi, altavoz auto-amplificado o similar.</p>
-
 <p>La idea es que tengamos en las <code>estancias</code> deseadas uno de estos dispositivos para poder enviar nuestra música a cada una de ellas.</p>
-
-<hr style="border-color: #d6d6d6;" />
-
+<!-- raw HTML omitted -->
 <h1 id="1-instalación">1. Instalación</h1>
-
 <p>Primero, vamos a instalar <code>forked-daapd</code> en nuestro servidor, en mi caso es una Raspberry Pi.</p>
-
 <ul>
-<li><p>Agregamos la key del repositorio</p>
-
-<pre><code class="language-bash">$ wget -q -O - http://www.gyfgafguf.dk/raspbian/forked-daapd.gpg | sudo apt-key add -
-</code></pre>
-
-<ul>
-<li>Añadimos el repositorio en <code>/etc/apt/sources.list.d/forked-daapd.list</code>
-<code>bash
-$ sudo nano /etc/apt/sources.list.d/forked-daapd.list
-</code></li>
-</ul></li>
+<li>Agregamos la key del repositorio</li>
 </ul>
-
-<p>Dentro pegamos lo siguiente y guardamos:</p>
-
-<pre><code class="language-txt">deb http://www.gyfgafguf.dk/raspbian/forked-daapd/ stretch contrib
-</code></pre>
-
-<ul>
-<li><p>Instalamos forked-daapd</p>
-
-<pre><code class="language-bash">$ sudo apt update
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ wget -q -O - http://www.gyfgafguf.dk/raspbian/forked-daapd.gpg | sudo apt-key add -
+</code></pre></div><ul>
+<li>Añadimos el repositorio en <code>/etc/apt/sources.list.d/forked-daapd.list</code></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/apt/sources.list.d/forked-daapd.list
+</code></pre></div><p>Dentro pegamos lo siguiente y guardamos:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">deb http://www.gyfgafguf.dk/raspbian/forked-daapd/ stretch contrib
+</code></pre></div><ul>
+<li>Instalamos forked-daapd</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt update
 $ sudo apt install forked-daapd
-</code></pre>
-
-<h1 id="2-configuración">2. Configuración</h1>
-
+</code></pre></div><h1 id="2-configuración">2. Configuración</h1>
 <p>El archivo de configuración se encuentra en <code>/etc/forked-daapd.conf</code>.</p>
-
 <p>En mi caso he deshabilitado la salida local, ya que en mi Raspberry Pi no tengo conectado ningún equipo de audio. Si quieres que tu server también sea un de los dispositivos Airplay disponibles, puedes habilitarlo o en su lugar instalar shairport-sync 
 
     
@@ -733,68 +701,43 @@ $ sudo apt install forked-daapd
     <a href="https://rlodeiro.info/blog/airplay_linux/" target='_blank'>tal como indiqué en el otro post</a>
 
 .</p>
-
 <ul>
-<li>Abrimos el archivo con nano
-<code>bash
-$ sudo nano /etc/forked-daapd.conf
-</code></li>
-</ul></li>
-
-<li><p>Modificamos las siguientes líneas, eliminando <code>#</code> en caso de que figuren como comentarios</p></li>
+<li>Abrimos el archivo con nano</li>
 </ul>
-
-<pre><code class="language-txt">#Configuración general
-uid = &quot;root&quot;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/forked-daapd.conf
+</code></pre></div><ul>
+<li>Modificamos las siguientes líneas, eliminando <code>#</code> en caso de que figuren como comentarios</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">#Configuración general
+uid = &#34;root&#34;
 
 # Librería
-name = &quot;Nombre de tu servidor&quot; # por defecto coge el nombre del host
+name = &#34;Nombre de tu servidor&#34; # por defecto coge el nombre del host
 port = 3689
-directories = {&quot;/ruta/directorio/de_tu_biblioteca&quot;}
+directories = {&#34;/ruta/directorio/de_tu_biblioteca&#34;}
 
 # Salida de audio local
-type = &quot;disabled&quot;
-</code></pre>
-
-<ul>
+type = &#34;disabled&#34;
+</code></pre></div><ul>
 <li>Finalizada la configuración, habilitamos el inicio automático con el arranque del sistema y reiniciamos el servicio para aplicar los cambios</li>
 </ul>
-
-<pre><code class="language-bash">$ sudo systemctl enable forked-daapd
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo systemctl enable forked-daapd
 $ sudo service forked-daapd restart
-</code></pre>
-
-<p>Para poder utilizar forked-daapd al completo, tenemos que esperar a que termine de escanear la biblioteca, el tiempo que tarde dependerá de la cantidad de música que tengas. Podemos ver el progreso con:</p>
-
-<pre><code class="language-bash">tail -f /var/log/forked-daapd.log
-</code></pre>
-
-<h1 id="3-interfaz-web">3. Interfaz web</h1>
-
+</code></pre></div><p>Para poder utilizar forked-daapd al completo, tenemos que esperar a que termine de escanear la biblioteca, el tiempo que tarde dependerá de la cantidad de música que tengas. Podemos ver el progreso con:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tail -f /var/log/forked-daapd.log
+</code></pre></div><h1 id="3-interfaz-web">3. Interfaz web</h1>
 <p>La interfaz web está disponible en <code>http://ip_de_tu_servidor:3689</code>.</p>
-
-<h2 id="3-1-biblioteca">3.1 Biblioteca</h2>
-
+<h2 id="31-biblioteca">3.1 Biblioteca</h2>
 <p>Lo primero que veremos será la parte destinada a navegar por nuestra biblioteca y nuestra música.</p>
-
-<p><img src="https://rlodeiro.info/img/posts/2019/04/audio_multiroom/forked-daapd1.png" alt="" /></p>
-
+<p><img src="https://rlodeiro.info/img/posts/2019/04/audio_multiroom/forked-daapd1.png" alt=""></p>
 <p>Para <code>elegir en que dispositivo o dispositivos</code> queremos reproducir la misma, solo tenemos que desplegar el menú pinchando en el icono del altavoz, y seleccionarlos, pudiendo manejar el volumen de forma independiente para cada uno de ellos.</p>
-
 <p>En la imagen superior, vemos que solo tengo dos conectados a la red en este momento, uno llamado <code>Studio</code> (maquina linux con Shairport Sync instalado) donde se está reproduciendo audio, y un <code>Apple TV</code> el cual no está reproduciendo nada. Si selecciono este último para escuchar la música en ambas estancias, veremos algo así:</p>
-
-<p><img src="https://rlodeiro.info/img/posts/2019/04/audio_multiroom/forked-daapd2.png" alt="" /></p>
-
+<p><img src="https://rlodeiro.info/img/posts/2019/04/audio_multiroom/forked-daapd2.png" alt=""></p>
 <p>Ahora la música se está reproduciendo en ambas estancias, con un volumen diferente en cada una de ellas.</p>
-
-<h2 id="3-2-administración">3.2 Administración</h2>
-
+<h2 id="32-administración">3.2 Administración</h2>
 <p>Pinchando en el icono de la rueda/Admin, accedemos al panel de administración de forked-daapd.</p>
-
-<p><img src="https://rlodeiro.info/img/posts/2019/04/audio_multiroom/forked-daapd3.png" alt="" /></p>
-
+<p><img src="https://rlodeiro.info/img/posts/2019/04/audio_multiroom/forked-daapd3.png" alt=""></p>
 <p>Aquí tenemos información relativa a nuestra biblioteca, pudiendo actualizar la misma. También veremos las solicitudes remotas de algunos clientes como <code>remote</code> en dispositivos Apple, salidas disponibles y la posibilidad de conectar servicios externos como Sportify, yo no lo tengo configurado ya que no lo utilizo.</p>
-
 <p>Tienes toda la 
 
     
@@ -804,9 +747,7 @@ $ sudo service forked-daapd restart
     <a href="https://ejurgensen.github.io/forked-daapd/" target='_blank'>documentación en la web oficial de forked-daapd</a>
 
 .</p>
-
 <h1 id="4-clientes">4. Clientes</h1>
-
 <p>La 
 
     
@@ -816,9 +757,7 @@ $ sudo service forked-daapd restart
     <a href="https://ejurgensen.github.io/forked-daapd/#supported-clients" target='_blank'>lista de clientes soportados</a>
 
  es muy extensa. Paso a listar los que yo utilizo.</p>
-
-<h2 id="4-1-shairport-sync-linux">4.1 Shairport Sync (Linux)</h2>
-
+<h2 id="41-shairport-sync-linux">4.1 Shairport Sync (Linux)</h2>
 <p>Este reproductor de audio compatible con <code>Airplay</code>, 
 
     
@@ -828,26 +767,16 @@ $ sudo service forked-daapd restart
     <a href="https://rlodeiro.info/blog/airplay_linux/" target='_blank'>tal como expliqué en una entrada anterior que pudes ver aquí</a>
 
 , lo podemos instalar en cualquier máquina Linux.</p>
-
 <p>Es el principal cliente que utilizo, ya que es compatible con <code>multiroom</code> y me permite reproducir la música en diferentes instancias de forma sincronizada.</p>
-
-<h2 id="4-2-rhythmbox-linux">4.2 Rhythmbox (Linux)</h2>
-
+<h2 id="42-rhythmbox-linux">4.2 Rhythmbox (Linux)</h2>
 <p>En mis máquinas Linux siempre utilizo como reproductor de audio <code>Rhythmbox</code>.</p>
-
 <ul>
 <li>Para instalarlo en Debian o derivados:</li>
 </ul>
-
-<pre><code class="language-bash">$ sudo apt install rhythmbox
-</code></pre>
-
-<p>Además de reproducir audio local, Rhythmbox es compatible con el protocolo <code>DAAP</code>, por lo que tenemos disponible nuestra biblioteca servida por forked-daapd en el apartado <code>Shared</code>.</p>
-
-<p><img src="https://rlodeiro.info/img/posts/2019/04/audio_multiroom/rhythmbox.png" alt="" /></p>
-
-<h2 id="4-3-itunes-remote-ios">4.3 iTunes Remote (iOS)</h2>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install rhythmbox
+</code></pre></div><p>Además de reproducir audio local, Rhythmbox es compatible con el protocolo <code>DAAP</code>, por lo que tenemos disponible nuestra biblioteca servida por forked-daapd en el apartado <code>Shared</code>.</p>
+<p><img src="https://rlodeiro.info/img/posts/2019/04/audio_multiroom/rhythmbox.png" alt=""></p>
+<h2 id="43-itunes-remote-ios">4.3 iTunes Remote (iOS)</h2>
 <p>Además de la interfaz web, también podemos controlar la música desde nuestros dispositivos iOS 
 
     
@@ -857,26 +786,15 @@ $ sudo service forked-daapd restart
     <a href="https://itunes.apple.com/es/app/itunes-remote/id284417350?mt=8" target='_blank'>con iTunes Remote, disponible en la App Store.</a>
 
 </p>
-
-<p><img src="https://rlodeiro.info/img/posts/2019/04/audio_multiroom/itunes_remote.png" alt="" /></p>
-
+<p><img src="https://rlodeiro.info/img/posts/2019/04/audio_multiroom/itunes_remote.png" alt=""></p>
 <p>Añadimos nuestra biblioteca de iTunes (forked-daapd) e introducimos el código de activación en la interfaz web de forked-daapd/administración tal como hemos visto antes.</p>
-
 <p><code>iTunes Remote</code> solo nos permite <code>controlar</code>, pero no reproducir el audio en el propio dispositivo. Si te interesa esto, presta atención al siguiente apartado.</p>
-
 <h1 id="5-mp3-stream">5. MP3 Stream</h1>
-
 <p>Además de todo lo anterior, forked-daapd hace un <code>streaming</code> del audio en formato <code>mp3</code>,  el cual está disponible desde:</p>
-
-<pre><code class="language-txt">http://ip_servidor:3689/stream.mp3
-</code></pre>
-
-<p>Se accede a el desde cualquier cliente compatible en iOS, Linux u otros sistemas. También  podemos activarlo en la interfaz web (figura como una de las salidas disponibles) y así escucharemos el streaming en el propio dispositivo a través de la propia web.</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">http://ip_servidor:3689/stream.mp3
+</code></pre></div><p>Se accede a el desde cualquier cliente compatible en iOS, Linux u otros sistemas. También  podemos activarlo en la interfaz web (figura como una de las salidas disponibles) y así escucharemos el streaming en el propio dispositivo a través de la propia web.</p>
 <p>Yo lo he probado con <code>VLC</code> y va perfecto.</p>
-
-<p><img src="https://rlodeiro.info/img/posts/2019/04/audio_multiroom/vlc.png" alt="" /></p>
-
+<p><img src="https://rlodeiro.info/img/posts/2019/04/audio_multiroom/vlc.png" alt=""></p>
 <p>Recuerda consultar la documentación oficial de <code>forked-daapd</code> 
 
     
@@ -886,7 +804,6 @@ $ sudo service forked-daapd restart
     <a href="https://ejurgensen.github.io/forked-daapd/#supported-clients" target='_blank'>aquí</a>
 
  si necesitas alguna configuración adicional que yo no he utilizado.</p>
-
 <p>También puedes 
 
     
@@ -896,9 +813,7 @@ $ sudo service forked-daapd restart
     <a href="https://rlodeiro.info/blog/airplay_linux/" target='_blank'>revisar mi post sobre Shairport Sync</a>
 
  para configurar tus propios dispositivos y ¡empezar a disfrutar de tu nuevo sistema de audio multiroom!.</p>
-
-<hr style="border-color: #d6d6d6;" />
-
+<!-- raw HTML omitted -->
 <p>Espero que sea útil, ¡gracias por leerme!</p>
 
   </div>
@@ -995,8 +910,6 @@ $ sudo service forked-daapd restart
 
         
         
-  <li><a href="//github.com/lodeiro0001" target="_blank" title="GitHub" class="fa fa-github"></a></li>
-
 
 
 
@@ -1095,6 +1008,44 @@ $ sudo service forked-daapd restart
           
         
 
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/">Raspberry Pi: Swap y Swappiness</a>
+              </h3>
+              
+              <time class="published" datetime='2021-06-08'>
+                8 de junio de 2021
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/06/raspberry-pi_swap-swappiness//raspberry-pi_swap-swappiness.jpg" alt="">
+        </a>
+    
+
+
+          </article>
         
           <article class="mini-post">
             <header>
@@ -1286,44 +1237,6 @@ $ sudo service forked-daapd restart
 
           </article>
         
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="https://rlodeiro.info/blog/instalacion_debian/">Instalar Debian 9 Stretch</a>
-              </h3>
-              
-              <time class="published" datetime='2019-03-30'>
-                30 de marzo de 2019
-              </time>
-            </header>
-            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="https://rlodeiro.info/blog/instalacion_debian/" class="image featured">
-            <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian//instalacion_Debian.jpg" alt="">
-        </a>
-    
-
-
-          </article>
-        
       </div>
 
       
@@ -1356,7 +1269,7 @@ $ sudo service forked-daapd restart
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/herramientas/">Herramientas</a>
+                <a href="https://rlodeiro.info/categories/herramientas/">herramientas</a>
                 <span style="float:right;">3</span>
               
             </header>
@@ -1367,7 +1280,7 @@ $ sudo service forked-daapd restart
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/iot/">Iot</a>
+                <a href="https://rlodeiro.info/categories/iot/">iot</a>
                 <span style="float:right;">2</span>
               
             </header>
@@ -1378,8 +1291,8 @@ $ sudo service forked-daapd restart
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/linux/">Linux</a>
-                <span style="float:right;">11</span>
+                <a href="https://rlodeiro.info/categories/linux/">linux</a>
+                <span style="float:right;">12</span>
               
             </header>
           </article>
@@ -1389,8 +1302,8 @@ $ sudo service forked-daapd restart
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/raspberry-pi/">Raspberry Pi</a>
-                <span style="float:right;">5</span>
+                <a href="https://rlodeiro.info/categories/raspberry-pi/">raspberry-pi</a>
+                <span style="float:right;">6</span>
               
             </header>
           </article>
@@ -1400,7 +1313,7 @@ $ sudo service forked-daapd restart
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/servicios/">Servicios</a>
+                <a href="https://rlodeiro.info/categories/servicios/">servicios</a>
                 <span style="float:right;">7</span>
               
             </header>
@@ -1431,8 +1344,6 @@ $ sudo service forked-daapd restart
 
         
         
-  <li><a href="//github.com/lodeiro0001" target="_blank" title="GitHub" class="fa fa-github"></a></li>
-
 
 
 
@@ -1518,7 +1429,7 @@ $ sudo service forked-daapd restart
     
     <p class="copyright">
       
-        &copy; 2019
+        &copy; 2021
         
           Roberto Lodeiro
         

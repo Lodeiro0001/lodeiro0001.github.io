@@ -11,7 +11,7 @@
         "@type" : "BlogPosting",
         "mainEntityOfPage": {
              "@type": "WebPage",
-             "@id": "https://rlodeiro.info"
+             "@id": "https:\/\/rlodeiro.info"
         },
         "articleSection" : "blog",
         "name" : ".Title",
@@ -24,10 +24,10 @@
         "accountablePerson" : "",
         "copyrightHolder" : "",
         "copyrightYear" : "2018",
-        "datePublished": "2018-10-21 00:00:00 &#43;0000 UTC",
-        "dateModified" : "2018-10-21 00:00:00 &#43;0000 UTC",
-        "url" : "https://rlodeiro.info/blog/mdadm/",
-        "wordCount" : "481",
+        "datePublished": "2018-10-21 00:00:00 \u002b0000 UTC",
+        "dateModified" : "2018-10-21 00:00:00 \u002b0000 UTC",
+        "url" : "https:\/\/rlodeiro.info\/blog\/mdadm\/",
+        "wordCount" : "477",
         "keywords" : [ "RAID","Linux","mdadm","Raspberry Pi","Debian","Blog" ]
     }
     </script>
@@ -39,7 +39,7 @@
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.54.0" />
+        <meta name="generator" content="Hugo 0.83.1" />
         <link rel="shortcut icon" href="https://rlodeiro.info/favicon.ico?v=kPP08pKEXB">
 
 
@@ -58,19 +58,11 @@
 <meta name="twitter:site" content="@lodeiro0001"/>
 
         
-        
-<meta itemprop="name" content="RAID en Linux">
-<meta itemprop="description" content="Configura un RAID por software con mdadm">
-
-
-<meta itemprop="datePublished" content="2018-10-21T00:00:00&#43;00:00" />
+        <meta itemprop="name" content="RAID en Linux">
+<meta itemprop="description" content="Configura un RAID por software con mdadm"><meta itemprop="datePublished" content="2018-10-21T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-10-21T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="481">
-
-
-
+<meta itemprop="wordCount" content="477"><meta itemprop="image" content="https://rlodeiro.info/img/main/logo2.jpg"/>
 <meta itemprop="keywords" content="RAID,Linux,mdadm,Raspberry Pi,Debian," />
-
         
 
         
@@ -226,6 +218,42 @@
                     
                 
 
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/">Raspberry Pi: Swap y Swappiness</a></h3>
+                                
+                                <time class="published" datetime='2021-06-08'>
+                                    8 de junio de 2021
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/06/raspberry-pi_swap-swappiness//raspberry-pi_swap-swappiness.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
                 
                         <article class="mini-post">
                             <header>
@@ -401,42 +429,6 @@
 
         <a href="https://rlodeiro.info/blog/personalizar_xfce/" class="image featured">
             <img src="https://rlodeiro.info/img/posts/2019/04/personalizar_xfce//personalizar_xfce.jpg" alt="">
-        </a>
-    
-
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="https://rlodeiro.info/blog/instalacion_debian/">Instalar Debian 9 Stretch</a></h3>
-                                
-                                <time class="published" datetime='2019-03-30'>
-                                    30 de marzo de 2019
-                                  </time>
-                            </header>
-                            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="https://rlodeiro.info/blog/instalacion_debian/" class="image featured">
-            <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian//instalacion_Debian.jpg" alt="">
         </a>
     
 
@@ -668,9 +660,7 @@
 
 
   <div id="content">
-    
-
-<p>Si queremos tener la información en nuestro disco a salvo de errores, un RAID puede ser una muy buena opción. Este proceso sirve tanto para un sistema <code>Linux X86</code>, como para una <code>Raspberry Pi</code> 
+    <p>Si queremos tener la información en nuestro disco a salvo de errores, un RAID puede ser una muy buena opción. Este proceso sirve tanto para un sistema <code>Linux X86</code>, como para una <code>Raspberry Pi</code> 
 
     
         
@@ -679,114 +669,83 @@
     <a href="https://rlodeiro.info/blog/raspberryusbboot/" target='_blank'>con varios discos USB conectados (USB boot mode).</a>
 
 </p>
-
 <p>En esta entrada me centraré en crear un <code>RAID1</code>, lo cual implica dos discos iguales que guardarán la misma información. Si uno falla, el otro tendrá toda la información a salvo y podremos sustituir el defectuoso. Para un entorno doméstico me parece la mejor opción, salvo que decidamos gastar un extra en hardware específico.</p>
-
 <p>Solo necesitaremos un sistema Linux, en este caso Ubuntu/Debian o derivado, y dos discos de la misma capacidad en el caso de RAID1. Si se quiere crear otro tipo de RAID, solo se han de indicar los discos necesarios y el <code>--level</code> a la hora de crearlo.</p>
-
-<hr style="border-color: #d6d6d6;" />
-
+<!-- raw HTML omitted -->
 <h1 id="instalación-y-configuración">Instalación y configuración</h1>
-
 <ul>
-<li><p>Primero listar los discos, apuntar cuales usaremos para el RAID, e instalar <code>mdadm</code></p>
-
-<pre><code class="language-bash">$ lsblk
+<li>Primero listar los discos, apuntar cuales usaremos para el RAID, e instalar <code>mdadm</code></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ lsblk
 $ sudo apt-get update
 $ sudo apt-get install mdadm
-</code></pre>
-
-<ul>
+</code></pre></div><ul>
 <li>Crear el RAID
-Cambiar sda1 y sdb1 según configuración propia
-<code>bash
-$ sudo mdadm --create /dev/md1 --level=mirror --raid-devices=2 /dev/sda1 /dev/sdb1
-</code></li>
-</ul></li>
-
-<li><p>Dar formato ext4</p>
-
-<pre><code class="language-bash">$ sudo mkfs.ext4 /dev/md0
-</code></pre>
-
-<ul>
-<li>Crear el nuevo directorio y montar el RAID
-<code>bash
-$ sudo mkdir -p /mnt/raid1
+Cambiar sda1 y sdb1 según configuración propia</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mdadm --create /dev/md1 --level<span style="color:#f92672">=</span>mirror --raid-devices<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span> /dev/sda1 /dev/sdb1
+</code></pre></div><ul>
+<li>Dar formato ext4</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mkfs.ext4 /dev/md0
+</code></pre></div><ul>
+<li>Crear el nuevo directorio y montar el RAID</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mkdir -p /mnt/raid1
 $ sudo mount /dev/md1 /mnt/raid1
-</code></li>
-</ul></li>
-
-<li><p>Para que el volumen se monte en el arranque del sistema</p>
-
-<pre><code class="language-bash">$ echo &quot;/dev/md1 /mnt/raid1/ ext4 defaults,noatime 0 1&quot; | sudo tee -a /etc/fstab
-</code></pre>
-
-<ul>
-<li>Actualizar la configuración de mdadm
-<code>bash
-$ sudo mdadm --detail --scan | sudo tee -a /etc/mdadm/mdadm.conf
-</code></li>
-</ul></li>
+</code></pre></div><ul>
+<li>Para que el volumen se monte en el arranque del sistema</li>
 </ul>
-
-<h1 id="mantenimiento">Mantenimiento</h1>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ echo <span style="color:#e6db74">&#34;/dev/md1 /mnt/raid1/ ext4 defaults,noatime 0 1&#34;</span> | sudo tee -a /etc/fstab
+</code></pre></div><ul>
+<li>Actualizar la configuración de mdadm</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mdadm --detail --scan | sudo tee -a /etc/mdadm/mdadm.conf
+</code></pre></div><h1 id="mantenimiento">Mantenimiento</h1>
 <ul>
-<li><p>Para ver el estado del raid</p>
-
-<pre><code class="language-bash">$ sudo mdadm --detail /dev/md1
+<li>Para ver el estado del raid</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mdadm --detail /dev/md1
+</code></pre></div><pre><code>Se mostrará algo similar a esto una vez finalice la sincronización inicial de los discos:
 </code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">/dev/md1:
+        Version : 1.2
+  Creation Time : xXxxXx
+     Raid Level : raid1
+     Array Size : 976596992 (931.36 GiB 1000.04 GB)
+  Used Dev Size : 976596992 (931.36 GiB 1000.04 GB)
+   Raid Devices : 2
+  Total Devices : 2
+    Persistence : Superblock is persistent
 
-<p>Se mostrará algo similar a esto una vez finalice la sincronización inicial de los discos:</p>
+  Intent Bitmap : Internal
 
-<pre><code class="language-txt">/dev/md1:
-    Version : 1.2
-Creation Time : xXxxXx
- Raid Level : raid1
- Array Size : 976596992 (931.36 GiB 1000.04 GB)
-Used Dev Size : 976596992 (931.36 GiB 1000.04 GB)
-Raid Devices : 2
-Total Devices : 2
-Persistence : Superblock is persistent
-
-Intent Bitmap : Internal
-
-Update Time : xXxxXx
-      State : clean 
-Active Devices : 2
+    Update Time : xXxxXx
+          State : clean 
+ Active Devices : 2
 Working Devices : 2
-Failed Devices : 0
-Spare Devices : 0
+ Failed Devices : 0
+  Spare Devices : 0
 
-       Name : xXxxXx:0  (local to host xXxxXx)
-       UUID : xXxxXx:xXxxXx:xXxxXx:xXxxXx
-     Events : xXxxXx
+           Name : xXxxXx:0  (local to host xXxxXx)
+           UUID : xXxxXx:xXxxXx:xXxxXx:xXxxXx
+         Events : xXxxXx
 
-Number   Major   Minor   RaidDevice State
-   2       8       17        0      active sync   /dev/sdb1
-   1       8        1        1      active sync   /dev/sda1
+    Number   Major   Minor   RaidDevice State
+       2       8       17        0      active sync   /dev/sdb1
+       1       8        1        1      active sync   /dev/sda1
 
-</code></pre></li>
-
-<li><p>Marcar disco como fallido y eliminarlo del RAID:</p>
-
-<pre><code class="language-bash">$ sudo mdadm --manage /dev/md1 --fail /dev/sdb1
-$ sudio mdadm --manage /dev/md1 --remove /dev/sdb1
-</code></pre>
-
-<ul>
-<li>Añadir disco:
-<code>bash
-$ sudo mdadm --manage /dev/md1 --add /dev/sdb1
-</code></li>
-</ul></li>
+</code></pre></div><ul>
+<li>Marcar disco como fallido y eliminarlo del RAID:</li>
 </ul>
-
-<p>La primera vez que creemos el <code>RAID</code>, o cuando agreguemos un disco por fallo u otra circunstancia, el tiempo que tarde este en indicar <code>State: clean</code> será considerable, ya que <code>mdadm</code> necesita sincronizar completamente los discos. Obviamente esto dependerá de la capacidad de los disco, y se nos indicará el porcentaje alcanzado al consultar el estado del RAID.</p>
-
-<hr style="border-color: #d6d6d6;" />
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mdadm --manage /dev/md1 --fail /dev/sdb1
+$ sudio mdadm --manage /dev/md1 --remove /dev/sdb1
+</code></pre></div><ul>
+<li>Añadir disco:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mdadm --manage /dev/md1 --add /dev/sdb1
+</code></pre></div><p>La primera vez que creemos el <code>RAID</code>, o cuando agreguemos un disco por fallo u otra circunstancia, el tiempo que tarde este en indicar <code>State: clean</code> será considerable, ya que <code>mdadm</code> necesita sincronizar completamente los discos. Obviamente esto dependerá de la capacidad de los disco, y se nos indicará el porcentaje alcanzado al consultar el estado del RAID.</p>
+<!-- raw HTML omitted -->
 <p>Espero que sea útil, ¡gracias por leerme!</p>
 
   </div>
@@ -883,8 +842,6 @@ $ sudo mdadm --manage /dev/md1 --add /dev/sdb1
 
         
         
-  <li><a href="//github.com/lodeiro0001" target="_blank" title="GitHub" class="fa fa-github"></a></li>
-
 
 
 
@@ -983,6 +940,44 @@ $ sudo mdadm --manage /dev/md1 --add /dev/sdb1
           
         
 
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/">Raspberry Pi: Swap y Swappiness</a>
+              </h3>
+              
+              <time class="published" datetime='2021-06-08'>
+                8 de junio de 2021
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/06/raspberry-pi_swap-swappiness//raspberry-pi_swap-swappiness.jpg" alt="">
+        </a>
+    
+
+
+          </article>
         
           <article class="mini-post">
             <header>
@@ -1174,44 +1169,6 @@ $ sudo mdadm --manage /dev/md1 --add /dev/sdb1
 
           </article>
         
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="https://rlodeiro.info/blog/instalacion_debian/">Instalar Debian 9 Stretch</a>
-              </h3>
-              
-              <time class="published" datetime='2019-03-30'>
-                30 de marzo de 2019
-              </time>
-            </header>
-            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="https://rlodeiro.info/blog/instalacion_debian/" class="image featured">
-            <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian//instalacion_Debian.jpg" alt="">
-        </a>
-    
-
-
-          </article>
-        
       </div>
 
       
@@ -1244,7 +1201,7 @@ $ sudo mdadm --manage /dev/md1 --add /dev/sdb1
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/herramientas/">Herramientas</a>
+                <a href="https://rlodeiro.info/categories/herramientas/">herramientas</a>
                 <span style="float:right;">3</span>
               
             </header>
@@ -1255,7 +1212,7 @@ $ sudo mdadm --manage /dev/md1 --add /dev/sdb1
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/iot/">Iot</a>
+                <a href="https://rlodeiro.info/categories/iot/">iot</a>
                 <span style="float:right;">2</span>
               
             </header>
@@ -1266,8 +1223,8 @@ $ sudo mdadm --manage /dev/md1 --add /dev/sdb1
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/linux/">Linux</a>
-                <span style="float:right;">11</span>
+                <a href="https://rlodeiro.info/categories/linux/">linux</a>
+                <span style="float:right;">12</span>
               
             </header>
           </article>
@@ -1277,8 +1234,8 @@ $ sudo mdadm --manage /dev/md1 --add /dev/sdb1
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/raspberry-pi/">Raspberry Pi</a>
-                <span style="float:right;">5</span>
+                <a href="https://rlodeiro.info/categories/raspberry-pi/">raspberry-pi</a>
+                <span style="float:right;">6</span>
               
             </header>
           </article>
@@ -1288,7 +1245,7 @@ $ sudo mdadm --manage /dev/md1 --add /dev/sdb1
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/servicios/">Servicios</a>
+                <a href="https://rlodeiro.info/categories/servicios/">servicios</a>
                 <span style="float:right;">7</span>
               
             </header>
@@ -1319,8 +1276,6 @@ $ sudo mdadm --manage /dev/md1 --add /dev/sdb1
 
         
         
-  <li><a href="//github.com/lodeiro0001" target="_blank" title="GitHub" class="fa fa-github"></a></li>
-
 
 
 
@@ -1406,7 +1361,7 @@ $ sudo mdadm --manage /dev/md1 --add /dev/sdb1
     
     <p class="copyright">
       
-        &copy; 2019
+        &copy; 2021
         
           Roberto Lodeiro
         

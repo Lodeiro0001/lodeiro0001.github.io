@@ -11,11 +11,11 @@
         "@type" : "BlogPosting",
         "mainEntityOfPage": {
              "@type": "WebPage",
-             "@id": "https://rlodeiro.info"
+             "@id": "https:\/\/rlodeiro.info"
         },
         "articleSection" : "blog",
         "name" : ".Title",
-        "headline" : "Raspberry Pi &amp; USB Boot Mode",
+        "headline" : "Raspberry Pi \u0026 USB Boot Mode",
         "description" : "Como arrancar una Raspberry Pi desde un disco USB",
         "inLanguage" : "es-ES",
         "author" : "",
@@ -24,10 +24,10 @@
         "accountablePerson" : "",
         "copyrightHolder" : "",
         "copyrightYear" : "2018",
-        "datePublished": "2018-09-28 00:00:00 &#43;0000 UTC",
-        "dateModified" : "2018-09-28 00:00:00 &#43;0000 UTC",
-        "url" : "https://rlodeiro.info/blog/raspberryusbboot/",
-        "wordCount" : "918",
+        "datePublished": "2018-09-28 00:00:00 \u002b0000 UTC",
+        "dateModified" : "2018-09-28 00:00:00 \u002b0000 UTC",
+        "url" : "https:\/\/rlodeiro.info\/blog\/raspberryusbboot\/",
+        "wordCount" : "915",
         "keywords" : [ "boot","USB","Raspberry","Blog" ]
     }
     </script>
@@ -39,7 +39,7 @@
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.54.0" />
+        <meta name="generator" content="Hugo 0.83.1" />
         <link rel="shortcut icon" href="https://rlodeiro.info/favicon.ico?v=kPP08pKEXB">
 
 
@@ -58,19 +58,11 @@
 <meta name="twitter:site" content="@lodeiro0001"/>
 
         
-        
-<meta itemprop="name" content="Raspberry Pi &amp; USB Boot Mode">
-<meta itemprop="description" content="Como arrancar una Raspberry Pi desde un disco USB">
-
-
-<meta itemprop="datePublished" content="2018-09-28T00:00:00&#43;00:00" />
+        <meta itemprop="name" content="Raspberry Pi &amp; USB Boot Mode">
+<meta itemprop="description" content="Como arrancar una Raspberry Pi desde un disco USB"><meta itemprop="datePublished" content="2018-09-28T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-09-28T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="918">
-
-
-
+<meta itemprop="wordCount" content="915"><meta itemprop="image" content="https://rlodeiro.info/img/main/logo2.jpg"/>
 <meta itemprop="keywords" content="boot,USB,Raspberry," />
-
         
 
         
@@ -226,6 +218,42 @@
                     
                 
 
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/">Raspberry Pi: Swap y Swappiness</a></h3>
+                                
+                                <time class="published" datetime='2021-06-08'>
+                                    8 de junio de 2021
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/06/raspberry-pi_swap-swappiness//raspberry-pi_swap-swappiness.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
                 
                         <article class="mini-post">
                             <header>
@@ -401,42 +429,6 @@
 
         <a href="https://rlodeiro.info/blog/personalizar_xfce/" class="image featured">
             <img src="https://rlodeiro.info/img/posts/2019/04/personalizar_xfce//personalizar_xfce.jpg" alt="">
-        </a>
-    
-
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="https://rlodeiro.info/blog/instalacion_debian/">Instalar Debian 9 Stretch</a></h3>
-                                
-                                <time class="published" datetime='2019-03-30'>
-                                    30 de marzo de 2019
-                                  </time>
-                            </header>
-                            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="https://rlodeiro.info/blog/instalacion_debian/" class="image featured">
-            <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian//instalacion_Debian.jpg" alt="">
         </a>
     
 
@@ -668,12 +660,8 @@
 
 
   <div id="content">
-    
-
-<p>En esta primera entrada, explicaré algo que me ha sido muy util a la hora de tener una Raspberry Pi como servidor en casa.</p>
-
+    <p>En esta primera entrada, explicaré algo que me ha sido muy util a la hora de tener una Raspberry Pi como servidor en casa.</p>
 <p>Todos sabemos que la Raspberry Pi, por defecto, utiliza una tarjeta MicroSD como disco para el sistema, lo cual supone muchas limitaciones, tanto a nivel de rendimiento como de durabilidad.</p>
-
 <p>Desde hace relativamente poco, en 
 
     
@@ -683,36 +671,23 @@
     <a href="https://www.raspberrypi.org/documentation/hardware/raspberrypi/bootmodes/msd.md" target='_blank'>la documentación oficial</a>
 
  se explica como activar el arranque desde un dispositivo usb.</p>
-
-<hr style="border-color: #d6d6d6;" />
-
+<!-- raw HTML omitted -->
 <h1 id="1-documentación-oficial">1. Documentación oficial</h1>
-
 <ul>
-<li><p>Actualizar nuestra Raspberry Pi</p>
-
-<pre><code class="language-bash">$ sudo apt-get update &amp;&amp; sudo apt-get upgrade
-</code></pre>
-
-<ul>
-<li>Habilitar USB boot mode
-<code>bash
-$ echo program_usb_boot_mode=1 | sudo tee -a /boot/config.txt
-</code></li>
-</ul></li>
+<li>Actualizar nuestra Raspberry Pi</li>
 </ul>
-
-<p>Esto añadirá <code>program_usb_boot_mode=1</code> al final de <code>/boot/config.txt</code>. En cuanto reiniciemos la Raspberry Pi, quedará activado USB Boot Mode de forma permanente, podremos arrancar desde un disco USB sin necesidad de la tarjeta MicroSD, pero si esta está presente, se arrancará desde ella. Si utilizamos esta MicroSD en otra Raspberry Pi, en esta también se activará USB Boot Mode.</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt-get update <span style="color:#f92672">&amp;&amp;</span> sudo apt-get upgrade
+</code></pre></div><ul>
+<li>Habilitar USB boot mode</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ echo program_usb_boot_mode<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> | sudo tee -a /boot/config.txt
+</code></pre></div><p>Esto añadirá <code>program_usb_boot_mode=1</code> al final de <code>/boot/config.txt</code>. En cuanto reiniciemos la Raspberry Pi, quedará activado USB Boot Mode de forma permanente, podremos arrancar desde un disco USB sin necesidad de la tarjeta MicroSD, pero si esta está presente, se arrancará desde ella. Si utilizamos esta MicroSD en otra Raspberry Pi, en esta también se activará USB Boot Mode.</p>
 <ul>
-<li><p>Para comprobar que se ha realizado correctamente</p>
-
-<pre><code class="language-bash">$ vcgencmd otp_dump | grep 17:
+<li>Para comprobar que se ha realizado correctamente</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ vcgencmd otp_dump | grep 17:
 17:3020000a
-</code></pre>
-
-<p>Verificamos que la salida sea <code>0x3020000a</code>. De no ser así, repetiremos el proceso. Si sigue sin funcionar, significa que la Raspberry Pi tiene un problema de hardware. A mi me ha funcionado sin problema tanto en una Pi 3B como en una 3B+.</p>
-
+</code></pre></div><p>Verificamos que la salida sea <code>0x3020000a</code>. De no ser así, repetiremos el proceso. Si sigue sin funcionar, significa que la Raspberry Pi tiene un problema de hardware. A mi me ha funcionado sin problema tanto en una Pi 3B como en una 3B+.</p>
 <p>Solo tenemos que 
 
     
@@ -730,101 +705,65 @@ $ echo program_usb_boot_mode=1 | sudo tee -a /boot/config.txt
     <a href="https://etcher.io/" target='_blank'>herramienta OpenSource Etcher</a>
 
  para esto.</p>
-
 <p>Todo pinta muy bonito, pero, siempre hay un pero.</p>
-
 <h3 id="problema-solo-un-hdd">Problema, solo un HDD</h3>
-
 <p>Si queremos utilizar, además del disco USB principal para el sistema, otro u otros discos USB para por ejemplo guardar archivos, nuestra Raspberry Pi ya no arrancará. He intentado especificar en la configuración del boot con cual de los discos se a de arrancar,pero no funciona, así que me temo que esto es algo que no se ha tenido en cuenta al implementar esta característica.</p>
-
 <p>Antes de nada, mencionar que la Raspberry Pi solo alimenta de forma correcta un disco USB. Para utilizar mas discos, tenemos que conectar un hub con alimentación externa propia, y ahí ya podemos conectar el resto de discos.</p>
-
 <h1 id="2-para-poder-conectar-mas-de-un-disco-usb">2. Para poder conectar mas de un disco usb</h1>
-
-<h2 id="2-1-instalación-nueva">2.1 Instalación nueva</h2>
-
+<h2 id="21-instalación-nueva">2.1 Instalación nueva</h2>
 <p>Partimos teniendo instalado raspbian, tanto en la MicroSD como en el disco USB. Básicamente lo que haremos, será arrancar como siempre con la MicroSD, pero indicando en la configuración de arranque que se utilice la partición root del disco USB en lugar de utilizar la de la MicroSD. En este caso, si necesitaremos la tarjeta MicroSD para arrancar.</p>
-
 <p>Es importante, que tanto la MicroSD como el disco USB, tengan la misma version de Raspbian. Si anteriormente hemos hecho un <code>sudo apt upgrade</code> en nuestra MicroSD, antes de continuar, arrancaremos solo con el disco USB para actualizar el sistema también en el. Yo lo he hecho sin actualizar ninguna de las dos instalaciones, actualizando el sistema posteriormente.</p>
-
 <p>Una vez arrancada la Raspberry Pi con la MicroSD y el disco USB conectado:</p>
-
 <ul>
-<li><p>Entramos en la terminal y listamos los discos con <code>lsblk</code>
-Esto nos devolverá el listado de discos/particiones que tenemos en el sistema. Ha de figurar montada la MicroSD, normalmente <code>/boot</code> en <code>mmcblk0p1</code> y la partición root <code>/</code> en <code>mmcblk0p2</code>. Anotamos el nombre de la partición del disco USB donde se encuentra el root, normalmente algo como <code>sda2</code>.</p></li>
-
-<li><p>Montamos la partición root del disco USB</p>
-
-<pre><code class="language-bash">$ sudo mkdir /mnt/rootUSB
+<li>
+<p>Entramos en la terminal y listamos los discos con <code>lsblk</code>
+Esto nos devolverá el listado de discos/particiones que tenemos en el sistema. Ha de figurar montada la MicroSD, normalmente <code>/boot</code> en <code>mmcblk0p1</code> y la partición root <code>/</code> en <code>mmcblk0p2</code>. Anotamos el nombre de la partición del disco USB donde se encuentra el root, normalmente algo como <code>sda2</code>.</p>
+</li>
+<li>
+<p>Montamos la partición root del disco USB</p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mkdir /mnt/rootUSB
 $ sudo mount /dev/sda2 /mnt/rootUSB
-</code></pre></li>
-</ul></li>
-
-<li><p>Para conocer su PARTUUID</p>
-
-<pre><code class="language-bash">$ sudo blkid -p /dev/sda2
-</code></pre>
-
-<p>No confundir UUID con PARTUUID. Encontraremos PARTUUID como <code>PART_ENTRY_UUID=&quot;XXXXXXXX-02&quot;</code>. Guardamos el código PARTUUID correspondiente a la partición root de nuestro disco USB.</p>
-
+</code></pre></div><ul>
+<li>Para conocer su PARTUUID</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo blkid -p /dev/sda2
+</code></pre></div><p>No confundir UUID con PARTUUID. Encontraremos PARTUUID como <code>PART_ENTRY_UUID=&quot;XXXXXXXX-02&quot;</code>. Guardamos el código PARTUUID correspondiente a la partición root de nuestro disco USB.</p>
 <ul>
-<li>Hacemos un backup de la configuración de inicio de la sd y la editamos
-<code>bash
-$ sudo cp /boot/cmdline.txt /boot/cmdline.sdBoot.bak
+<li>Hacemos un backup de la configuración de inicio de la sd y la editamos</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo cp /boot/cmdline.txt /boot/cmdline.sdBoot.bak
 $ sudo nano /boot/cmdline.txt
-</code></li>
-</ul></li>
-</ul>
-
-<p>Veremos algo como <code>root=PARTUUID=XXXXXXXX-02</code>, correspondiente al <code>/</code>de  la sd, lo sustituimos por el PARTUUID correpondiente a la partición root del USB que copiamos antes.</p>
-
+</code></pre></div><p>Veremos algo como <code>root=PARTUUID=XXXXXXXX-02</code>, correspondiente al <code>/</code>de  la sd, lo sustituimos por el PARTUUID correpondiente a la partición root del USB que copiamos antes.</p>
 <ul>
-<li><p>Editamos <code>fstab</code> en el disco USB para indicar el <code>/boot</code> de la sd</p>
-
-<pre><code class="language-bash">$ sudo nano /mnt/rootUSB/etc/fstab
-</code></pre>
-
-<p>Comentamos la linea correspondiente al <code>/boot</code> del usb, y añadimos <code>PARTUUID=XXXXXXXX-01       /boot           vfat    defaults          0       2</code> para la sd, quedando algo como lo siguiente:</p>
-
-<pre><code class="language-bash">proc                       /proc           proc    defaults          0       0
-PARTUUID=XXXXXXXX-02       /               ext4    defaults,noatime  0       1
-PARTUUID=XXXXXXXX-01       /boot           vfat    defaults          0       2
-#/dev/mmcblk0p1            /boot           vfat    defaults          0       2
-</code></pre>
-
-<p>El root, puede aparecer identificado como <code>/dev/mmcblk0p2</code> o similar. Para evitar problemas, recomiendo cambiarlo por su PARTUUID como muestro arriba.</p></li>
+<li>Editamos <code>fstab</code> en el disco USB para indicar el <code>/boot</code> de la sd</li>
 </ul>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /mnt/rootUSB/etc/fstab
+</code></pre></div><p>Comentamos la linea correspondiente al <code>/boot</code> del usb, y añadimos <code>PARTUUID=XXXXXXXX-01       /boot           vfat    defaults          0       2</code> para la sd, quedando algo como lo siguiente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    proc                       /proc           proc    defaults          <span style="color:#ae81ff">0</span>       <span style="color:#ae81ff">0</span>
+    PARTUUID<span style="color:#f92672">=</span>XXXXXXXX-02       /               ext4    defaults,noatime  <span style="color:#ae81ff">0</span>       <span style="color:#ae81ff">1</span>
+    PARTUUID<span style="color:#f92672">=</span>XXXXXXXX-01       /boot           vfat    defaults          <span style="color:#ae81ff">0</span>       <span style="color:#ae81ff">2</span>
+    <span style="color:#75715e">#/dev/mmcblk0p1            /boot           vfat    defaults          0       2</span>
+</code></pre></div><p>El root, puede aparecer identificado como <code>/dev/mmcblk0p2</code> o similar. Para evitar problemas, recomiendo cambiarlo por su PARTUUID como muestro arriba.</p>
 <p>Al reiniciar, si ejecutamos <code>lsblk</code> veremos como ya está montando, tanto el root <code>/</code> del disco USB como <code>/boot</code> de la MicroSD, con lo cual, ya estamos arrancando con la MicroSD, pero utilizando el root del disco USB, y podemos tener todos los discos que necesitemos conectados, y nuestra Raspberry Pi continuará arrancado sin problemas!</p>
-
 <p>Esta instalación, ha sido suponiendo que estamos haciendo una instalación de raspbian nueva, desde 0 en ambos discos. Si se quiere copiar la partición root de la MicroSD  al nuevo disco USB, conservando posibles cambios, es muy sencillo.</p>
-
-<h2 id="2-2-copiando-la-partición-root-de-la-sd-al-disco-usb">2.2 Copiando la partición root de la SD al disco USB</h2>
-
+<h2 id="22-copiando-la-partición-root-de-la-sd-al-disco-usb">2.2 Copiando la partición root de la SD al disco USB</h2>
 <ul>
-<li><p>Instalamos <code>rsync</code> si no lo estuviera</p>
-
-<pre><code class="language-bash">$ sudo apt install rsync
-</code></pre>
-
-<ul>
-<li>Montamos el disco USB (sustituir <code>sdX</code> por la de vuestro disco USB)
-<code>bash
-$ sudo mount /dev/sdX /mnt
-</code></li>
-</ul></li>
-
-<li><p>Copiamos <code>/</code> de nuestra MicroSD al disco USB</p>
-
-<pre><code class="language-bash">$ sudo rsync -axv / /mnt/
-</code></pre>
-
-<p>Una vez copiada la partición root en el disco USB, procedemos igual que en la parte 2.1</p>
-
-<hr style="border-color: #d6d6d6;" />
-
-<p>Espero que sea útil, ¡gracias por leerme!</p></li>
+<li>Instalamos <code>rsync</code> si no lo estuviera</li>
 </ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install rsync
+</code></pre></div><ul>
+<li>Montamos el disco USB (sustituir <code>sdX</code> por la de vuestro disco USB)</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mount /dev/sdX /mnt
+</code></pre></div><ul>
+<li>Copiamos <code>/</code> de nuestra MicroSD al disco USB</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo rsync -axv / /mnt/
+</code></pre></div><p>Una vez copiada la partición root en el disco USB, procedemos igual que en la parte 2.1</p>
+<!-- raw HTML omitted -->
+<p>Espero que sea útil, ¡gracias por leerme!</p>
 
   </div>
 
@@ -908,8 +847,6 @@ $ sudo mount /dev/sdX /mnt
 
         
         
-  <li><a href="//github.com/lodeiro0001" target="_blank" title="GitHub" class="fa fa-github"></a></li>
-
 
 
 
@@ -1008,6 +945,44 @@ $ sudo mount /dev/sdX /mnt
           
         
 
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/">Raspberry Pi: Swap y Swappiness</a>
+              </h3>
+              
+              <time class="published" datetime='2021-06-08'>
+                8 de junio de 2021
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/06/raspberry-pi_swap-swappiness//raspberry-pi_swap-swappiness.jpg" alt="">
+        </a>
+    
+
+
+          </article>
         
           <article class="mini-post">
             <header>
@@ -1199,44 +1174,6 @@ $ sudo mount /dev/sdX /mnt
 
           </article>
         
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="https://rlodeiro.info/blog/instalacion_debian/">Instalar Debian 9 Stretch</a>
-              </h3>
-              
-              <time class="published" datetime='2019-03-30'>
-                30 de marzo de 2019
-              </time>
-            </header>
-            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="https://rlodeiro.info/blog/instalacion_debian/" class="image featured">
-            <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian//instalacion_Debian.jpg" alt="">
-        </a>
-    
-
-
-          </article>
-        
       </div>
 
       
@@ -1269,7 +1206,7 @@ $ sudo mount /dev/sdX /mnt
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/herramientas/">Herramientas</a>
+                <a href="https://rlodeiro.info/categories/herramientas/">herramientas</a>
                 <span style="float:right;">3</span>
               
             </header>
@@ -1280,7 +1217,7 @@ $ sudo mount /dev/sdX /mnt
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/iot/">Iot</a>
+                <a href="https://rlodeiro.info/categories/iot/">iot</a>
                 <span style="float:right;">2</span>
               
             </header>
@@ -1291,8 +1228,8 @@ $ sudo mount /dev/sdX /mnt
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/linux/">Linux</a>
-                <span style="float:right;">11</span>
+                <a href="https://rlodeiro.info/categories/linux/">linux</a>
+                <span style="float:right;">12</span>
               
             </header>
           </article>
@@ -1302,8 +1239,8 @@ $ sudo mount /dev/sdX /mnt
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/raspberry-pi/">Raspberry Pi</a>
-                <span style="float:right;">5</span>
+                <a href="https://rlodeiro.info/categories/raspberry-pi/">raspberry-pi</a>
+                <span style="float:right;">6</span>
               
             </header>
           </article>
@@ -1313,7 +1250,7 @@ $ sudo mount /dev/sdX /mnt
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/servicios/">Servicios</a>
+                <a href="https://rlodeiro.info/categories/servicios/">servicios</a>
                 <span style="float:right;">7</span>
               
             </header>
@@ -1344,8 +1281,6 @@ $ sudo mount /dev/sdX /mnt
 
         
         
-  <li><a href="//github.com/lodeiro0001" target="_blank" title="GitHub" class="fa fa-github"></a></li>
-
 
 
 
@@ -1431,7 +1366,7 @@ $ sudo mount /dev/sdX /mnt
     
     <p class="copyright">
       
-        &copy; 2019
+        &copy; 2021
         
           Roberto Lodeiro
         

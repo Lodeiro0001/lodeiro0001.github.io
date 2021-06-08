@@ -11,7 +11,7 @@
         "@type" : "BlogPosting",
         "mainEntityOfPage": {
              "@type": "WebPage",
-             "@id": "https://rlodeiro.info"
+             "@id": "https:\/\/rlodeiro.info"
         },
         "articleSection" : "blog",
         "name" : ".Title",
@@ -24,9 +24,9 @@
         "accountablePerson" : "",
         "copyrightHolder" : "",
         "copyrightYear" : "2019",
-        "datePublished": "2019-05-17 00:00:00 &#43;0000 UTC",
-        "dateModified" : "2019-05-17 00:00:00 &#43;0000 UTC",
-        "url" : "https://rlodeiro.info/blog/tearing_linux/",
+        "datePublished": "2019-05-17 00:00:00 \u002b0000 UTC",
+        "dateModified" : "2019-05-17 00:00:00 \u002b0000 UTC",
+        "url" : "https:\/\/rlodeiro.info\/blog\/tearing_linux\/",
         "wordCount" : "497",
         "keywords" : [ "Tearing","Linux","Nvidia","Intel","XFCE","Debian","Blog" ]
     }
@@ -39,7 +39,7 @@
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.54.0" />
+        <meta name="generator" content="Hugo 0.83.1" />
         <link rel="shortcut icon" href="https://rlodeiro.info/favicon.ico?v=kPP08pKEXB">
 
 
@@ -58,21 +58,11 @@
 <meta name="twitter:site" content="@lodeiro0001"/>
 
         
-        
-<meta itemprop="name" content="Screen tearing en Linux">
-<meta itemprop="description" content="La solución definitiva">
-
-
-<meta itemprop="datePublished" content="2019-05-17T00:00:00&#43;00:00" />
+        <meta itemprop="name" content="Screen tearing en Linux">
+<meta itemprop="description" content="La solución definitiva"><meta itemprop="datePublished" content="2019-05-17T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-05-17T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="497">
-
-  <meta itemprop="image" content="https://rlodeiro.info/img/posts/2019/05/tearing_linux/tearing_linux.jpg">
-
-
-
+<meta itemprop="wordCount" content="497"><meta itemprop="image" content="https://rlodeiro.info/img/posts/2019/05/tearing_linux/tearing_linux.jpg">
 <meta itemprop="keywords" content="Tearing,Linux,Nvidia,Intel,XFCE,Debian," />
-
         
 
         
@@ -228,6 +218,42 @@
                     
                 
 
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/">Raspberry Pi: Swap y Swappiness</a></h3>
+                                
+                                <time class="published" datetime='2021-06-08'>
+                                    8 de junio de 2021
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/06/raspberry-pi_swap-swappiness//raspberry-pi_swap-swappiness.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
                 
                         <article class="mini-post">
                             <header>
@@ -403,42 +429,6 @@
 
         <a href="https://rlodeiro.info/blog/personalizar_xfce/" class="image featured">
             <img src="https://rlodeiro.info/img/posts/2019/04/personalizar_xfce//personalizar_xfce.jpg" alt="">
-        </a>
-    
-
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="https://rlodeiro.info/blog/instalacion_debian/">Instalar Debian 9 Stretch</a></h3>
-                                
-                                <time class="published" datetime='2019-03-30'>
-                                    30 de marzo de 2019
-                                  </time>
-                            </header>
-                            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="https://rlodeiro.info/blog/instalacion_debian/" class="image featured">
-            <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian//instalacion_Debian.jpg" alt="">
         </a>
     
 
@@ -670,10 +660,7 @@
 
 
   <div id="content">
-    
-
-<p>Muchos de los que usamos Linux hemos sufrido tearing, y al fin he encontrado la solución. Tanto si usas una gráfica <code>Nvidia</code>, como una integrada de <code>Intel</code>, podrás decir adiós a este molesto problema.</p>
-
+    <p>Muchos de los que usamos Linux hemos sufrido tearing, y al fin he encontrado la solución. Tanto si usas una gráfica <code>Nvidia</code>, como una integrada de <code>Intel</code>, podrás decir adiós a este molesto problema.</p>
 <p>Anteriormente escribí dos posts sobre 
 
     
@@ -691,33 +678,23 @@
     <a href="https://rlodeiro.info/blog/personalizar_xfce/" target='_blank'>como personalizar XFCE</a>
 
  (el mejor entorno de escritorio que he probado hasta la fecha), así que basaré este en máquinas con esta configuración, aunque seguramente te sea de utilidad si utilizas otra distribución u otro entorno de escritorio.</p>
-
-<hr style="border-color: #d6d6d6;" />
-
+<!-- raw HTML omitted -->
 <h2 id="1-cambiar-el-compositor">1. Cambiar el compositor</h2>
-
 <p>Primero, vamos a cambiar el compositor por defecto de <code>XFCE</code>, lo que viene siendo el gestor de ventanas del sistema. He elegido <code>Compton</code> por ser ligero y altamente personalizable.</p>
-
 <ul>
-<li><p>Deshabilitamos el compositor por defecto de XFCE en <code>Settings Manager/Window Manager Twearks/Compositor</code></p>
-
-<p><img src="https://rlodeiro.info/img/posts/2019/05/tearing_linux/xfce_compositor.png" alt="" /></p></li>
-
-<li><p>Instalamos <code>Compton</code></p>
-
-<pre><code class="language-bash">$ sudo apt-get install compton compton-conf 
-</code></pre>
-
-<ul>
+<li>
+<p>Deshabilitamos el compositor por defecto de XFCE en <code>Settings Manager/Window Manager Twearks/Compositor</code></p>
+<p><img src="https://rlodeiro.info/img/posts/2019/05/tearing_linux/xfce_compositor.png" alt=""></p>
+</li>
+<li>
+<p>Instalamos <code>Compton</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt-get install compton compton-conf 
+</code></pre></div><ul>
 <li>Habilitamos su inicio automático</li>
 </ul>
-
-<pre><code class="language-bash">$ sudo nano ~/.config/autostart/compton.desktop
-</code></pre>
-
-<p>Pegamos dentro lo siguiente y guardamos:</p>
-
-<pre><code class="language-txt">[Desktop Entry]
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano ~/.config/autostart/compton.desktop
+</code></pre></div><p>Pegamos dentro lo siguiente y guardamos:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">[Desktop Entry]
 Encoding=UTF-8
 Version=0.9.4
 Type=Application
@@ -728,53 +705,36 @@ OnlyShowIn=XFCE;
 StartupNotify=false
 Terminal=false
 Hidden=false
-</code></pre>
-
-<ul>
-<li>Cambiamos los permisos al fichero creado</li>
+</code></pre></div></li>
+<li>
+<p>Cambiamos los permisos al fichero creado</p>
+</li>
 </ul>
-
-<pre><code class="language-bash">$sudo chmod +x ~/.config/autostart/compton.desktop
-</code></pre></li>
-
-<li><p>Creamos configuración por defecto ejecutando <code>compton-conf</code> y pulsamos en <code>apply</code></p></li>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$sudo chmod +x ~/.config/autostart/compton.desktop
+</code></pre></div><ul>
+<li>Creamos configuración por defecto ejecutando <code>compton-conf</code> y pulsamos en <code>apply</code></li>
 </ul>
-
-<pre><code class="language-bash">$ compton-conf
-</code></pre>
-
-<h3 id="1-1-transparencia-en-ventanas-inactivas">1.1 Transparencia en ventanas inactivas</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ compton-conf
+</code></pre></div><h3 id="11-transparencia-en-ventanas-inactivas">1.1 Transparencia en ventanas inactivas</h3>
 <p>Por defecto, Compton muestra las ventanas inactivas con transparencia. Si no te gusta este comportamiento puedes modificarlo en la configuración generada anteriormente.</p>
-
 <ul>
-<li><p>Edita el archivo <code>compton.conf</code></p>
-
-<pre><code class="language-bash">$ sudo nano ~/.config/compton.conf
-</code></pre>
-
-<ul>
-<li>Busca <code>inactive-opacity</code> y lo modifícalo para que no aplique la transparencia, quedando algo así:</li>
+<li>
+<p>Edita el archivo <code>compton.conf</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano ~/.config/compton.conf
+</code></pre></div></li>
+<li>
+<p>Busca <code>inactive-opacity</code> y lo modifícalo para que no aplique la transparencia, quedando algo así:</p>
+</li>
 </ul>
-
-<pre><code class="language-txt">...
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">...
 inactive-opacity = 1.0;
 ...
-</code></pre></li>
-</ul>
-
-<p>Al reiniciar o cerrar y abrir la sesión Compton sera nuestro compositor por defecto.</p>
-
-<hr style="border-color: #d6d6d6;" />
-
+</code></pre></div><p>Al reiniciar o cerrar y abrir la sesión Compton sera nuestro compositor por defecto.</p>
+<!-- raw HTML omitted -->
 <h2 id="2-nvidia">2. Nvidia</h2>
-
 <p>Ahora vamos a configurar nuestra tarjeta de vídeo Nvidia. Si tienes una Intel salta al punto 3.</p>
-
-<h3 id="2-1-instalar-drivers">2.1 Instalar drivers</h3>
-
+<h3 id="21-instalar-drivers">2.1 Instalar drivers</h3>
 <p>Vamos a instalar los drivers privativos. Si ya los tienes, salta al punto 2.2.</p>
-
 <p>Hemos de tener habilitados los repositorios <code>contrib</code>, <code>non-free</code> y <code>backports</code>, he explicado como hacerlo 
 
     
@@ -784,99 +744,68 @@ inactive-opacity = 1.0;
     <a href="https://rlodeiro.info/blog/instalacion_debian/" target='_blank'>en este post sobre Debian.</a>
 
 </p>
-
 <ul>
 <li>Comprobamos el driver en uso con lshw</li>
 </ul>
-
-<pre><code class="language-bash">$ sudo apt install lshw
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install lshw
 $ sudo lshw -c display
-</code></pre>
-
-<ul>
-<li><p>Ponemos los controladores noveau en lista negra:</p>
-
-<pre><code class="language-bash">sudo nano /etc/modprobe.d/blacklist-nouveau.conf
-</code></pre>
-
-<p>Pegamos dentro lo siguiente y guardamos:</p>
-
-<pre><code class="language-txt">blacklist nouveau
+</code></pre></div><ul>
+<li>
+<p>Ponemos los controladores noveau en lista negra:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo nano /etc/modprobe.d/blacklist-nouveau.conf
+</code></pre></div><p>Pegamos dentro lo siguiente y guardamos:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">blacklist nouveau
 blacklist lbm-nouveau
 options nouveau modeset=0
 alias nouveau off
 alias lbm-nouveau off
-</code></pre></li>
-
-<li><p>Instalamos el driver privativo:</p></li>
+</code></pre></div></li>
+<li>
+<p>Instalamos el driver privativo:</p>
+</li>
 </ul>
-
-<pre><code class="language-bash">$ sudo apt install -t stretch-backports nvidia-driver
-</code></pre>
-
-<ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install -t stretch-backports nvidia-driver
+</code></pre></div><ul>
 <li>Creamos el fichero de configuración en <code>/etc/X11/xorg.conf</code></li>
 </ul>
-
-<pre><code class="language-bash">$ sudo nvidia-xconfig
-</code></pre>
-
-<h3 id="2-2-configuracion">2.2 Configuracion</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nvidia-xconfig
+</code></pre></div><h3 id="22-configuracion">2.2 Configuracion</h3>
 <p>Tiendo los drivers de Nvidia y Compton correctamente instalados:</p>
-
 <ul>
 <li>Abrimos <code>nvidia-settings</code> con sudo</li>
 </ul>
-
-<pre><code class="language-bash">sudo nvidia-settings
-</code></pre>
-
-<ul>
-<li><p>Vamos a <code>X ServerDisplay Configuration</code> y pinchamos en <code>Advanced</code>.</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo nvidia-settings
+</code></pre></div><ul>
+<li>
+<p>Vamos a <code>X ServerDisplay Configuration</code> y pinchamos en <code>Advanced</code>.</p>
 <ul>
 <li>Marcamos la opcion <code>Force Composition Pipeline</code></li>
 </ul>
-
-<p><img src="https://rlodeiro.info/img/posts/2019/05/tearing_linux/nvidia_1.png" alt="" /></p>
-
+<p><img src="https://rlodeiro.info/img/posts/2019/05/tearing_linux/nvidia_1.png" alt=""></p>
 <ul>
 <li>Pinchamos en <code>Save to X Configuration File</code> y guardamos, se añadirá a la configuración previa en <code>/etc/X11/xorg.conf</code></li>
 </ul>
-
-<p><img src="https://rlodeiro.info/img/posts/2019/05/tearing_linux/nvidia_2.png" alt="" /></p></li>
+<p><img src="https://rlodeiro.info/img/posts/2019/05/tearing_linux/nvidia_2.png" alt=""></p>
+</li>
 </ul>
-
 <p>Has de reiniciar para que se apliquen los cambios.</p>
-
-<hr style="border-color: #d6d6d6;" />
-
+<!-- raw HTML omitted -->
 <h2 id="3-intel">3. Intel</h2>
-
 <p>Si tu tarjeta de vídeo es <code>Intel</code>, como es el caso de mi portátil XPS, la solución es muy sencilla.</p>
-
 <p>Teniendo el compositor <code>Compton</code> instalado:</p>
-
 <ul>
-<li><p>Creamos el archivo <code>/etc/X11/xorg.conf</code></p>
-
-<pre><code class="language-bash">$ sudo nano /etc/X11/xorg.conf
-</code></pre>
-
-<p>Pegamos dentro lo siguiente y guardamos:</p>
-
-<pre><code class="language-txt">Section &quot;Device&quot;
-Identifier  &quot;Intel Graphics&quot;
-Driver      &quot;intel&quot;
+<li>
+<p>Creamos el archivo <code>/etc/X11/xorg.conf</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/X11/xorg.conf
+</code></pre></div><p>Pegamos dentro lo siguiente y guardamos:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">Section &#34;Device&#34;
+Identifier  &#34;Intel Graphics&#34;
+Driver      &#34;intel&#34;
 EndSection
-</code></pre></li>
+</code></pre></div></li>
 </ul>
-
 <p>Una vez reinicies el sistema, el tearing habrá desaparecido.</p>
-
-<hr style="border-color: #d6d6d6;" />
-
+<!-- raw HTML omitted -->
 <p>Espero que sea útil, ¡gracias por leerme!</p>
 
   </div>
@@ -973,8 +902,6 @@ EndSection
 
         
         
-  <li><a href="//github.com/lodeiro0001" target="_blank" title="GitHub" class="fa fa-github"></a></li>
-
 
 
 
@@ -1073,6 +1000,44 @@ EndSection
           
         
 
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/">Raspberry Pi: Swap y Swappiness</a>
+              </h3>
+              
+              <time class="published" datetime='2021-06-08'>
+                8 de junio de 2021
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/06/raspberry-pi_swap-swappiness//raspberry-pi_swap-swappiness.jpg" alt="">
+        </a>
+    
+
+
+          </article>
         
           <article class="mini-post">
             <header>
@@ -1264,44 +1229,6 @@ EndSection
 
           </article>
         
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="https://rlodeiro.info/blog/instalacion_debian/">Instalar Debian 9 Stretch</a>
-              </h3>
-              
-              <time class="published" datetime='2019-03-30'>
-                30 de marzo de 2019
-              </time>
-            </header>
-            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="https://rlodeiro.info/blog/instalacion_debian/" class="image featured">
-            <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian//instalacion_Debian.jpg" alt="">
-        </a>
-    
-
-
-          </article>
-        
       </div>
 
       
@@ -1334,7 +1261,7 @@ EndSection
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/herramientas/">Herramientas</a>
+                <a href="https://rlodeiro.info/categories/herramientas/">herramientas</a>
                 <span style="float:right;">3</span>
               
             </header>
@@ -1345,7 +1272,7 @@ EndSection
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/iot/">Iot</a>
+                <a href="https://rlodeiro.info/categories/iot/">iot</a>
                 <span style="float:right;">2</span>
               
             </header>
@@ -1356,8 +1283,8 @@ EndSection
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/linux/">Linux</a>
-                <span style="float:right;">11</span>
+                <a href="https://rlodeiro.info/categories/linux/">linux</a>
+                <span style="float:right;">12</span>
               
             </header>
           </article>
@@ -1367,8 +1294,8 @@ EndSection
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/raspberry-pi/">Raspberry Pi</a>
-                <span style="float:right;">5</span>
+                <a href="https://rlodeiro.info/categories/raspberry-pi/">raspberry-pi</a>
+                <span style="float:right;">6</span>
               
             </header>
           </article>
@@ -1378,7 +1305,7 @@ EndSection
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/servicios/">Servicios</a>
+                <a href="https://rlodeiro.info/categories/servicios/">servicios</a>
                 <span style="float:right;">7</span>
               
             </header>
@@ -1409,8 +1336,6 @@ EndSection
 
         
         
-  <li><a href="//github.com/lodeiro0001" target="_blank" title="GitHub" class="fa fa-github"></a></li>
-
 
 
 
@@ -1496,7 +1421,7 @@ EndSection
     
     <p class="copyright">
       
-        &copy; 2019
+        &copy; 2021
         
           Roberto Lodeiro
         

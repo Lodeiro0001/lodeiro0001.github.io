@@ -11,12 +11,12 @@
         "@type" : "BlogPosting",
         "mainEntityOfPage": {
              "@type": "WebPage",
-             "@id": "https://rlodeiro.info"
+             "@id": "https:\/\/rlodeiro.info"
         },
         "articleSection" : "blog",
         "name" : ".Title",
         "headline" : "AirPlay en Linux",
-        "description" : "Configurar Shairport Sync en Ubuntu/Debian y derivados",
+        "description" : "Configurar Shairport Sync en Ubuntu\/Debian y derivados",
         "inLanguage" : "es-ES",
         "author" : "",
         "creator" : "",
@@ -24,9 +24,9 @@
         "accountablePerson" : "",
         "copyrightHolder" : "",
         "copyrightYear" : "2018",
-        "datePublished": "2018-11-27 00:00:00 &#43;0000 UTC",
-        "dateModified" : "2018-11-27 00:00:00 &#43;0000 UTC",
-        "url" : "https://rlodeiro.info/blog/airplay_linux/",
+        "datePublished": "2018-11-27 00:00:00 \u002b0000 UTC",
+        "dateModified" : "2018-11-27 00:00:00 \u002b0000 UTC",
+        "url" : "https:\/\/rlodeiro.info\/blog\/airplay_linux\/",
         "wordCount" : "497",
         "keywords" : [ "Linux","Raspbian","Ubuntu","Debian","AirPlay","Blog" ]
     }
@@ -39,7 +39,7 @@
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.54.0" />
+        <meta name="generator" content="Hugo 0.83.1" />
         <link rel="shortcut icon" href="https://rlodeiro.info/favicon.ico?v=kPP08pKEXB">
 
 
@@ -58,19 +58,11 @@
 <meta name="twitter:site" content="@lodeiro0001"/>
 
         
-        
-<meta itemprop="name" content="AirPlay en Linux">
-<meta itemprop="description" content="Configurar Shairport Sync en Ubuntu/Debian y derivados">
-
-
-<meta itemprop="datePublished" content="2018-11-27T00:00:00&#43;00:00" />
+        <meta itemprop="name" content="AirPlay en Linux">
+<meta itemprop="description" content="Configurar Shairport Sync en Ubuntu/Debian y derivados"><meta itemprop="datePublished" content="2018-11-27T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-11-27T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="497">
-
-
-
+<meta itemprop="wordCount" content="497"><meta itemprop="image" content="https://rlodeiro.info/img/main/logo2.jpg"/>
 <meta itemprop="keywords" content="Linux,Raspbian,Ubuntu,Debian,AirPlay," />
-
         
 
         
@@ -226,6 +218,42 @@
                     
                 
 
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/">Raspberry Pi: Swap y Swappiness</a></h3>
+                                
+                                <time class="published" datetime='2021-06-08'>
+                                    8 de junio de 2021
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/06/raspberry-pi_swap-swappiness//raspberry-pi_swap-swappiness.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
                 
                         <article class="mini-post">
                             <header>
@@ -401,42 +429,6 @@
 
         <a href="https://rlodeiro.info/blog/personalizar_xfce/" class="image featured">
             <img src="https://rlodeiro.info/img/posts/2019/04/personalizar_xfce//personalizar_xfce.jpg" alt="">
-        </a>
-    
-
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="https://rlodeiro.info/blog/instalacion_debian/">Instalar Debian 9 Stretch</a></h3>
-                                
-                                <time class="published" datetime='2019-03-30'>
-                                    30 de marzo de 2019
-                                  </time>
-                            </header>
-                            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="https://rlodeiro.info/blog/instalacion_debian/" class="image featured">
-            <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian//instalacion_Debian.jpg" alt="">
         </a>
     
 
@@ -668,10 +660,7 @@
 
 
   <div id="content">
-    
-
-<p>Con Shairport Sync podrás convertir tu Raspberry Pi u otro sistema Linux en un receptor de audio AirPlay.</p>
-
+    <p>Con Shairport Sync podrás convertir tu Raspberry Pi u otro sistema Linux en un receptor de audio AirPlay.</p>
 <p>Tanto si quieres actualizar tu equipo de música (mi caso) conectándole una Raspberry Pi, como configurarlo en tu pc, con <code>Shairport Sync</code> podrás enviar audio desde cualquier cliente compatible(si, existen para Linux) a tu nuevo receptor. En caso de que tu distribución no sea <code>Ubuntu/Debian</code> o derivados, 
 
     
@@ -681,82 +670,49 @@
     <a href="https://github.com/mikebrady/shairport-sync/blob/master/README.md" target='_blank'>consulta aquí tus requisitos de configuración. También está disponible para macOS y OpenWrt.</a>
 
 </p>
-
 <p>Cabe destacar que la diferencia de calidad entre Bluetooth y AirPlay a la hora de transmitir audio de forma inalámbrica es abismal, así que no te lo pienses y elije el segundo.</p>
-
-<hr style="border-color: #d6d6d6;" />
-
+<!-- raw HTML omitted -->
 <h1 id="actualizar-el-sistema">Actualizar el sistema</h1>
-
 <p>Primero actualizamos el sistema e instalamos los paquetes necesarios.</p>
-
-<pre><code class="language-bash">$ sudo apt-get update &amp; sudo apt-get upgrade
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt-get update &amp; sudo apt-get upgrade
 $ sudo apt-get install autoconf automake avahi-daemon build-essential git libasound2-dev libavahi-client-dev libconfig-dev libdaemon-dev libpopt-dev libssl-dev libtool xmltoman
-</code></pre>
-
-<h1 id="clonar-el-repositorio">Clonar el repositorio</h1>
-
+</code></pre></div><h1 id="clonar-el-repositorio">Clonar el repositorio</h1>
 <p>Podemos encontrar <code>shairport-sync</code> en los repositorios de Ubuntu, Raspbian y demás, pero no será la versión actualizada. Clonamos el repositorio en nuestro <code>$HOME</code>:</p>
-
-<pre><code class="language-bash">$ git clone https://github.com/mikebrady/shairport-sync.git
-</code></pre>
-
-<h1 id="configurar-y-compilar">Configurar y compilar</h1>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git clone https://github.com/mikebrady/shairport-sync.git
+</code></pre></div><h1 id="configurar-y-compilar">Configurar y compilar</h1>
 <p>Entramos en el directorio y ejecutamos:</p>
-
-<pre><code class="language-bash">$ cd shairport-sync
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd shairport-sync
 $ autoreconf -i -f
-$ ./configure --with-alsa --with-avahi --with-ssl=openssl --with-systemd --with-metadata
-</code></pre>
-
-<p>Una vez configurado, compilamos e instalamos con:</p>
-
-<pre><code class="language-bash">$ make
+$ ./configure --with-alsa --with-avahi --with-ssl<span style="color:#f92672">=</span>openssl --with-systemd --with-metadata
+</code></pre></div><p>Una vez configurado, compilamos e instalamos con:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ make
 $ sudo make install
-</code></pre>
-
-<h1 id="inicio-automático">Inicio automático</h1>
-
+</code></pre></div><h1 id="inicio-automático">Inicio automático</h1>
 <p>Para habilitar el inicio automático con <code>systemd</code> ejecutamos:</p>
-
-<pre><code class="language-bash">$ sudo systemctl enable shairport-sync
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo systemctl enable shairport-sync
 $ sudo service shairport-sync start
-</code></pre>
-
-<h1 id="configuración-adicional">Configuración adicional</h1>
-
+</code></pre></div><h1 id="configuración-adicional">Configuración adicional</h1>
 <p>Por defecto se mostrará con el nombre del host, podemos cambiarlo con:</p>
-
-<pre><code class="language-bash">$ sudo nano /usr/local/etc/shairport-sync.conf
-</code></pre>
-
-<ul>
-<li><p>Veremos algo como los siguiente:</p>
-
-<pre><code class="language-txt">// General Settings
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /usr/local/etc/shairport-sync.conf
+</code></pre></div><ul>
+<li>
+<p>Veremos algo como los siguiente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">// General Settings
 general =
 {
-// name = &quot;%H&quot;; // This means &quot;Hostname&quot; -- see below. This is the name th$
-</code></pre>
-
+// name = &#34;%H&#34;; // This means &#34;Hostname&#34; -- see below. This is the name th$
+</code></pre></div></li>
+</ul>
 <p>Donde eliminando <code>//</code> delante de <code>name</code> y sustituyendo <code>&quot;%H&quot;</code> por <code>&quot;NuevoNombre&quot;</code> podremos indicar un nombre diferente al del host.</p>
-
 <p><code>shairport-sync.conf</code> es el archivo de configuración, donde podemos por ejemplo indicar la tarjeta de sonido a utilizar modificando el parámetro <code>&quot;output_device = &quot;default&quot;;</code>. Dejando todo como viene, funcionará con la tarjeta indicada en el sistema como <code>default</code>. Yo lo he probado tanto en Raspbian Stretch como en Ubuntu 18.04.</p>
-
 <h1 id="firewall">Firewall</h1>
-
 <p>Si tienes habilitado el firewal UFW, añade las siguientes reglas:</p>
-
-<pre><code class="language-bash">$ sudo ufw allow from 192.168.1.1/16 to any port 3689 proto tcp
-$ sudo ufw allow from 192.168.1.1/16 to any port 5353
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo ufw allow from 192.168.1.1/16 to any port <span style="color:#ae81ff">3689</span> proto tcp
+$ sudo ufw allow from 192.168.1.1/16 to any port <span style="color:#ae81ff">5353</span>
 $ sudo ufw allow from 192.168.1.1/16 to any port 5000:5005 proto tcp
 $ sudo ufw allow from 192.168.1.1/16 to any port 6000:6005 proto udp
 $ sudo ufw allow from 192.168.1.1/16 to any port 35000:65535 proto udp
-</code></pre></li>
-</ul>
-
-<p>Para mas información, si vuestro sistema es diferente o necesitáis consultar otras posibilidades de configuración 
+</code></pre></div><p>Para mas información, si vuestro sistema es diferente o necesitáis consultar otras posibilidades de configuración 
 
     
         
@@ -765,11 +721,8 @@ $ sudo ufw allow from 192.168.1.1/16 to any port 35000:65535 proto udp
     <a href="https://github.com/mikebrady/shairport-sync/blob/master/README.md" target='_blank'>este es su repositorio oficial en Github con toda la documentación.</a>
 
 </p>
-
 <p><code>En el momento de escribir esta entrada, Shairport-Sync no soporta el nuevo multi-room de AirPlay 2, con el cual podríamos reproducir audio desde el móvil a la vez en diferentes receptores. Pero no es un problema, ya que existen formas de hacerlo desde dispositivos Linux, lo dejo para otra!</code></p>
-
-<hr style="border-color: #d6d6d6;" />
-
+<!-- raw HTML omitted -->
 <p>Espero que sea útil, ¡gracias por leerme!</p>
 
   </div>
@@ -866,8 +819,6 @@ $ sudo ufw allow from 192.168.1.1/16 to any port 35000:65535 proto udp
 
         
         
-  <li><a href="//github.com/lodeiro0001" target="_blank" title="GitHub" class="fa fa-github"></a></li>
-
 
 
 
@@ -966,6 +917,44 @@ $ sudo ufw allow from 192.168.1.1/16 to any port 35000:65535 proto udp
           
         
 
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/">Raspberry Pi: Swap y Swappiness</a>
+              </h3>
+              
+              <time class="published" datetime='2021-06-08'>
+                8 de junio de 2021
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/06/raspberry-pi_swap-swappiness//raspberry-pi_swap-swappiness.jpg" alt="">
+        </a>
+    
+
+
+          </article>
         
           <article class="mini-post">
             <header>
@@ -1157,44 +1146,6 @@ $ sudo ufw allow from 192.168.1.1/16 to any port 35000:65535 proto udp
 
           </article>
         
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="https://rlodeiro.info/blog/instalacion_debian/">Instalar Debian 9 Stretch</a>
-              </h3>
-              
-              <time class="published" datetime='2019-03-30'>
-                30 de marzo de 2019
-              </time>
-            </header>
-            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="https://rlodeiro.info/blog/instalacion_debian/" class="image featured">
-            <img src="https://rlodeiro.info/img/posts/2019/03/instalacion_Debian//instalacion_Debian.jpg" alt="">
-        </a>
-    
-
-
-          </article>
-        
       </div>
 
       
@@ -1227,7 +1178,7 @@ $ sudo ufw allow from 192.168.1.1/16 to any port 35000:65535 proto udp
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/herramientas/">Herramientas</a>
+                <a href="https://rlodeiro.info/categories/herramientas/">herramientas</a>
                 <span style="float:right;">3</span>
               
             </header>
@@ -1238,7 +1189,7 @@ $ sudo ufw allow from 192.168.1.1/16 to any port 35000:65535 proto udp
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/iot/">Iot</a>
+                <a href="https://rlodeiro.info/categories/iot/">iot</a>
                 <span style="float:right;">2</span>
               
             </header>
@@ -1249,8 +1200,8 @@ $ sudo ufw allow from 192.168.1.1/16 to any port 35000:65535 proto udp
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/linux/">Linux</a>
-                <span style="float:right;">11</span>
+                <a href="https://rlodeiro.info/categories/linux/">linux</a>
+                <span style="float:right;">12</span>
               
             </header>
           </article>
@@ -1260,8 +1211,8 @@ $ sudo ufw allow from 192.168.1.1/16 to any port 35000:65535 proto udp
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/raspberry-pi/">Raspberry Pi</a>
-                <span style="float:right;">5</span>
+                <a href="https://rlodeiro.info/categories/raspberry-pi/">raspberry-pi</a>
+                <span style="float:right;">6</span>
               
             </header>
           </article>
@@ -1271,7 +1222,7 @@ $ sudo ufw allow from 192.168.1.1/16 to any port 35000:65535 proto udp
           <article>
             <header>
               
-                <a href="https://rlodeiro.info/categories/servicios/">Servicios</a>
+                <a href="https://rlodeiro.info/categories/servicios/">servicios</a>
                 <span style="float:right;">7</span>
               
             </header>
@@ -1302,8 +1253,6 @@ $ sudo ufw allow from 192.168.1.1/16 to any port 35000:65535 proto udp
 
         
         
-  <li><a href="//github.com/lodeiro0001" target="_blank" title="GitHub" class="fa fa-github"></a></li>
-
 
 
 
@@ -1389,7 +1338,7 @@ $ sudo ufw allow from 192.168.1.1/16 to any port 35000:65535 proto udp
     
     <p class="copyright">
       
-        &copy; 2019
+        &copy; 2021
         
           Roberto Lodeiro
         
