@@ -2,22 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://rlodeiro.info/tags/2fa/</loc>
+    <lastmod>2021-06-26T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://rlodeiro.info/blog/</loc>
-    <lastmod>2021-06-08T00:00:00+00:00</lastmod>
+    <lastmod>2021-06-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlodeiro.info/categories/</loc>
-    <lastmod>2021-06-08T00:00:00+00:00</lastmod>
+    <lastmod>2021-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/tags/github/</loc>
+    <lastmod>2021-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/blog/github-2fa-ssh/</loc>
+    <lastmod>2021-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/categories/herramientas/</loc>
+    <lastmod>2021-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/tags/linux/</loc>
+    <lastmod>2021-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/categories/linux/</loc>
+    <lastmod>2021-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/</loc>
+    <lastmod>2021-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/tags/ssh/</loc>
+    <lastmod>2021-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/tags/</loc>
+    <lastmod>2021-06-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlodeiro.info/tags/debian/</loc>
     <lastmod>2021-06-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlodeiro.info/tags/fedora/</loc>
-    <lastmod>2021-06-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rlodeiro.info/tags/linux/</loc>
-    <lastmod>2021-06-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rlodeiro.info/categories/linux/</loc>
     <lastmod>2021-06-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlodeiro.info/categories/raspberry-pi/</loc>
@@ -26,16 +47,10 @@
     <loc>https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/</loc>
     <lastmod>2021-06-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://rlodeiro.info/</loc>
-    <lastmod>2021-06-08T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://rlodeiro.info/tags/swap/</loc>
     <lastmod>2021-06-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlodeiro.info/tags/swappiness/</loc>
-    <lastmod>2021-06-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rlodeiro.info/tags/</loc>
     <lastmod>2021-06-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlodeiro.info/tags/ubuntu/</loc>
@@ -48,9 +63,6 @@
     <lastmod>2019-09-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlodeiro.info/blog/flatpak/</loc>
-    <lastmod>2019-09-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rlodeiro.info/categories/herramientas/</loc>
     <lastmod>2019-09-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlodeiro.info/tags/sandbox/</loc>

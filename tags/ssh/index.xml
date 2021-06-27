@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SSH on Roberto Lodeiro</title>
+    <link>https://rlodeiro.info/tags/ssh/</link>
+    <description>Recent content in SSH on Roberto Lodeiro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <copyright>© {year} Roberto Lodeiro</copyright>
+    <lastBuildDate>Sat, 26 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GitHub: 2FA y claves SSH</title>
+      <link>https://rlodeiro.info/blog/github-2fa-ssh/</link>
+      <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/blog/github-2fa-ssh/</guid>
+      <description>En pleno siglo XXI, los ataques a servicios y dispositivos están a la orden del día, por lo que no está de más revisar las configuraciones de seguridad de los mismos.
+En esta entrada vamos a ver como incrementar la seguridad en nuestra cuenta de GitHub y como realizar la autentificación mediante una clave SSH.
+1. 2FA La autentificación de dos factores no es un requisito para poder utilizar la clave SSH en GitHub, sin embargo, lo recomiendo encarecidamente ya que es la forma que tenemos para incrementar la seguridad de nuestra cuenta.</description>
+    </item>
+    
+  </channel>
+</rss>
