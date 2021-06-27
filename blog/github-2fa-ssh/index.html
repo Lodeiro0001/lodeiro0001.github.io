@@ -19,7 +19,7 @@
   
   "genre": "post",
   "keywords": "Linux, Github, 2FA, SSH",
-  "wordcount":  704 ,
+  "wordcount":  707 ,
   "url": "https://rlodeiro.info/blog/github-2fa-ssh/",
   "datePublished": "2021-06-27",
   "dateModified": "2021-06-27",
@@ -60,7 +60,7 @@
         <meta itemprop="name" content="GitHub: 2FA y claves SSH">
 <meta itemprop="description" content="Incrementa la seguridad de tu cuenta de GitHub"><meta itemprop="datePublished" content="2021-06-27T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-06-27T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="704"><meta itemprop="image" content="https://rlodeiro.info/img/posts/2021/06/github-2fa-ssh/github-2fa-ssh.jpg">
+<meta itemprop="wordCount" content="707"><meta itemprop="image" content="https://rlodeiro.info/img/posts/2021/06/github-2fa-ssh/github-2fa-ssh.jpg">
 <meta itemprop="keywords" content="Linux,Github,2FA,SSH," />
         
 
@@ -660,15 +660,15 @@
 
   <div id="content">
     <p>En pleno siglo XXI, los ataques a servicios y dispositivos están a la orden del día, por lo que no está de más revisar las configuraciones de seguridad de los mismos.</p>
-<p>En esta entrada vamos a ver como incrementar la seguridad en nuestra cuenta de <code>GitHub</code> y como realizar la autentificación mediante una clave <code>SSH</code>.</p>
+<p>En esta entrada vamos a ver como incrementar la seguridad en nuestra cuenta de <code>GitHub</code> y como realizar la autenticación mediante una clave <code>SSH</code>.</p>
 
 
 <hr style="border-color: #d6d6d6;" />
 
 
 <h2 id="1-2fa">1. 2FA</h2>
-<p>La autentificación de dos factores no es un requisito para poder utilizar la clave SSH en GitHub, sin embargo, lo recomiendo encarecidamente ya que es la forma que tenemos para incrementar la seguridad de nuestra cuenta.</p>
-<p>Como veremos a continuación, podremos elegir entre distintas posibilidades de autentificación.</p>
+<p>La autenticación de dos factores no es un requisito para poder utilizar la clave SSH en GitHub, sin embargo, lo recomiendo encarecidamente ya que es la forma que tenemos para incrementar la seguridad de nuestra cuenta.</p>
+<p>Como veremos a continuación, podremos elegir entre distintas posibilidades de autenticación.</p>
 <ul>
 <li>Primero pinchamos en los <code>Ajustes</code> de nuestra cuenta, y vamos a <code>Seguridad de la cuenta</code>:</li>
 </ul>
@@ -684,7 +684,7 @@
 
 </p>
 <ul>
-<li>Pinchamos en el botón verde que dice <code>Habilitar autentificación de dos factores</code> lo cual nos llevará a la siguiente pantalla:</li>
+<li>Pinchamos en el botón verde que dice <code>Habilitar autenticación de dos factores</code> lo cual nos llevará a la siguiente pantalla:</li>
 </ul>
 <p>
 
@@ -697,7 +697,7 @@
 </center>
 
 
-Aquí nos da la posibilidad de utilizar una app de autentificación, o hacerlo mediante SMS. Recomiendo elegir la primera opción, en concreto con la aplicación 
+Aquí nos da la posibilidad de utilizar una app de autenticación de dos factores, o hacerlo mediante SMS. Recomiendo elegir la primera opción, en concreto con la aplicación 
 
     
         
@@ -706,8 +706,8 @@ Aquí nos da la posibilidad de utilizar una app de autentificación, o hacerlo m
     <a href="https://github.com/freeotp" target='_blank'>FreeOTP</a>
 
  de Red Hat, ya que está disponible tanto para Android como para iOS y es Open Source.</p>
-<p>Elegimos entonces <code>Configurar usando una app</code> en el botón verde. Esto nos llevará a la siguiente página, donde se nos darán varios <code>códigos de un solo uso</code> que debemos guardar en un lugar confiable. Son muy importantes, ya que será la única forma de iniciar sesión si perdemos el dispositivo de doble autentificación.</p>
-<p>Una vez guardemos los códigos podemos pulsar siguiente, aquí nos saldrá un código QR para escanear con nuestra app de autentificación, y esta ya nos dará el <code>código generado</code> que debemos introducir para verificar el proceso. Pulsamos en el botón verde de <code>Habilitar</code>.</p>
+<p>Elegimos entonces <code>Configurar usando una app</code> en el botón verde. Esto nos llevará a la siguiente página, donde se nos darán varios <code>códigos de un solo uso</code> que debemos guardar en un lugar confiable. Son muy importantes, ya que será la única forma de iniciar sesión si perdemos el dispositivo de doble autenticación.</p>
+<p>Una vez guardemos los códigos podemos pulsar siguiente, aquí nos saldrá un código QR para escanear con nuestra app de autenticación, y esta ya nos dará el <code>código generado</code> que debemos introducir para verificar el proceso. Pulsamos en el botón verde de <code>Habilitar</code>.</p>
 <ul>
 <li>Volvemos a <code>Seguridad de la cuenta</code></li>
 </ul>
@@ -722,9 +722,9 @@ Aquí nos da la posibilidad de utilizar una app de autentificación, o hacerlo m
 </center>
 
 </p>
-<p>Aquí vemos que la autentificación de dos factores ya está habilitada y que podemos agregar más métodos de autentificación. En mi caso tengo agregadas también llaves de seguridad <code>Fido</code>.</p>
+<p>Aquí vemos que la autenticación de dos factores ya está habilitada y que podemos agregar más métodos de autenticación. En mi caso tengo agregadas también llaves de seguridad <code>Fido</code>.</p>
 <h2 id="2-clave-ssh">2. Clave SSH</h2>
-<p>Solo será obligatorio tener una clave SSH para autenticarnos si tenemos habilitada la autentificación de dos factores, aunque se puede utilizar sin tenerla habilitada 2FA.</p>
+<p>Solo será obligatorio tener una clave SSH para autenticarnos si tenemos habilitada la autenticación de dos factores, aunque se puede utilizar sin tenerla habilitada 2FA.</p>
 <p>Esta clave SSH la generaremos en nuestro sistema, y después configuraremos el mismo para que las utilice con GitHub. También tendremos que indicarle a GitHub cual es nuestra clave SSH para que la acepte como válida.</p>
 <ul>
 <li>Generamos la clave SSH:</li>
@@ -748,7 +748,7 @@ Your public key has been saved in test.pub.
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">Host github.com
 User git
 IdentityFile ~/.ssh/test
-</code></pre></div><p>Con esto, cada vez que nos autentifiquemos en GitHub mediante SSH, nuestro sistema utilizará esta clave.</p>
+</code></pre></div><p>Con esto, cada vez que nos autentiquemos en GitHub mediante SSH, nuestro sistema utilizará esta clave.</p>
 <ul>
 <li>Por último, volvemos a los <code>Ajustes</code> de nuestra cuenta de GitHub, entramos en el apartado <code>Claves SSH y GPG</code>, y pinchamos en el botón verde de <code>Nueva clave SSH</code>:</li>
 </ul>
@@ -764,7 +764,7 @@ IdentityFile ~/.ssh/test
 
 </p>
 <p>Tenemos que ponerle un <code>título</code>, que sea por ejemplo identificativo de la máquina donde usamos la clave, y en <code>clave</code> pegamos el contenido de la <code>clave pública</code> que generamos anteriormente, en mi caso test.pub.</p>
-<p>Con esto, ya tenemos nuestra cuenta de GitHub más segura, y hemos habilitado un método de autentificación mediante clave SSH.</p>
+<p>Con esto, ya tenemos nuestra cuenta de GitHub más segura, y hemos habilitado un método de autenticación mediante clave SSH.</p>
 <p>Por supuesto podemos generar todas las claves SSH que queramos siguiendo este proceso, para utilizarlas en distintas máquinas, o bien utilizar la misma clave SSH en todas nuestras máquinas. ¡Queda a tu elección!.</p>
 <p>
 
