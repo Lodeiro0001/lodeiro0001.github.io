@@ -18,11 +18,11 @@
   "articleSection" : "blog",
   
   "genre": "post",
-  "keywords": "Backup, Linux, Remoto",
-  "wordcount":  445 ,
+  "keywords": "Backup, Linux, Remoto, Raspberry Pi OS, Debian",
+  "wordcount":  619 ,
   "url": "https://rlodeiro.info/blog/raspberrypi_backup_remoto/",
   "datePublished": "2018-11-20",
-  "dateModified": "2018-11-20",
+  "dateModified": "2021-07-19",
   "license": "© 2021 Roberto Lodeiro",
   "copyrightHolder" : "Roberto Lodeiro",
   "copyrightYear" : "2018",
@@ -59,9 +59,9 @@
         
         <meta itemprop="name" content="Raspberry Pi - Backup remoto">
 <meta itemprop="description" content="Como crear una copia de seguridad sin apagar el sistema"><meta itemprop="datePublished" content="2018-11-20T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2018-11-20T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="445"><meta itemprop="image" content="https://rlodeiro.info/img/posts/2018/11/raspberryPi_backup_remoto/raspberryPi_backup_remoto.jpg">
-<meta itemprop="keywords" content="Backup,Linux,Remoto," />
+<meta itemprop="dateModified" content="2021-07-19T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="619"><meta itemprop="image" content="https://rlodeiro.info/img/posts/2018/11/raspberryPi_backup_remoto/raspberryPi_backup_remoto.jpg">
+<meta itemprop="keywords" content="Backup,Linux,Remoto,Raspberry Pi OS,Debian," />
         
 
         
@@ -549,6 +549,9 @@
         <time class="published" datetime='2018-11-20'>
             20 de noviembre de 2018
           </time>
+                <time class="published" datetime="2021-07-19 00:00:00 &#43;0000 UTC" title="2021-07-19 00:00:00 &#43;0000 UTC">
+                    (Actualizado: 19.07.2021)
+                </time>
         <span class="author">Roberto Lodeiro</span>
         
         
@@ -662,11 +665,15 @@
     <p>Si odias apagar tu Raspberry PI para hacer una copia de seguridad del sistema, continua leyendo.</p>
 <p>Ya te habrá quedado claro que soy un Full Lover de la Raspberry PI, la uso como servidor principal y es casi mas importante que yo en casa, pero el ritual de hacer una copia de seguridad me cansaba. Tenia que apagarla, desconectar los discos y la microSD, conectar todo a mi pc y hacer el backup. Después había que volver a conectar todo, encenderla y comprobar que todos los servicios se iniciaban de forma correcta.</p>
 <p>Esos malos tiempos se han acabado, ¡te explico como!</p>
+<blockquote>
+<p>ACTUALIZACIÓN:
+Si queremos hacer backup remoto en un equipo con <code>Debian</code>, se presentará un error relacionado con <code>sudo</code>. Agrego un último apartado para solucionarlo.
 
 
   <hr style="border-color: #d6d6d6;" />
 
-
+</p>
+</blockquote>
 <h2 id="requisitos">Requisitos</h2>
 <p>Basta con tener habilitado el acceso remoto con SSH en nuestra Raspberry PI. En caso contrario, podemos crear un archivo con nombre <code>ssh</code> en la particion <code>/boot</code> de la misma y reiniciar. Este proceso se puede hacer tando desde sistemas Linux como macOS.</p>
 <p>Este ejemplo es con una Raspberry que solo tiene microSD como disco del sistema, pero en el caso de tener también 
@@ -725,6 +732,21 @@ Copiar el nombre, en este caso es <code>/dev/mmcblk0 </code></p>
 </code></pre><p>Cambiando el nombre de la copia y el del disco de destino por los adecuados.</p>
 </li>
 </ul>
+<h2 id="backup-remoto-en-debian">Backup remoto en Debian</h2>
+<p>Si intentamos hacer este procedimiento en un equipo con <code>Debian</code>, se presentará el error <code>sudo: no tty present and no askpass program specified</code>. Esto se debe a que, mientras que por defecto Raspberry Pi OS no nos pide password para ejecutar comandos con sudo, Debian si lo pide.</p>
+<p>Para solucionarlo, realizamos lo siguiente:</p>
+<ul>
+<li>Editar el archivo de configuración:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo visudo
+</code></pre></div><ul>
+<li>
+<p>Agregamos una línea al final como la siguiente, indicando el usuario con el que hacemos login en el equipo con Debian:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">usuario ALL=(ALL) NOPASSWD:ALL
+</code></pre></div><p>Guardamos y ya podremos ejecutar el comando de copia remota, este se ejecutará sin problema ya que ahora sudo no solicita password.</p>
+</li>
+</ul>
+<p>Si una vez finalizada la copia queremos dejar el sistema como estaba, cosa que recomiendo por seguridad, tan solo tenemos que comentar la linea que agregamos anteriormente y el sistema volverá a pedir password para ejecutar sudo con nuestro usuario.</p>
 
 
   <hr style="border-color: #d6d6d6;" />
@@ -768,6 +790,12 @@ Copiar el nombre, en este caso es <code>/dev/mmcblk0 </code></p>
                 
                 
                 <li><a class="article-category-link" href="https://rlodeiro.info/tags/remoto">Remoto</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/raspberry-pi-os">Raspberry Pi OS</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/debian">Debian</a></li>
                 
             
         
