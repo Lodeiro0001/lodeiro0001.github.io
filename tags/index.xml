@@ -7,7 +7,61 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <copyright>© {year} Roberto Lodeiro</copyright>
-    <lastBuildDate>Sun, 27 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Autofirma</title>
+      <link>https://rlodeiro.info/tags/autofirma/</link>
+      <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/autofirma/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Debian</title>
+      <link>https://rlodeiro.info/tags/debian/</link>
+      <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/debian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DNI electrónico</title>
+      <link>https://rlodeiro.info/tags/dni-electr%C3%B3nico/</link>
+      <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/dni-electr%C3%B3nico/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DNIe</title>
+      <link>https://rlodeiro.info/tags/dnie/</link>
+      <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/dnie/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://rlodeiro.info/tags/linux/</link>
+      <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>https://rlodeiro.info/tags/ubuntu/</link>
+      <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>2FA</title>
       <link>https://rlodeiro.info/tags/2fa/</link>
@@ -27,29 +81,11 @@
     </item>
     
     <item>
-      <title>Linux</title>
-      <link>https://rlodeiro.info/tags/linux/</link>
-      <pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://rlodeiro.info/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>SSH</title>
       <link>https://rlodeiro.info/tags/ssh/</link>
       <pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://rlodeiro.info/tags/ssh/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Debian</title>
-      <link>https://rlodeiro.info/tags/debian/</link>
-      <pubDate>Tue, 08 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://rlodeiro.info/tags/debian/</guid>
       <description></description>
     </item>
     
@@ -77,15 +113,6 @@
       <pubDate>Tue, 08 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://rlodeiro.info/tags/swappiness/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ubuntu</title>
-      <link>https://rlodeiro.info/tags/ubuntu/</link>
-      <pubDate>Tue, 08 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://rlodeiro.info/tags/ubuntu/</guid>
       <description></description>
     </item>
     
