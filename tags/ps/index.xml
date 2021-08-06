@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PS on Roberto Lodeiro</title>
+    <link>https://rlodeiro.info/tags/ps/</link>
+    <description>Recent content in PS on Roberto Lodeiro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <copyright>© {year} Roberto Lodeiro</copyright>
+    <lastBuildDate>Fri, 06 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/ps/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PS5 &amp; PS4: Remote Play en Linux</title>
+      <link>https://rlodeiro.info/blog/ps5-ps4-remote-play-linux/</link>
+      <pubDate>Fri, 06 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/blog/ps5-ps4-remote-play-linux/</guid>
+      <description>Resulta muy útil poder jugar con tu PlayStation 5 o PlayStation 4 de forma remota, ya que puedes tenerla conectada en el televisor del salón, y cuando quieras puedes utilizarla también desde tu ordenador.
+Oficialmente solo se puede desde Windows o macOS, pero en este post vamos a ver como hacerlo también desde Linux.
+1. Instalación Vamos a utilizar un programa gratis y Open Source llamado Chiaki. Lo instalaremos por Flatpak, si todavía no tienes Flatpak configurado en tu sistema puedes ver este post donde explico como hacerlo.</description>
+    </item>
+    
+  </channel>
+</rss>
