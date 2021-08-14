@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <copyright>© {year} Roberto Lodeiro</copyright>
-    <lastBuildDate>Fri, 06 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Actualizar Debian 10 a Debian 11 Bullseye</title>
+      <link>https://rlodeiro.info/blog/actualizar-debian-10-a-debian-11-bullseye/</link>
+      <pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/blog/actualizar-debian-10-a-debian-11-bullseye/</guid>
+      <description>Hoy es el lanzamiento oficial de Debian 11 Bullseye. Si bien ya se podía actualizar antes de Debian Buster a Debian Bullseye, me gusta esperar al día oficial del lanzamiento para que la migración resulte estable y el nuevo sistema esté 100% testeado.
+Recuerda que es muy recomendable hacer una copia de seguridad de nuestro equipo antes de realizar la actualización.
+Preparación Primero vamos a preparar nuestro sistema con Debian Buster para que actualice sin problemas, veremos que es más sencillo de lo esperado.</description>
+    </item>
+    
     <item>
       <title>PS5 &amp; PS4: Remote Play en Linux</title>
       <link>https://rlodeiro.info/blog/ps5-ps4-remote-play-linux/</link>

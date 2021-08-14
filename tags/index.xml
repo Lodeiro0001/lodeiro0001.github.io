@@ -7,7 +7,52 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <copyright>© {year} Roberto Lodeiro</copyright>
-    <lastBuildDate>Fri, 06 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bullseye</title>
+      <link>https://rlodeiro.info/tags/bullseye/</link>
+      <pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/bullseye/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Buster</title>
+      <link>https://rlodeiro.info/tags/buster/</link>
+      <pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/buster/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Debian</title>
+      <link>https://rlodeiro.info/tags/debian/</link>
+      <pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/debian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Debian 10</title>
+      <link>https://rlodeiro.info/tags/debian-10/</link>
+      <pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/debian-10/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Debian 11</title>
+      <link>https://rlodeiro.info/tags/debian-11/</link>
+      <pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/debian-11/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Linux</title>
       <link>https://rlodeiro.info/tags/linux/</link>
@@ -59,15 +104,6 @@
       <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://rlodeiro.info/tags/autofirma/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Debian</title>
-      <link>https://rlodeiro.info/tags/debian/</link>
-      <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://rlodeiro.info/tags/debian/</guid>
       <description></description>
     </item>
     
