@@ -7,7 +7,43 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <copyright>© {year} Roberto Lodeiro</copyright>
-    <lastBuildDate>Sat, 14 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Diun</title>
+      <link>https://rlodeiro.info/tags/diun/</link>
+      <pubDate>Fri, 10 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/diun/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://rlodeiro.info/tags/docker/</link>
+      <pubDate>Fri, 10 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Email</title>
+      <link>https://rlodeiro.info/tags/email/</link>
+      <pubDate>Fri, 10 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/email/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Telegram</title>
+      <link>https://rlodeiro.info/tags/telegram/</link>
+      <pubDate>Fri, 10 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/telegram/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Bullseye</title>
       <link>https://rlodeiro.info/tags/bullseye/</link>
@@ -221,15 +257,6 @@
       <pubDate>Sun, 21 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://rlodeiro.info/tags/dns/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Docker</title>
-      <link>https://rlodeiro.info/tags/docker/</link>
-      <pubDate>Sun, 21 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://rlodeiro.info/tags/docker/</guid>
       <description></description>
     </item>
     
