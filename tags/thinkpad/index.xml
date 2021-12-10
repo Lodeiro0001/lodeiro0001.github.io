@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thinkpad on Roberto Lodeiro</title>
+    <link>https://rlodeiro.info/tags/thinkpad/</link>
+    <description>Recent content in Thinkpad on Roberto Lodeiro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <copyright>© {year} Roberto Lodeiro</copyright>
+    <lastBuildDate>Fri, 10 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/thinkpad/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>fwupd</title>
+      <link>https://rlodeiro.info/blog/fwupd-linux-firmware/</link>
+      <pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/blog/fwupd-linux-firmware/</guid>
+      <description>Si tienes un equipo Dell, Lenovo Thinkpad, Intel o HP (entre otros dispositivos y marcas) esto va a interesarte. Se acabó tener que ir a Windows para actualizar el firmware de nuestra placa base y otros dispositivos.
+Vamos a ver como instalar y ulitizar fwupd para actualizar el firmware desde Linux.
+Instalación Por supuesto, fwupd se encuentra por defecto en los repositorios de las distribuciones más utilizadas. En mi caso en Debian tan solo tenemos que hacer lo siguiente:</description>
+    </item>
+    
+  </channel>
+</rss>

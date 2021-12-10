@@ -3,10 +3,49 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://rlodeiro.info/blog/</loc>
-    <lastmod>2021-09-10T00:00:00+00:00</lastmod>
+    <lastmod>2021-12-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlodeiro.info/categories/</loc>
-    <lastmod>2021-09-10T00:00:00+00:00</lastmod>
+    <lastmod>2021-12-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/tags/dell/</loc>
+    <lastmod>2021-12-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/tags/firmware/</loc>
+    <lastmod>2021-12-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/tags/fwupd/</loc>
+    <lastmod>2021-12-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/blog/fwupd-linux-firmware/</loc>
+    <lastmod>2021-12-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/categories/herramientas/</loc>
+    <lastmod>2021-12-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/tags/hp/</loc>
+    <lastmod>2021-12-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/tags/intel/</loc>
+    <lastmod>2021-12-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/tags/linux/</loc>
+    <lastmod>2021-12-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/categories/linux/</loc>
+    <lastmod>2021-12-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/tags/lvfs/</loc>
+    <lastmod>2021-12-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/</loc>
+    <lastmod>2021-12-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/tags/</loc>
+    <lastmod>2021-12-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/tags/thinkpad/</loc>
+    <lastmod>2021-12-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlodeiro.info/tags/diun/</loc>
     <lastmod>2021-09-10T00:00:00+00:00</lastmod>
@@ -20,16 +59,7 @@
     <loc>https://rlodeiro.info/tags/email/</loc>
     <lastmod>2021-09-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://rlodeiro.info/categories/linux/</loc>
-    <lastmod>2021-09-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rlodeiro.info/</loc>
-    <lastmod>2021-09-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://rlodeiro.info/categories/servicios/</loc>
-    <lastmod>2021-09-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rlodeiro.info/tags/</loc>
     <lastmod>2021-09-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlodeiro.info/tags/telegram/</loc>
@@ -52,12 +82,6 @@
   </url><url>
     <loc>https://rlodeiro.info/tags/debian-11/</loc>
     <lastmod>2021-08-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rlodeiro.info/categories/herramientas/</loc>
-    <lastmod>2021-08-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rlodeiro.info/tags/linux/</loc>
-    <lastmod>2021-08-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlodeiro.info/tags/playstation/</loc>
     <lastmod>2021-08-06T00:00:00+00:00</lastmod>
@@ -139,9 +163,6 @@
   </url><url>
     <loc>https://rlodeiro.info/tags/raspberry-pi/</loc>
     <lastmod>2019-07-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rlodeiro.info/tags/intel/</loc>
-    <lastmod>2019-05-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlodeiro.info/tags/nvidia/</loc>
     <lastmod>2019-05-17T00:00:00+00:00</lastmod>
@@ -231,9 +252,6 @@
     <lastmod>2018-11-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlodeiro.info/blog/escaner_ubuntu/</loc>
-    <lastmod>2018-11-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rlodeiro.info/tags/hp/</loc>
     <lastmod>2018-11-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlodeiro.info/blog/mqtt1/</loc>
