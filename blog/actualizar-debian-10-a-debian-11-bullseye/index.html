@@ -58,8 +58,8 @@
 
         
         <meta itemprop="name" content="Actualizar Debian 10 a Debian 11 Bullseye">
-<meta itemprop="description" content="De Buster a Bullseye"><meta itemprop="datePublished" content="2021-08-14T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-08-14T00:00:00&#43;00:00" />
+<meta itemprop="description" content="De Buster a Bullseye"><meta itemprop="datePublished" content="2021-08-14T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-08-14T00:00:00+00:00" />
 <meta itemprop="wordCount" content="420"><meta itemprop="image" content="https://rlodeiro.info/img/posts/2021/08/actualizar-debian-10-a-debian-11-bullseye/actualizar-debian-10-a-debian-11-bullseye.jpg">
 <meta itemprop="keywords" content="Debian,Bullseye,Debian 11,Debian 10,Buster," />
         
@@ -685,14 +685,14 @@
 <ul>
 <li>Actualizamos el sistema:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt update
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt update
 $ sudo apt upgrade
 </code></pre></div><ul>
 <li>Verificamos que nuestro sistema es Debian Buster:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat /etc/*release
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat /etc/*release
 </code></pre></div><p>Esto nos devolverá algo como lo siguiente, confirmando que estamos en Debian 10 Buster:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">PRETTY_NAME=&#34;Debian GNU/Linux 10 (buster)&#34;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">PRETTY_NAME=&#34;Debian GNU/Linux 10 (buster)&#34;
 NAME=&#34;Debian GNU/Linux&#34;
 VERSION_ID=&#34;10&#34;
 VERSION=&#34;10 (buster)&#34;
@@ -704,14 +704,14 @@ BUG_REPORT_URL=&#34;https://bugs.debian.org/&#34;
 </code></pre></div><ul>
 <li>Revisamos los <code>repositorios de terceros</code>, si los tenemos:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd /etc/apt/sources.list.d/
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd /etc/apt/sources.list.d/
 </code></pre></div><p>En este directorio tendremos los repositorios de terceros, es importante que los actualicemos a Debian 11 Bullseye para no tener ningún problema con la actualización.</p>
 <ul>
 <li>Actualizamos los <code>repositorios oficiales</code> de Debian 10 Buster a Debian 11 Bullseye:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/apt/sources.list
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/apt/sources.list
 </code></pre></div><p>Comentaremos los repositorios de Debian Buster, y pondremos los nuevos repositorios de Debian Bullseye, quedando así:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">### Buster ###</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">### Buster ###</span>
 
 <span style="color:#75715e">#deb http://deb.debian.org/debian/ buster main contrib non-free</span>
 <span style="color:#75715e">#deb-src http://deb.debian.org/debian/ buster main contrib non-free</span>
@@ -735,20 +735,20 @@ deb http://ftp.debian.org/debian bullseye-backports main contrib non-free
 <ul>
 <li>Actualizamos nuestro sistema:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt clean all
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt clean all
 $ sudo apt update
 $ sudo apt full-upgrade
 </code></pre></div><p>Ten paciencia, ya que la actualización es grande y tardará un tiempo. Durante la actualización se nos preguntará si queremos o no sustituir diversos ficheros de configuración que hayamos modificado antes, así como otras opciones del sistema.</p>
 <ul>
 <li>Una vez finalizada la actualización, reiniciamos el sistema:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo reboot
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo reboot
 </code></pre></div><ul>
 <li>Por último, verificamos que realmente hemos actualizado a Debian 11 Bullseye:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat /etc/*release
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat /etc/*release
 </code></pre></div><p>Nos mostrará algo como lo siguiente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">PRETTY_NAME=&#34;Debian GNU/Linux 11 (bullseye)&#34;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">PRETTY_NAME=&#34;Debian GNU/Linux 11 (bullseye)&#34;
 NAME=&#34;Debian GNU/Linux&#34;
 VERSION_ID=&#34;11&#34;
 VERSION=&#34;11 (bullseye)&#34;

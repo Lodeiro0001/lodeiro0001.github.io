@@ -58,8 +58,8 @@
 
         
         <meta itemprop="name" content="Audio Multiroom">
-<meta itemprop="description" content="Servidor multimedia con soporte Airplay"><meta itemprop="datePublished" content="2019-04-14T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-04-14T00:00:00&#43;00:00" />
+<meta itemprop="description" content="Servidor multimedia con soporte Airplay"><meta itemprop="datePublished" content="2019-04-14T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-04-14T00:00:00+00:00" />
 <meta itemprop="wordCount" content="881"><meta itemprop="image" content="https://rlodeiro.info/img/posts/2019/04/audio_multiroom/audio_multiroom.jpg">
 <meta itemprop="keywords" content="Linux,Audio,Multiroom,AirPlay,forked-daapd," />
         
@@ -695,17 +695,17 @@
 <ul>
 <li>Agregamos la key del repositorio</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ wget -q -O - http://www.gyfgafguf.dk/raspbian/forked-daapd.gpg | sudo apt-key add -
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ wget -q -O - http://www.gyfgafguf.dk/raspbian/forked-daapd.gpg | sudo apt-key add -
 </code></pre></div><ul>
 <li>Añadimos el repositorio en <code>/etc/apt/sources.list.d/forked-daapd.list</code></li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/apt/sources.list.d/forked-daapd.list
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/apt/sources.list.d/forked-daapd.list
 </code></pre></div><p>Dentro pegamos lo siguiente y guardamos:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">deb http://www.gyfgafguf.dk/raspbian/forked-daapd/ stretch contrib
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">deb http://www.gyfgafguf.dk/raspbian/forked-daapd/ stretch contrib
 </code></pre></div><ul>
 <li>Instalamos forked-daapd</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt update
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt update
 $ sudo apt install forked-daapd
 </code></pre></div><h2 id="2-configuración">2. Configuración</h2>
 <p>El archivo de configuración se encuentra en <code>/etc/forked-daapd.conf</code>.</p>
@@ -721,11 +721,11 @@ $ sudo apt install forked-daapd
 <ul>
 <li>Abrimos el archivo con nano</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/forked-daapd.conf
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/forked-daapd.conf
 </code></pre></div><ul>
 <li>Modificamos las siguientes líneas, eliminando <code>#</code> en caso de que figuren como comentarios</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">#Configuración general
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">#Configuración general
 uid = &#34;root&#34;
 
 # Librería
@@ -738,10 +738,10 @@ type = &#34;disabled&#34;
 </code></pre></div><ul>
 <li>Finalizada la configuración, habilitamos el inicio automático con el arranque del sistema y reiniciamos el servicio para aplicar los cambios</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo systemctl enable forked-daapd
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo systemctl enable forked-daapd
 $ sudo service forked-daapd restart
 </code></pre></div><p>Para poder utilizar forked-daapd al completo, tenemos que esperar a que termine de escanear la biblioteca, el tiempo que tarde dependerá de la cantidad de música que tengas. Podemos ver el progreso con:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tail -f /var/log/forked-daapd.log
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tail -f /var/log/forked-daapd.log
 </code></pre></div><h2 id="3-interfaz-web">3. Interfaz web</h2>
 <p>La interfaz web está disponible en <code>http://ip_de_tu_servidor:3689</code>.</p>
 <h3 id="31-biblioteca">3.1 Biblioteca</h3>
@@ -790,7 +790,7 @@ $ sudo service forked-daapd restart
 <ul>
 <li>Para instalarlo en Debian o derivados:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install rhythmbox
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install rhythmbox
 </code></pre></div><p>Además de reproducir audio local, Rhythmbox es compatible con el protocolo <code>DAAP</code>, por lo que tenemos disponible nuestra biblioteca servida por forked-daapd en el apartado <code>Shared</code>.</p>
 <p><img src="https://rlodeiro.info/img/posts/2019/04/audio_multiroom/rhythmbox.png" alt=""></p>
 <h3 id="43-itunes-remote-ios">4.3 iTunes Remote (iOS)</h3>
@@ -808,7 +808,7 @@ $ sudo service forked-daapd restart
 <p><code>iTunes Remote</code> solo nos permite <code>controlar</code>, pero no reproducir el audio en el propio dispositivo. Si te interesa esto, presta atención al siguiente apartado.</p>
 <h2 id="5-mp3-stream">5. MP3 Stream</h2>
 <p>Además de todo lo anterior, forked-daapd hace un <code>streaming</code> del audio en formato <code>mp3</code>,  el cual está disponible desde:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">http://ip_servidor:3689/stream.mp3
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">http://ip_servidor:3689/stream.mp3
 </code></pre></div><p>Se accede a el desde cualquier cliente compatible en iOS, Linux u otros sistemas. También  podemos activarlo en la interfaz web (figura como una de las salidas disponibles) y así escucharemos el streaming en el propio dispositivo a través de la propia web.</p>
 <p>Yo lo he probado con <code>VLC</code> y va perfecto.</p>
 <p><img src="https://rlodeiro.info/img/posts/2019/04/audio_multiroom/vlc.png" alt=""></p>

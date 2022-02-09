@@ -58,8 +58,8 @@
 
         
         <meta itemprop="name" content="Raspberry Pi - Backup remoto">
-<meta itemprop="description" content="Como crear una copia de seguridad sin apagar el sistema"><meta itemprop="datePublished" content="2018-11-20T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-07-19T00:00:00&#43;00:00" />
+<meta itemprop="description" content="Como crear una copia de seguridad sin apagar el sistema"><meta itemprop="datePublished" content="2018-11-20T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-07-19T00:00:00+00:00" />
 <meta itemprop="wordCount" content="619"><meta itemprop="image" content="https://rlodeiro.info/img/posts/2018/11/raspberryPi_backup_remoto/raspberryPi_backup_remoto.jpg">
 <meta itemprop="keywords" content="Backup,Linux,Remoto,Raspberry Pi OS,Debian," />
         
@@ -703,31 +703,31 @@ Si queremos hacer backup remoto en un equipo con <code>Debian</code>, se present
 <ul>
 <li>
 <p>Entrar a la Raspberry PI por ssh</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh pi@xxx.xxx.x.xxx
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh pi@xxx.xxx.x.xxx
 </code></pre></div></li>
 <li>
 <p>Ver el nombre del disco</p>
-<pre><code>$ lsblk -p
+<pre tabindex="0"><code>$ lsblk -p
 </code></pre></li>
 </ul>
 <p>Saldrá algo como lo siguiente:
-<code>txt NAME MAJ:MIN RM SIZE RO TYPE MOUNTPOINT /dev/mmcblk0 179:0 0 14,9G 0 disk  ├─/dev/mmcblk0p1 179:1 0 43,2M 0 part /boot └─/dev/mmcblk0p2 179:2 0 14,8G 0 part /</code>
+<code>txt NAME MAJ:MIN RM SIZE RO TYPE MOUNTPOINT /dev/mmcblk0 179:0 0 14,9G 0 disk  ├─/dev/mmcblk0p1 179:1 0 43,2M 0 part /boot └─/dev/mmcblk0p2 179:2 0 14,8G 0 part / </code>
 Copiar el nombre, en este caso es <code>/dev/mmcblk0 </code></p>
 <ul>
 <li>Cerrar la conexion ssh
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ exit
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ exit
 </code></pre></div></li>
 </ul>
 <h2 id="iniciar-el-backup">Iniciar el backup</h2>
 <ul>
 <li>
 <p>Ejecutar lo siguiente</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh pi@xxx.xxx.x.xxx <span style="color:#e6db74">&#34;sudo dd if=/dev/mmcblk0 bs=1M | gzip -&#34;</span> | dd of<span style="color:#f92672">=</span>$HOME/backupPi.gz status<span style="color:#f92672">=</span>progress
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh pi@xxx.xxx.x.xxx <span style="color:#e6db74">&#34;sudo dd if=/dev/mmcblk0 bs=1M | gzip -&#34;</span> | dd of<span style="color:#f92672">=</span>$HOME/backupPi.gz status<span style="color:#f92672">=</span>progress
 </code></pre></div><p>Nos pedirá la contraseña remota y comenzará el backup. Previamente hemos de modificar algunos parámetros.</p>
 </li>
 </ul>
 <h3 id="parámetros-a-modificar">Parámetros a modificar</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">* pi -&gt; Nombre de nuestro usuario en la Raspberry PI
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">* pi -&gt; Nombre de nuestro usuario en la Raspberry PI
 * xxx.xxx.x.xxx -&gt; Direccion IP a la que nos queremos conectar
 * if=/dev/mmcblk0 -&gt; Nombre del disco
 * of=$HOME/backupPi.gz -&gt; &#34;Directorio/nombreArchivo.gz&#34; donde se guardara el backup
@@ -738,11 +738,11 @@ Copiar el nombre, en este caso es <code>/dev/mmcblk0 </code></p>
 <ul>
 <li>
 <p>Comprobar el nombre del disco de destino</p>
-<pre><code>$ lsblk -p
+<pre tabindex="0"><code>$ lsblk -p
 </code></pre></li>
 <li>
 <p>Situados en el directorio donde está la copia:</p>
-<pre><code>$ gunzip -c backupPi.gz | dd of=/dev/mmcblk0
+<pre tabindex="0"><code>$ gunzip -c backupPi.gz | dd of=/dev/mmcblk0
 </code></pre><p>Cambiando el nombre de la copia y el del disco de destino por los adecuados.</p>
 </li>
 </ul>
@@ -752,11 +752,11 @@ Copiar el nombre, en este caso es <code>/dev/mmcblk0 </code></p>
 <ul>
 <li>Editar el archivo de configuración:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo visudo
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo visudo
 </code></pre></div><ul>
 <li>
 <p>Agregamos una línea al final como la siguiente, indicando el usuario con el que hacemos login en el equipo con Debian:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">usuario ALL=(ALL) NOPASSWD:ALL
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">usuario ALL=(ALL) NOPASSWD:ALL
 </code></pre></div><p>Guardamos y ya podremos ejecutar el comando de copia remota, este se ejecutará sin problema ya que ahora sudo no solicita password.</p>
 </li>
 </ul>

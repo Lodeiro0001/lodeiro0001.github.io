@@ -58,8 +58,8 @@
 
         
         <meta itemprop="name" content="RAID en Linux">
-<meta itemprop="description" content="Configura un RAID por software con mdadm"><meta itemprop="datePublished" content="2018-10-21T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2018-10-21T00:00:00&#43;00:00" />
+<meta itemprop="description" content="Configura un RAID por software con mdadm"><meta itemprop="datePublished" content="2018-10-21T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2018-10-21T00:00:00+00:00" />
 <meta itemprop="wordCount" content="477"><meta itemprop="image" content="https://rlodeiro.info/img/posts/2018/10/mdadm/mdadm.jpg">
 <meta itemprop="keywords" content="RAID,Linux,mdadm,Raspberry Pi,Debian," />
         
@@ -693,39 +693,39 @@
 <ul>
 <li>Primero listar los discos, apuntar cuales usaremos para el RAID, e instalar <code>mdadm</code></li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ lsblk
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ lsblk
 $ sudo apt-get update
 $ sudo apt-get install mdadm
 </code></pre></div><ul>
 <li>Crear el RAID
 Cambiar sda1 y sdb1 según configuración propia</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mdadm --create /dev/md1 --level<span style="color:#f92672">=</span>mirror --raid-devices<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span> /dev/sda1 /dev/sdb1
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mdadm --create /dev/md1 --level<span style="color:#f92672">=</span>mirror --raid-devices<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span> /dev/sda1 /dev/sdb1
 </code></pre></div><ul>
 <li>Dar formato ext4</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mkfs.ext4 /dev/md0
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mkfs.ext4 /dev/md0
 </code></pre></div><ul>
 <li>Crear el nuevo directorio y montar el RAID</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mkdir -p /mnt/raid1
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mkdir -p /mnt/raid1
 $ sudo mount /dev/md1 /mnt/raid1
 </code></pre></div><ul>
 <li>Para que el volumen se monte en el arranque del sistema</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ echo <span style="color:#e6db74">&#34;/dev/md1 /mnt/raid1/ ext4 defaults,noatime 0 1&#34;</span> | sudo tee -a /etc/fstab
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ echo <span style="color:#e6db74">&#34;/dev/md1 /mnt/raid1/ ext4 defaults,noatime 0 1&#34;</span> | sudo tee -a /etc/fstab
 </code></pre></div><ul>
 <li>Actualizar la configuración de mdadm</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mdadm --detail --scan | sudo tee -a /etc/mdadm/mdadm.conf
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mdadm --detail --scan | sudo tee -a /etc/mdadm/mdadm.conf
 </code></pre></div><h2 id="mantenimiento">Mantenimiento</h2>
 <ul>
 <li>Para ver el estado del raid</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mdadm --detail /dev/md1
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mdadm --detail /dev/md1
 </code></pre></div><pre><code>Se mostrará algo similar a esto una vez finalice la sincronización inicial de los discos:
 </code></pre>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">/dev/md1:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">/dev/md1:
         Version : 1.2
   Creation Time : xXxxXx
      Raid Level : raid1
@@ -755,12 +755,12 @@ Working Devices : 2
 </code></pre></div><ul>
 <li>Marcar disco como fallido y eliminarlo del RAID:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mdadm --manage /dev/md1 --fail /dev/sdb1
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mdadm --manage /dev/md1 --fail /dev/sdb1
 $ sudio mdadm --manage /dev/md1 --remove /dev/sdb1
 </code></pre></div><ul>
 <li>Añadir disco:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mdadm --manage /dev/md1 --add /dev/sdb1
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mdadm --manage /dev/md1 --add /dev/sdb1
 </code></pre></div><p>La primera vez que creemos el <code>RAID</code>, o cuando agreguemos un disco por fallo u otra circunstancia, el tiempo que tarde este en indicar <code>State: clean</code> será considerable, ya que <code>mdadm</code> necesita sincronizar completamente los discos. Obviamente esto dependerá de la capacidad de los disco, y se nos indicará el porcentaje alcanzado al consultar el estado del RAID.</p>
 
 

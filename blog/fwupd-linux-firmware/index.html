@@ -58,8 +58,8 @@
 
         
         <meta itemprop="name" content="fwupd">
-<meta itemprop="description" content="Actualiza el Firmware de tus dispositivos desde Linux"><meta itemprop="datePublished" content="2021-12-10T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-12-10T00:00:00&#43;00:00" />
+<meta itemprop="description" content="Actualiza el Firmware de tus dispositivos desde Linux"><meta itemprop="datePublished" content="2021-12-10T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-12-10T00:00:00+00:00" />
 <meta itemprop="wordCount" content="189"><meta itemprop="image" content="https://rlodeiro.info/img/posts/2021/12/fwupd-linux-firmware/fwupd-linux-firmware.jpg">
 <meta itemprop="keywords" content="fwupd,LVFS,Linux,Firmware,Dell,Thinkpad,Intel,HP," />
         
@@ -682,30 +682,30 @@
 
 <h2 id="instalación">Instalación</h2>
 <p>Por supuesto, fwupd se encuentra por defecto en los repositorios de las distribuciones más utilizadas. En mi caso en Debian tan solo tenemos que hacer lo siguiente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt update
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt update
 sudo apt install fwupd
 </code></pre></div><h2 id="uso">Uso</h2>
 <p>Tenemos disponibles los siguientes comandos:</p>
 <ul>
 <li>Listar los dispositivos detectados por fwupd:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fwupdmgr get-devices
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fwupdmgr get-devices
 </code></pre></div><ul>
 <li>Descargar metadata desde LVFS</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fwupdmgr refresh
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fwupdmgr refresh
 </code></pre></div><ul>
 <li>Mostrar si hay actualizaciones disponibles</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fwupdmgr get-updates
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fwupdmgr get-updates
 </code></pre></div><ul>
 <li>Descargar y aplicar todas las actualizaciones disponibles para el sistema</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fwupdmgr update
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fwupdmgr update
 </code></pre></div><ul>
 <li>Descargar y aplicar la actualización solo de un device</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fwupdmgr update DEVICEID
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fwupdmgr update DEVICEID
 </code></pre></div><p>Con estos sencillos pasos, tendremos actualizado el firmware de nuestro equipo desde Linux, siempre que el vendedor se encuentre entre los que colaboran con LVFS.</p>
 <p>Podemos consultar en la 
 

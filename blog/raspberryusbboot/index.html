@@ -58,8 +58,8 @@
 
         
         <meta itemprop="name" content="Raspberry Pi &amp; USB Boot Mode">
-<meta itemprop="description" content="Como arrancar una Raspberry Pi desde un disco USB"><meta itemprop="datePublished" content="2018-09-28T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2018-09-28T00:00:00&#43;00:00" />
+<meta itemprop="description" content="Como arrancar una Raspberry Pi desde un disco USB"><meta itemprop="datePublished" content="2018-09-28T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2018-09-28T00:00:00+00:00" />
 <meta itemprop="wordCount" content="915"><meta itemprop="image" content="https://rlodeiro.info/img/posts/2018/09/raspberry/raspberry.jpg">
 <meta itemprop="keywords" content="boot,USB,Raspberry," />
         
@@ -693,16 +693,16 @@
 <ul>
 <li>Actualizar nuestra Raspberry Pi</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt-get update <span style="color:#f92672">&amp;&amp;</span> sudo apt-get upgrade
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt-get update <span style="color:#f92672">&amp;&amp;</span> sudo apt-get upgrade
 </code></pre></div><ul>
 <li>Habilitar USB boot mode</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ echo program_usb_boot_mode<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> | sudo tee -a /boot/config.txt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ echo program_usb_boot_mode<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> | sudo tee -a /boot/config.txt
 </code></pre></div><p>Esto añadirá <code>program_usb_boot_mode=1</code> al final de <code>/boot/config.txt</code>. En cuanto reiniciemos la Raspberry Pi, quedará activado USB Boot Mode de forma permanente, podremos arrancar desde un disco USB sin necesidad de la tarjeta MicroSD, pero si esta está presente, se arrancará desde ella. Si utilizamos esta MicroSD en otra Raspberry Pi, en esta también se activará USB Boot Mode.</p>
 <ul>
 <li>Para comprobar que se ha realizado correctamente</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ vcgencmd otp_dump | grep 17:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ vcgencmd otp_dump | grep 17:
 17:3020000a
 </code></pre></div><p>Verificamos que la salida sea <code>0x3020000a</code>. De no ser así, repetiremos el proceso. Si sigue sin funcionar, significa que la Raspberry Pi tiene un problema de hardware. A mi me ha funcionado sin problema tanto en una Pi 3B como en una 3B+.</p>
 <p>Solo tenemos que 
@@ -740,25 +740,25 @@ Esto nos devolverá el listado de discos/particiones que tenemos en el sistema. 
 <p>Montamos la partición root del disco USB</p>
 </li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mkdir /mnt/rootUSB
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mkdir /mnt/rootUSB
 $ sudo mount /dev/sda2 /mnt/rootUSB
 </code></pre></div><ul>
 <li>Para conocer su PARTUUID</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo blkid -p /dev/sda2
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo blkid -p /dev/sda2
 </code></pre></div><p>No confundir UUID con PARTUUID. Encontraremos PARTUUID como <code>PART_ENTRY_UUID=&quot;XXXXXXXX-02&quot;</code>. Guardamos el código PARTUUID correspondiente a la partición root de nuestro disco USB.</p>
 <ul>
 <li>Hacemos un backup de la configuración de inicio de la sd y la editamos</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo cp /boot/cmdline.txt /boot/cmdline.sdBoot.bak
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo cp /boot/cmdline.txt /boot/cmdline.sdBoot.bak
 $ sudo nano /boot/cmdline.txt
 </code></pre></div><p>Veremos algo como <code>root=PARTUUID=XXXXXXXX-02</code>, correspondiente al <code>/</code>de  la sd, lo sustituimos por el PARTUUID correpondiente a la partición root del USB que copiamos antes.</p>
 <ul>
 <li>Editamos <code>fstab</code> en el disco USB para indicar el <code>/boot</code> de la sd</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /mnt/rootUSB/etc/fstab
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /mnt/rootUSB/etc/fstab
 </code></pre></div><p>Comentamos la linea correspondiente al <code>/boot</code> del usb, y añadimos <code>PARTUUID=XXXXXXXX-01       /boot           vfat    defaults          0       2</code> para la sd, quedando algo como lo siguiente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    proc                       /proc           proc    defaults          <span style="color:#ae81ff">0</span>       <span style="color:#ae81ff">0</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    proc                       /proc           proc    defaults          <span style="color:#ae81ff">0</span>       <span style="color:#ae81ff">0</span>
     PARTUUID<span style="color:#f92672">=</span>XXXXXXXX-02       /               ext4    defaults,noatime  <span style="color:#ae81ff">0</span>       <span style="color:#ae81ff">1</span>
     PARTUUID<span style="color:#f92672">=</span>XXXXXXXX-01       /boot           vfat    defaults          <span style="color:#ae81ff">0</span>       <span style="color:#ae81ff">2</span>
     <span style="color:#75715e">#/dev/mmcblk0p1            /boot           vfat    defaults          0       2</span>
@@ -769,15 +769,15 @@ $ sudo nano /boot/cmdline.txt
 <ul>
 <li>Instalamos <code>rsync</code> si no lo estuviera</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install rsync
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install rsync
 </code></pre></div><ul>
 <li>Montamos el disco USB (sustituir <code>sdX</code> por la de vuestro disco USB)</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mount /dev/sdX /mnt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mount /dev/sdX /mnt
 </code></pre></div><ul>
 <li>Copiamos <code>/</code> de nuestra MicroSD al disco USB</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo rsync -axv / /mnt/
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo rsync -axv / /mnt/
 </code></pre></div><p>Una vez copiada la partición root en el disco USB, procedemos igual que en la parte 2.1</p>
 
 

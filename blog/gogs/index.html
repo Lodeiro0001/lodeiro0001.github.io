@@ -58,8 +58,8 @@
 
         
         <meta itemprop="name" content="Gogs | Self-Hosted Git">
-<meta itemprop="description" content="Tu propio servicio de hospedaje para repositorios Git"><meta itemprop="datePublished" content="2018-10-07T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2018-10-07T00:00:00&#43;00:00" />
+<meta itemprop="description" content="Tu propio servicio de hospedaje para repositorios Git"><meta itemprop="datePublished" content="2018-10-07T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2018-10-07T00:00:00+00:00" />
 <meta itemprop="wordCount" content="743"><meta itemprop="image" content="https://rlodeiro.info/img/posts/2018/10/gogs/gogs.jpg">
 <meta itemprop="keywords" content="GO,Control de versiones,Proyectos,git,Golang," />
         
@@ -693,26 +693,26 @@
 <ul>
 <li>Si no los tenemos, instalar git y wget:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install -y git wget
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install -y git wget
 </code></pre></div><ul>
 <li>Crear el usuario Gogs:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo adduser --disabled-login --gecos <span style="color:#e6db74">&#39;Gogs&#39;</span> git
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo adduser --disabled-login --gecos <span style="color:#e6db74">&#39;Gogs&#39;</span> git
 </code></pre></div><p>Si ya tenemos corriendo en nuestro servidor <code>MySQL/MariaDB</code> y <code>Nginx</code> podemos saltar a la instalación de GO, si no:</p>
 <ul>
 <li>Instalamos MariaDB y Nginx:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install mariadb-server nginx
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install mariadb-server nginx
 </code></pre></div><ul>
 <li>Para dejar lista nuestra nueva instalación de MariaDB:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mysql_secure_installation
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mysql_secure_installation
 </code></pre></div><p>Iremos respondiendo a todas las preguntas, con el fin de establecer el password de nuestro usuario <code>root</code> para MariaDB.</p>
 <h2 id="1-instalación-de-go-golang">1. Instalación de GO (Golang)</h2>
 <ul>
 <li>Creamos el directorio /home/git/local:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo su - git
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo su - git
 $ mkdir $HOME/local <span style="color:#f92672">&amp;&amp;</span> cd $_
 </code></pre></div><ul>
 <li>Descargar Go y extraer el contenido:</li>
@@ -726,76 +726,76 @@ $ mkdir $HOME/local <span style="color:#f92672">&amp;&amp;</span> cd $_
     <a href="https://golang.org/dl/" target='_blank'>disponible en golang.org</a>
 
  es GO 1.11.1</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ wget https://dl.google.com/go/go1.11.1.linux-armv6l.tar.gz
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ wget https://dl.google.com/go/go1.11.1.linux-armv6l.tar.gz
 $ tar -C /home/git/local -xvzf go1.11.1.linux-armv6l.tar.gz
 </code></pre></div><ul>
 <li>Establecer la variable de entorno GOPATH para especificar la ubicación de nuestro espacio de trabajo:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ echo <span style="color:#e6db74">&#39;export GOROOT=$HOME/local/go&#39;</span> &gt;&gt; $HOME/.bashrc
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ echo <span style="color:#e6db74">&#39;export GOROOT=$HOME/local/go&#39;</span> &gt;&gt; $HOME/.bashrc
 $ echo <span style="color:#e6db74">&#39;export GOPATH=$HOME/go&#39;</span> &gt;&gt; $HOME/.bashrc
 $ echo <span style="color:#e6db74">&#39;export PATH=$PATH:$GOROOT/bin:$GOPATH/bin&#39;</span> &gt;&gt; $HOME/.bashrc
 $ source $HOME/.bashrc
 </code></pre></div><ul>
 <li>Comprobar que Go está bien instalado:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ go version
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ go version
 </code></pre></div><ul>
 <li>Si está bien instalado, se mostrará algo como lo siguiente:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">go version go1.11.1 linux/arm
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">go version go1.11.1 linux/arm
 </code></pre></div><h2 id="2-descargar-y-compilar-gogs">2. Descargar y compilar Gogs</h2>
 <ul>
 <li>Descargar Gogs:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ go get -u github.com/gogs/gogs
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ go get -u github.com/gogs/gogs
 </code></pre></div><p>Tardará unos minutos y parecerá que la consola no responde, ya que no muestra progreso.</p>
 <ul>
 <li>Compilar Gogs:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd $GOPATH/src/github.com/gogs/gogs
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd $GOPATH/src/github.com/gogs/gogs
 $ go build
 </code></pre></div><ul>
 <li>Ejecutamos:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ./gogs web
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ./gogs web
 </code></pre></div><p>Esto arrancará el servidor web integrado escuchando en el <code>puerto 3000</code>
 Abrir <code>localhost:3000</code> en el explorador. Gogs mostrará la página de instalación. Como no tenemos todavía configurada la base de datos, cerraremos el explorador y pararemos el servidor web con <code>CTRL+C</code>
 Volveremos a la página de instalación de Gogs tras configurar MariaDB y Nginx.</p>
 <ul>
 <li>Salir del usuario git :</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ exit
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ exit
 </code></pre></div><h2 id="3-configuración-de-la-base-de-datos">3. Configuración de la base de datos</h2>
 <ul>
 <li>Entramos en MariaDB</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mysql -u root -p
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mysql -u root -p
 </code></pre></div><ul>
 <li>Creamos el nuevo usuario para Gogs:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">USER</span> <span style="color:#e6db74">&#39;gogs&#39;</span><span style="color:#f92672">@</span><span style="color:#e6db74">&#39;localhost&#39;</span> IDENTIFIED <span style="color:#66d9ef">BY</span> <span style="color:#e6db74">&#39;password&#39;</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">USER</span> <span style="color:#e6db74">&#39;gogs&#39;</span><span style="color:#f92672">@</span><span style="color:#e6db74">&#39;localhost&#39;</span> IDENTIFIED <span style="color:#66d9ef">BY</span> <span style="color:#e6db74">&#39;password&#39;</span>;
 </code></pre></div><p>Sustituye <code>password</code> por la contraseña que decidas y guárdala, se necesitará después para configurar Gogs.</p>
 <ul>
 <li>Crear nueva base de datos para Gogs:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">DATABASE</span> gogs CHARACTER <span style="color:#66d9ef">SET</span> utf8 <span style="color:#66d9ef">COLLATE</span> utf8_general_ci;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">DATABASE</span> gogs CHARACTER <span style="color:#66d9ef">SET</span> utf8 <span style="color:#66d9ef">COLLATE</span> utf8_general_ci;
 </code></pre></div><ul>
 <li>Dar permisos al usuario gogs:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">ALL</span> <span style="color:#66d9ef">PRIVILEGES</span> <span style="color:#66d9ef">ON</span> gogs.<span style="color:#f92672">*</span> <span style="color:#66d9ef">TO</span> gogs<span style="color:#f92672">@</span>localhost ;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">ALL</span> <span style="color:#66d9ef">PRIVILEGES</span> <span style="color:#66d9ef">ON</span> gogs.<span style="color:#f92672">*</span> <span style="color:#66d9ef">TO</span> gogs<span style="color:#f92672">@</span>localhost ;
 </code></pre></div><ul>
 <li>Salir de Mariadb:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#f92672">&gt;</span> quit
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#f92672">&gt;</span> quit
 </code></pre></div><h2 id="4-configuración-de-nginx">4. Configuración de Nginx</h2>
 <p>Configuraremos un <code>Reverse Proxy</code> en Nginx, de esta forma podremos acceder a Gogs con nuestro nombre de dominio. Si queremos establecer un subdominio del estilo <code>gogs.tudominio.com</code> solo tendremos que establecer <code>location \</code> e indicar el <code>server_name</code> deseado.</p>
 <ul>
 <li>Entrar en /etc/nginx/sites-available y añadir la configuración del Reverse Proxy:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd /etc/nginx/sites-available
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd /etc/nginx/sites-available
 $ sudo nano gogs
 </code></pre></div><p>Pegar lo siguiente modificando segun nuestra configuración:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">http{
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">http{
 server {
 listen 80;
 server_name tudominio.com;
@@ -807,24 +807,24 @@ proxy_pass http://localhost:3000/;
 </code></pre></div><ul>
 <li>Habilitamos el nuevo sitio:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo ln -s /etc/nginx/sites-available/gogs /etc/nginx/sites-enabled/
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo ln -s /etc/nginx/sites-available/gogs /etc/nginx/sites-enabled/
 </code></pre></div><ul>
 <li>Reiniciamos Nginx:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo systemctl restart nginx
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo systemctl restart nginx
 </code></pre></div><ul>
 <li>Configuramos Gogs con la url tudominio.com/gogs/</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /home/git/go/src/github.com/gogits/gogs/custom/conf/app.ini
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /home/git/go/src/github.com/gogits/gogs/custom/conf/app.ini
 </code></pre></div><p>Buscar la <code>ROOT URL</code> y modificarla así:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">[server] ROOT_URL = tudominio.com/gogs/
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">[server] ROOT_URL = tudominio.com/gogs/
 </code></pre></div><h2 id="5-inicio-automático-con-systemd">5. Inicio automático con systemd</h2>
 <ul>
 <li>Crear el archivo gogs.service:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/systemd/system/gogs.service
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/systemd/system/gogs.service
 </code></pre></div><p>Pegar el siguiente contenido y guardar los cambios:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">[Unit]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">[Unit]
 Description=Gogs (Go Git Service)
 After=syslog.target
 After=network.target
@@ -843,11 +843,11 @@ WantedBy=multi-user.target
 </code></pre></div><ul>
 <li>Habilitar Gogs, iniciar el servicio y comprobar el estado:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo systemctl enable gogs
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo systemctl enable gogs
 $ sudo systemctl restart gogs
 $ sudo systemctl status gogs 
 </code></pre></div><p>Por último, entra en tudominio.com/gogs/ para iniciar la configuración de Gogs, y completar lo siguiente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">Database type = MySQL
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">Database type = MySQL
 Host = 127.0.0.1:3306
 User = gogs
 Password = &lt;password para el usuario gogs&gt;

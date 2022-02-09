@@ -58,8 +58,8 @@
 
         
         <meta itemprop="name" content="MQTT | Parte 1">
-<meta itemprop="description" content="Introducción al protocolo MQTT"><meta itemprop="datePublished" content="2018-10-29T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2018-10-29T00:00:00&#43;00:00" />
+<meta itemprop="description" content="Introducción al protocolo MQTT"><meta itemprop="datePublished" content="2018-10-29T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2018-10-29T00:00:00+00:00" />
 <meta itemprop="wordCount" content="730"><meta itemprop="image" content="https://rlodeiro.info/img/posts/2018/10/mqtt1/mqtt1.jpg">
 <meta itemprop="keywords" content="mqtt,protocolo,mensajeria,broker,Iot," />
         
@@ -715,7 +715,7 @@
 <p>Los topics, simplemente son rutas donde publicamos y/o recibimos mensajes. Estas también son definidas a nuestro antojo, pero es buena idea seguir un patrón ordenado. En el ejemplo solo hay luces, pero suponiendo que en ambas habitaciones tengamos además un enchufe, su topic podría ser algo como enchufes/dormitorio/cmd, en el caso del dormitorio.</p>
 <p>El motivo por el cual he creado un topic terminado en /cmd y otro en /stat para cada dispositivo, es simplemente para poder tando enviar ordenes como recibir su estado. Esto puede ser útil, entre otras razones, si el Arduino en cuestión tiene un botón físico y apagamos en el la luz. De este forma la Raspberry Pi conozcerá su nuevo estado.</p>
 <p>Podemos resumirlo en algo como esto:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md"><span style="color:#75715e">#### Broker MQTT ####
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md"><span style="color:#75715e">#### Broker MQTT ####
 </span><span style="color:#75715e"></span>Servidor que gestiona las comunicaciones
 
 <span style="color:#75715e">#### Clientes ####

@@ -58,8 +58,8 @@
 
         
         <meta itemprop="name" content="MQTT | Parte 2">
-<meta itemprop="description" content="Broker VS cliente"><meta itemprop="datePublished" content="2018-12-05T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2018-12-05T00:00:00&#43;00:00" />
+<meta itemprop="description" content="Broker VS cliente"><meta itemprop="datePublished" content="2018-12-05T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2018-12-05T00:00:00+00:00" />
 <meta itemprop="wordCount" content="825"><meta itemprop="image" content="https://rlodeiro.info/img/posts/2018/12/mqtt2/mqtt2.jpg">
 <meta itemprop="keywords" content="mqtt,protocolo,mensajeria,broker,Iot," />
         
@@ -694,23 +694,23 @@
 <ul>
 <li>
 <p>Para instalar Mosquitto</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt update
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt update
 $ sudo apt install mosquitto
 </code></pre></div></li>
 <li>
 <p>Crear usuario y contraseña</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mosquitto_passwd -c /etc/mosquitto/tuArchivoPass nombreUsuario
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mosquitto_passwd -c /etc/mosquitto/tuArchivoPass nombreUsuario
 </code></pre></div></li>
 </ul>
 <p>Cambia <code>nombreUsuario</code> por el nombre que quieras darle, y <code>tuArchivoPass</code> por el nombre que quieras para el archivo donde se guardaran los usuarios y sus contraseñas. Una vez ejecutado el comando se nos preguntara el password que queremos asignarle al nuevo usuario.</p>
 <ul>
 <li>
 <p>Si quieres añadir mas usuarios</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mosquitto_passwd -b /etc/mosquitto/tuArchivoPass nombreUsuario password
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mosquitto_passwd -b /etc/mosquitto/tuArchivoPass nombreUsuario password
 </code></pre></div></li>
 <li>
 <p>Para eliminar un usuario</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mosquitto_passwd -D /etc/mosquitto/tuArchivoPass nombreUsuario
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mosquitto_passwd -D /etc/mosquitto/tuArchivoPass nombreUsuario
 </code></pre></div></li>
 </ul>
 <h2 id="21-configuración">2.1 Configuración</h2>
@@ -718,14 +718,14 @@ $ sudo apt install mosquitto
 <ul>
 <li>
 <p>Para crear el nuevo archivo</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/mosquitto/conf.d/miConfiguracion.conf
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/mosquitto/conf.d/miConfiguracion.conf
 </code></pre></div><p>Aquí añadiremos dos lineas, una indicando que no se permita la conexión a usuarios anónimos, y otra indicando donde tenemos el archivo que con tiene los usuarios y sus contraseñas.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">allow_anonymous false
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">allow_anonymous false
 password_file etc/mosquitto/tuArchivoPass
 </code></pre></div></li>
 <li>
 <p>Reiniciar el servicio</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo systemctl restart mosquitto
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo systemctl restart mosquitto
 </code></pre></div></li>
 </ul>
 <h2 id="22-configurar-ssl">2.2 Configurar SSL</h2>
@@ -733,7 +733,7 @@ password_file etc/mosquitto/tuArchivoPass
 <ul>
 <li>
 <p>Creamos los directorios y el certificado</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mkdir /etc/ssl/mqtt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mkdir /etc/ssl/mqtt
 $ cd /etc/ssl/mqtt
 $ sudo openssl req -new -x509 -days <span style="color:#ae81ff">365</span> -nodes -out ejemploMQTT.local.pem -keyout ejemploMQTT.local.key
 </code></pre></div><p>Cambia <code>ejemploMQTT.local</code> por tu nombre de dominio, dejando las extensiones <code>.pem</code> y <code>.key</code>. En este ejemplo el certificado tendrá una validez de 365 días, si no quieres tener que generar uno nueva cada año, modifica <code>-days XXX</code> sustituyendo XXX por el número de días que quieras.</p>
@@ -743,16 +743,16 @@ $ sudo openssl req -new -x509 -days <span style="color:#ae81ff">365</span> -node
 <ul>
 <li>
 <p>Abrir el archivo de configuración</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/mosquitto/conf.d/miConfiguracion.conf
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/mosquitto/conf.d/miConfiguracion.conf
 </code></pre></div><p>Añadimos lo siguiente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">listener 1883 localhost
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">listener 1883 localhost
 listener 8883
 certfile /etc/ssl/mqtt/mqtt.example.local.pem
 keyfile /etc/ssl/mqtt/mqtt.example.local.key
 </code></pre></div></li>
 <li>
 <p>Reiniciar el servicio</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo systemctl restart mosquitto
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo systemctl restart mosquitto
 </code></pre></div></li>
 </ul>
 <h2 id="3-cliente">3. Cliente</h2>
@@ -760,19 +760,19 @@ keyfile /etc/ssl/mqtt/mqtt.example.local.key
 <ul>
 <li>
 <p>Instalamos en la máquina cliente</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install mosquitto-clients
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install mosquitto-clients
 </code></pre></div></li>
 </ul>
 <p>Una vez instalado, abre dos consolas en la máquina cliente. La idea para probar el sistema es publicar mensajes a un topic desde una consola, y verlos desde la otra, la cual estará suscrita al mismo topic.</p>
 <ul>
 <li>
 <p>Para suscribirse en la primera consola:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mosquitto_sub -v -h ipBroker -u tuUsuario -P tuContrasenha -p <span style="color:#ae81ff">8883</span> -t <span style="color:#e6db74">&#39;raspberry/topicTest&#39;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mosquitto_sub -v -h ipBroker -u tuUsuario -P tuContrasenha -p <span style="color:#ae81ff">8883</span> -t <span style="color:#e6db74">&#39;raspberry/topicTest&#39;</span>
 </code></pre></div><p>Cambia <code>ipBroker</code> por la ip de la máquina donde tienes instalado Mosquitto Broker, así como el usuario y la contraseña por los tuyos.<code>raspberry/topic1</code> es un topic de ejemplo, pon el que tu quieras. No cierras la consola, esta quedará a la escucha.</p>
 </li>
 <li>
 <p>Para publicar mensajes desde la segunda consola:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mosquitto_pub -h ipBroker -u tuusuario -P tuContrasenha -p <span style="color:#ae81ff">8883</span> -t <span style="color:#e6db74">&#39;raspberry/topicTest&#39;</span> -m <span style="color:#e6db74">&#39;Mensaje de prueba super cool&#39;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mosquitto_pub -h ipBroker -u tuusuario -P tuContrasenha -p <span style="color:#ae81ff">8883</span> -t <span style="color:#e6db74">&#39;raspberry/topicTest&#39;</span> -m <span style="color:#e6db74">&#39;Mensaje de prueba super cool&#39;</span>
 </code></pre></div><p>Una vez se ejecute el comando, verás que la primera terminal recibe el mensaje, ¡magia!.</p>
 </li>
 </ul>

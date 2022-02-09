@@ -58,8 +58,8 @@
 
         
         <meta itemprop="name" content="GitHub: 2FA y claves SSH">
-<meta itemprop="description" content="Incrementa la seguridad de tu cuenta de GitHub"><meta itemprop="datePublished" content="2021-06-27T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-06-27T00:00:00&#43;00:00" />
+<meta itemprop="description" content="Incrementa la seguridad de tu cuenta de GitHub"><meta itemprop="datePublished" content="2021-06-27T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-06-27T00:00:00+00:00" />
 <meta itemprop="wordCount" content="707"><meta itemprop="image" content="https://rlodeiro.info/img/posts/2021/06/github-2fa-ssh/github-2fa-ssh.jpg">
 <meta itemprop="keywords" content="Linux,Github,2FA,SSH," />
         
@@ -743,10 +743,10 @@ Aquí nos da la posibilidad de utilizar una app de autenticación de dos factore
 <ul>
 <li>Generamos la clave SSH:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh-keygen -t rsa -b <span style="color:#ae81ff">4096</span> -C tucorreo@dominio.com
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh-keygen -t rsa -b <span style="color:#ae81ff">4096</span> -C tucorreo@dominio.com
 </code></pre></div><p>Es importante poner el mismo correo electrónico que utilizamos en GitHub.</p>
 <p>Se nos pedirá el nombre del <code>archivo</code> donde guardar la clave, y una <code>passphrase</code> que será la contraseña que utilizaremos para poder usar nuestra clave SHH. La <code>passphrase</code> no es obligatoria, pero si muy recomendable.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Generating public/private rsa key pair.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Generating public/private rsa key pair.
 Enter file in which to save the key <span style="color:#f92672">(</span>/home/usuario/.ssh/id_rsa<span style="color:#f92672">)</span>: test
 Enter passphrase <span style="color:#f92672">(</span>empty <span style="color:#66d9ef">for</span> no passphrase<span style="color:#f92672">)</span>: 
 Enter same passphrase again: 
@@ -757,9 +757,9 @@ Your public key has been saved in test.pub.
 <ul>
 <li>Estando en el <code>$HOME</code> de nuestro usuario, editamos el archivo de configuracion de SSH:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ nano .ssh/config
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ nano .ssh/config
 </code></pre></div><p>Y pegamos dentro lo siguiente, indicando correctamente el nombre de nuestra clave privada, en mi caso <code>test</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">Host github.com
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">Host github.com
 User git
 IdentityFile ~/.ssh/test
 </code></pre></div><p>Con esto, cada vez que nos autentiquemos en GitHub mediante SSH, nuestro sistema utilizará esta clave.</p>

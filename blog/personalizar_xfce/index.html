@@ -58,8 +58,8 @@
 
         
         <meta itemprop="name" content="Personalizar XFCE">
-<meta itemprop="description" content="Tema, iconos y más"><meta itemprop="datePublished" content="2019-04-07T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-04-07T00:00:00&#43;00:00" />
+<meta itemprop="description" content="Tema, iconos y más"><meta itemprop="datePublished" content="2019-04-07T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-04-07T00:00:00+00:00" />
 <meta itemprop="wordCount" content="663"><meta itemprop="image" content="https://rlodeiro.info/img/posts/2019/04/personalizar_xfce/personalizar_xfce.jpg">
 <meta itemprop="keywords" content="Linux,Debian,XFCE," />
         
@@ -730,7 +730,7 @@
 <ul>
 <li>Creamos un directorio oculto con el nombre <code>icons</code> en el <code>HOME</code> de nuestro usuario:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd $HOME
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd $HOME
 $ mkdir .icons
 </code></pre></div><ul>
 <li>
@@ -744,11 +744,11 @@ $ mkdir .icons
 <ul>
 <li>Instalamos plank:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install plank
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install plank
 </code></pre></div><ul>
 <li>Para que se inicie automáticamente tenemos que entrar en <code>Settings Manager/Session and Startup/Application Autostart</code> y añadirlo manualmente en <code>+</code> con los siguientes datos:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">Name: Plank
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">Name: Plank
 Description: Epic dock!
 Command: plank
 </code></pre></div><h4 id="linea-horizontal">Linea horizontal</h4>
@@ -781,16 +781,16 @@ Command: plank
 <ul>
 <li>Editamos el archivo de configuración:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /usr/share/lightdm/lightdm.conf.d/01_debian.conf
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /usr/share/lightdm/lightdm.conf.d/01_debian.conf
 </code></pre></div><ul>
 <li>Modificamos la siguiente linea a <code>false</code>:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">greeter-hide-users=false
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">greeter-hide-users=false
 </code></pre></div><h3 id="52-background-y-foto-de-usuario">5.2 Background y foto de usuario</h3>
 <ul>
 <li>Instalamos <code>lightdm-gtk-greeter-settings</code></li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install lightdm-gtk-greeter-settings
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install lightdm-gtk-greeter-settings
 </code></pre></div><ul>
 <li>
 <p>En <code>Settings Manager</code> nos aparecerá la configuración de <code>LightDM GTK+ Greeter settings</code> donde podemos configurar el tema para la ventana de inicio de sesión, background y foto de usuario, entre otros.</p>
@@ -802,11 +802,11 @@ Command: plank
 <ul>
 <li>Instalamos <code>gnome-search-tool</code>:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install gnome-search-tool
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install gnome-search-tool
 </code></pre></div><ul>
 <li>Abrimos una ventada de Thunar y vamos al menú <code>Edit/Configure custom actions</code> y y pinchamos en <code>+</code> para agregar una acción personalizada con los siguientes parámetros:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">Name: Search
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">Name: Search
 Command: gnome-search-tool --path=%f --contains=
 </code></pre></div><p>Elegimos el icono que más nos guste, guardamos, y ya tendremos disponible desde el menú contextual de Thunar la opción de búsqueda en cualquier directorio.</p>
 <p>

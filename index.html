@@ -599,7 +599,7 @@
 <p>He incluido la configuración de env <code>ND_DEVACTIVITYPANEL=FALSE</code> para que el cliente web funcione de forma fluida, sin esta configuración presentaba grandes problemas el funcionamiento de la interfaz.</p>
 <p>Podemos elegir entre docker-compose o la linea de comandos:</p>
 <h3 id="11-docker-compose">1.1 Docker-Compose</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">version: &#34;3&#34;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">version: &#34;3&#34;
 services:
 navidrome:
 image: deluan/navidrome:latest
@@ -615,7 +615,7 @@ volumes:
 - &#34;/directorio/de/musica:/music:ro&#34;
 
 </code></pre></div><h3 id="12-command-line-tool">1.2 Command line tool</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker run -d <span style="color:#ae81ff">\
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker run -d <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>--name navidrome <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>--restart<span style="color:#f92672">=</span>always <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>--user <span style="color:#66d9ef">$(</span>id -u<span style="color:#66d9ef">)</span>:<span style="color:#66d9ef">$(</span>id -g<span style="color:#66d9ef">)</span> <span style="color:#ae81ff">\
@@ -658,7 +658,7 @@ volumes:
 </p>
 <h2 id="4-nginx-reverse-proxy">4. Nginx reverse proxy</h2>
 <p>Si queremos usar un nombre de dominio para acceder a nuestro nuevo servidor de música, así como asegurarlo por https, tan solo tenemos que crear un reverse proxy con Nginx.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">server {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">server {
 
 listen 80;
 server_name dominio.local;
@@ -740,6 +740,9 @@ Espero que sea útil, ¡gracias por leerme!</p>
                 
                 
                 <li><a class="article-category-link" href="https://rlodeiro.info/tags/spotify">Spotify</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/substreamer">Substreamer</a></li>
                 
             
         
