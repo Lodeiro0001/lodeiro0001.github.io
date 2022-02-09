@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Navidrome on Roberto Lodeiro</title>
+    <link>https://rlodeiro.info/tags/navidrome/</link>
+    <description>Recent content in Navidrome on Roberto Lodeiro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <copyright>© {year} Roberto Lodeiro</copyright>
+    <lastBuildDate>Wed, 09 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/navidrome/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Navidrome</title>
+      <link>https://rlodeiro.info/blog/navidrome/</link>
+      <pubDate>Wed, 09 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/blog/navidrome/</guid>
+      <description>Los servicios de música en streaming están de moda, pero si eres de los que tiene su propia biblioteca de música, esto te va a interesar.
+Navidrome es un servidor de música Self-Hosted y Opensource, con cliente web y diversos clientes para dispositivos móviles. Vamos a ver como instalarlo.
+1. Instalación Para la instalación vamos a usar Docker, ya que facilita el despliegue del servicio y configuración del mismo. Si todavía no tiene Docker en tu máquina, puedes leer este post donde explico como instalarlo.</description>
+    </item>
+    
+  </channel>
+</rss>

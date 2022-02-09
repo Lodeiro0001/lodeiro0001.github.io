@@ -1,0 +1,1447 @@
+<!DOCTYPE HTML>
+<html lang="es">
+    <head>
+        
+        <meta property="og:image" content="http://rlodeiro.info/img/posts/2022/02/navidrome/navidrome.jpg"/>
+        <meta property="og:image:secure_url" content="https://rlodeiro.info/img/posts/2022/02/navidrome/navidrome.jpg"/>
+        
+        <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Navidrome",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://rlodeiro.info"
+  },
+  "inLanguage" : "es-ES",
+  "articleSection" : "blog",
+  
+  "genre": "post",
+  "keywords": "Navidrome, Música, Self-Hosted, Subsonic, Airsonic, Docker, Spotify",
+  "wordcount":  485 ,
+  "url": "https://rlodeiro.info/blog/navidrome/",
+  "datePublished": "2022-02-09",
+  "dateModified": "2022-02-09",
+  "license": "© 2022 Roberto Lodeiro",
+  "copyrightHolder" : "Roberto Lodeiro",
+  "copyrightYear" : "2022",
+  
+  "author" : "Roberto Lodeiro",
+  "description": "Tu propio Spotify Self-Hosted"
+}
+</script>
+        
+            
+                <title>Navidrome | Roberto Lodeiro</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" href="https://rlodeiro.info/favicon.ico?v=kPP08pKEXB">
+
+
+        
+            <meta name="author" content="Roberto Lodeiro">
+        
+        
+            <meta name="description" content="Tu propio Spotify Self-Hosted">
+        
+
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://rlodeiro.info/img/posts/2022/02/navidrome/navidrome.jpg"/>
+
+<meta name="twitter:title" content="Navidrome"/>
+<meta name="twitter:description" content="Tu propio Spotify Self-Hosted"/>
+<meta name="twitter:site" content="@lodeiro0001"/>
+
+        
+        <meta itemprop="name" content="Navidrome">
+<meta itemprop="description" content="Tu propio Spotify Self-Hosted"><meta itemprop="datePublished" content="2022-02-09T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2022-02-09T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="485"><meta itemprop="image" content="https://rlodeiro.info/img/posts/2022/02/navidrome/navidrome.jpg">
+<meta itemprop="keywords" content="Navidrome,Música,Self-Hosted,Subsonic,Airsonic,Docker,Spotify," />
+        
+
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+            <link rel="stylesheet" href="https://rlodeiro.info/css/main.css">
+            <link rel="stylesheet" href="https://rlodeiro.info/css/add-on.css">
+            <link rel="stylesheet" href="https://rlodeiro.info/css/academicons.min.css">
+        
+
+        
+            
+                
+            
+                
+                    <link rel="stylesheet" href="https://rlodeiro.info/css/github.min.css">
+                
+            
+        
+
+
+
+      
+    </head>
+    <body>
+
+      
+      <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+      <h1><a href="https://rlodeiro.info/">Roberto Lodeiro</a></h1>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="https://rlodeiro.info/">
+                            <i class="fa fa-home">&nbsp;</i>Inicio
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/about/">
+                            <i class="fa fa-id-card-o">&nbsp;</i>Sobre mi
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/blog/">
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/categories/">
+                            <i class="fa fa-sitemap">&nbsp;</i>Categorias
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/contact/">
+                            <i class="fa fa-envelope-o">&nbsp;</i>Contacto
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Buscar</a>
+                <form id="search" method="get" action="//duckduckgo.com" target="_blank">
+                    <input type="text" name="q" placeholder="Buscar" />
+                    <input type="hidden" name="sites" value="https://rlodeiro.info">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+    <section>
+        <form class="search" method="get" action="//duckduckgo.com" target="_blank">
+            <input type="text" name="q" placeholder="Buscar" />
+            <input type="hidden" name="sites" value="https://rlodeiro.info">
+        </form>
+    </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="https://rlodeiro.info/">
+                            <h3>
+                                <i class="fa fa-home">&nbsp;</i>Inicio
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/about/">
+                            <h3>
+                                <i class="fa fa-id-card-o">&nbsp;</i>Sobre mi
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/blog/">
+                            <h3>
+                                <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/categories/">
+                            <h3>
+                                <i class="fa fa-sitemap">&nbsp;</i>Categorias
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/contact/">
+                            <h3>
+                                <i class="fa fa-envelope-o">&nbsp;</i>Contacto
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section class="recent-posts">
+            <div class="mini-posts">
+                <header>
+                    <h3>Publicaciones Recientes</h3>
+                </header>
+                
+
+                
+                    
+                
+
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/navidrome/">Navidrome</a></h3>
+                                
+                                <time class="published" datetime='2022-02-09'>
+                                    9 de febrero de 2022
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/navidrome/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2022/02/navidrome/navidrome.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/fwupd-linux-firmware/">fwupd</a></h3>
+                                
+                                <time class="published" datetime='2021-12-10'>
+                                    10 de diciembre de 2021
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/fwupd-linux-firmware/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/12/fwupd-linux-firmware/fwupd-linux-firmware.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/diun-avisos-actualizaciones-imagenes-docker/">Diun: Avisos de actualizaciones de imágenes Docker</a></h3>
+                                
+                                <time class="published" datetime='2021-09-10'>
+                                    10 de septiembre de 2021
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/diun-avisos-actualizaciones-imagenes-docker/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/09/diun-avisos-actualizaciones-imagenes-docker/diun-avisos-actualizaciones-imagenes-docker.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/actualizar-debian-10-a-debian-11-bullseye/">Actualizar Debian 10 a Debian 11 Bullseye</a></h3>
+                                
+                                <time class="published" datetime='2021-08-14'>
+                                    14 de agosto de 2021
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/actualizar-debian-10-a-debian-11-bullseye/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/08/actualizar-debian-10-a-debian-11-bullseye/actualizar-debian-10-a-debian-11-bullseye.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/ps5-ps4-remote-play-linux/">PS5 &amp; PS4: Remote Play en Linux</a></h3>
+                                
+                                <time class="published" datetime='2021-08-06'>
+                                    6 de agosto de 2021
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/ps5-ps4-remote-play-linux/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/08/PS5-PS4-Remote-Play-Linux//PS5-PS4-Remote-Play-Linux.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/dnie-linux/">DNI electrónico en Linux</a></h3>
+                                
+                                <time class="published" datetime='2021-07-25'>
+                                    25 de julio de 2021
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/dnie-linux/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/07/dnie-linux//dnie-linux.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+
+                
+                    <a href=
+                        
+                            /blog/
+                        
+                        class="button">Ver más entradas</a>
+                
+            </div>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Comparte esta publicación <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2frlodeiro.info%2fblog%2fnavidrome%2f&amp;text=Navidrome&amp;via=lodeiro0001" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frlodeiro.info%2fblog%2fnavidrome%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=https%3a%2f%2frlodeiro.info%2fblog%2fnavidrome%2f&amp;title=Navidrome" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2frlodeiro.info%2fblog%2fnavidrome%2f&amp;title=Navidrome" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2frlodeiro.info%2fblog%2fnavidrome%2f&amp;description=Navidrome" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Chequea este post de Roberto%20Lodeiro&amp;body=https%3a%2f%2frlodeiro.info%2fblog%2fnavidrome%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+  <header>
+    <div class="title">
+        
+            <h1><a href="https://rlodeiro.info/blog/navidrome/">Navidrome</a></h1>
+            
+        
+        
+            <p>Tu propio Spotify Self-Hosted</p>
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published" datetime='2022-02-09'>
+            9 de febrero de 2022
+          </time>
+        <span class="author">Roberto Lodeiro</span>
+        
+        
+    </div>
+</header>
+
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2frlodeiro.info%2fblog%2fnavidrome%2f&amp;text=Navidrome&amp;via=lodeiro0001" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frlodeiro.info%2fblog%2fnavidrome%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=https%3a%2f%2frlodeiro.info%2fblog%2fnavidrome%2f&amp;title=Navidrome" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2frlodeiro.info%2fblog%2fnavidrome%2f&amp;title=Navidrome" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2frlodeiro.info%2fblog%2fnavidrome%2f&amp;description=Navidrome" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Chequea este post de Roberto%20Lodeiro&amp;body=https%3a%2f%2frlodeiro.info%2fblog%2fnavidrome%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+      </ul>
+    </section>
+  
+
+  
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/navidrome/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2022/02/navidrome/navidrome.jpg" alt="">
+        </a>
+    
+
+
+  <div id="content">
+    <p>Los servicios de música en streaming están de moda, pero si eres de los que tiene su propia biblioteca de música, esto te va a interesar.</p>
+<p>Navidrome es un servidor de música Self-Hosted y Opensource, con cliente web y diversos clientes para dispositivos móviles. Vamos a ver como instalarlo.</p>
+
+
+<hr style="border-color: #d6d6d6;" />
+
+
+<h2 id="1-instalación">1. Instalación</h2>
+<p>Para la instalación vamos a usar <code>Docker</code>, ya que facilita el despliegue del servicio y configuración del mismo. Si todavía no tiene Docker en tu máquina, 
+
+    
+        
+    
+
+    <a href="https://rlodeiro.info/blog/pihole_docker/" target='_blank'>puedes leer este post</a>
+
+ donde explico como instalarlo.</p>
+<p>He incluido la configuración de env <code>ND_DEVACTIVITYPANEL=FALSE</code> para que el cliente web funcione de forma fluida, sin esta configuración presentaba grandes problemas el funcionamiento de la interfaz.</p>
+<p>Podemos elegir entre docker-compose o la linea de comandos:</p>
+<h3 id="11-docker-compose">1.1 Docker-Compose</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">version: &#34;3&#34;
+services:
+navidrome:
+image: deluan/navidrome:latest
+user: 1000:1000
+ports:
+- &#34;4533:4533&#34;
+restart: always
+environment:
+ND_LOGLEVEL: info 
+ND_DEVACTIVITYPANEL: FALSE
+volumes:
+- &#34;/directorio/de/datos:/data&#34;
+- &#34;/directorio/de/musica:/music:ro&#34;
+
+</code></pre></div><h3 id="12-command-line-tool">1.2 Command line tool</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker run -d <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--name navidrome <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--restart<span style="color:#f92672">=</span>always <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--user <span style="color:#66d9ef">$(</span>id -u<span style="color:#66d9ef">)</span>:<span style="color:#66d9ef">$(</span>id -g<span style="color:#66d9ef">)</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-v /directorio/de/musica:/music <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-v /directorio/de/datos:/data <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-p 4533:4533 <span style="color:#ae81ff">\ </span>
+-e ND_LOGLEVEL<span style="color:#f92672">=</span>info <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-e ND_DEVACTIVITYPANEL<span style="color:#f92672">=</span>FALSE <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>deluan/navidrome:latest
+</code></pre></div><p>Tenemos que sustituir la ruta de los volúmenes, por un lado <code>data</code> que será donde Navidrome guarde la configuración y otros archivos necesarios, y por otro lado <code>music</code>, que será el directorio donde tenemos que tener toda nuestra biblioteca de música para que Navidrome la indexe y la sirva.</p>
+<p>Es importante que el usuario que indiquemos tenga permisos en los directorios especificados para los volúmenes.</p>
+<h2 id="2-interfaz-web">2. Interfaz web</h2>
+<p>Una vez arranque el contenedor, podemos acceder a la interfaz de Navidrome en <code>http://localhost:4533</code>.</p>
+<p>Primero nos pedirá crear un usuario admin, desde el cual podremos gestionar todo Navidrome además de comenzar a escuchar nuestra música. Desde este usuario podremos crear todos los usuarios que queramos que usen nuestro servidor.</p>
+<p>Una vez configurado, la apariencia será así:
+
+
+<center>
+
+
+<img src="https://rlodeiro.info/img/posts/2022/02/navidrome/navidrome_web.jpg" alt="">
+
+
+</center>
+
+</p>
+<h2 id="3-cliente-androidios">3. Cliente Android/iOS</h2>
+<p>Navidrome es compatible con cualquiera de los clientes desarrollados para Subsonic o Airsonic.</p>
+<p>Tras probar muchos, recomiendo <code>substreamer</code>, está disponible tanto para Android como para iOS, y entre muchas otras cosas permite gestionar la descarga de música para escucharla offline.
+
+
+<center>
+
+
+<img src="https://rlodeiro.info/img/posts/2022/02/navidrome/substreamer.jpg" alt="">
+
+
+</center>
+
+</p>
+<h2 id="4-nginx-reverse-proxy">4. Nginx reverse proxy</h2>
+<p>Si queremos usar un nombre de dominio para acceder a nuestro nuevo servidor de música, así como asegurarlo por https, tan solo tenemos que crear un reverse proxy con Nginx.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">server {
+
+listen 80;
+server_name dominio.local;
+# enforce https
+return 301 https://$server_name$request_uri;
+}
+server {
+listen 443 ssl http2;
+server_name dominio.local;
+ssl_certificate /directorio/certificado.pem;
+ssl_certificate_key /directorio/llave.key;
+add_header Strict-Transport-Security &#34;max-age=31536000&#34; always;
+
+location / {
+proxy_pass http://localhost:4533/;
+proxy_set_header Host $host;
+proxy_set_header X-Real-IP $remote_addr;
+proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+proxy_set_header X-Forwarded-Proto $scheme;
+proxy_set_header X-Forwarded-Protocol $scheme;
+proxy_set_header X-Forwarded-Host $http_host;
+proxy_buffering off;
+}
+}
+</code></pre></div><p>Tenemos que sustituir el nombre de dominio por el adecuado, así como la ruta y nombre de nuestro certificado ssl.</p>
+<p>Con esto, ya estamos listos para disfrutar de nuestra biblioteca de música en todos nuestros dispositivos, tanto online como offline!</p>
+<p>
+
+<hr style="border-color: #d6d6d6;" />
+
+
+Espero que sea útil, ¡gracias por leerme!</p>
+
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/categories/servicios">Servicios</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/categories/linux">Linux</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+            
+            
+                <i class="fa fa-tags"></i>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/navidrome">Navidrome</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/m%C3%BAsica">Música</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/self-hosted">Self-Hosted</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/subsonic">Subsonic</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/airsonic">Airsonic</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/docker">Docker</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/spotify">Spotify</a></li>
+                
+            
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="https://rlodeiro.info/blog/fwupd-linux-firmware/"
+                class="button big previous">fwupd</a></li>
+    
+
+    
+</ul>
+
+
+    </div>
+    
+<section id="sidebar">
+
+  
+  <section id="intro">
+    
+    
+      
+        <a href='https://rlodeiro.info/'><img src="https://rlodeiro.info/img/main/logo.jpg" class="intro-circle" width="" alt="" /></a>
+      
+    
+    
+      <header>
+        <h2>Roberto Lodeiro</h2>
+        <p>Reality is wrong. Dreams are for real.</p>
+      </header>
+    
+    
+      <ul class="icons">
+        
+          
+    <li><a href="" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//twitter.com/lodeiro0001" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:me@rlodeiro.info" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+  </section>
+
+  
+  <section class="recent-posts">
+    <div class="mini-posts">
+      <header>
+        <h3>Publicaciones Recientes</h3>
+      </header>
+      <div class="posts-container">
+        
+
+        
+          
+        
+
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/navidrome/">Navidrome</a>
+              </h3>
+              
+              <time class="published" datetime='2022-02-09'>
+                9 de febrero de 2022
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/navidrome/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2022/02/navidrome/navidrome.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/fwupd-linux-firmware/">fwupd</a>
+              </h3>
+              
+              <time class="published" datetime='2021-12-10'>
+                10 de diciembre de 2021
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/fwupd-linux-firmware/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/12/fwupd-linux-firmware/fwupd-linux-firmware.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/diun-avisos-actualizaciones-imagenes-docker/">Diun: Avisos de actualizaciones de imágenes Docker</a>
+              </h3>
+              
+              <time class="published" datetime='2021-09-10'>
+                10 de septiembre de 2021
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/diun-avisos-actualizaciones-imagenes-docker/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/09/diun-avisos-actualizaciones-imagenes-docker/diun-avisos-actualizaciones-imagenes-docker.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/actualizar-debian-10-a-debian-11-bullseye/">Actualizar Debian 10 a Debian 11 Bullseye</a>
+              </h3>
+              
+              <time class="published" datetime='2021-08-14'>
+                14 de agosto de 2021
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/actualizar-debian-10-a-debian-11-bullseye/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/08/actualizar-debian-10-a-debian-11-bullseye/actualizar-debian-10-a-debian-11-bullseye.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/ps5-ps4-remote-play-linux/">PS5 &amp; PS4: Remote Play en Linux</a>
+              </h3>
+              
+              <time class="published" datetime='2021-08-06'>
+                6 de agosto de 2021
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/ps5-ps4-remote-play-linux/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/08/PS5-PS4-Remote-Play-Linux//PS5-PS4-Remote-Play-Linux.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/dnie-linux/">DNI electrónico en Linux</a>
+              </h3>
+              
+              <time class="published" datetime='2021-07-25'>
+                25 de julio de 2021
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/dnie-linux/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/07/dnie-linux//dnie-linux.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+      </div>
+
+      
+        <a href=
+          
+            /blog/
+          
+        class="button">Ver más entradas</a>
+      
+    </div>
+  </section>
+
+  
+  
+  
+  
+  
+    <section id="categories">
+      <header>
+        <h3>
+          <a href="https://rlodeiro.info/categories/">Categorías</a>
+        </h3>
+      </header>
+        
+          
+        
+
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/herramientas/">herramientas</a>
+                <span style="float:right;">7</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/iot/">iot</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/linux/">linux</a>
+                <span style="float:right;">19</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/raspberry-pi/">raspberry-pi</a>
+                <span style="float:right;">6</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/servicios/">servicios</a>
+                <span style="float:right;">9</span>
+              
+            </header>
+          </article>
+        </p>
+        
+    </section>
+  
+  
+
+  
+  
+    <section id="mini-bio">
+      <h3>Sobre Mi</h3>
+      <p>¿De donde viene? ¿Cual es su color de pelo? ¿A que tribu urbana pertenece? Si estás muy aburrid@ y/o quieres saberlo ¡adelante!</p>
+      <a href="https://rlodeiro.info/about/" class="button">Leer Más</a>
+    </section>
+  
+
+  
+  <section id="footer">
+    
+      <ul class="icons">
+        
+          
+    <li><a href="" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//twitter.com/lodeiro0001" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:me@rlodeiro.info" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+    <p class="copyright">
+      
+      © 2022 Roberto Lodeiro
+      
+    </p>
+  </section>
+</section>
+
+    </div>
+    <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+    
+
+    
+      
+    
+
+    
+    
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+      <script src="https://rlodeiro.info/js/util.js"></script>
+      <script src="https://rlodeiro.info/js/main.js"></script>
+      <script src="https://rlodeiro.info/js/backToTop.js"></script>
+    
+
+    
+      
+        
+      
+        
+          <script src="https://rlodeiro.info/js/highlight.min.js"></script>
+        
+      
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+      
+
+
+  </body>
+</html>
+

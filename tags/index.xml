@@ -7,7 +7,70 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <copyright>© {year} Roberto Lodeiro</copyright>
-    <lastBuildDate>Fri, 10 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Airsonic</title>
+      <link>https://rlodeiro.info/tags/airsonic/</link>
+      <pubDate>Wed, 09 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/airsonic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://rlodeiro.info/tags/docker/</link>
+      <pubDate>Wed, 09 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Música</title>
+      <link>https://rlodeiro.info/tags/m%C3%BAsica/</link>
+      <pubDate>Wed, 09 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/m%C3%BAsica/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Navidrome</title>
+      <link>https://rlodeiro.info/tags/navidrome/</link>
+      <pubDate>Wed, 09 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/navidrome/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Self-Hosted</title>
+      <link>https://rlodeiro.info/tags/self-hosted/</link>
+      <pubDate>Wed, 09 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/self-hosted/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spotify</title>
+      <link>https://rlodeiro.info/tags/spotify/</link>
+      <pubDate>Wed, 09 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/spotify/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Subsonic</title>
+      <link>https://rlodeiro.info/tags/subsonic/</link>
+      <pubDate>Wed, 09 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/subsonic/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Dell</title>
       <link>https://rlodeiro.info/tags/dell/</link>
@@ -86,15 +149,6 @@
       <pubDate>Fri, 10 Sep 2021 00:00:00 +0000</pubDate>
       
       <guid>https://rlodeiro.info/tags/diun/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Docker</title>
-      <link>https://rlodeiro.info/tags/docker/</link>
-      <pubDate>Fri, 10 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://rlodeiro.info/tags/docker/</guid>
       <description></description>
     </item>
     
