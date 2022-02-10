@@ -601,18 +601,18 @@
 <h3 id="11-docker-compose">1.1 Docker-Compose</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">version: &#34;3&#34;
 services:
-navidrome:
-image: deluan/navidrome:latest
-user: 1000:1000
-ports:
-- &#34;4533:4533&#34;
-restart: always
-environment:
-ND_LOGLEVEL: info 
-ND_DEVACTIVITYPANEL: FALSE
-volumes:
-- &#34;/directorio/de/datos:/data&#34;
-- &#34;/directorio/de/musica:/music:ro&#34;
+    navidrome:
+        image: deluan/navidrome:latest
+        user: 1000:1000
+        ports:
+            - &#34;4533:4533&#34;
+        restart: always
+        environment:
+            ND_LOGLEVEL: info 
+            ND_DEVACTIVITYPANEL: FALSE
+        volumes:
+            - &#34;/directorio/de/datos:/data&#34;
+            - &#34;/directorio/de/musica:/music:ro&#34;
 
 </code></pre></div><h3 id="12-command-line-tool">1.2 Command line tool</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker run -d <span style="color:#ae81ff">\
@@ -659,29 +659,28 @@ volumes:
 <h2 id="4-nginx-reverse-proxy">4. Nginx reverse proxy</h2>
 <p>Si queremos usar un nombre de dominio para acceder a nuestro nuevo servidor de música, así como asegurarlo por https, tan solo tenemos que crear un reverse proxy con Nginx.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">server {
-
-listen 80;
-server_name dominio.local;
-# enforce https
-return 301 https://$server_name$request_uri;
+    listen 80;
+    server_name dominio.local;
+    # enforce https
+    return 301 https://$server_name$request_uri;
 }
 server {
-listen 443 ssl http2;
-server_name dominio.local;
-ssl_certificate /directorio/certificado.pem;
-ssl_certificate_key /directorio/llave.key;
-add_header Strict-Transport-Security &#34;max-age=31536000&#34; always;
+    listen 443 ssl http2;
+    server_name dominio.local;
+    ssl_certificate /directorio/certificado.pem;
+    ssl_certificate_key /directorio/llave.key;
+    add_header Strict-Transport-Security &#34;max-age=31536000&#34; always;
 
-location / {
-proxy_pass http://localhost:4533/;
-proxy_set_header Host $host;
-proxy_set_header X-Real-IP $remote_addr;
-proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-proxy_set_header X-Forwarded-Proto $scheme;
-proxy_set_header X-Forwarded-Protocol $scheme;
-proxy_set_header X-Forwarded-Host $http_host;
-proxy_buffering off;
-}
+    location / {
+        proxy_pass http://localhost:4533/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Forwarded-Protocol $scheme;
+        proxy_set_header X-Forwarded-Host $http_host;
+        proxy_buffering off;
+    }
 }
 </code></pre></div><p>Tenemos que sustituir el nombre de dominio por el adecuado, así como la ruta y nombre de nuestro certificado ssl.</p>
 <p>Con esto, ya estamos listos para disfrutar de nuestra biblioteca de música en todos nuestros dispositivos, tanto online como offline!</p>
