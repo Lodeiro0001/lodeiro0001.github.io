@@ -1,0 +1,1394 @@
+<!DOCTYPE HTML>
+<html lang="es">
+    <head>
+        
+        <meta property="og:image" content="http://rlodeiro.info/img/posts/2022/09/ventoy/ventoy.jpg"/>
+        <meta property="og:image:secure_url" content="https://rlodeiro.info/img/posts/2022/09/ventoy/ventoy.jpg"/>
+        
+        <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Ventoy",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://rlodeiro.info"
+  },
+  "inLanguage" : "es-ES",
+  "articleSection" : "blog",
+  
+  "genre": "post",
+  "keywords": "Ventoy, ISO, Bootable, USB",
+  "wordcount":  439 ,
+  "url": "https://rlodeiro.info/blog/ventoy/",
+  "datePublished": "2022-09-03",
+  "dateModified": "2022-09-03",
+  "license": "© 2022 Roberto Lodeiro",
+  "copyrightHolder" : "Roberto Lodeiro",
+  "copyrightYear" : "2022",
+  
+  "author" : "Roberto Lodeiro",
+  "description": "Crea un USB Bootable con múltiples imágenes"
+}
+</script>
+        
+            
+                <title>Ventoy | Roberto Lodeiro</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" href="https://rlodeiro.info/favicon.ico?v=kPP08pKEXB">
+
+
+        
+            <meta name="author" content="Roberto Lodeiro">
+        
+        
+            <meta name="description" content="Crea un USB Bootable con múltiples imágenes">
+        
+
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://rlodeiro.info/img/posts/2022/09/ventoy/ventoy.jpg"/>
+
+<meta name="twitter:title" content="Ventoy"/>
+<meta name="twitter:description" content="Crea un USB Bootable con múltiples imágenes"/>
+<meta name="twitter:site" content="@lodeiro0001"/>
+
+        
+        <meta itemprop="name" content="Ventoy">
+<meta itemprop="description" content="Crea un USB Bootable con múltiples imágenes"><meta itemprop="datePublished" content="2022-09-03T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-09-03T00:00:00+00:00" />
+<meta itemprop="wordCount" content="439"><meta itemprop="image" content="https://rlodeiro.info/img/posts/2022/09/ventoy/ventoy.jpg">
+<meta itemprop="keywords" content="Ventoy,ISO,Bootable,USB," />
+        
+
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+            <link rel="stylesheet" href="https://rlodeiro.info/css/main.css">
+            <link rel="stylesheet" href="https://rlodeiro.info/css/add-on.css">
+            <link rel="stylesheet" href="https://rlodeiro.info/css/academicons.min.css">
+        
+
+        
+            
+                
+            
+                
+                    <link rel="stylesheet" href="https://rlodeiro.info/css/github.min.css">
+                
+            
+        
+
+
+
+      
+    </head>
+    <body>
+
+      
+      <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+      <h1><a href="https://rlodeiro.info/">Roberto Lodeiro</a></h1>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="https://rlodeiro.info/">
+                            <i class="fa fa-home">&nbsp;</i>Inicio
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/about/">
+                            <i class="fa fa-id-card-o">&nbsp;</i>Sobre mi
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/blog/">
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/categories/">
+                            <i class="fa fa-sitemap">&nbsp;</i>Categorias
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/contact/">
+                            <i class="fa fa-envelope-o">&nbsp;</i>Contacto
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Buscar</a>
+                <form id="search" method="get" action="//duckduckgo.com" target="_blank">
+                    <input type="text" name="q" placeholder="Buscar" />
+                    <input type="hidden" name="sites" value="https://rlodeiro.info">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+    <section>
+        <form class="search" method="get" action="//duckduckgo.com" target="_blank">
+            <input type="text" name="q" placeholder="Buscar" />
+            <input type="hidden" name="sites" value="https://rlodeiro.info">
+        </form>
+    </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="https://rlodeiro.info/">
+                            <h3>
+                                <i class="fa fa-home">&nbsp;</i>Inicio
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/about/">
+                            <h3>
+                                <i class="fa fa-id-card-o">&nbsp;</i>Sobre mi
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/blog/">
+                            <h3>
+                                <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/categories/">
+                            <h3>
+                                <i class="fa fa-sitemap">&nbsp;</i>Categorias
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/contact/">
+                            <h3>
+                                <i class="fa fa-envelope-o">&nbsp;</i>Contacto
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section class="recent-posts">
+            <div class="mini-posts">
+                <header>
+                    <h3>Publicaciones Recientes</h3>
+                </header>
+                
+
+                
+                    
+                
+
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/ventoy/">Ventoy</a></h3>
+                                
+                                <time class="published" datetime='2022-09-03'>
+                                    3 de septiembre de 2022
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/ventoy/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2022/09/ventoy/ventoy.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/navidrome/">Navidrome</a></h3>
+                                
+                                <time class="published" datetime='2022-02-09'>
+                                    9 de febrero de 2022
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/navidrome/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2022/02/navidrome/navidrome.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/fwupd-linux-firmware/">fwupd</a></h3>
+                                
+                                <time class="published" datetime='2021-12-10'>
+                                    10 de diciembre de 2021
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/fwupd-linux-firmware/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/12/fwupd-linux-firmware/fwupd-linux-firmware.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/diun-avisos-actualizaciones-imagenes-docker/">Diun: Avisos de actualizaciones de imágenes Docker</a></h3>
+                                
+                                <time class="published" datetime='2021-09-10'>
+                                    10 de septiembre de 2021
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/diun-avisos-actualizaciones-imagenes-docker/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/09/diun-avisos-actualizaciones-imagenes-docker/diun-avisos-actualizaciones-imagenes-docker.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/actualizar-debian-10-a-debian-11-bullseye/">Actualizar Debian 10 a Debian 11 Bullseye</a></h3>
+                                
+                                <time class="published" datetime='2021-08-14'>
+                                    14 de agosto de 2021
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/actualizar-debian-10-a-debian-11-bullseye/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/08/actualizar-debian-10-a-debian-11-bullseye/actualizar-debian-10-a-debian-11-bullseye.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/ps5-ps4-remote-play-linux/">PS5 &amp; PS4: Remote Play en Linux</a></h3>
+                                
+                                <time class="published" datetime='2021-08-06'>
+                                    6 de agosto de 2021
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/ps5-ps4-remote-play-linux/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/08/PS5-PS4-Remote-Play-Linux//PS5-PS4-Remote-Play-Linux.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+
+                
+                    <a href=
+                        
+                            /blog/
+                        
+                        class="button">Ver más entradas</a>
+                
+            </div>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Comparte esta publicación <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2frlodeiro.info%2fblog%2fventoy%2f&amp;text=Ventoy&amp;via=lodeiro0001" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frlodeiro.info%2fblog%2fventoy%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=https%3a%2f%2frlodeiro.info%2fblog%2fventoy%2f&amp;title=Ventoy" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2frlodeiro.info%2fblog%2fventoy%2f&amp;title=Ventoy" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2frlodeiro.info%2fblog%2fventoy%2f&amp;description=Ventoy" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Chequea este post de Roberto%20Lodeiro&amp;body=https%3a%2f%2frlodeiro.info%2fblog%2fventoy%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+  <header>
+    <div class="title">
+        
+            <h1><a href="https://rlodeiro.info/blog/ventoy/">Ventoy</a></h1>
+            
+        
+        
+            <p>Crea un USB Bootable con múltiples imágenes</p>
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published" datetime='2022-09-03'>
+            3 de septiembre de 2022
+          </time>
+        <span class="author">Roberto Lodeiro</span>
+        
+        
+    </div>
+</header>
+
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2frlodeiro.info%2fblog%2fventoy%2f&amp;text=Ventoy&amp;via=lodeiro0001" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frlodeiro.info%2fblog%2fventoy%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=https%3a%2f%2frlodeiro.info%2fblog%2fventoy%2f&amp;title=Ventoy" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2frlodeiro.info%2fblog%2fventoy%2f&amp;title=Ventoy" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2frlodeiro.info%2fblog%2fventoy%2f&amp;description=Ventoy" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Chequea este post de Roberto%20Lodeiro&amp;body=https%3a%2f%2frlodeiro.info%2fblog%2fventoy%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+      </ul>
+    </section>
+  
+
+  
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/ventoy/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2022/09/ventoy/ventoy.jpg" alt="">
+        </a>
+    
+
+
+  <div id="content">
+    <p>Si estás cansado de tener que quemar cada imagen que bajas de un sistema operativo en un Pendrive, este es tu post.</p>
+<p>Ventoy es una utilidad que te permite tener múltiples imágenes de distintos sistemas operativos, listas y totalmente Bootables en una misma Memoria USB.</p>
+
+
+<hr style="border-color: #d6d6d6;" />
+
+
+<h2 id="1-descarga">1. Descarga</h2>
+<p>Ya que Ventoy es Open Source y gratuito, podemos 
+
+    
+        
+    
+
+    <a href="https://github.com/ventoy/Ventoy/releases/latest" target='_blank'>descargarlo desde su página de Github.</a>
+
+</p>
+<p>Como podemos ver, hay versión tanto para Linux como para Windows, además de una ISO. En nuestro caso nos centraremos en la versión de Linux ya que vamos a crear nuestra Memoria USB Bootable desde Debian.</p>
+<h2 id="2-instalación">2. Instalación</h2>
+<ul>
+<li>Una vez descargado, nos situamos en la carpeta donde lo tenemos y descomprimimos el archivo:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tar -xf ventoy-1.0.79-linux.tar.gz
+</code></pre></div><ul>
+<li>Estando descomprimido, nos situamos en la carpeta de Ventoy:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd ventoy-1.0.79/
+</code></pre></div><ul>
+<li>Lo siguiente que tenemos que hacer, es saber cual es el nombre de nuestra Memoria USB, para lo que ejecutamos:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ lsblk
+</code></pre></div><p>Esto nos mostrará la lista de discos en nuestro sistema, en mi caso la Memoria USB que quiero usar con Ventoy es <code>sde</code>.</p>
+<ul>
+<li>Antes de instalar Ventoy, tenemos que tener en cuenta las siguientes opciones disponibles para la ejecución del script:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">Ventoy2Disk.sh COMANDO [ OPCION ] /dev/sdX
+CMD:
+-i install ventoy to sdX (fail if disk already installed with ventoy)
+-I force install ventoy to sdX (no matter installed or not)
+-u update ventoy in sdX
+-l list Ventoy information in sdX
+OPTION: (optional)
+-r SIZE_MB preserve some space at the bottom of the disk (only for install)
+-s enable secure boot support (default is disabled)
+-g use GPT partition style, default is MBR style (only for install)
+-L Label of the 1st exfat partition (default is ventoy)
+</code></pre></div><ul>
+<li>En nuestro caso, vamos a instalarlo con el comando <code>-i</code>, sin usar ninguna opción adicional, ya que es una Memoria USB que no tiene Ventoy instalado:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo sh Ventoy2Disk.sh -i /dev/sde
+</code></pre></div><p>Recuerda sustituir <code>sde</code> por el nombre que tenga tu Memoria USB en tu sistema.</p>
+<h2 id="3-agregar-imágenes">3. Agregar imágenes</h2>
+<p>Es tan sencillo como abrir la nueva partición llamada <code>Ventoy</code> de nuestra Memoria USB, y copiar las imágenes en ella. Esta partición está en <code>exfat</code>.</p>
+<p>Los tipos de imágenes soportados son los siguientes: <code>ISO/WIM/IMG/VHD(x)/EFI</code>.</p>
+<h2 id="4-soporte-exfat-en-debian">4. Soporte exfat en Debian</h2>
+<ul>
+<li>Para tener compatibilidad con <code>exfat</code> en Debian, instalamos lo siguiente:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt update 
+$ sudo apt install exfat-fuse exfat-utils
+</code></pre></div><p>Con esto, ya tenemos nuestro USB Bootable listo. Una vez arranquemos nuestro ordenador desde el, se nos mostrará una lista con las distintas imágenes que tengamos en el y podremos ejecutar la que deseemos.</p>
+<p>Es compatible con imágenes de Linux, Windows, entre otras.</p>
+<p>
+
+<hr style="border-color: #d6d6d6;" />
+
+
+Espero que sea útil, ¡gracias por leerme!</p>
+
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/categories/herramientas">Herramientas</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/categories/linux">Linux</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+            
+            
+                <i class="fa fa-tags"></i>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/ventoy">Ventoy</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/iso">ISO</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/bootable">Bootable</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/usb">USB</a></li>
+                
+            
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="https://rlodeiro.info/blog/navidrome/"
+                class="button big previous">Navidrome</a></li>
+    
+
+    
+</ul>
+
+
+    </div>
+    
+<section id="sidebar">
+
+  
+  <section id="intro">
+    
+    
+      
+        <a href='https://rlodeiro.info/'><img src="https://rlodeiro.info/img/main/logo.jpg" class="intro-circle" width="" alt="" /></a>
+      
+    
+    
+      <header>
+        <h2>Roberto Lodeiro</h2>
+        <p>Reality is wrong. Dreams are for real.</p>
+      </header>
+    
+    
+      <ul class="icons">
+        
+          
+    <li><a href="" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//twitter.com/lodeiro0001" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:me@rlodeiro.info" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+  </section>
+
+  
+  <section class="recent-posts">
+    <div class="mini-posts">
+      <header>
+        <h3>Publicaciones Recientes</h3>
+      </header>
+      <div class="posts-container">
+        
+
+        
+          
+        
+
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/ventoy/">Ventoy</a>
+              </h3>
+              
+              <time class="published" datetime='2022-09-03'>
+                3 de septiembre de 2022
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/ventoy/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2022/09/ventoy/ventoy.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/navidrome/">Navidrome</a>
+              </h3>
+              
+              <time class="published" datetime='2022-02-09'>
+                9 de febrero de 2022
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/navidrome/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2022/02/navidrome/navidrome.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/fwupd-linux-firmware/">fwupd</a>
+              </h3>
+              
+              <time class="published" datetime='2021-12-10'>
+                10 de diciembre de 2021
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/fwupd-linux-firmware/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/12/fwupd-linux-firmware/fwupd-linux-firmware.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/diun-avisos-actualizaciones-imagenes-docker/">Diun: Avisos de actualizaciones de imágenes Docker</a>
+              </h3>
+              
+              <time class="published" datetime='2021-09-10'>
+                10 de septiembre de 2021
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/diun-avisos-actualizaciones-imagenes-docker/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/09/diun-avisos-actualizaciones-imagenes-docker/diun-avisos-actualizaciones-imagenes-docker.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/actualizar-debian-10-a-debian-11-bullseye/">Actualizar Debian 10 a Debian 11 Bullseye</a>
+              </h3>
+              
+              <time class="published" datetime='2021-08-14'>
+                14 de agosto de 2021
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/actualizar-debian-10-a-debian-11-bullseye/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/08/actualizar-debian-10-a-debian-11-bullseye/actualizar-debian-10-a-debian-11-bullseye.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/ps5-ps4-remote-play-linux/">PS5 &amp; PS4: Remote Play en Linux</a>
+              </h3>
+              
+              <time class="published" datetime='2021-08-06'>
+                6 de agosto de 2021
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/ps5-ps4-remote-play-linux/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2021/08/PS5-PS4-Remote-Play-Linux//PS5-PS4-Remote-Play-Linux.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+      </div>
+
+      
+        <a href=
+          
+            /blog/
+          
+        class="button">Ver más entradas</a>
+      
+    </div>
+  </section>
+
+  
+  
+  
+  
+  
+    <section id="categories">
+      <header>
+        <h3>
+          <a href="https://rlodeiro.info/categories/">Categorías</a>
+        </h3>
+      </header>
+        
+          
+        
+
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/herramientas/">herramientas</a>
+                <span style="float:right;">8</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/iot/">iot</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/linux/">linux</a>
+                <span style="float:right;">20</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/raspberry-pi/">raspberry-pi</a>
+                <span style="float:right;">6</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/servicios/">servicios</a>
+                <span style="float:right;">9</span>
+              
+            </header>
+          </article>
+        </p>
+        
+    </section>
+  
+  
+
+  
+  
+    <section id="mini-bio">
+      <h3>Sobre Mi</h3>
+      <p>¿De donde viene? ¿Cual es su color de pelo? ¿A que tribu urbana pertenece? Si estás muy aburrid@ y/o quieres saberlo ¡adelante!</p>
+      <a href="https://rlodeiro.info/about/" class="button">Leer Más</a>
+    </section>
+  
+
+  
+  <section id="footer">
+    
+      <ul class="icons">
+        
+          
+    <li><a href="" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//twitter.com/lodeiro0001" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:me@rlodeiro.info" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+    <p class="copyright">
+      
+      © 2022 Roberto Lodeiro
+      
+    </p>
+  </section>
+</section>
+
+    </div>
+    <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+    
+
+    
+      
+    
+
+    
+    
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+      <script src="https://rlodeiro.info/js/util.js"></script>
+      <script src="https://rlodeiro.info/js/main.js"></script>
+      <script src="https://rlodeiro.info/js/backToTop.js"></script>
+    
+
+    
+      
+        
+      
+        
+          <script src="https://rlodeiro.info/js/highlight.min.js"></script>
+        
+      
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+      
+
+
+  </body>
+</html>
+

@@ -7,7 +7,43 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <copyright>© {year} Roberto Lodeiro</copyright>
-    <lastBuildDate>Wed, 09 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bootable</title>
+      <link>https://rlodeiro.info/tags/bootable/</link>
+      <pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/bootable/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ISO</title>
+      <link>https://rlodeiro.info/tags/iso/</link>
+      <pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/iso/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>USB</title>
+      <link>https://rlodeiro.info/tags/usb/</link>
+      <pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/usb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ventoy</title>
+      <link>https://rlodeiro.info/tags/ventoy/</link>
+      <pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/ventoy/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Airsonic</title>
       <link>https://rlodeiro.info/tags/airsonic/</link>
@@ -716,15 +752,6 @@
       <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://rlodeiro.info/tags/boot/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>USB</title>
-      <link>https://rlodeiro.info/tags/usb/</link>
-      <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://rlodeiro.info/tags/usb/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bootable on Roberto Lodeiro</title>
+    <link>https://rlodeiro.info/tags/bootable/</link>
+    <description>Recent content in Bootable on Roberto Lodeiro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <copyright>© {year} Roberto Lodeiro</copyright>
+    <lastBuildDate>Sat, 03 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/bootable/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ventoy</title>
+      <link>https://rlodeiro.info/blog/ventoy/</link>
+      <pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/blog/ventoy/</guid>
+      <description>Si estás cansado de tener que quemar cada imagen que bajas de un sistema operativo en un Pendrive, este es tu post.
+Ventoy es una utilidad que te permite tener múltiples imágenes de distintos sistemas operativos, listas y totalmente Bootables en una misma Memoria USB.
+1. Descarga Ya que Ventoy es Open Source y gratuito, podemos descargarlo desde su página de Github. Como podemos ver, hay versión tanto para Linux como para Windows, además de una ISO.</description>
+    </item>
+    
+  </channel>
+</rss>
