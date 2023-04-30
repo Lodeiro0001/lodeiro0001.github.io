@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>SSH on Roberto Lodeiro</title>
+    <title>ssh on Roberto Lodeiro</title>
     <link>https://rlodeiro.info/tags/ssh/</link>
-    <description>Recent content in SSH on Roberto Lodeiro</description>
+    <description>Recent content in ssh on Roberto Lodeiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <copyright>© {year} Roberto Lodeiro</copyright>
-    <lastBuildDate>Sun, 27 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Duplicati</title>
+      <link>https://rlodeiro.info/blog/duplicati/</link>
+      <pubDate>Sun, 30 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/blog/duplicati/</guid>
+      <description>¿Necesitas una herramienta para gestionar tus copias de seguridad? entonces continua leyendo.
+Duplicati es opensource y totalmente gratuito. Te permite guardar tus copias de seguridad en otro equipo mediante SFTP (SSH), Webdav, FTP o S3 entre muchos otros.
+1. Descarga Lo primero es descargar la última versión para nuestro sistema operativo, en nuestro caso será Debian. Podemos descargarlo desde su página oficial. Hay versiones para Linux, Windows y macOS. Se encuentra en fase beta, pero por lo que lo he probado es totalmente estable.</description>
+    </item>
+    
     <item>
       <title>GitHub: 2FA y claves SSH</title>
       <link>https://rlodeiro.info/blog/github-2fa-ssh/</link>
