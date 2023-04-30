@@ -688,18 +688,18 @@
 <ul>
 <li>Para comprobar el valor actual de Swappines:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cat /proc/sys/vm/swappiness
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat /proc/sys/vm/swappiness
+</span></span></code></pre></div><ul>
 <li>Para modificarlo, editamos la configuración:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo nano /etc/sysctl.conf
-</code></pre></div><p>Buscamos <code>vm.swappiness</code>, si no existe lo agregamos al final del fichero, quedando así:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">vm.swappiness=10
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo nano /etc/sysctl.conf
+</span></span></code></pre></div><p>Buscamos <code>vm.swappiness</code>, si no existe lo agregamos al final del fichero, quedando así:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>vm.swappiness=10
+</span></span></code></pre></div><ul>
 <li>Tras reiniciar el sistema, comprobamos que el cambio se ha aplicado:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cat /proc/sys/vm/swappiness
-</code></pre></div><p>Por lo general para <code>servidores</code> se suele recomendar <code>10</code>. Para equipos de escritorio con 4gb de memoria Ram o más también es recomendable reducir el valor por defecto, ya que en caso contrario haremos demasiado uso de la memoria virtual, la cual es más lenta que la memoria Ram.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat /proc/sys/vm/swappiness
+</span></span></code></pre></div><p>Por lo general para <code>servidores</code> se suele recomendar <code>10</code>. Para equipos de escritorio con 4gb de memoria Ram o más también es recomendable reducir el valor por defecto, ya que en caso contrario haremos demasiado uso de la memoria virtual, la cual es más lenta que la memoria Ram.</p>
 <p>Dependiendo del uso de tu Raspberry Pi o equipo personal y tu hardware, modifica este valor para conseguir una mayor estabilidad del sistema.</p>
 <h2 id="swap">Swap</h2>
 <p>Se trata de una parte de nuestro disco duro, que el sistema utilizará como espacio de intercambio o memoria virtual.</p>
@@ -707,27 +707,27 @@
 <ul>
 <li>Para ver la memoria actual y el uso de la misma, ejecutamos:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ free -h
-</code></pre></div><p>Se mostrará algo como lo siguiente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">total used free shared buff/cache available
-Mem: 975Mi 457Mi 317Mi 14Mi 200Mi 447Mi
-Swap: 100Mi 90Mi 10Mi
-</code></pre></div><p>Como vemos en el ejemplo anterior, se está usando el 90% del espacio destinado a Swap, quedando solo el 10% libre. Para evitar tener problemas en el sistema si Ram y Swap se llenan, vamos a incrementar el tamaño de la última.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ free -h
+</span></span></code></pre></div><p>Se mostrará algo como lo siguiente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>total used free shared buff/cache available
+</span></span><span style="display:flex;"><span>Mem: 975Mi 457Mi 317Mi 14Mi 200Mi 447Mi
+</span></span><span style="display:flex;"><span>Swap: 100Mi 90Mi 10Mi
+</span></span></code></pre></div><p>Como vemos en el ejemplo anterior, se está usando el 90% del espacio destinado a Swap, quedando solo el 10% libre. Para evitar tener problemas en el sistema si Ram y Swap se llenan, vamos a incrementar el tamaño de la última.</p>
 <ul>
 <li>Editamos el fichero de configuración:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/dphys-swapfile
-</code></pre></div><p>Buscamos <code>CONF_SWAPSIZE</code> y lo modificamos. Yo lo estableceré a 1024MiB quedando así:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">CONF_SWAPSIZE=1024
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo nano /etc/dphys-swapfile
+</span></span></code></pre></div><p>Buscamos <code>CONF_SWAPSIZE</code> y lo modificamos. Yo lo estableceré a 1024MiB quedando así:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>CONF_SWAPSIZE=1024
+</span></span></code></pre></div><ul>
 <li>Reiniciamos el servicio:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo service dphys-swapfile restart
-</code></pre></div><p>Si volvemos a ejecutar el comando <code>$ free -h</code> veremos que los cambios se han aplicado, mostrando algo así:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">total used free shared buff/cache available
-Mem: 975Mi 660Mi 46Mi 53Mi 268Mi 205Mi
-Swap: 1.0Gi 3.0Mi 1.0Gi
-</code></pre></div><p>En mi caso el disco del sistema de la Raspberry Pi es 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo service dphys-swapfile restart
+</span></span></code></pre></div><p>Si volvemos a ejecutar el comando <code>$ free -h</code> veremos que los cambios se han aplicado, mostrando algo así:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>total used free shared buff/cache available
+</span></span><span style="display:flex;"><span>Mem: 975Mi 660Mi 46Mi 53Mi 268Mi 205Mi
+</span></span><span style="display:flex;"><span>Swap: 1.0Gi 3.0Mi 1.0Gi
+</span></span></code></pre></div><p>En mi caso el disco del sistema de la Raspberry Pi es 
 
     
         

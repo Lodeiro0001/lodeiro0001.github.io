@@ -715,24 +715,24 @@
 <p>Los topics, simplemente son rutas donde publicamos y/o recibimos mensajes. Estas también son definidas a nuestro antojo, pero es buena idea seguir un patrón ordenado. En el ejemplo solo hay luces, pero suponiendo que en ambas habitaciones tengamos además un enchufe, su topic podría ser algo como enchufes/dormitorio/cmd, en el caso del dormitorio.</p>
 <p>El motivo por el cual he creado un topic terminado en /cmd y otro en /stat para cada dispositivo, es simplemente para poder tando enviar ordenes como recibir su estado. Esto puede ser útil, entre otras razones, si el Arduino en cuestión tiene un botón físico y apagamos en el la luz. De este forma la Raspberry Pi conozcerá su nuevo estado.</p>
 <p>Podemos resumirlo en algo como esto:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md"><span style="color:#75715e">#### Broker MQTT ####
-</span><span style="color:#75715e"></span>Servidor que gestiona las comunicaciones
-
-<span style="color:#75715e">#### Clientes ####
-</span><span style="color:#75715e"></span>Dispositivos que se conectan al broker para enviar y/o recibir mensajes
-En nuestro ejemplo:
-Raspberry Pi - Controla todas las luces
-Arduino salon - Enciende/apaga las luces del salón
-Arduino dormitorio - Enciende/apaga las luces del dormitorio
-
-<span style="color:#75715e">#### Topics ####
-</span><span style="color:#75715e"></span>&#34;Lugares&#34; o &#34;salas&#34; donde los dispositivos pueden enviar y/o recibir mensajes
-En nuestro ejemplo:
-luces/dormitorio/cmd/ - Para enviarle ordenes al Cliente3
-luces/dormitorio/stat/ - Publica estado el Cliente3
-luces/salon/cmd/ - Para enviarle ordenes al Cliente2
-luces/salon/stat/ - Publica su estado el Cliente2
-</code></pre></div><p>Todo esto se puede volver lo complejo que queramos, pero queda para otra entrada.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span><span style="color:#75715e">#### Broker MQTT ####
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Servidor que gestiona las comunicaciones
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#### Clientes ####
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Dispositivos que se conectan al broker para enviar y/o recibir mensajes
+</span></span><span style="display:flex;"><span>En nuestro ejemplo:
+</span></span><span style="display:flex;"><span>Raspberry Pi - Controla todas las luces
+</span></span><span style="display:flex;"><span>Arduino salon - Enciende/apaga las luces del salón
+</span></span><span style="display:flex;"><span>Arduino dormitorio - Enciende/apaga las luces del dormitorio
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#### Topics ####
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>&#34;Lugares&#34; o &#34;salas&#34; donde los dispositivos pueden enviar y/o recibir mensajes
+</span></span><span style="display:flex;"><span>En nuestro ejemplo:
+</span></span><span style="display:flex;"><span>luces/dormitorio/cmd/ - Para enviarle ordenes al Cliente3
+</span></span><span style="display:flex;"><span>luces/dormitorio/stat/ - Publica estado el Cliente3
+</span></span><span style="display:flex;"><span>luces/salon/cmd/ - Para enviarle ordenes al Cliente2
+</span></span><span style="display:flex;"><span>luces/salon/stat/ - Publica su estado el Cliente2
+</span></span></code></pre></div><p>Todo esto se puede volver lo complejo que queramos, pero queda para otra entrada.</p>
 <p>
 
   <hr style="border-color: #d6d6d6;" />

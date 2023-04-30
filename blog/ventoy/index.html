@@ -695,35 +695,35 @@
 <ul>
 <li>Una vez descargado, nos situamos en la carpeta donde lo tenemos y descomprimimos el archivo:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tar -xf ventoy-1.0.79-linux.tar.gz
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ tar -xf ventoy-1.0.79-linux.tar.gz
+</span></span></code></pre></div><ul>
 <li>Estando descomprimido, nos situamos en la carpeta de Ventoy:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd ventoy-1.0.79/
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cd ventoy-1.0.79/
+</span></span></code></pre></div><ul>
 <li>Lo siguiente que tenemos que hacer, es saber cual es el nombre de nuestra Memoria USB, para lo que ejecutamos:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ lsblk
-</code></pre></div><p>Esto nos mostrará la lista de discos en nuestro sistema, en mi caso la Memoria USB que quiero usar con Ventoy es <code>sde</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ lsblk
+</span></span></code></pre></div><p>Esto nos mostrará la lista de discos en nuestro sistema, en mi caso la Memoria USB que quiero usar con Ventoy es <code>sde</code>.</p>
 <ul>
 <li>Antes de instalar Ventoy, tenemos que tener en cuenta las siguientes opciones disponibles para la ejecución del script:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">Ventoy2Disk.sh COMANDO [ OPCION ] /dev/sdX
-CMD:
--i install ventoy to sdX (fail if disk already installed with ventoy)
--I force install ventoy to sdX (no matter installed or not)
--u update ventoy in sdX
--l list Ventoy information in sdX
-OPTION: (optional)
--r SIZE_MB preserve some space at the bottom of the disk (only for install)
--s enable secure boot support (default is disabled)
--g use GPT partition style, default is MBR style (only for install)
--L Label of the 1st exfat partition (default is ventoy)
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>Ventoy2Disk.sh COMANDO [ OPCION ] /dev/sdX
+</span></span><span style="display:flex;"><span>CMD:
+</span></span><span style="display:flex;"><span>-i install ventoy to sdX (fail if disk already installed with ventoy)
+</span></span><span style="display:flex;"><span>-I force install ventoy to sdX (no matter installed or not)
+</span></span><span style="display:flex;"><span>-u update ventoy in sdX
+</span></span><span style="display:flex;"><span>-l list Ventoy information in sdX
+</span></span><span style="display:flex;"><span>OPTION: (optional)
+</span></span><span style="display:flex;"><span>-r SIZE_MB preserve some space at the bottom of the disk (only for install)
+</span></span><span style="display:flex;"><span>-s enable secure boot support (default is disabled)
+</span></span><span style="display:flex;"><span>-g use GPT partition style, default is MBR style (only for install)
+</span></span><span style="display:flex;"><span>-L Label of the 1st exfat partition (default is ventoy)
+</span></span></code></pre></div><ul>
 <li>En nuestro caso, vamos a instalarlo con el comando <code>-i</code>, sin usar ninguna opción adicional, ya que es una Memoria USB que no tiene Ventoy instalado:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo sh Ventoy2Disk.sh -i /dev/sde
-</code></pre></div><p>Recuerda sustituir <code>sde</code> por el nombre que tenga tu Memoria USB en tu sistema.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo sh Ventoy2Disk.sh -i /dev/sde
+</span></span></code></pre></div><p>Recuerda sustituir <code>sde</code> por el nombre que tenga tu Memoria USB en tu sistema.</p>
 <h2 id="3-agregar-imágenes">3. Agregar imágenes</h2>
 <p>Es tan sencillo como abrir la nueva partición llamada <code>Ventoy</code> de nuestra Memoria USB, y copiar las imágenes en ella. Esta partición está en <code>exfat</code>.</p>
 <p>Los tipos de imágenes soportados son los siguientes: <code>ISO/WIM/IMG/VHD(x)/EFI</code>.</p>
@@ -731,9 +731,9 @@ OPTION: (optional)
 <ul>
 <li>Para tener compatibilidad con <code>exfat</code> en Debian, instalamos lo siguiente:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt update 
-$ sudo apt install exfat-fuse exfat-utils
-</code></pre></div><p>Con esto, ya tenemos nuestro USB Bootable listo. Una vez arranquemos nuestro ordenador desde el, se nos mostrará una lista con las distintas imágenes que tengamos en el y podremos ejecutar la que deseemos.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt update 
+</span></span><span style="display:flex;"><span>$ sudo apt install exfat-fuse exfat-utils
+</span></span></code></pre></div><p>Con esto, ya tenemos nuestro USB Bootable listo. Una vez arranquemos nuestro ordenador desde el, se nos mostrará una lista con las distintas imágenes que tengamos en el y podremos ejecutar la que deseemos.</p>
 <p>Es compatible con imágenes de Linux, Windows, entre otras.</p>
 <p>
 

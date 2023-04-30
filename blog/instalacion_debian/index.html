@@ -796,50 +796,50 @@ He elejido XFCE por ser un entorno de escritorio muy estable, altamente personal
 <ul>
 <li>Como root, instalamos sudo y añadimos nuestro usuario al grupo:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ su
-$ apt install sudo
-$ usermod -a -G sudo tu_nombre_de_usuario
-</code></pre></div><p>Una vez reiniciado el equipo, ya se puede usar sudo con nuestro usuario.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ su
+</span></span><span style="display:flex;"><span>$ apt install sudo
+</span></span><span style="display:flex;"><span>$ usermod -a -G sudo tu_nombre_de_usuario
+</span></span></code></pre></div><p>Una vez reiniciado el equipo, ya se puede usar sudo con nuestro usuario.</p>
 <h2 id="repositorio-backports">Repositorio Backports</h2>
 <p>Al principio del post comentaba que el software en la rama estable está algo obsoleto en muchos casos, y para eso han creado el repositorio Backports!</p>
 <p>Me explico, no vamos a pasar a testing o a sid, solo vamos a instalar ciertos paquetes desde este repositorio, los cuales están revisados por Debian para funcionar sin problema en la rama estable.</p>
 <ul>
 <li>Editamos el archivo <code>source.list</code></li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/apt/source.list
-</code></pre></div><p>Debe figurar algo como esto:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">deb http://ftp.es.debian.org/debian/ stretch main 
-deb-src http://ftp.es.debian.org/debian/ stretch main 
-
-deb http://security.debian.org/debian-security stretch/updates main 
-deb-src http://security.debian.org/debian-security stretch/updates main c
-
-# stretch-updates, previously known as &#39;volatile&#39;
-deb http://ftp.es.debian.org/debian/ stretch-updates main
-deb-src http://ftp.es.debian.org/debian/ stretch-updates main 
-</code></pre></div><p>Aprovechamos para agregar, ademas del repositorio Backports, <code>contrib</code> y <code>non-free</code> en todas las url para poder instalar controladores privativos. El resultado ha de ser:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">deb http://ftp.es.debian.org/debian/ stretch main contrib non-free
-deb-src http://ftp.es.debian.org/debian/ stretch main contrib non-free
-
-deb http://security.debian.org/debian-security stretch/updates main contrib non-free
-deb-src http://security.debian.org/debian-security stretch/updates main contrib non-free
-
-# stretch-updates, previously known as &#39;volatile&#39;
-deb http://ftp.es.debian.org/debian/ stretch-updates main contrib non-free
-deb-src http://ftp.es.debian.org/debian/ stretch-updates main contrib non-free
-
-# stretch-backports
-deb http://ftp.es.debian.org/debian/ stretch-backports main contrib non-free
-</code></pre></div><p>Instalamos los paquetes necesarios para añadir la clave pública del nuevo repositorio y actualizamos:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install debian-keyring debian-archive-keyring
-$ sudo apt update
-</code></pre></div><h2 id="actualizar-kernel-y-firmware">Actualizar kernel y firmware</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo nano /etc/apt/source.list
+</span></span></code></pre></div><p>Debe figurar algo como esto:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>deb http://ftp.es.debian.org/debian/ stretch main 
+</span></span><span style="display:flex;"><span>deb-src http://ftp.es.debian.org/debian/ stretch main 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>deb http://security.debian.org/debian-security stretch/updates main 
+</span></span><span style="display:flex;"><span>deb-src http://security.debian.org/debian-security stretch/updates main c
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># stretch-updates, previously known as &#39;volatile&#39;
+</span></span><span style="display:flex;"><span>deb http://ftp.es.debian.org/debian/ stretch-updates main
+</span></span><span style="display:flex;"><span>deb-src http://ftp.es.debian.org/debian/ stretch-updates main 
+</span></span></code></pre></div><p>Aprovechamos para agregar, ademas del repositorio Backports, <code>contrib</code> y <code>non-free</code> en todas las url para poder instalar controladores privativos. El resultado ha de ser:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>deb http://ftp.es.debian.org/debian/ stretch main contrib non-free
+</span></span><span style="display:flex;"><span>deb-src http://ftp.es.debian.org/debian/ stretch main contrib non-free
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>deb http://security.debian.org/debian-security stretch/updates main contrib non-free
+</span></span><span style="display:flex;"><span>deb-src http://security.debian.org/debian-security stretch/updates main contrib non-free
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># stretch-updates, previously known as &#39;volatile&#39;
+</span></span><span style="display:flex;"><span>deb http://ftp.es.debian.org/debian/ stretch-updates main contrib non-free
+</span></span><span style="display:flex;"><span>deb-src http://ftp.es.debian.org/debian/ stretch-updates main contrib non-free
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># stretch-backports
+</span></span><span style="display:flex;"><span>deb http://ftp.es.debian.org/debian/ stretch-backports main contrib non-free
+</span></span></code></pre></div><p>Instalamos los paquetes necesarios para añadir la clave pública del nuevo repositorio y actualizamos:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt install debian-keyring debian-archive-keyring
+</span></span><span style="display:flex;"><span>$ sudo apt update
+</span></span></code></pre></div><h2 id="actualizar-kernel-y-firmware">Actualizar kernel y firmware</h2>
 <p>Actualizo el Kernel para mejorar el soporte de hardware. Solo necesario en el caso de equipos recientes. También elimino el anterior, este ultimo paso podéis dejarlo tras comprobar que arranque correctamente con el nuevo:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt -t stretch-backports install linux-image-amd64
-$ sudo apt remove --purge linux-image-4.9.0-8-amd64
-</code></pre></div><p>Ya que mi XPS necesita una de las últimas versiones de <code>firmware-atheros</code> para que funcione la tarjeta Wi-Fi, lo instalo desde Backports. Hago lo mismo con los paquetes <code>firmware-linux</code> y <code>firmware-linux-nonfree</code>, los cuales se actualizarán a la versión mas reciente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">s sudo apt -t stretch-backports install firmware-atheros firmware-linux firmware-linux-nonfree
-</code></pre></div><p>En otro post explicaré como poner XFCE really cool.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt -t stretch-backports install linux-image-amd64
+</span></span><span style="display:flex;"><span>$ sudo apt remove --purge linux-image-4.9.0-8-amd64
+</span></span></code></pre></div><p>Ya que mi XPS necesita una de las últimas versiones de <code>firmware-atheros</code> para que funcione la tarjeta Wi-Fi, lo instalo desde Backports. Hago lo mismo con los paquetes <code>firmware-linux</code> y <code>firmware-linux-nonfree</code>, los cuales se actualizarán a la versión mas reciente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>s sudo apt -t stretch-backports install firmware-atheros firmware-linux firmware-linux-nonfree
+</span></span></code></pre></div><p>En otro post explicaré como poner XFCE really cool.</p>
 <p>
 
   <hr style="border-color: #d6d6d6;" />

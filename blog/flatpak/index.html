@@ -712,16 +712,16 @@
 <ul>
 <li>Instalamos Flatpak</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt update <span style="color:#f92672">&amp;&amp;</span> sudo apt install flatpak
-</code></pre></div><p>Si utiliza el entorno de escritorio <code>Gnome</code>, que no es mi caso ya que <code>XFCE</code> me tiene enamorado, te será de gran utilidad instalar el Plug-in para que se integre con la tienda de aplicaciones</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install gnome-software-plugin-flatpak
-</code></pre></div><h2 id="2-agregar-repositorios">2. Agregar repositorios</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt update <span style="color:#f92672">&amp;&amp;</span> sudo apt install flatpak
+</span></span></code></pre></div><p>Si utiliza el entorno de escritorio <code>Gnome</code>, que no es mi caso ya que <code>XFCE</code> me tiene enamorado, te será de gran utilidad instalar el Plug-in para que se integre con la tienda de aplicaciones</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt install gnome-software-plugin-flatpak
+</span></span></code></pre></div><h2 id="2-agregar-repositorios">2. Agregar repositorios</h2>
 <p>Flatpak necesita tener uno o más repositorios desde los cuales instalará las aplicaciones. En este caso, aunque existen otros, utilizaremos solo el oficial del proyecto.</p>
 <ul>
 <li>Agregar <code>flathub</code></li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-</code></pre></div><p>Además de las funciones por consola que explicaré a continuación, <code>flathub</code> 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+</span></span></code></pre></div><p>Además de las funciones por consola que explicaré a continuación, <code>flathub</code> 
 
     
         
@@ -737,55 +737,55 @@
 <ul>
 <li>Por ejemplo, para instalar <code>LibreOffice</code></li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ flatpak install flathub org.libreoffice.LibreOffice
-</code></pre></div><p>La sintaxis es:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ flatpak install &lt;repositorio&gt; &lt;aplicacion&gt;
-</code></pre></div><p>Desde hace algunas versiones, el equipo de Flatpak ha incluido la <code>búsqueda desde consola</code> para facilitar el proceso.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ flatpak install flathub org.libreoffice.LibreOffice
+</span></span></code></pre></div><p>La sintaxis es:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ flatpak install &lt;repositorio&gt; &lt;aplicacion&gt;
+</span></span></code></pre></div><p>Desde hace algunas versiones, el equipo de Flatpak ha incluido la <code>búsqueda desde consola</code> para facilitar el proceso.</p>
 <ul>
 <li>Búsqueda desde consola</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ flatpak search spotify
-</code></pre></div><p>Nos devolverá algo como lo siguiente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">Description                                                                Application                                  Version                Branch             Remotes
-Spotify - Online music streaming service                                   com.spotify.Client                           1.1.10.546             stable             flathub
-Clementine Music Player - Plays music files and Internet radio             org.clementine_player.Clementine             1.3.1-git              stable             flathub
-</code></pre></div><p>Para <code>instalar</code> la aplicación, podemos hacerlo de <code>dos formas</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ flatpak search spotify
+</span></span></code></pre></div><p>Nos devolverá algo como lo siguiente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>Description                                                                Application                                  Version                Branch             Remotes
+</span></span><span style="display:flex;"><span>Spotify - Online music streaming service                                   com.spotify.Client                           1.1.10.546             stable             flathub
+</span></span><span style="display:flex;"><span>Clementine Music Player - Plays music files and Internet radio             org.clementine_player.Clementine             1.3.1-git              stable             flathub
+</span></span></code></pre></div><p>Para <code>instalar</code> la aplicación, podemos hacerlo de <code>dos formas</code>.</p>
 <ul>
 <li>Indicando todos los parámetros:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ flatpak install flathub com.spotify.Client 
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ flatpak install flathub com.spotify.Client 
+</span></span></code></pre></div><ul>
 <li>Indicando solo el <code>nombre corto</code> de la aplicación:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ flatpak install spotify
-</code></pre></div><p>Flatpak <code>nos sugerirá</code> el repositorio y la aplicación encontrada:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">Looking for matches…
-Found similar ref(s) for ‘spotify’ in remote ‘flathub’ (system).
-Use this remote? [Y/n]: y
-Found ref ‘app/com.spotify.Client/x86_64/stable’ in remote ‘flathub’ (system).
-Use this ref? [Y/n]: y
-</code></pre></div><p>Simplemente respondiendo si (y) a ambas preguntas, comenzará la instalación.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ flatpak install spotify
+</span></span></code></pre></div><p>Flatpak <code>nos sugerirá</code> el repositorio y la aplicación encontrada:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>Looking for matches…
+</span></span><span style="display:flex;"><span>Found similar ref(s) for ‘spotify’ in remote ‘flathub’ (system).
+</span></span><span style="display:flex;"><span>Use this remote? [Y/n]: y
+</span></span><span style="display:flex;"><span>Found ref ‘app/com.spotify.Client/x86_64/stable’ in remote ‘flathub’ (system).
+</span></span><span style="display:flex;"><span>Use this ref? [Y/n]: y
+</span></span></code></pre></div><p>Simplemente respondiendo si (y) a ambas preguntas, comenzará la instalación.</p>
 <h2 id="4-otros-comandos">4. Otros comandos</h2>
 <ul>
 <li>Listar aplicaciones instaladas:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ flatpak list
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ flatpak list
+</span></span></code></pre></div><ul>
 <li>Actualizar aplicaciones</li>
 </ul>
 <p>Para actualizar todas:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ flatpak update
-</code></pre></div><p>Si queremos actualizar solo una, debemos indicar el nombre completo de la misma:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ flatpak update org.libreoffice.LibreOffice  
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ flatpak update
+</span></span></code></pre></div><p>Si queremos actualizar solo una, debemos indicar el nombre completo de la misma:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ flatpak update org.libreoffice.LibreOffice  
+</span></span></code></pre></div><ul>
 <li>Desinstalar aplicaciones:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ flatpak remove com.spotify.Client 
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ flatpak remove com.spotify.Client 
+</span></span></code></pre></div><ul>
 <li>Eliminar contenido no utilizado:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ flatpak remove --unused
-</code></pre></div><p>Ahora ya puedes empezar a disfrutar de aplicaciones actualizadas, y olvidar los problemas de dependencias o que lo que quieres instalar no esté disponible en el repositorio de tu distribución.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ flatpak remove --unused
+</span></span></code></pre></div><p>Ahora ya puedes empezar a disfrutar de aplicaciones actualizadas, y olvidar los problemas de dependencias o que lo que quieres instalar no esté disponible en el repositorio de tu distribución.</p>
 <p>Además, si eres desarrollador, esta es una magnífica forma de distribuir tu aplicación para todas las distribuciones!</p>
 
 

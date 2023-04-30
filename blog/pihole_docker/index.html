@@ -19,7 +19,7 @@
   
   "genre": "post",
   "keywords": "Pi-hole, Docker, DNS, Raspberry Pi",
-  "wordcount":  479 ,
+  "wordcount":  480 ,
   "url": "https://rlodeiro.info/blog/pihole_docker/",
   "datePublished": "2019-07-21",
   "dateModified": "2019-07-21",
@@ -60,7 +60,7 @@
         <meta itemprop="name" content="Pi-hole &amp; Docker">
 <meta itemprop="description" content="Adiós publicidad, hola dominios locales!"><meta itemprop="datePublished" content="2019-07-21T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2019-07-21T00:00:00+00:00" />
-<meta itemprop="wordCount" content="479"><meta itemprop="image" content="https://rlodeiro.info/img/posts/2019/07/pihole_docker/pihole_docker.jpg">
+<meta itemprop="wordCount" content="480"><meta itemprop="image" content="https://rlodeiro.info/img/posts/2019/07/pihole_docker/pihole_docker.jpg">
 <meta itemprop="keywords" content="Pi-hole,Docker,DNS,Raspberry Pi," />
         
 
@@ -685,34 +685,34 @@
 <ul>
 <li>Actualizar los paquetes e instalar los requisitos:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt update <span style="color:#f92672">&amp;&amp;</span> sudo apt install <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>apt-transport-https <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>ca-certificates <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>curl <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>gnupg2 <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>software-properties-common
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt update <span style="color:#f92672">&amp;&amp;</span> sudo apt install <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>apt-transport-https <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>ca-certificates <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>curl <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>gnupg2 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>software-properties-common
+</span></span></code></pre></div><ul>
 <li>Añadir la clave GPG:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl -fsSL https://download.docker.com/linux/debian/gpg <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>| sudo apt-key add -
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl -fsSL https://download.docker.com/linux/debian/gpg <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>| sudo apt-key add -
+</span></span></code></pre></div><ul>
 <li>Añadir el repositorio:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo add-apt-repository <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span><span style="color:#e6db74">&#34;deb [arch=armhf] https://download.docker.com/linux/debian \
-</span><span style="color:#e6db74"></span><span style="color:#66d9ef">$(</span>lsb_release -cs<span style="color:#66d9ef">)</span><span style="color:#e6db74"> \
-</span><span style="color:#e6db74">stable&#34;</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo add-apt-repository <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span><span style="color:#e6db74">&#34;deb [arch=armhf] https://download.docker.com/linux/debian \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"></span><span style="color:#66d9ef">$(</span>lsb_release -cs<span style="color:#66d9ef">)</span><span style="color:#e6db74"> \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">stable&#34;</span>
+</span></span></code></pre></div><ul>
 <li>Instalar Docker:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt update <span style="color:#f92672">&amp;&amp;</span> sudo apt install <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>docker-ce docker-ce-cli containerd.io
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt update <span style="color:#f92672">&amp;&amp;</span> sudo apt install <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>docker-ce docker-ce-cli containerd.io
+</span></span></code></pre></div><ul>
 <li>Añadir nuestro usuario al grupo Docker:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo usermod -aG docker &lt;tu_usuario&gt;
-</code></pre></div><h2 id="2-instalar-pi-hole">2. Instalar Pi-hole</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo usermod -aG docker &lt;tu_usuario&gt;
+</span></span></code></pre></div><h2 id="2-instalar-pi-hole">2. Instalar Pi-hole</h2>
 <p>Una vez instalado Docker, vamos a desplegar el contenedor de Pi-hole.</p>
 <p>Montaremos los directorios <code>pihole</code> y <code>dnsmasq.d</code> del contenedor en dos volúmenes locales. El directorio oculto <code>.pihole</code> situado en el home de nuestro usuario alojará ambos.</p>
 <p>Además serviremos la interfaz web en el <code>puerto 89</code> para no dar lugar a conflicto, estableceremos las <code>DNS de Cloudfare</code> por defecto y configuraremos la zona horaria a <code>Europe/Madrid</code>.</p>
@@ -720,18 +720,18 @@
 <ul>
 <li>Desplegar el contenedor:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker run -d <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>--name pihole <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>-p 53:53/tcp -p 53:53/udp <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>-p 89:80 <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>-p 443:443 <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>-e TZ<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Europe/Madrid&#34;</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>-v <span style="color:#e6db74">&#34;</span>$HOME<span style="color:#e6db74">/.pihole/pihole/:/etc/pihole/&#34;</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>-v <span style="color:#e6db74">&#34;</span>$HOME<span style="color:#e6db74">/.pihole/dnsmasq.d/:/etc/dnsmasq.d/&#34;</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>--dns<span style="color:#f92672">=</span>1.1.1.1 --dns<span style="color:#f92672">=</span>1.0.0.1 <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>--restart<span style="color:#f92672">=</span>unless-stopped <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>pihole/pihole:latest
-</code></pre></div><p>Una vez finalice, la interfaz de Pi-hole estará disponible en <code>http://localhost:89</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker run -d <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--name pihole <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-p 53:53/tcp -p 53:53/udp <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-p 89:80 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-p 443:443 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-e TZ<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Europe/Madrid&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-v <span style="color:#e6db74">&#34;</span>$HOME<span style="color:#e6db74">/.pihole/pihole/:/etc/pihole/&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-v <span style="color:#e6db74">&#34;</span>$HOME<span style="color:#e6db74">/.pihole/dnsmasq.d/:/etc/dnsmasq.d/&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--dns<span style="color:#f92672">=</span>1.1.1.1 --dns<span style="color:#f92672">=</span>1.0.0.1 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--restart<span style="color:#f92672">=</span>unless-stopped <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>pihole/pihole:latest
+</span></span></code></pre></div><p>Una vez finalice, la interfaz de Pi-hole estará disponible en <code>http://localhost:89</code>.</p>
 <p>Tras configurar el <code>servidor DNS</code> con la <code>ip</code> de nuestra <code>Raspberry Pi</code>, todo funcionará según lo esperado. Esto podemos hacerlo en cada uno de los dispositivos, o en la <code>configuración del router.</code> Recomiendo esta última opción.</p>
 <h2 id="3-dominios-locales">3. Dominios locales</h2>
 <p>Por último, vamos a utilizar Pi-hole para resolver nombres de dominio locales.</p>
@@ -739,23 +739,23 @@
 <ul>
 <li>Creamos el archivo <code>local.list</code> en $HOME/.pihole/pihole/:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ nano $HOME/.pihole/pihole/local.list
-</code></pre></div><p>En este archivo definimos los dominios deseados con el formato <code>&lt;dirección-ip&gt; &lt;dominio-completo&gt; &lt;dominio&gt;</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ nano $HOME/.pihole/pihole/local.list
+</span></span></code></pre></div><p>En este archivo definimos los dominios deseados con el formato <code>&lt;dirección-ip&gt; &lt;dominio-completo&gt; &lt;dominio&gt;</code>.</p>
 <ul>
 <li>Ejemplo de dominios locales en <code>local.list</code>:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">192.168.1.1 router router
-192.168.1.2 raspberry.local raspberry
-192.168.1.100 pcmain.local pcmain
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>192.168.1.1 router router
+</span></span><span style="display:flex;"><span>192.168.1.2 raspberry.local raspberry
+</span></span><span style="display:flex;"><span>192.168.1.100 pcmain.local pcmain
+</span></span></code></pre></div><ul>
 <li>Creamos un segundo archivo de configuración para <code>dnsmasq</code> que referencie a <code>local.list</code>:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ echo <span style="color:#e6db74">&#34;addn-hosts=/etc/pihole/local.list&#34;</span> | sudo tee $HOME/.pihole/dnsmasq.d/02-local.conf
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ echo <span style="color:#e6db74">&#34;addn-hosts=/etc/pihole/local.list&#34;</span> | sudo tee $HOME/.pihole/dnsmasq.d/02-local.conf
+</span></span></code></pre></div><ul>
 <li>Reiniciamos el contenedor :</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker restart pihole
-</code></pre></div><p>Listo!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker restart pihole
+</span></span></code></pre></div><p>Listo!</p>
 <p>Ya tenemos todos los dispositivos de la red libres publicidad intrusiva, así como nuestros propios dominios locales para acceder sin escribir la dirección ip.</p>
 
 

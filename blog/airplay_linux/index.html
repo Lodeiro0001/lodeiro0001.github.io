@@ -691,45 +691,45 @@
 
 <h2 id="actualizar-el-sistema">Actualizar el sistema</h2>
 <p>Primero actualizamos el sistema e instalamos los paquetes necesarios.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt-get update &amp; sudo apt-get upgrade
-$ sudo apt-get install autoconf automake avahi-daemon build-essential git libasound2-dev libavahi-client-dev libconfig-dev libdaemon-dev libpopt-dev libssl-dev libtool xmltoman
-</code></pre></div><h2 id="clonar-el-repositorio">Clonar el repositorio</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt-get update &amp; sudo apt-get upgrade
+</span></span><span style="display:flex;"><span>$ sudo apt-get install autoconf automake avahi-daemon build-essential git libasound2-dev libavahi-client-dev libconfig-dev libdaemon-dev libpopt-dev libssl-dev libtool xmltoman
+</span></span></code></pre></div><h2 id="clonar-el-repositorio">Clonar el repositorio</h2>
 <p>Podemos encontrar <code>shairport-sync</code> en los repositorios de Ubuntu, Raspbian y demás, pero no será la versión actualizada. Clonamos el repositorio en nuestro <code>$HOME</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git clone https://github.com/mikebrady/shairport-sync.git
-</code></pre></div><h2 id="configurar-y-compilar">Configurar y compilar</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git clone https://github.com/mikebrady/shairport-sync.git
+</span></span></code></pre></div><h2 id="configurar-y-compilar">Configurar y compilar</h2>
 <p>Entramos en el directorio y ejecutamos:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd shairport-sync
-$ autoreconf -i -f
-$ ./configure --with-alsa --with-avahi --with-ssl<span style="color:#f92672">=</span>openssl --with-systemd --with-metadata
-</code></pre></div><p>Una vez configurado, compilamos e instalamos con:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ make
-$ sudo make install
-</code></pre></div><h2 id="inicio-automático">Inicio automático</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cd shairport-sync
+</span></span><span style="display:flex;"><span>$ autoreconf -i -f
+</span></span><span style="display:flex;"><span>$ ./configure --with-alsa --with-avahi --with-ssl<span style="color:#f92672">=</span>openssl --with-systemd --with-metadata
+</span></span></code></pre></div><p>Una vez configurado, compilamos e instalamos con:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ make
+</span></span><span style="display:flex;"><span>$ sudo make install
+</span></span></code></pre></div><h2 id="inicio-automático">Inicio automático</h2>
 <p>Para habilitar el inicio automático con <code>systemd</code> ejecutamos:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo systemctl enable shairport-sync
-$ sudo service shairport-sync start
-</code></pre></div><h2 id="configuración-adicional">Configuración adicional</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo systemctl enable shairport-sync
+</span></span><span style="display:flex;"><span>$ sudo service shairport-sync start
+</span></span></code></pre></div><h2 id="configuración-adicional">Configuración adicional</h2>
 <p>Por defecto se mostrará con el nombre del host, podemos cambiarlo con:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /usr/local/etc/shairport-sync.conf
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo nano /usr/local/etc/shairport-sync.conf
+</span></span></code></pre></div><ul>
 <li>
 <p>Veremos algo como los siguiente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">// General Settings
-general =
-{
-// name = &#34;%H&#34;; // This means &#34;Hostname&#34; -- see below. This is the name th$
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>// General Settings
+</span></span><span style="display:flex;"><span>general =
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>// name = &#34;%H&#34;; // This means &#34;Hostname&#34; -- see below. This is the name th$
+</span></span></code></pre></div></li>
 </ul>
 <p>Donde eliminando <code>//</code> delante de <code>name</code> y sustituyendo <code>&quot;%H&quot;</code> por <code>&quot;NuevoNombre&quot;</code> podremos indicar un nombre diferente al del host.</p>
 <p><code>shairport-sync.conf</code> es el archivo de configuración, donde podemos por ejemplo indicar la tarjeta de sonido a utilizar modificando el parámetro <code>&quot;output_device = &quot;default&quot;;</code>. Dejando todo como viene, funcionará con la tarjeta indicada en el sistema como <code>default</code>. Yo lo he probado tanto en Raspbian Stretch como en Ubuntu 18.04.</p>
 <h2 id="firewall">Firewall</h2>
 <p>Si tienes habilitado el firewal UFW, añade las siguientes reglas:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo ufw allow from 192.168.1.1/16 to any port <span style="color:#ae81ff">3689</span> proto tcp
-$ sudo ufw allow from 192.168.1.1/16 to any port <span style="color:#ae81ff">5353</span>
-$ sudo ufw allow from 192.168.1.1/16 to any port 5000:5005 proto tcp
-$ sudo ufw allow from 192.168.1.1/16 to any port 6000:6005 proto udp
-$ sudo ufw allow from 192.168.1.1/16 to any port 35000:65535 proto udp
-</code></pre></div><p>Para mas información, si vuestro sistema es diferente o necesitáis consultar otras posibilidades de configuración 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo ufw allow from 192.168.1.1/16 to any port <span style="color:#ae81ff">3689</span> proto tcp
+</span></span><span style="display:flex;"><span>$ sudo ufw allow from 192.168.1.1/16 to any port <span style="color:#ae81ff">5353</span>
+</span></span><span style="display:flex;"><span>$ sudo ufw allow from 192.168.1.1/16 to any port 5000:5005 proto tcp
+</span></span><span style="display:flex;"><span>$ sudo ufw allow from 192.168.1.1/16 to any port 6000:6005 proto udp
+</span></span><span style="display:flex;"><span>$ sudo ufw allow from 192.168.1.1/16 to any port 35000:65535 proto udp
+</span></span></code></pre></div><p>Para mas información, si vuestro sistema es diferente o necesitáis consultar otras posibilidades de configuración 
 
     
         

@@ -16,7 +16,7 @@
       <guid>https://rlodeiro.info/blog/audio_multiroom/</guid>
       <description>Hoy vamos a instalar y configurar forked-daapd, un servidor multimedia para nuestra biblioteca musical.
 DAAP (Digital Audio Access Protocol) es un protocolo ideado por Apple, el cual es utilizado por iTunes. Nuestro servidor será compatible por lo tanto con iTunes, dispositivos comerciales preparados para trabajar con Airplay, clientes MPD, entre otros.
- Tal como expliqué en una entrada anterior, podemos montar nuestros propios dispositivos compatibles con Airplay con una simple Raspberry Pi con Shairport Sync instalado conectándola a nuestro equipo Hi-Fi, altavoz auto-amplificado o similar.</description>
+Tal como expliqué en una entrada anterior, podemos montar nuestros propios dispositivos compatibles con Airplay con una simple Raspberry Pi con Shairport Sync instalado conectándola a nuestro equipo Hi-Fi, altavoz auto-amplificado o similar.</description>
     </item>
     
   </channel>

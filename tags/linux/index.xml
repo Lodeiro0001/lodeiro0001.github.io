@@ -93,7 +93,7 @@ Anteriormente escribí dos posts sobre como instalar Debian y como personalizar 
       <guid>https://rlodeiro.info/blog/audio_multiroom/</guid>
       <description>Hoy vamos a instalar y configurar forked-daapd, un servidor multimedia para nuestra biblioteca musical.
 DAAP (Digital Audio Access Protocol) es un protocolo ideado por Apple, el cual es utilizado por iTunes. Nuestro servidor será compatible por lo tanto con iTunes, dispositivos comerciales preparados para trabajar con Airplay, clientes MPD, entre otros.
- Tal como expliqué en una entrada anterior, podemos montar nuestros propios dispositivos compatibles con Airplay con una simple Raspberry Pi con Shairport Sync instalado conectándola a nuestro equipo Hi-Fi, altavoz auto-amplificado o similar.</description>
+Tal como expliqué en una entrada anterior, podemos montar nuestros propios dispositivos compatibles con Airplay con una simple Raspberry Pi con Shairport Sync instalado conectándola a nuestro equipo Hi-Fi, altavoz auto-amplificado o similar.</description>
     </item>
     
     <item>
@@ -103,7 +103,7 @@ DAAP (Digital Audio Access Protocol) es un protocolo ideado por Apple, el cual e
       
       <guid>https://rlodeiro.info/blog/personalizar_xfce/</guid>
       <description>Vamos a personalizar el entorno de escritorio XFCE para darle un toque actual y modificar a nuestro gusto algunas de las opciones por defecto.
- En la entrada anterior vimos como instalar Debian 9 Stretch  , donde escogí XFCE por su estabilidad, bajo consumo de recursos y sus altas posibilidades de personalización. Hoy toca adaptarlo y vitaminarlo para mejorar nuestro entorno de trabajo.
+En la entrada anterior vimos como instalar Debian 9 Stretch , donde escogí XFCE por su estabilidad, bajo consumo de recursos y sus altas posibilidades de personalización. Hoy toca adaptarlo y vitaminarlo para mejorar nuestro entorno de trabajo.
 1. Tema 1.1 Apariencia General Primero vamos a cambiar el tema de nuestro escritorio.</description>
     </item>
     

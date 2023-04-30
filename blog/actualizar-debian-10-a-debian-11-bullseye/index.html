@@ -685,79 +685,79 @@
 <ul>
 <li>Actualizamos el sistema:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt update
-$ sudo apt upgrade
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt update
+</span></span><span style="display:flex;"><span>$ sudo apt upgrade
+</span></span></code></pre></div><ul>
 <li>Verificamos que nuestro sistema es Debian Buster:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat /etc/*release
-</code></pre></div><p>Esto nos devolverá algo como lo siguiente, confirmando que estamos en Debian 10 Buster:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">PRETTY_NAME=&#34;Debian GNU/Linux 10 (buster)&#34;
-NAME=&#34;Debian GNU/Linux&#34;
-VERSION_ID=&#34;10&#34;
-VERSION=&#34;10 (buster)&#34;
-VERSION_CODENAME=buster
-ID=debian
-HOME_URL=&#34;https://www.debian.org/&#34;
-SUPPORT_URL=&#34;https://www.debian.org/support&#34;
-BUG_REPORT_URL=&#34;https://bugs.debian.org/&#34;
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cat /etc/*release
+</span></span></code></pre></div><p>Esto nos devolverá algo como lo siguiente, confirmando que estamos en Debian 10 Buster:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>PRETTY_NAME=&#34;Debian GNU/Linux 10 (buster)&#34;
+</span></span><span style="display:flex;"><span>NAME=&#34;Debian GNU/Linux&#34;
+</span></span><span style="display:flex;"><span>VERSION_ID=&#34;10&#34;
+</span></span><span style="display:flex;"><span>VERSION=&#34;10 (buster)&#34;
+</span></span><span style="display:flex;"><span>VERSION_CODENAME=buster
+</span></span><span style="display:flex;"><span>ID=debian
+</span></span><span style="display:flex;"><span>HOME_URL=&#34;https://www.debian.org/&#34;
+</span></span><span style="display:flex;"><span>SUPPORT_URL=&#34;https://www.debian.org/support&#34;
+</span></span><span style="display:flex;"><span>BUG_REPORT_URL=&#34;https://bugs.debian.org/&#34;
+</span></span></code></pre></div><ul>
 <li>Revisamos los <code>repositorios de terceros</code>, si los tenemos:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd /etc/apt/sources.list.d/
-</code></pre></div><p>En este directorio tendremos los repositorios de terceros, es importante que los actualicemos a Debian 11 Bullseye para no tener ningún problema con la actualización.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cd /etc/apt/sources.list.d/
+</span></span></code></pre></div><p>En este directorio tendremos los repositorios de terceros, es importante que los actualicemos a Debian 11 Bullseye para no tener ningún problema con la actualización.</p>
 <ul>
 <li>Actualizamos los <code>repositorios oficiales</code> de Debian 10 Buster a Debian 11 Bullseye:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/apt/sources.list
-</code></pre></div><p>Comentaremos los repositorios de Debian Buster, y pondremos los nuevos repositorios de Debian Bullseye, quedando así:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">### Buster ###</span>
-
-<span style="color:#75715e">#deb http://deb.debian.org/debian/ buster main contrib non-free</span>
-<span style="color:#75715e">#deb-src http://deb.debian.org/debian/ buster main contrib non-free</span>
-
-<span style="color:#75715e">#deb http://security.debian.org/debian-security buster/updates main contrib non-free</span>
-<span style="color:#75715e">#deb-src http://security.debian.org/debian-security buster/updates main contrib non-free</span>
-
-<span style="color:#75715e">#deb http://deb.debian.org/debian/ buster-updates main contrib non-free</span>
-<span style="color:#75715e">#deb-src http://deb.debian.org/debian/ buster-updates main contrib non-free</span>
-
-<span style="color:#75715e">#deb http://deb.debian.org/debian buster-backports main contrib non-free</span>
-
-<span style="color:#75715e">### Bullseye ###</span>
-
-deb http://deb.debian.org/debian bullseye main contrib non-free
-deb http://deb.debian.org/debian bullseye-updates main contrib non-free
-deb http://security.debian.org/debian-security bullseye-security main
-deb http://ftp.debian.org/debian bullseye-backports main contrib non-free
-</code></pre></div><p>He incluido el repositorio backports, ya que en un futuro nos resultará muy útil para instalar paquetes más actualizados que en la rama estable, pero por supuesto totalmente compatibles con esta.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo nano /etc/apt/sources.list
+</span></span></code></pre></div><p>Comentaremos los repositorios de Debian Buster, y pondremos los nuevos repositorios de Debian Bullseye, quedando así:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">### Buster ###</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#deb http://deb.debian.org/debian/ buster main contrib non-free</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#deb-src http://deb.debian.org/debian/ buster main contrib non-free</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#deb http://security.debian.org/debian-security buster/updates main contrib non-free</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#deb-src http://security.debian.org/debian-security buster/updates main contrib non-free</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#deb http://deb.debian.org/debian/ buster-updates main contrib non-free</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#deb-src http://deb.debian.org/debian/ buster-updates main contrib non-free</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#deb http://deb.debian.org/debian buster-backports main contrib non-free</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### Bullseye ###</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>deb http://deb.debian.org/debian bullseye main contrib non-free
+</span></span><span style="display:flex;"><span>deb http://deb.debian.org/debian bullseye-updates main contrib non-free
+</span></span><span style="display:flex;"><span>deb http://security.debian.org/debian-security bullseye-security main
+</span></span><span style="display:flex;"><span>deb http://ftp.debian.org/debian bullseye-backports main contrib non-free
+</span></span></code></pre></div><p>He incluido el repositorio backports, ya que en un futuro nos resultará muy útil para instalar paquetes más actualizados que en la rama estable, pero por supuesto totalmente compatibles con esta.</p>
 <h2 id="actualización">Actualización</h2>
 <ul>
 <li>Actualizamos nuestro sistema:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt clean all
-$ sudo apt update
-$ sudo apt full-upgrade
-</code></pre></div><p>Ten paciencia, ya que la actualización es grande y tardará un tiempo. Durante la actualización se nos preguntará si queremos o no sustituir diversos ficheros de configuración que hayamos modificado antes, así como otras opciones del sistema.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt clean all
+</span></span><span style="display:flex;"><span>$ sudo apt update
+</span></span><span style="display:flex;"><span>$ sudo apt full-upgrade
+</span></span></code></pre></div><p>Ten paciencia, ya que la actualización es grande y tardará un tiempo. Durante la actualización se nos preguntará si queremos o no sustituir diversos ficheros de configuración que hayamos modificado antes, así como otras opciones del sistema.</p>
 <ul>
 <li>Una vez finalizada la actualización, reiniciamos el sistema:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo reboot
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo reboot
+</span></span></code></pre></div><ul>
 <li>Por último, verificamos que realmente hemos actualizado a Debian 11 Bullseye:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat /etc/*release
-</code></pre></div><p>Nos mostrará algo como lo siguiente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">PRETTY_NAME=&#34;Debian GNU/Linux 11 (bullseye)&#34;
-NAME=&#34;Debian GNU/Linux&#34;
-VERSION_ID=&#34;11&#34;
-VERSION=&#34;11 (bullseye)&#34;
-VERSION_CODENAME=bullseye
-ID=debian
-HOME_URL=&#34;https://www.debian.org/&#34;
-SUPPORT_URL=&#34;https://www.debian.org/support&#34;
-BUG_REPORT_URL=&#34;https://bugs.debian.org/&#34;
-</code></pre></div><p>Ahora, solo nos queda disfrutar de nuestro nuevo sistema Debian 11 Bullseye!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cat /etc/*release
+</span></span></code></pre></div><p>Nos mostrará algo como lo siguiente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>PRETTY_NAME=&#34;Debian GNU/Linux 11 (bullseye)&#34;
+</span></span><span style="display:flex;"><span>NAME=&#34;Debian GNU/Linux&#34;
+</span></span><span style="display:flex;"><span>VERSION_ID=&#34;11&#34;
+</span></span><span style="display:flex;"><span>VERSION=&#34;11 (bullseye)&#34;
+</span></span><span style="display:flex;"><span>VERSION_CODENAME=bullseye
+</span></span><span style="display:flex;"><span>ID=debian
+</span></span><span style="display:flex;"><span>HOME_URL=&#34;https://www.debian.org/&#34;
+</span></span><span style="display:flex;"><span>SUPPORT_URL=&#34;https://www.debian.org/support&#34;
+</span></span><span style="display:flex;"><span>BUG_REPORT_URL=&#34;https://bugs.debian.org/&#34;
+</span></span></code></pre></div><p>Ahora, solo nos queda disfrutar de nuestro nuevo sistema Debian 11 Bullseye!</p>
 <p>
 
 <hr style="border-color: #d6d6d6;" />

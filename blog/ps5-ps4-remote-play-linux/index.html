@@ -693,8 +693,8 @@
 <ul>
 <li>Instalamos Chiaki:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ flatpak install flathub re.chiaki.Chiaki
-</code></pre></div><h2 id="2-configuración">2. Configuración</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ flatpak install flathub re.chiaki.Chiaki
+</span></span></code></pre></div><h2 id="2-configuración">2. Configuración</h2>
 <p>Ahora tenemos que configurar Chiaki para que se conecte con nuestra PlayStation.</p>
 <p>Según especifica el desarrollador debería encontrar de forma automática nuestra PS, pero a mi no me ha funcionado, así que vamos a hacerlo de forma manual.</p>
 <ul>
@@ -740,20 +740,20 @@
 <ul>
 <li>Ejecutamos el script, ten en cuenta que solo funciona con <code>python3</code>:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python3 chiaki.py
-</code></pre></div><p>Veremos algo como lo siguiente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">########################################################
-Script to determine PSN AccountID
-thanks to grill2010
-(This script will perform network operations.)
-########################################################
-
-➡️ Open the following URL in your Browser and log in:
-
-https://auth.api.sonyentertainmentnetwork.com/2.0/oauth/authorize?service_entity=urn:service-entity:psn&amp;response_type=code&amp;client_id=ba495a24-818c-472b-b12d-ff231c1b5745&amp;redirect_uri=https://remoteplay.dl.playstation.net/remoteplay/redirect&amp;scope=psn:clientapp&amp;request_locale=en_US&amp;ui=pr&amp;service_logo=ps&amp;layout_type=popup&amp;smcid=remoteplay&amp;prompt=always&amp;PlatformPrivacyWs1=minimal&amp;
-
-➡️ After logging in, when the page shows &#34;redirect&#34;, copy the URL from the address bar and paste it here:
-</code></pre></div><p>Tenemos que abrir la url en nuestro navegador, veremos una página de Sony donde tendremos que iniciar sesión con la misma cuenta de la PlayStation que queremos registrar en Chiaki.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ python3 chiaki.py
+</span></span></code></pre></div><p>Veremos algo como lo siguiente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>########################################################
+</span></span><span style="display:flex;"><span>Script to determine PSN AccountID
+</span></span><span style="display:flex;"><span>thanks to grill2010
+</span></span><span style="display:flex;"><span>(This script will perform network operations.)
+</span></span><span style="display:flex;"><span>########################################################
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>➡️ Open the following URL in your Browser and log in:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>https://auth.api.sonyentertainmentnetwork.com/2.0/oauth/authorize?service_entity=urn:service-entity:psn&amp;response_type=code&amp;client_id=ba495a24-818c-472b-b12d-ff231c1b5745&amp;redirect_uri=https://remoteplay.dl.playstation.net/remoteplay/redirect&amp;scope=psn:clientapp&amp;request_locale=en_US&amp;ui=pr&amp;service_logo=ps&amp;layout_type=popup&amp;smcid=remoteplay&amp;prompt=always&amp;PlatformPrivacyWs1=minimal&amp;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>➡️ After logging in, when the page shows &#34;redirect&#34;, copy the URL from the address bar and paste it here:
+</span></span></code></pre></div><p>Tenemos que abrir la url en nuestro navegador, veremos una página de Sony donde tendremos que iniciar sesión con la misma cuenta de la PlayStation que queremos registrar en Chiaki.</p>
 <p>Una vez se inicie la sesión veremos en el navegador la palabra <code>redirect</code>, copiamos la nueva url del navegador y la pegamos en nuestra consola. El script nos devolverá nuestro PSN Account-ID en base64, lo copiamos y lo pegamos en la ventana de Chiaki.</p>
 <h3 id="22-pin">2.2 PIN</h3>
 <p>Por último, tenemos que obtener el <code>PIN</code> desde nuestra PlayStation.</p>

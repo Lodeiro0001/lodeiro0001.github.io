@@ -703,8 +703,8 @@ Si queremos hacer backup remoto en un equipo con <code>Debian</code>, se present
 <ul>
 <li>
 <p>Entrar a la Raspberry PI por ssh</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh pi@xxx.xxx.x.xxx
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ssh pi@xxx.xxx.x.xxx
+</span></span></code></pre></div></li>
 <li>
 <p>Ver el nombre del disco</p>
 <pre tabindex="0"><code>$ lsblk -p
@@ -715,23 +715,23 @@ Si queremos hacer backup remoto en un equipo con <code>Debian</code>, se present
 Copiar el nombre, en este caso es <code>/dev/mmcblk0 </code></p>
 <ul>
 <li>Cerrar la conexion ssh
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ exit
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ exit
+</span></span></code></pre></div></li>
 </ul>
 <h2 id="iniciar-el-backup">Iniciar el backup</h2>
 <ul>
 <li>
 <p>Ejecutar lo siguiente</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh pi@xxx.xxx.x.xxx <span style="color:#e6db74">&#34;sudo dd if=/dev/mmcblk0 bs=1M | gzip -&#34;</span> | dd of<span style="color:#f92672">=</span>$HOME/backupPi.gz status<span style="color:#f92672">=</span>progress
-</code></pre></div><p>Nos pedirá la contraseña remota y comenzará el backup. Previamente hemos de modificar algunos parámetros.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ssh pi@xxx.xxx.x.xxx <span style="color:#e6db74">&#34;sudo dd if=/dev/mmcblk0 bs=1M | gzip -&#34;</span> | dd of<span style="color:#f92672">=</span>$HOME/backupPi.gz status<span style="color:#f92672">=</span>progress
+</span></span></code></pre></div><p>Nos pedirá la contraseña remota y comenzará el backup. Previamente hemos de modificar algunos parámetros.</p>
 </li>
 </ul>
 <h3 id="parámetros-a-modificar">Parámetros a modificar</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">* pi -&gt; Nombre de nuestro usuario en la Raspberry PI
-* xxx.xxx.x.xxx -&gt; Direccion IP a la que nos queremos conectar
-* if=/dev/mmcblk0 -&gt; Nombre del disco
-* of=$HOME/backupPi.gz -&gt; &#34;Directorio/nombreArchivo.gz&#34; donde se guardara el backup
-</code></pre></div><p>De esta forma, conectaremos con nuestra Rapberry PI por <code>ssh</code>, haremos una copia con <code>dd</code> ya comprimida, y la guardaremos en el directorio local indicado.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>* pi -&gt; Nombre de nuestro usuario en la Raspberry PI
+</span></span><span style="display:flex;"><span>* xxx.xxx.x.xxx -&gt; Direccion IP a la que nos queremos conectar
+</span></span><span style="display:flex;"><span>* if=/dev/mmcblk0 -&gt; Nombre del disco
+</span></span><span style="display:flex;"><span>* of=$HOME/backupPi.gz -&gt; &#34;Directorio/nombreArchivo.gz&#34; donde se guardara el backup
+</span></span></code></pre></div><p>De esta forma, conectaremos con nuestra Rapberry PI por <code>ssh</code>, haremos una copia con <code>dd</code> ya comprimida, y la guardaremos en el directorio local indicado.</p>
 <p>Gracias a <code>status=progress</code> tendremos información del progreso de la copia hasta que esta finalice.</p>
 <h2 id="restaurar-el-backup">Restaurar el backup</h2>
 <p>Si queremos restaurar la copia, solo tenemos que conectar el disco en nuestro pc y hacer lo siguiente:</p>
@@ -752,12 +752,12 @@ Copiar el nombre, en este caso es <code>/dev/mmcblk0 </code></p>
 <ul>
 <li>Editar el archivo de configuración:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo visudo
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo visudo
+</span></span></code></pre></div><ul>
 <li>
 <p>Agregamos una línea al final como la siguiente, indicando el usuario con el que hacemos login en el equipo con Debian:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">usuario ALL=(ALL) NOPASSWD:ALL
-</code></pre></div><p>Guardamos y ya podremos ejecutar el comando de copia remota, este se ejecutará sin problema ya que ahora sudo no solicita password.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>usuario ALL=(ALL) NOPASSWD:ALL
+</span></span></code></pre></div><p>Guardamos y ya podremos ejecutar el comando de copia remota, este se ejecutará sin problema ya que ahora sudo no solicita password.</p>
 </li>
 </ul>
 <p>Si una vez finalizada la copia queremos dejar el sistema como estaba, cosa que recomiendo por seguridad, tan solo tenemos que comentar la linea que agregamos anteriormente y el sistema volverá a pedir password para ejecutar sudo con nuestro usuario.</p>

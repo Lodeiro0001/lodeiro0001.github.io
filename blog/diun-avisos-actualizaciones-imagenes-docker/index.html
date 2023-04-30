@@ -686,35 +686,35 @@
 <ul>
 <li>Creamos el fichero de configuración:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /home/miusuario/diun/diun.yml
-</code></pre></div><p>Agregamos la siguiente configuración:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">db:
-  path: diun.db
-
-watch:
-  workers: 20
-  schedule: &#34;0 */6 * * *&#34;
-  firstCheckNotif: false
-  compareDigest: true
-
-notif:
-  mail:
-    host: localhost
-    port: 25
-    ssl: false
-    username: xxxxx
-    password: xxxxx
-    from: tucorreo@dominio.com
-    to: correodestino@dominio.com
-  telegram:
-    token: xxxxx
-    chatIDs:
-      - xxxxx
-providers:
-  docker:
-    watchStopped: true
-    watchByDefault: false
-</code></pre></div><p>Cambia la configuración de <code>mail</code> por los datos de tu cuenta y proveedor de correo. Para los avisos por <code>Telegram</code>, hemos de indicar el token de nuestro bot y uno o más chatIDs donde recibiremos los mensajes.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo nano /home/miusuario/diun/diun.yml
+</span></span></code></pre></div><p>Agregamos la siguiente configuración:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>db:
+</span></span><span style="display:flex;"><span>  path: diun.db
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>watch:
+</span></span><span style="display:flex;"><span>  workers: 20
+</span></span><span style="display:flex;"><span>  schedule: &#34;0 */6 * * *&#34;
+</span></span><span style="display:flex;"><span>  firstCheckNotif: false
+</span></span><span style="display:flex;"><span>  compareDigest: true
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>notif:
+</span></span><span style="display:flex;"><span>  mail:
+</span></span><span style="display:flex;"><span>    host: localhost
+</span></span><span style="display:flex;"><span>    port: 25
+</span></span><span style="display:flex;"><span>    ssl: false
+</span></span><span style="display:flex;"><span>    username: xxxxx
+</span></span><span style="display:flex;"><span>    password: xxxxx
+</span></span><span style="display:flex;"><span>    from: tucorreo@dominio.com
+</span></span><span style="display:flex;"><span>    to: correodestino@dominio.com
+</span></span><span style="display:flex;"><span>  telegram:
+</span></span><span style="display:flex;"><span>    token: xxxxx
+</span></span><span style="display:flex;"><span>    chatIDs:
+</span></span><span style="display:flex;"><span>      - xxxxx
+</span></span><span style="display:flex;"><span>providers:
+</span></span><span style="display:flex;"><span>  docker:
+</span></span><span style="display:flex;"><span>    watchStopped: true
+</span></span><span style="display:flex;"><span>    watchByDefault: false
+</span></span></code></pre></div><p>Cambia la configuración de <code>mail</code> por los datos de tu cuenta y proveedor de correo. Para los avisos por <code>Telegram</code>, hemos de indicar el token de nuestro bot y uno o más chatIDs donde recibiremos los mensajes.</p>
 <p>Podemos configurar otros sistemas de notificación 
 
     
@@ -737,26 +737,26 @@ providers:
 <ul>
 <li>Creamos el contenedor de Diun:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker run -d --name diun <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>-e <span style="color:#e6db74">&#34;TZ=Europe/Madrid&#34;</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>-e <span style="color:#e6db74">&#34;LOG_LEVEL=info&#34;</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>-e <span style="color:#e6db74">&#34;LOG_JSON=false&#34;</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>-v <span style="color:#e6db74">&#34;/home/miusuario/diun/data:/data&#34;</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>-v <span style="color:#e6db74">&#34;/home/miusuario/diun/diun.yml:/diun.yml:ro&#34;</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>-v <span style="color:#e6db74">&#34;/var/run/docker.sock:/var/run/docker.sock&#34;</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>-l <span style="color:#e6db74">&#34;diun.enable=true&#34;</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>--restart always <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>crazymax/diun:latest
-</code></pre></div><p>Recuerda modificar la ruta del directorio <code>data</code> y del <code>yml</code> que hemos creado anteriormente.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker run -d --name diun <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-e <span style="color:#e6db74">&#34;TZ=Europe/Madrid&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-e <span style="color:#e6db74">&#34;LOG_LEVEL=info&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-e <span style="color:#e6db74">&#34;LOG_JSON=false&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-v <span style="color:#e6db74">&#34;/home/miusuario/diun/data:/data&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-v <span style="color:#e6db74">&#34;/home/miusuario/diun/diun.yml:/diun.yml:ro&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-v <span style="color:#e6db74">&#34;/var/run/docker.sock:/var/run/docker.sock&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-l <span style="color:#e6db74">&#34;diun.enable=true&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--restart always <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>crazymax/diun:latest
+</span></span></code></pre></div><p>Recuerda modificar la ruta del directorio <code>data</code> y del <code>yml</code> que hemos creado anteriormente.</p>
 <ul>
 <li>Para probar que nuestras notificaciones funcionan, entramos por consola al contenedor:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker exec -it diun /bin/sh
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker exec -it diun /bin/sh
+</span></span></code></pre></div><ul>
 <li>Ejecutamos el siguiente comando:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ diun notif test
-</code></pre></div><p>Recibiremos una notificación de test por los providers configurados.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ diun notif test
+</span></span></code></pre></div><p>Recibiremos una notificación de test por los providers configurados.</p>
 <p>Con esto, ya tendremos Diun corriendo, el cual nos avisará de las nuevas actualizaciones de nuestras imágenes, siempre que les pongamos la etiqueta <code>diun.enable=true</code> dejando watchByDefault a false.</p>
 <p>
 

@@ -693,33 +693,32 @@
 <p>He incluido la configuración de env <code>ND_DEVACTIVITYPANEL=FALSE</code> para que el cliente web funcione de forma fluida, sin esta configuración presentaba grandes problemas el funcionamiento de la interfaz.</p>
 <p>Podemos elegir entre docker-compose o la linea de comandos:</p>
 <h3 id="11-docker-compose">1.1 Docker-Compose</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">version: &#34;3&#34;
-services:
-    navidrome:
-        image: deluan/navidrome:latest
-        user: 1000:1000
-        ports:
-            - &#34;4533:4533&#34;
-        restart: always
-        environment:
-            ND_LOGLEVEL: info 
-            ND_DEVACTIVITYPANEL: FALSE
-        volumes:
-            - &#34;/directorio/de/datos:/data&#34;
-            - &#34;/directorio/de/musica:/music:ro&#34;
-
-</code></pre></div><h3 id="12-command-line-tool">1.2 Command line tool</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker run -d <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>--name navidrome <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>--restart<span style="color:#f92672">=</span>always <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>--user <span style="color:#66d9ef">$(</span>id -u<span style="color:#66d9ef">)</span>:<span style="color:#66d9ef">$(</span>id -g<span style="color:#66d9ef">)</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>-v /directorio/de/musica:/music <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>-v /directorio/de/datos:/data <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>-p 4533:4533 <span style="color:#ae81ff">\ </span>
--e ND_LOGLEVEL<span style="color:#f92672">=</span>info <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>-e ND_DEVACTIVITYPANEL<span style="color:#f92672">=</span>FALSE <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>deluan/navidrome:latest
-</code></pre></div><p>Tenemos que sustituir la ruta de los volúmenes, por un lado <code>data</code> que será donde Navidrome guarde la configuración y otros archivos necesarios, y por otro lado <code>music</code>, que será el directorio donde tenemos que tener toda nuestra biblioteca de música para que Navidrome la indexe y la sirva.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>version: &#34;3&#34;
+</span></span><span style="display:flex;"><span>services:
+</span></span><span style="display:flex;"><span>    navidrome:
+</span></span><span style="display:flex;"><span>        image: deluan/navidrome:latest
+</span></span><span style="display:flex;"><span>        user: 1000:1000
+</span></span><span style="display:flex;"><span>        ports:
+</span></span><span style="display:flex;"><span>            - &#34;4533:4533&#34;
+</span></span><span style="display:flex;"><span>        restart: always
+</span></span><span style="display:flex;"><span>        environment:
+</span></span><span style="display:flex;"><span>            ND_LOGLEVEL: info 
+</span></span><span style="display:flex;"><span>            ND_DEVACTIVITYPANEL: FALSE
+</span></span><span style="display:flex;"><span>        volumes:
+</span></span><span style="display:flex;"><span>            - &#34;/directorio/de/datos:/data&#34;
+</span></span><span style="display:flex;"><span>            - &#34;/directorio/de/musica:/music:ro&#34;
+</span></span></code></pre></div><h3 id="12-command-line-tool">1.2 Command line tool</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker run -d <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--name navidrome <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--restart<span style="color:#f92672">=</span>always <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--user <span style="color:#66d9ef">$(</span>id -u<span style="color:#66d9ef">)</span>:<span style="color:#66d9ef">$(</span>id -g<span style="color:#66d9ef">)</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-v /directorio/de/musica:/music <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-v /directorio/de/datos:/data <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-p 4533:4533 <span style="color:#ae81ff">\ </span>
+</span></span><span style="display:flex;"><span>-e ND_LOGLEVEL<span style="color:#f92672">=</span>info <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-e ND_DEVACTIVITYPANEL<span style="color:#f92672">=</span>FALSE <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>deluan/navidrome:latest
+</span></span></code></pre></div><p>Tenemos que sustituir la ruta de los volúmenes, por un lado <code>data</code> que será donde Navidrome guarde la configuración y otros archivos necesarios, y por otro lado <code>music</code>, que será el directorio donde tenemos que tener toda nuestra biblioteca de música para que Navidrome la indexe y la sirva.</p>
 <p>Es importante que el usuario que indiquemos tenga permisos en los directorios especificados para los volúmenes.</p>
 <h2 id="2-interfaz-web">2. Interfaz web</h2>
 <p>Una vez arranque el contenedor, podemos acceder a la interfaz de Navidrome en <code>http://localhost:4533</code>.</p>
@@ -752,31 +751,31 @@ services:
 </p>
 <h2 id="4-nginx-reverse-proxy">4. Nginx reverse proxy</h2>
 <p>Si queremos usar un nombre de dominio para acceder a nuestro nuevo servidor de música, así como asegurarlo por https, tan solo tenemos que crear un reverse proxy con Nginx.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">server {
-    listen 80;
-    server_name dominio.local;
-    # enforce https
-    return 301 https://$server_name$request_uri;
-}
-server {
-    listen 443 ssl http2;
-    server_name dominio.local;
-    ssl_certificate /directorio/certificado.pem;
-    ssl_certificate_key /directorio/llave.key;
-    add_header Strict-Transport-Security &#34;max-age=31536000&#34; always;
-
-    location / {
-        proxy_pass http://localhost:4533/;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-        proxy_set_header X-Forwarded-Protocol $scheme;
-        proxy_set_header X-Forwarded-Host $http_host;
-        proxy_buffering off;
-    }
-}
-</code></pre></div><p>Tenemos que sustituir el nombre de dominio por el adecuado, así como la ruta y nombre de nuestro certificado ssl.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>server {
+</span></span><span style="display:flex;"><span>    listen 80;
+</span></span><span style="display:flex;"><span>    server_name dominio.local;
+</span></span><span style="display:flex;"><span>    # enforce https
+</span></span><span style="display:flex;"><span>    return 301 https://$server_name$request_uri;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>server {
+</span></span><span style="display:flex;"><span>    listen 443 ssl http2;
+</span></span><span style="display:flex;"><span>    server_name dominio.local;
+</span></span><span style="display:flex;"><span>    ssl_certificate /directorio/certificado.pem;
+</span></span><span style="display:flex;"><span>    ssl_certificate_key /directorio/llave.key;
+</span></span><span style="display:flex;"><span>    add_header Strict-Transport-Security &#34;max-age=31536000&#34; always;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    location / {
+</span></span><span style="display:flex;"><span>        proxy_pass http://localhost:4533/;
+</span></span><span style="display:flex;"><span>        proxy_set_header Host $host;
+</span></span><span style="display:flex;"><span>        proxy_set_header X-Real-IP $remote_addr;
+</span></span><span style="display:flex;"><span>        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+</span></span><span style="display:flex;"><span>        proxy_set_header X-Forwarded-Proto $scheme;
+</span></span><span style="display:flex;"><span>        proxy_set_header X-Forwarded-Protocol $scheme;
+</span></span><span style="display:flex;"><span>        proxy_set_header X-Forwarded-Host $http_host;
+</span></span><span style="display:flex;"><span>        proxy_buffering off;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Tenemos que sustituir el nombre de dominio por el adecuado, así como la ruta y nombre de nuestro certificado ssl.</p>
 <p>Con esto, ya estamos listos para disfrutar de nuestra biblioteca de música en todos nuestros dispositivos, tanto online como offline!</p>
 <p>
 

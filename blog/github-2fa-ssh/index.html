@@ -743,26 +743,26 @@ Aquí nos da la posibilidad de utilizar una app de autenticación de dos factore
 <ul>
 <li>Generamos la clave SSH:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh-keygen -t rsa -b <span style="color:#ae81ff">4096</span> -C tucorreo@dominio.com
-</code></pre></div><p>Es importante poner el mismo correo electrónico que utilizamos en GitHub.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ssh-keygen -t rsa -b <span style="color:#ae81ff">4096</span> -C tucorreo@dominio.com
+</span></span></code></pre></div><p>Es importante poner el mismo correo electrónico que utilizamos en GitHub.</p>
 <p>Se nos pedirá el nombre del <code>archivo</code> donde guardar la clave, y una <code>passphrase</code> que será la contraseña que utilizaremos para poder usar nuestra clave SHH. La <code>passphrase</code> no es obligatoria, pero si muy recomendable.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Generating public/private rsa key pair.
-Enter file in which to save the key <span style="color:#f92672">(</span>/home/usuario/.ssh/id_rsa<span style="color:#f92672">)</span>: test
-Enter passphrase <span style="color:#f92672">(</span>empty <span style="color:#66d9ef">for</span> no passphrase<span style="color:#f92672">)</span>: 
-Enter same passphrase again: 
-Your identification has been saved in test.
-Your public key has been saved in test.pub.
-</code></pre></div><p>Ya tenemos la clave SSH generada, en un archivo la privada y en otro la pública, que en mi caso son <code>test</code> y <code>test.pub</code> respectivamente. Recomiendo moverlas al directorio <code>.ssh</code> dentro del <code>$HOME</code> de nuestro usuario, para tenerlas localizadas.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Generating public/private rsa key pair.
+</span></span><span style="display:flex;"><span>Enter file in which to save the key <span style="color:#f92672">(</span>/home/usuario/.ssh/id_rsa<span style="color:#f92672">)</span>: test
+</span></span><span style="display:flex;"><span>Enter passphrase <span style="color:#f92672">(</span>empty <span style="color:#66d9ef">for</span> no passphrase<span style="color:#f92672">)</span>: 
+</span></span><span style="display:flex;"><span>Enter same passphrase again: 
+</span></span><span style="display:flex;"><span>Your identification has been saved in test.
+</span></span><span style="display:flex;"><span>Your public key has been saved in test.pub.
+</span></span></code></pre></div><p>Ya tenemos la clave SSH generada, en un archivo la privada y en otro la pública, que en mi caso son <code>test</code> y <code>test.pub</code> respectivamente. Recomiendo moverlas al directorio <code>.ssh</code> dentro del <code>$HOME</code> de nuestro usuario, para tenerlas localizadas.</p>
 <p>Ahora, configuramos nuestra máquina para que utilice esta clave con GitHub.</p>
 <ul>
 <li>Estando en el <code>$HOME</code> de nuestro usuario, editamos el archivo de configuracion de SSH:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ nano .ssh/config
-</code></pre></div><p>Y pegamos dentro lo siguiente, indicando correctamente el nombre de nuestra clave privada, en mi caso <code>test</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">Host github.com
-User git
-IdentityFile ~/.ssh/test
-</code></pre></div><p>Con esto, cada vez que nos autentiquemos en GitHub mediante SSH, nuestro sistema utilizará esta clave.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ nano .ssh/config
+</span></span></code></pre></div><p>Y pegamos dentro lo siguiente, indicando correctamente el nombre de nuestra clave privada, en mi caso <code>test</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>Host github.com
+</span></span><span style="display:flex;"><span>User git
+</span></span><span style="display:flex;"><span>IdentityFile ~/.ssh/test
+</span></span></code></pre></div><p>Con esto, cada vez que nos autentiquemos en GitHub mediante SSH, nuestro sistema utilizará esta clave.</p>
 <ul>
 <li>Por último, volvemos a los <code>Ajustes</code> de nuestra cuenta de GitHub, entramos en el apartado <code>Claves SSH y GPG</code>, y pinchamos en el botón verde de <code>Nueva clave SSH</code>:</li>
 </ul>

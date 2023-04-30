@@ -602,78 +602,78 @@
 <ul>
 <li>Descargamos la última versión disponible:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wget https://updates.duplicati.com/beta/duplicati_2.0.6.3-1_all.deb
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget https://updates.duplicati.com/beta/duplicati_2.0.6.3-1_all.deb
+</span></span></code></pre></div><ul>
 <li>Instalamos el archivo descargado:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install ./duplicati_2.0.6.3-1_all.deb -y
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install ./duplicati_2.0.6.3-1_all.deb -y
+</span></span></code></pre></div><ul>
 <li>Creamos el servicio:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo nano /etc/systemd/system/duplicati.service
-</code></pre></div><p>Pegamos dentro el siguiente contenido y guardamos:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">[Unit]
-Description=Duplicati web-server
-After=network.target
-
-[Service]
-Nice=19
-IOSchedulingClass=idle
-EnvironmentFile=-/etc/default/duplicati
-ExecStart=/usr/bin/duplicati-server $DAEMON_OPTS
-Restart=always
-
-[Install]
-WantedBy=multi-user.target
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo nano /etc/systemd/system/duplicati.service
+</span></span></code></pre></div><p>Pegamos dentro el siguiente contenido y guardamos:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>[Unit]
+</span></span><span style="display:flex;"><span>Description=Duplicati web-server
+</span></span><span style="display:flex;"><span>After=network.target
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[Service]
+</span></span><span style="display:flex;"><span>Nice=19
+</span></span><span style="display:flex;"><span>IOSchedulingClass=idle
+</span></span><span style="display:flex;"><span>EnvironmentFile=-/etc/default/duplicati
+</span></span><span style="display:flex;"><span>ExecStart=/usr/bin/duplicati-server $DAEMON_OPTS
+</span></span><span style="display:flex;"><span>Restart=always
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[Install]
+</span></span><span style="display:flex;"><span>WantedBy=multi-user.target
+</span></span></code></pre></div><ul>
 <li>Editamos <code>/etc/dafault/duplicati</code>:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo nano /etc/default/duplicati
-</code></pre></div><p>Lo dejamos con las opciones que se muestran a continuación y guardamos:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt"># Defaults for duplicati initscript
-# sourced by /etc/init.d/duplicati
-# installed at /etc/default/duplicati by the maintainer scripts
-
-#
-# This is a POSIX shell fragment
-#
-
-# Additional options that are passed to the Daemon.
-DAEMON_OPTS=&#34;--webservice-interface=any --webservice-port=8200&#34;
-</code></pre></div><p>En este caso, estamos indicando que el servicio se levante en el <code>puerto 8200</code>, si lo tenemos ocupado por otro servicio podemos modificarlo.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo nano /etc/default/duplicati
+</span></span></code></pre></div><p>Lo dejamos con las opciones que se muestran a continuación y guardamos:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span># Defaults for duplicati initscript
+</span></span><span style="display:flex;"><span># sourced by /etc/init.d/duplicati
+</span></span><span style="display:flex;"><span># installed at /etc/default/duplicati by the maintainer scripts
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#
+</span></span><span style="display:flex;"><span># This is a POSIX shell fragment
+</span></span><span style="display:flex;"><span>#
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Additional options that are passed to the Daemon.
+</span></span><span style="display:flex;"><span>DAEMON_OPTS=&#34;--webservice-interface=any --webservice-port=8200&#34;
+</span></span></code></pre></div><p>En este caso, estamos indicando que el servicio se levante en el <code>puerto 8200</code>, si lo tenemos ocupado por otro servicio podemos modificarlo.</p>
 <ul>
 <li>Habilitamos, iniciamos y comprobamos el estado del service de duplicati:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl enable duplicati.service
-sudo systemctl daemon-reload
-sudo systemctl start duplicati.service 
-sudo systemctl status duplicati.service
-</code></pre></div><p>Con esto ya tendremos disponible duplicati en nuestra máquina. Podemos entrar por <code>http://192.168.1.XXX:8200</code>, indicando la ip de la máquina donde lo hemos instalado y el puerto.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl enable duplicati.service
+</span></span><span style="display:flex;"><span>sudo systemctl daemon-reload
+</span></span><span style="display:flex;"><span>sudo systemctl start duplicati.service 
+</span></span><span style="display:flex;"><span>sudo systemctl status duplicati.service
+</span></span></code></pre></div><p>Con esto ya tendremos disponible duplicati en nuestra máquina. Podemos entrar por <code>http://192.168.1.XXX:8200</code>, indicando la ip de la máquina donde lo hemos instalado y el puerto.</p>
 <h2 id="3-nginx-reverse-proxy">3. NGINX reverse proxy</h2>
 <p>Si tenemos un dominio local, y queremos servir duplicati por ejemplo bajo un subdominio de este, tan solo tenemos que agregar un reverse proxy en nuestra configuración de NGINX.</p>
 <p>La configuración de dicho reverse proxy sería la siguiente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">server {
-
-listen 80;
-server_name duplicati.midominio.local;
-# enforce https
-return 301 https://$server_name$request_uri;
-}
-server {
-listen 443 ssl;
-server_name duplicati.midominio.local;
-ssl_certificate /ruta/midominio.local.pem;
-ssl_certificate_key /ruta/midominio.local.key;
-location / {
-proxy_pass http://127.0.0.1:8200;
-proxy_set_header Host $host;
-proxy_set_header X-Real-IP $remote_addr;
-proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-proxy_set_header X-Forwarded-Proto $scheme;
-
-}
-}
-</code></pre></div><p>Tan solo tenemos que modificar las rutas de nuestro certificado ssl y nuestro dominio local.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>server {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>listen 80;
+</span></span><span style="display:flex;"><span>server_name duplicati.midominio.local;
+</span></span><span style="display:flex;"><span># enforce https
+</span></span><span style="display:flex;"><span>return 301 https://$server_name$request_uri;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>server {
+</span></span><span style="display:flex;"><span>listen 443 ssl;
+</span></span><span style="display:flex;"><span>server_name duplicati.midominio.local;
+</span></span><span style="display:flex;"><span>ssl_certificate /ruta/midominio.local.pem;
+</span></span><span style="display:flex;"><span>ssl_certificate_key /ruta/midominio.local.key;
+</span></span><span style="display:flex;"><span>location / {
+</span></span><span style="display:flex;"><span>proxy_pass http://127.0.0.1:8200;
+</span></span><span style="display:flex;"><span>proxy_set_header Host $host;
+</span></span><span style="display:flex;"><span>proxy_set_header X-Real-IP $remote_addr;
+</span></span><span style="display:flex;"><span>proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+</span></span><span style="display:flex;"><span>proxy_set_header X-Forwarded-Proto $scheme;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Tan solo tenemos que modificar las rutas de nuestro certificado ssl y nuestro dominio local.</p>
 <p>Para que duplicati funcione bajo nuestro dominio, tenemos que indicarlo en la configuración de duplicati. Entraremos por la ip de nuestra máquina en <code>http://192.168.1.XXX:8200</code> y seleccionaremos lo siguiente:</p>
 <p>
 

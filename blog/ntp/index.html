@@ -702,13 +702,13 @@
 <ul>
 <li>Deshabilitar la sincronización horaria systemd-timesyncd</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo systemctl stop systemd-timesyncd
-$ sudo systemctl disable systemd-timesyncd
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo systemctl stop systemd-timesyncd
+</span></span><span style="display:flex;"><span>$ sudo systemctl disable systemd-timesyncd
+</span></span></code></pre></div><ul>
 <li>Instalar NTP</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt-get install ntp
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt-get install ntp
+</span></span></code></pre></div><ul>
 <li>Editar el archivo de configuración con los servers adecuados a tu zona horaria. Los encontrarás en 
 
     
@@ -719,86 +719,86 @@ $ sudo systemctl disable systemd-timesyncd
 
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/ntp.conf
-</code></pre></div><pre><code>Quedará algo como lo siguiente
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo nano /etc/ntp.conf
+</span></span></code></pre></div><pre><code>Quedará algo como lo siguiente
 </code></pre>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">#/etc/ntp.conf, configuration for ntpd
-
-driftfile /var/lib/ntp/ntp.drift
-statsdir /var/log/ntpstats/
-
-statistics loopstats peerstats clockstats
-filegen loopstats file loopstats type day enable
-filegen peerstats file peerstats type day enable
-filegen clockstats file clockstats type day enable
-
-# You do need to talk to an NTP server or two (or three).
-#server ntp.your-provider.example
-
-# pool.ntp.org maps to more than 300 low-stratum NTP servers.
-# Your server will pick a different set every time it starts up.
-# *** Please consider joining the pool! ***
-# *** ***
-server 0.es.pool.ntp.org
-server 0.europe.pool.ntp.org
-server 1.europe.pool.ntp.org
-
-# By default, exchange time with everybody, but don&#39;t allow configuration.
-# See /usr/share/doc/ntp-doc/html/accopt.html for details.
-restrict -4 default kod notrap nomodify nopeer noquery
-restrict -6 default kod notrap nomodify nopeer noquery
-
-# Local users may interrogate the ntp server more closely.
-restrict 127.0.0.1
-restrict ::1
-
-# Clients from this (example!) subnet have unlimited access,
-# but only if cryptographically authenticated
-#restrict 192.168.123.0 mask 255.255.255.0 notrust
-
-# If you want to provide time to your local subnet, change the next line.
-# (Again, the address is an example only.)
-#broadcast 192.168.123.255
-
-# If you want to listen to time broadcasts on your local subnet,
-# de-comment the next lines. Please do this only if you trust everybody
-# on the network!
-#disable auth
-#broadcastclient
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>#/etc/ntp.conf, configuration for ntpd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>driftfile /var/lib/ntp/ntp.drift
+</span></span><span style="display:flex;"><span>statsdir /var/log/ntpstats/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>statistics loopstats peerstats clockstats
+</span></span><span style="display:flex;"><span>filegen loopstats file loopstats type day enable
+</span></span><span style="display:flex;"><span>filegen peerstats file peerstats type day enable
+</span></span><span style="display:flex;"><span>filegen clockstats file clockstats type day enable
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># You do need to talk to an NTP server or two (or three).
+</span></span><span style="display:flex;"><span>#server ntp.your-provider.example
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># pool.ntp.org maps to more than 300 low-stratum NTP servers.
+</span></span><span style="display:flex;"><span># Your server will pick a different set every time it starts up.
+</span></span><span style="display:flex;"><span># *** Please consider joining the pool! ***
+</span></span><span style="display:flex;"><span># *** ***
+</span></span><span style="display:flex;"><span>server 0.es.pool.ntp.org
+</span></span><span style="display:flex;"><span>server 0.europe.pool.ntp.org
+</span></span><span style="display:flex;"><span>server 1.europe.pool.ntp.org
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># By default, exchange time with everybody, but don&#39;t allow configuration.
+</span></span><span style="display:flex;"><span># See /usr/share/doc/ntp-doc/html/accopt.html for details.
+</span></span><span style="display:flex;"><span>restrict -4 default kod notrap nomodify nopeer noquery
+</span></span><span style="display:flex;"><span>restrict -6 default kod notrap nomodify nopeer noquery
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Local users may interrogate the ntp server more closely.
+</span></span><span style="display:flex;"><span>restrict 127.0.0.1
+</span></span><span style="display:flex;"><span>restrict ::1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Clients from this (example!) subnet have unlimited access,
+</span></span><span style="display:flex;"><span># but only if cryptographically authenticated
+</span></span><span style="display:flex;"><span>#restrict 192.168.123.0 mask 255.255.255.0 notrust
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># If you want to provide time to your local subnet, change the next line.
+</span></span><span style="display:flex;"><span># (Again, the address is an example only.)
+</span></span><span style="display:flex;"><span>#broadcast 192.168.123.255
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># If you want to listen to time broadcasts on your local subnet,
+</span></span><span style="display:flex;"><span># de-comment the next lines. Please do this only if you trust everybody
+</span></span><span style="display:flex;"><span># on the network!
+</span></span><span style="display:flex;"><span>#disable auth
+</span></span><span style="display:flex;"><span>#broadcastclient
+</span></span></code></pre></div><ul>
 <li>Reiniciar el servicio y probar que sincroniza correctamente</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo service ntp restart
-$ ntpq -pn
-</code></pre></div><pre><code>Se mostrará por pantalla algo similar a esto:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo service ntp restart
+</span></span><span style="display:flex;"><span>$ ntpq -pn
+</span></span></code></pre></div><pre><code>Se mostrará por pantalla algo similar a esto:
 </code></pre>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">remote refid st t when poll reach delay offset jitter
-==============================================================================
-*81.27.192.20 195.113.144.238 2 u 26 64 1 58.571 0.797 68.634
-+93.185.101.74 195.113.144.201 2 u 25 64 1 42.282 -1.507 0.477
-+93.185.101.77 195.113.144.201 2 u 24 64 1 41.390 -1.544 68.243
--91.216.168.42 178.238.46.152 3 u 23 64 1 43.510 1.010 1.094
-</code></pre></div><p>Podemos comprobar que la hora y fecha del sistema es correcta con:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ date
-</code></pre></div><h2 id="configurar-el-servidor-ntp">Configurar el servidor NTP</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>remote refid st t when poll reach delay offset jitter
+</span></span><span style="display:flex;"><span>==============================================================================
+</span></span><span style="display:flex;"><span>*81.27.192.20 195.113.144.238 2 u 26 64 1 58.571 0.797 68.634
+</span></span><span style="display:flex;"><span>+93.185.101.74 195.113.144.201 2 u 25 64 1 42.282 -1.507 0.477
+</span></span><span style="display:flex;"><span>+93.185.101.77 195.113.144.201 2 u 24 64 1 41.390 -1.544 68.243
+</span></span><span style="display:flex;"><span>-91.216.168.42 178.238.46.152 3 u 23 64 1 43.510 1.010 1.094
+</span></span></code></pre></div><p>Podemos comprobar que la hora y fecha del sistema es correcta con:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ date
+</span></span></code></pre></div><h2 id="configurar-el-servidor-ntp">Configurar el servidor NTP</h2>
 <p>Ahora vamos a configurar NTP para que esté disponible como servidor local.</p>
 <ul>
 <li>Editar el archivo de configuración</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/ntp.conf
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo nano /etc/ntp.conf
+</span></span></code></pre></div><ul>
 <li>Añadimos lo siguiente:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">restrict 192.168.1.0 mask 255.255.255.0
-</code></pre></div><p>Con esto restringimos el acceso al server a nuestra red local. Cambiar las direcciones según las correspondientes a nuestra red.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">broadcast 192.168.1.255
-broadcast 224.0.1.1
-</code></pre></div><p>Aquí cambiaremos la primera dirección por la dirección broadcast de nuestra red. No cambiar la dirección 224.0.1.1, ya que algunos dispositivos de red sincronizan con NTP en esta dirección multicast de forma automática.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>restrict 192.168.1.0 mask 255.255.255.0
+</span></span></code></pre></div><p>Con esto restringimos el acceso al server a nuestra red local. Cambiar las direcciones según las correspondientes a nuestra red.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>broadcast 192.168.1.255
+</span></span><span style="display:flex;"><span>broadcast 224.0.1.1
+</span></span></code></pre></div><p>Aquí cambiaremos la primera dirección por la dirección broadcast de nuestra red. No cambiar la dirección 224.0.1.1, ya que algunos dispositivos de red sincronizan con NTP en esta dirección multicast de forma automática.</p>
 <ul>
 <li>Reiniciar el servicio</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo service ntp restart
-</code></pre></div><p>Por último, configuramos en los dispositivos cliente la ip local del servidor como server NTP, y ya tendremos lo hora sincronizada sin necesidad de que estos tengan acceso a internet.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo service ntp restart
+</span></span></code></pre></div><p>Por último, configuramos en los dispositivos cliente la ip local del servidor como server NTP, y ya tendremos lo hora sincronizada sin necesidad de que estos tengan acceso a internet.</p>
 
 
   <hr style="border-color: #d6d6d6;" />

@@ -685,75 +685,75 @@
 <ul>
 <li>Instalar el demonio</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install apcupsd
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt install apcupsd
+</span></span></code></pre></div><ul>
 <li>Configurar el SAI</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/apcupsd/apcupsd.conf
-</code></pre></div><p>Buscamos y modificamos los siguientes parámetros:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">UPSNAME homeups1
-UPSCABLE usb
-## establecer tipo de UPS como usb, DEVICE en blanco ##
-UPSTYPE usb
-DEVICE
-## estos vienen por defecto, modifícalos si quieres ##
-ONBATTERYDELAY 6
-BATTERYLEVEL 5
-MINUTES 3
-TIMEOUT 0
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo nano /etc/apcupsd/apcupsd.conf
+</span></span></code></pre></div><p>Buscamos y modificamos los siguientes parámetros:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>UPSNAME homeups1
+</span></span><span style="display:flex;"><span>UPSCABLE usb
+</span></span><span style="display:flex;"><span>## establecer tipo de UPS como usb, DEVICE en blanco ##
+</span></span><span style="display:flex;"><span>UPSTYPE usb
+</span></span><span style="display:flex;"><span>DEVICE
+</span></span><span style="display:flex;"><span>## estos vienen por defecto, modifícalos si quieres ##
+</span></span><span style="display:flex;"><span>ONBATTERYDELAY 6
+</span></span><span style="display:flex;"><span>BATTERYLEVEL 5
+</span></span><span style="display:flex;"><span>MINUTES 3
+</span></span><span style="display:flex;"><span>TIMEOUT 0
+</span></span></code></pre></div><ul>
 <li>Indicar que la configuración esta realizada</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/default/apcupsd
-</code></pre></div><p>Buscar el parámetro <code>ISCONFIGURED</code> y modificarlo</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">ISCONFIGURED=yes
-</code></pre></div><h2 id="controlar-el-servicio">Controlar el servicio</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo nano /etc/default/apcupsd
+</span></span></code></pre></div><p>Buscar el parámetro <code>ISCONFIGURED</code> y modificarlo</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>ISCONFIGURED=yes
+</span></span></code></pre></div><h2 id="controlar-el-servicio">Controlar el servicio</h2>
 <p>Podemos arrancar, parar y reiniciar el servicio con los siguientes comandos</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo /etc/init.d/apcupsd start
-$ sudo /etc/init.d/apcupsd stop
-$ sudo /etc/init.d/apcupsd restart
-</code></pre></div><h2 id="ver-estado-actual-del-ups">Ver estado actual del UPS</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ apcaccess 
-</code></pre></div><p>Esto nos mostrara por pantalla algo similar a lo siguiente</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">APC : xxxXXXxxx
-DATE : fecha hora 
-HOSTNAME : hostname
-VERSION : 3.14.14 (31 May 2016) debian
-UPSNAME : nombreUPS
-CABLE : USB Cable
-DRIVER : USB UPS Driver
-UPSMODE : Stand Alone
-STARTTIME: fecha hora 
-MODEL : Back-UPS XS 700U 
-STATUS : ONLINE 
-LINEV : 228.0 Volts
-LOADPCT : 7.0 Percent
-BCHARGE : 100.0 Percent
-TIMELEFT : 71.3 Minutes
-MBATTCHG : 5 Percent
-MINTIMEL : 3 Minutes
-MAXTIME : 0 Seconds
-SENSE : Medium
-LOTRANS : 140.0 Volts
-HITRANS : 300.0 Volts
-ALARMDEL : 30 Seconds
-BATTV : 13.5 Volts
-LASTXFER : lastxfer
-NUMXFERS : 1
-XONBATT : fecha hora 
-TONBATT : 0 Seconds
-CUMONBATT: 78 Seconds
-XOFFBATT : fecha hora
-SELFTEST : NO
-STATFLAG : xxxXXXxxx
-SERIALNO : XXxxxXXxx 
-BATTDATE : fecha
-NOMINV : 230 Volts
-NOMBATTV : 12.0 Volts
-NOMPOWER : 390 Watts
-FIRMWARE : firmware
-END APC : fecha hora
-</code></pre></div><p>Según cual sea tu modelo de SAI, el listado anterior puede variar.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo /etc/init.d/apcupsd start
+</span></span><span style="display:flex;"><span>$ sudo /etc/init.d/apcupsd stop
+</span></span><span style="display:flex;"><span>$ sudo /etc/init.d/apcupsd restart
+</span></span></code></pre></div><h2 id="ver-estado-actual-del-ups">Ver estado actual del UPS</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ apcaccess 
+</span></span></code></pre></div><p>Esto nos mostrara por pantalla algo similar a lo siguiente</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>APC : xxxXXXxxx
+</span></span><span style="display:flex;"><span>DATE : fecha hora 
+</span></span><span style="display:flex;"><span>HOSTNAME : hostname
+</span></span><span style="display:flex;"><span>VERSION : 3.14.14 (31 May 2016) debian
+</span></span><span style="display:flex;"><span>UPSNAME : nombreUPS
+</span></span><span style="display:flex;"><span>CABLE : USB Cable
+</span></span><span style="display:flex;"><span>DRIVER : USB UPS Driver
+</span></span><span style="display:flex;"><span>UPSMODE : Stand Alone
+</span></span><span style="display:flex;"><span>STARTTIME: fecha hora 
+</span></span><span style="display:flex;"><span>MODEL : Back-UPS XS 700U 
+</span></span><span style="display:flex;"><span>STATUS : ONLINE 
+</span></span><span style="display:flex;"><span>LINEV : 228.0 Volts
+</span></span><span style="display:flex;"><span>LOADPCT : 7.0 Percent
+</span></span><span style="display:flex;"><span>BCHARGE : 100.0 Percent
+</span></span><span style="display:flex;"><span>TIMELEFT : 71.3 Minutes
+</span></span><span style="display:flex;"><span>MBATTCHG : 5 Percent
+</span></span><span style="display:flex;"><span>MINTIMEL : 3 Minutes
+</span></span><span style="display:flex;"><span>MAXTIME : 0 Seconds
+</span></span><span style="display:flex;"><span>SENSE : Medium
+</span></span><span style="display:flex;"><span>LOTRANS : 140.0 Volts
+</span></span><span style="display:flex;"><span>HITRANS : 300.0 Volts
+</span></span><span style="display:flex;"><span>ALARMDEL : 30 Seconds
+</span></span><span style="display:flex;"><span>BATTV : 13.5 Volts
+</span></span><span style="display:flex;"><span>LASTXFER : lastxfer
+</span></span><span style="display:flex;"><span>NUMXFERS : 1
+</span></span><span style="display:flex;"><span>XONBATT : fecha hora 
+</span></span><span style="display:flex;"><span>TONBATT : 0 Seconds
+</span></span><span style="display:flex;"><span>CUMONBATT: 78 Seconds
+</span></span><span style="display:flex;"><span>XOFFBATT : fecha hora
+</span></span><span style="display:flex;"><span>SELFTEST : NO
+</span></span><span style="display:flex;"><span>STATFLAG : xxxXXXxxx
+</span></span><span style="display:flex;"><span>SERIALNO : XXxxxXXxx 
+</span></span><span style="display:flex;"><span>BATTDATE : fecha
+</span></span><span style="display:flex;"><span>NOMINV : 230 Volts
+</span></span><span style="display:flex;"><span>NOMBATTV : 12.0 Volts
+</span></span><span style="display:flex;"><span>NOMPOWER : 390 Watts
+</span></span><span style="display:flex;"><span>FIRMWARE : firmware
+</span></span><span style="display:flex;"><span>END APC : fecha hora
+</span></span></code></pre></div><p>Según cual sea tu modelo de SAI, el listado anterior puede variar.</p>
 <p>Una vez hecho esto, el SAI ya queda completamente integrado en el sistema. Pero como siempre, podemos seguir complicando la cosa.</p>
 <p>En mi caso, he programado una regla en mi sistema de domótica, que ejecuta <code>apcaccess</code> cada pocos segundos, y parsea las lineas que nos devuelve el comando a valores independientes, para así controlar los parámetros que me interesan (por ejemplo si se va la corriente y no estoy en casa que me avise, entre otras features). Queda para otra.</p>
 <p>Mucha mierda para 2019, no bebáis mucho terrícolas!</p>

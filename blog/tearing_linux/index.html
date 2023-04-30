@@ -705,48 +705,48 @@
 </li>
 <li>
 <p>Instalamos <code>Compton</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt-get install compton compton-conf 
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt-get install compton compton-conf 
+</span></span></code></pre></div><ul>
 <li>Habilitamos su inicio automático</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano ~/.config/autostart/compton.desktop
-</code></pre></div><p>Pegamos dentro lo siguiente y guardamos:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">[Desktop Entry]
-Encoding=UTF-8
-Version=0.9.4
-Type=Application
-Name=Compton
-Comment=X11 compositor
-Exec=compton -b
-OnlyShowIn=XFCE;
-StartupNotify=false
-Terminal=false
-Hidden=false
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo nano ~/.config/autostart/compton.desktop
+</span></span></code></pre></div><p>Pegamos dentro lo siguiente y guardamos:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>[Desktop Entry]
+</span></span><span style="display:flex;"><span>Encoding=UTF-8
+</span></span><span style="display:flex;"><span>Version=0.9.4
+</span></span><span style="display:flex;"><span>Type=Application
+</span></span><span style="display:flex;"><span>Name=Compton
+</span></span><span style="display:flex;"><span>Comment=X11 compositor
+</span></span><span style="display:flex;"><span>Exec=compton -b
+</span></span><span style="display:flex;"><span>OnlyShowIn=XFCE;
+</span></span><span style="display:flex;"><span>StartupNotify=false
+</span></span><span style="display:flex;"><span>Terminal=false
+</span></span><span style="display:flex;"><span>Hidden=false
+</span></span></code></pre></div></li>
 <li>
 <p>Cambiamos los permisos al fichero creado</p>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$sudo chmod +x ~/.config/autostart/compton.desktop
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$sudo chmod +x ~/.config/autostart/compton.desktop
+</span></span></code></pre></div><ul>
 <li>Creamos configuración por defecto ejecutando <code>compton-conf</code> y pulsamos en <code>apply</code></li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ compton-conf
-</code></pre></div><h3 id="11-transparencia-en-ventanas-inactivas">1.1 Transparencia en ventanas inactivas</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ compton-conf
+</span></span></code></pre></div><h3 id="11-transparencia-en-ventanas-inactivas">1.1 Transparencia en ventanas inactivas</h3>
 <p>Por defecto, Compton muestra las ventanas inactivas con transparencia. Si no te gusta este comportamiento puedes modificarlo en la configuración generada anteriormente.</p>
 <ul>
 <li>
 <p>Edita el archivo <code>compton.conf</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano ~/.config/compton.conf
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo nano ~/.config/compton.conf
+</span></span></code></pre></div></li>
 <li>
 <p>Busca <code>inactive-opacity</code> y lo modifícalo para que no aplique la transparencia, quedando algo así:</p>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">...
-inactive-opacity = 1.0;
-...
-</code></pre></div><p>Al reiniciar o cerrar y abrir la sesión Compton sera nuestro compositor por defecto.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>inactive-opacity = 1.0;
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><p>Al reiniciar o cerrar y abrir la sesión Compton sera nuestro compositor por defecto.</p>
 <!-- raw HTML omitted -->
 <h2 id="2-nvidia">2. Nvidia</h2>
 <p>Ahora vamos a configurar nuestra tarjeta de vídeo Nvidia. Si tienes una Intel salta al punto 3.</p>
@@ -764,35 +764,35 @@ inactive-opacity = 1.0;
 <ul>
 <li>Comprobamos el driver en uso con lshw</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install lshw
-$ sudo lshw -c display
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt install lshw
+</span></span><span style="display:flex;"><span>$ sudo lshw -c display
+</span></span></code></pre></div><ul>
 <li>
 <p>Ponemos los controladores noveau en lista negra:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo nano /etc/modprobe.d/blacklist-nouveau.conf
-</code></pre></div><p>Pegamos dentro lo siguiente y guardamos:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">blacklist nouveau
-blacklist lbm-nouveau
-options nouveau modeset=0
-alias nouveau off
-alias lbm-nouveau off
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo nano /etc/modprobe.d/blacklist-nouveau.conf
+</span></span></code></pre></div><p>Pegamos dentro lo siguiente y guardamos:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>blacklist nouveau
+</span></span><span style="display:flex;"><span>blacklist lbm-nouveau
+</span></span><span style="display:flex;"><span>options nouveau modeset=0
+</span></span><span style="display:flex;"><span>alias nouveau off
+</span></span><span style="display:flex;"><span>alias lbm-nouveau off
+</span></span></code></pre></div></li>
 <li>
 <p>Instalamos el driver privativo:</p>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install -t stretch-backports nvidia-driver
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt install -t stretch-backports nvidia-driver
+</span></span></code></pre></div><ul>
 <li>Creamos el fichero de configuración en <code>/etc/X11/xorg.conf</code></li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nvidia-xconfig
-</code></pre></div><h3 id="22-configuracion">2.2 Configuracion</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo nvidia-xconfig
+</span></span></code></pre></div><h3 id="22-configuracion">2.2 Configuracion</h3>
 <p>Tiendo los drivers de Nvidia y Compton correctamente instalados:</p>
 <ul>
 <li>Abrimos <code>nvidia-settings</code> con sudo</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo nvidia-settings
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo nvidia-settings
+</span></span></code></pre></div><ul>
 <li>
 <p>Vamos a <code>X ServerDisplay Configuration</code> y pinchamos en <code>Advanced</code>.</p>
 <ul>
@@ -813,13 +813,13 @@ alias lbm-nouveau off
 <ul>
 <li>
 <p>Creamos el archivo <code>/etc/X11/xorg.conf</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/X11/xorg.conf
-</code></pre></div><p>Pegamos dentro lo siguiente y guardamos:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">Section &#34;Device&#34;
-Identifier  &#34;Intel Graphics&#34;
-Driver      &#34;intel&#34;
-EndSection
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo nano /etc/X11/xorg.conf
+</span></span></code></pre></div><p>Pegamos dentro lo siguiente y guardamos:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>Section &#34;Device&#34;
+</span></span><span style="display:flex;"><span>Identifier  &#34;Intel Graphics&#34;
+</span></span><span style="display:flex;"><span>Driver      &#34;intel&#34;
+</span></span><span style="display:flex;"><span>EndSection
+</span></span></code></pre></div></li>
 </ul>
 <p>Una vez reinicies el sistema, el tearing habrá desaparecido.</p>
 

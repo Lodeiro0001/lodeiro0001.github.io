@@ -686,35 +686,35 @@
 <ul>
 <li>Comprobamos el valor actual de <code>usbcore-autosuspend</code>:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat /sys/module/usbcore/parameters/autosuspend
-</code></pre></div><p>Si como a mi te sale el valor <code>2</code>, es que tienes autosuspend activado por defecto. Vamos a desactivarlo.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cat /sys/module/usbcore/parameters/autosuspend
+</span></span></code></pre></div><p>Si como a mi te sale el valor <code>2</code>, es que tienes autosuspend activado por defecto. Vamos a desactivarlo.</p>
 <ul>
 <li>Editamos el Grub:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/default/grub
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo nano /etc/default/grub
+</span></span></code></pre></div><ul>
 <li>Agregamos <code>usbcore.autosuspend=-1</code> en la linea que se muestra (quiet ya venia así que lo dejamos):</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">GRUB_CMDLINE_LINUX_DEFAULT=&#34;quiet usbcore.autosuspend=-1&#34;
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>GRUB_CMDLINE_LINUX_DEFAULT=&#34;quiet usbcore.autosuspend=-1&#34;
+</span></span></code></pre></div><ul>
 <li>Actualizamos el Grub:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo update-grub
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo update-grub
+</span></span></code></pre></div><ul>
 <li>Reiniciamos el equipo, y comprobamos que el valor a quedado correctamente a <code>-1</code>:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat /sys/module/usbcore/parameters/autosuspend
-</code></pre></div><h2 id="2-instalación">2. Instalación</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cat /sys/module/usbcore/parameters/autosuspend
+</span></span></code></pre></div><h2 id="2-instalación">2. Instalación</h2>
 <p>Como he dicho antes, utilizo Debian, así que estos comando servirán para Debian y derivados.</p>
 <ul>
 <li>Instalamos los requisitos previos:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install pcsc-tools pcscd pinentry-gtk2 libccid
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt install pcsc-tools pcscd pinentry-gtk2 libccid
+</span></span></code></pre></div><ul>
 <li>Comprobamos que nuestro lector es detectado, nos dirá que no detecta ninguna tarjeta:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pcsc_scan
-</code></pre></div><p>Si repetimos el comando anterior con el DNI insertado en el lector, nos dirá que ha sido detectado he incluso que es un DNI español.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ pcsc_scan
+</span></span></code></pre></div><p>Si repetimos el comando anterior con el DNI insertado en el lector, nos dirá que ha sido detectado he incluso que es un DNI español.</p>
 <ul>
 <li>
 
@@ -738,8 +738,8 @@
 <ul>
 <li>Instalamos el driver descargado:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install ./libpkcs11-dnie_1.6.1_amd64.deb
-</code></pre></div><h2 id="3-configuración-en-firefox">3. Configuración en Firefox</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt install ./libpkcs11-dnie_1.6.1_amd64.deb
+</span></span></code></pre></div><h2 id="3-configuración-en-firefox">3. Configuración en Firefox</h2>
 <p>Ahora tenemos que configurar Firefox para que detecte nuestro DNI electrónico.</p>
 <ul>
 <li>Vamos a <code>Ajustes - Privacidad</code> y en el apartado de seguridad, pinchamos en <code>Dispositivos de seguridad</code>:</li>
@@ -772,9 +772,9 @@
 <ul>
 <li>Añadimos los siguientes datos, y pulsamos en aceptar:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">Nombre del módulo: DNIe
-Nombre del archivo del módulo: /usr/lib/libpkcs11-dnie.so
-</code></pre></div><p>Marcando el nuevo dispositivo que hemos añadido y pinchando en iniciar sesión, podemos comprobar que nuestro DNI funciona correctamente.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>Nombre del módulo: DNIe
+</span></span><span style="display:flex;"><span>Nombre del archivo del módulo: /usr/lib/libpkcs11-dnie.so
+</span></span></code></pre></div><p>Marcando el nuevo dispositivo que hemos añadido y pinchando en iniciar sesión, podemos comprobar que nuestro DNI funciona correctamente.</p>
 <h2 id="4-autofirma">4. Autofirma</h2>
 <p>Por último, vamos a instalar autofirma, el cual nos permitirá firmar documentos con nuestro DNI electrónico.</p>
 <h3 id="41-requisitos">4.1 Requisitos</h3>
@@ -783,31 +783,31 @@ Nombre del archivo del módulo: /usr/lib/libpkcs11-dnie.so
 <ul>
 <li>Instalamos las dependencias requeridas:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt-get -q update
-$ sudo apt-get -yq install gnupg curl
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt-get -q update
+</span></span><span style="display:flex;"><span>$ sudo apt-get -yq install gnupg curl
+</span></span></code></pre></div><ul>
 <li>Agregamos la key pública del repositorio:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt-key adv <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>--keyserver hkp://keyserver.ubuntu.com:80 <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>--recv-keys 0xB1998361219BD9C9
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt-key adv <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--keyserver hkp://keyserver.ubuntu.com:80 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--recv-keys 0xB1998361219BD9C9
+</span></span></code></pre></div><ul>
 <li>Descargamos e instalamos el paquete que agregará el repositorio:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl -O https://cdn.azul.com/zulu/bin/zulu-repo_1.0.0-2_all.deb
-$ sudo apt-get install ./zulu-repo_1.0.0-2_all.deb
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl -O https://cdn.azul.com/zulu/bin/zulu-repo_1.0.0-2_all.deb
+</span></span><span style="display:flex;"><span>$ sudo apt-get install ./zulu-repo_1.0.0-2_all.deb
+</span></span></code></pre></div><ul>
 <li>Instalamos <code>zulu8</code>:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt update
-$ sudo apt install zulu8
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt update
+</span></span><span style="display:flex;"><span>$ sudo apt install zulu8
+</span></span></code></pre></div><ul>
 <li>Comprobamos la versión actual de Java del sistema:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ java -version
-</code></pre></div><p>Si teníamos instalada una versión superior de Java y <code>zulu8</code> no ha quedado como predeterminada, podemos cambiarla con el siguiente comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&amp; sudo update-alternatives --config java
-</code></pre></div><p>Seleccionamos el numero de la versión de Java que queremos que el sistema utilice por defecto, en nuestro caso zulu8.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ java -version
+</span></span></code></pre></div><p>Si teníamos instalada una versión superior de Java y <code>zulu8</code> no ha quedado como predeterminada, podemos cambiarla con el siguiente comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&amp; sudo update-alternatives --config java
+</span></span></code></pre></div><p>Seleccionamos el numero de la versión de Java que queremos que el sistema utilice por defecto, en nuestro caso zulu8.</p>
 <h3 id="42-instalación-de-autofirma">4.2 Instalación de autofirma</h3>
 <p>
 
@@ -821,8 +821,8 @@ $ sudo apt install zulu8
 <ul>
 <li>Instalamos autofirma:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install ./AutoFirma_1_6_5.deb
-</code></pre></div><p>Tenemos que insertar el DNI en el lector antes de abrir autofirma, ya que de lo contrario no mostrará ningún aviso pero no funcionará. Nada mas ejecutarse la aplicación nos pedirá nuestra clave, y ya podremos firmar cualquier documento con nuestro DNI electrónico en Linux.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install ./AutoFirma_1_6_5.deb
+</span></span></code></pre></div><p>Tenemos que insertar el DNI en el lector antes de abrir autofirma, ya que de lo contrario no mostrará ningún aviso pero no funcionará. Nada mas ejecutarse la aplicación nos pedirá nuestra clave, y ya podremos firmar cualquier documento con nuestro DNI electrónico en Linux.</p>
 <p>
 
 <hr style="border-color: #d6d6d6;" />

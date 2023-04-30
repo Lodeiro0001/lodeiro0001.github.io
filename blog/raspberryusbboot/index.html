@@ -693,18 +693,18 @@
 <ul>
 <li>Actualizar nuestra Raspberry Pi</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt-get update <span style="color:#f92672">&amp;&amp;</span> sudo apt-get upgrade
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt-get update <span style="color:#f92672">&amp;&amp;</span> sudo apt-get upgrade
+</span></span></code></pre></div><ul>
 <li>Habilitar USB boot mode</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ echo program_usb_boot_mode<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> | sudo tee -a /boot/config.txt
-</code></pre></div><p>Esto añadirá <code>program_usb_boot_mode=1</code> al final de <code>/boot/config.txt</code>. En cuanto reiniciemos la Raspberry Pi, quedará activado USB Boot Mode de forma permanente, podremos arrancar desde un disco USB sin necesidad de la tarjeta MicroSD, pero si esta está presente, se arrancará desde ella. Si utilizamos esta MicroSD en otra Raspberry Pi, en esta también se activará USB Boot Mode.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ echo program_usb_boot_mode<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> | sudo tee -a /boot/config.txt
+</span></span></code></pre></div><p>Esto añadirá <code>program_usb_boot_mode=1</code> al final de <code>/boot/config.txt</code>. En cuanto reiniciemos la Raspberry Pi, quedará activado USB Boot Mode de forma permanente, podremos arrancar desde un disco USB sin necesidad de la tarjeta MicroSD, pero si esta está presente, se arrancará desde ella. Si utilizamos esta MicroSD en otra Raspberry Pi, en esta también se activará USB Boot Mode.</p>
 <ul>
 <li>Para comprobar que se ha realizado correctamente</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ vcgencmd otp_dump | grep 17:
-17:3020000a
-</code></pre></div><p>Verificamos que la salida sea <code>0x3020000a</code>. De no ser así, repetiremos el proceso. Si sigue sin funcionar, significa que la Raspberry Pi tiene un problema de hardware. A mi me ha funcionado sin problema tanto en una Pi 3B como en una 3B+.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vcgencmd otp_dump | grep 17:
+</span></span><span style="display:flex;"><span>17:3020000a
+</span></span></code></pre></div><p>Verificamos que la salida sea <code>0x3020000a</code>. De no ser así, repetiremos el proceso. Si sigue sin funcionar, significa que la Raspberry Pi tiene un problema de hardware. A mi me ha funcionado sin problema tanto en una Pi 3B como en una 3B+.</p>
 <p>Solo tenemos que 
 
     
@@ -740,45 +740,45 @@ Esto nos devolverá el listado de discos/particiones que tenemos en el sistema. 
 <p>Montamos la partición root del disco USB</p>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mkdir /mnt/rootUSB
-$ sudo mount /dev/sda2 /mnt/rootUSB
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo mkdir /mnt/rootUSB
+</span></span><span style="display:flex;"><span>$ sudo mount /dev/sda2 /mnt/rootUSB
+</span></span></code></pre></div><ul>
 <li>Para conocer su PARTUUID</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo blkid -p /dev/sda2
-</code></pre></div><p>No confundir UUID con PARTUUID. Encontraremos PARTUUID como <code>PART_ENTRY_UUID=&quot;XXXXXXXX-02&quot;</code>. Guardamos el código PARTUUID correspondiente a la partición root de nuestro disco USB.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo blkid -p /dev/sda2
+</span></span></code></pre></div><p>No confundir UUID con PARTUUID. Encontraremos PARTUUID como <code>PART_ENTRY_UUID=&quot;XXXXXXXX-02&quot;</code>. Guardamos el código PARTUUID correspondiente a la partición root de nuestro disco USB.</p>
 <ul>
 <li>Hacemos un backup de la configuración de inicio de la sd y la editamos</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo cp /boot/cmdline.txt /boot/cmdline.sdBoot.bak
-$ sudo nano /boot/cmdline.txt
-</code></pre></div><p>Veremos algo como <code>root=PARTUUID=XXXXXXXX-02</code>, correspondiente al <code>/</code>de  la sd, lo sustituimos por el PARTUUID correpondiente a la partición root del USB que copiamos antes.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo cp /boot/cmdline.txt /boot/cmdline.sdBoot.bak
+</span></span><span style="display:flex;"><span>$ sudo nano /boot/cmdline.txt
+</span></span></code></pre></div><p>Veremos algo como <code>root=PARTUUID=XXXXXXXX-02</code>, correspondiente al <code>/</code>de  la sd, lo sustituimos por el PARTUUID correpondiente a la partición root del USB que copiamos antes.</p>
 <ul>
 <li>Editamos <code>fstab</code> en el disco USB para indicar el <code>/boot</code> de la sd</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /mnt/rootUSB/etc/fstab
-</code></pre></div><p>Comentamos la linea correspondiente al <code>/boot</code> del usb, y añadimos <code>PARTUUID=XXXXXXXX-01       /boot           vfat    defaults          0       2</code> para la sd, quedando algo como lo siguiente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    proc                       /proc           proc    defaults          <span style="color:#ae81ff">0</span>       <span style="color:#ae81ff">0</span>
-    PARTUUID<span style="color:#f92672">=</span>XXXXXXXX-02       /               ext4    defaults,noatime  <span style="color:#ae81ff">0</span>       <span style="color:#ae81ff">1</span>
-    PARTUUID<span style="color:#f92672">=</span>XXXXXXXX-01       /boot           vfat    defaults          <span style="color:#ae81ff">0</span>       <span style="color:#ae81ff">2</span>
-    <span style="color:#75715e">#/dev/mmcblk0p1            /boot           vfat    defaults          0       2</span>
-</code></pre></div><p>El root, puede aparecer identificado como <code>/dev/mmcblk0p2</code> o similar. Para evitar problemas, recomiendo cambiarlo por su PARTUUID como muestro arriba.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo nano /mnt/rootUSB/etc/fstab
+</span></span></code></pre></div><p>Comentamos la linea correspondiente al <code>/boot</code> del usb, y añadimos <code>PARTUUID=XXXXXXXX-01       /boot           vfat    defaults          0       2</code> para la sd, quedando algo como lo siguiente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    proc                       /proc           proc    defaults          <span style="color:#ae81ff">0</span>       <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    PARTUUID<span style="color:#f92672">=</span>XXXXXXXX-02       /               ext4    defaults,noatime  <span style="color:#ae81ff">0</span>       <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    PARTUUID<span style="color:#f92672">=</span>XXXXXXXX-01       /boot           vfat    defaults          <span style="color:#ae81ff">0</span>       <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#/dev/mmcblk0p1            /boot           vfat    defaults          0       2</span>
+</span></span></code></pre></div><p>El root, puede aparecer identificado como <code>/dev/mmcblk0p2</code> o similar. Para evitar problemas, recomiendo cambiarlo por su PARTUUID como muestro arriba.</p>
 <p>Al reiniciar, si ejecutamos <code>lsblk</code> veremos como ya está montando, tanto el root <code>/</code> del disco USB como <code>/boot</code> de la MicroSD, con lo cual, ya estamos arrancando con la MicroSD, pero utilizando el root del disco USB, y podemos tener todos los discos que necesitemos conectados, y nuestra Raspberry Pi continuará arrancado sin problemas!</p>
 <p>Esta instalación, ha sido suponiendo que estamos haciendo una instalación de raspbian nueva, desde 0 en ambos discos. Si se quiere copiar la partición root de la MicroSD  al nuevo disco USB, conservando posibles cambios, es muy sencillo.</p>
 <h3 id="22-copiando-la-partición-root-de-la-sd-al-disco-usb">2.2 Copiando la partición root de la SD al disco USB</h3>
 <ul>
 <li>Instalamos <code>rsync</code> si no lo estuviera</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install rsync
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt install rsync
+</span></span></code></pre></div><ul>
 <li>Montamos el disco USB (sustituir <code>sdX</code> por la de vuestro disco USB)</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mount /dev/sdX /mnt
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo mount /dev/sdX /mnt
+</span></span></code></pre></div><ul>
 <li>Copiamos <code>/</code> de nuestra MicroSD al disco USB</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo rsync -axv / /mnt/
-</code></pre></div><p>Una vez copiada la partición root en el disco USB, procedemos igual que en la parte 2.1</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo rsync -axv / /mnt/
+</span></span></code></pre></div><p>Una vez copiada la partición root en el disco USB, procedemos igual que en la parte 2.1</p>
 
 
   <hr style="border-color: #d6d6d6;" />
