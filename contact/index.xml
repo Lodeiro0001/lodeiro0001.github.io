@@ -6,6 +6,7 @@
     <description>Recent content in Contacto on Roberto Lodeiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <copyright>© {year} Roberto Lodeiro</copyright><atom:link href="https://rlodeiro.info/contact/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© {year} Roberto Lodeiro</copyright>
+    <atom:link href="https://rlodeiro.info/contact/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

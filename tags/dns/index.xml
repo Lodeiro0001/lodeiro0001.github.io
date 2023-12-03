@@ -7,16 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <copyright>© {year} Roberto Lodeiro</copyright>
-    <lastBuildDate>Sun, 21 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/dns/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://rlodeiro.info/tags/dns/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pi-hole &amp; Docker</title>
       <link>https://rlodeiro.info/blog/pihole_docker/</link>
       <pubDate>Sun, 21 Jul 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/pihole_docker/</guid>
       <description>Pi-hole es la mejor solución para terminar con la publicidad intrusiva, tanto de aplicaciones como de sitios web, en todos los dispositivos de nuestra red. Vamos a instalarlo en nuestra Raspberry Pi, la cual actuará como servidor DNS. Además, explicaré como configurar dominios locales.
 Aunque existen otras formas de instalación, he elegido Docker por las múltiples ventajas que aporta. Algunas de estas ventajas son: facilidad a la hora de actualizar, no modificamos los archivos del sistema y tendremos la posibilidad de aprovechar al máximo nuestra Raspberry Pi instalando otros servicios.</description>
     </item>
-    
   </channel>
 </rss>

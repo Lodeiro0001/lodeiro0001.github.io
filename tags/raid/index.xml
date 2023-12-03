@@ -7,15 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <copyright>© {year} Roberto Lodeiro</copyright>
-    <lastBuildDate>Sun, 21 Oct 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/raid/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://rlodeiro.info/tags/raid/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>RAID en Linux</title>
       <link>https://rlodeiro.info/blog/mdadm/</link>
       <pubDate>Sun, 21 Oct 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/mdadm/</guid>
       <description>Si queremos tener la información en nuestro disco a salvo de errores, un RAID puede ser una muy buena opción. Este proceso sirve tanto para un sistema Linux X86, como para una Raspberry Pi con varios discos USB conectados (USB boot mode). En esta entrada me centraré en crear un RAID1, lo cual implica dos discos iguales que guardarán la misma información. Si uno falla, el otro tendrá toda la información a salvo y podremos sustituir el defectuoso.</description>
     </item>
-    
   </channel>
 </rss>

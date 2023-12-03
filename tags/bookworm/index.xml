@@ -7,18 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <copyright>© {year} Roberto Lodeiro</copyright>
-    <lastBuildDate>Sun, 11 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/bookworm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Jun 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://rlodeiro.info/tags/bookworm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Actualizar Debian 11 a Debian 12 Bookworm</title>
       <link>https://rlodeiro.info/blog/actualizar-debian-11-debian-12-bookworm/</link>
       <pubDate>Sun, 11 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/actualizar-debian-11-debian-12-bookworm/</guid>
       <description>Ya a sido lanzado de forma oficial Debian 12 Bookworm. Como siempre, me gusta actualizar cuando se hace la release estable oficial para evitar problemas, así que vamos a ello.
 Recuerda que es muy recomendable hacer una copia de seguridad de nuestro equipo antes de realizar la actualización.
 Preparación Primero vamos a preparar nuestro sistema con Debian Bullseye para que actualice sin problemas.
 Actualizamos el sistema: $ sudo apt update $ sudo apt upgrade Verificamos que nuestro sistema es Debian Bullseye: $ cat /etc/*release Esto nos devolverá algo como lo siguiente, confirmando que estamos en Debian 11 Bullseye:</description>
     </item>
-    
   </channel>
 </rss>

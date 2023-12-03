@@ -7,105 +7,88 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <copyright>© {year} Roberto Lodeiro</copyright>
-    <lastBuildDate>Sun, 30 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/categories/herramientas/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://rlodeiro.info/categories/herramientas/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Duplicati</title>
       <link>https://rlodeiro.info/blog/duplicati/</link>
       <pubDate>Sun, 30 Apr 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/duplicati/</guid>
       <description>¿Necesitas una herramienta para gestionar tus copias de seguridad? entonces continua leyendo.
 Duplicati es opensource y totalmente gratuito. Te permite guardar tus copias de seguridad en otro equipo mediante SFTP (SSH), Webdav, FTP o S3 entre muchos otros.
 1. Descarga Lo primero es descargar la última versión para nuestro sistema operativo, en nuestro caso será Debian. Podemos descargarlo desde su página oficial. Hay versiones para Linux, Windows y macOS. Se encuentra en fase beta, pero por lo que lo he probado es totalmente estable.</description>
     </item>
-    
     <item>
       <title>Ventoy</title>
       <link>https://rlodeiro.info/blog/ventoy/</link>
       <pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/ventoy/</guid>
       <description>Si estás cansado de tener que quemar cada imagen que bajas de un sistema operativo en un Pendrive, este es tu post.
 Ventoy es una utilidad que te permite tener múltiples imágenes de distintos sistemas operativos, listas y totalmente Bootables en una misma Memoria USB.
 1. Descarga Ya que Ventoy es Open Source y gratuito, podemos descargarlo desde su página de Github. Como podemos ver, hay versión tanto para Linux como para Windows, además de una ISO.</description>
     </item>
-    
     <item>
       <title>fwupd</title>
       <link>https://rlodeiro.info/blog/fwupd-linux-firmware/</link>
       <pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/fwupd-linux-firmware/</guid>
       <description>Si tienes un equipo Dell, Lenovo Thinkpad, Intel o HP (entre otros dispositivos y marcas) esto va a interesarte. Se acabó tener que ir a Windows para actualizar el firmware de nuestra placa base y otros dispositivos.
 Vamos a ver como instalar y ulitizar fwupd para actualizar el firmware desde Linux.
 Instalación Por supuesto, fwupd se encuentra por defecto en los repositorios de las distribuciones más utilizadas. En mi caso en Debian tan solo tenemos que hacer lo siguiente:</description>
     </item>
-    
     <item>
       <title>PS5 &amp; PS4: Remote Play en Linux</title>
       <link>https://rlodeiro.info/blog/ps5-ps4-remote-play-linux/</link>
       <pubDate>Fri, 06 Aug 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/ps5-ps4-remote-play-linux/</guid>
       <description>Resulta muy útil poder jugar con tu PlayStation 5 o PlayStation 4 de forma remota, ya que puedes tenerla conectada en el televisor del salón, y cuando quieras puedes utilizarla también desde tu ordenador.
 Oficialmente solo se puede desde Windows o macOS, pero en este post vamos a ver como hacerlo también desde Linux.
 1. Instalación Vamos a utilizar un programa gratis y Open Source llamado Chiaki. Lo instalaremos por Flatpak, si todavía no tienes Flatpak configurado en tu sistema puedes ver este post donde explico como hacerlo.</description>
     </item>
-    
     <item>
       <title>DNI electrónico en Linux</title>
       <link>https://rlodeiro.info/blog/dnie-linux/</link>
       <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/dnie-linux/</guid>
       <description>Debido a la situación actual, el uso del DNIe se ha hecho todavía mas imprescindible que antes, tanto para identificarnos ante organismos oficiales como para firmar documentos.
 Si te interesa utilizarlo en Linux, continua leyendo.
 1. Evitar que el lector se apague En Debian, mi lector se apagaba al poco de conectarlo por motivos de ahorro de energía. Si este no es tu caso puedes saltar al segundo punto.
 Para evitarlo, tenemos que editar el Grub.</description>
     </item>
-    
     <item>
       <title>GitHub: 2FA y claves SSH</title>
       <link>https://rlodeiro.info/blog/github-2fa-ssh/</link>
       <pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/github-2fa-ssh/</guid>
       <description>En pleno siglo XXI, los ataques a servicios y dispositivos están a la orden del día, por lo que no está de más revisar las configuraciones de seguridad de los mismos.
 En esta entrada vamos a ver como incrementar la seguridad en nuestra cuenta de GitHub y como realizar la autenticación mediante una clave SSH.
 1. 2FA La autenticación de dos factores no es un requisito para poder utilizar la clave SSH en GitHub, sin embargo, lo recomiendo encarecidamente ya que es la forma que tenemos para incrementar la seguridad de nuestra cuenta.</description>
     </item>
-    
     <item>
       <title>Flatpak</title>
       <link>https://rlodeiro.info/blog/flatpak/</link>
       <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/flatpak/</guid>
       <description>Ya que el verano está finalizando, vamos a hablar de las aplicaciones en Linux. Flatpak solventa los problemas encontrados al instalar aplicaciones de la forma habitual, y facilita enormemente la distribución de las mismas.
 A los más puristas no les gusta Flatpak (quien sabe por qué), pero yo llevo utilizándolo un tiempo y no le encuentro más que ventajas.
 Tenemos un catálogo inmenso de aplicaciones, periódicamente actualizadas, sin problemas de dependencias y disponibles para la gran mayoría de distribuciones Linux desde un único repositorio.</description>
     </item>
-    
     <item>
       <title>Escáner en Ubuntu</title>
       <link>https://rlodeiro.info/blog/escaner_ubuntu/</link>
       <pubDate>Mon, 12 Nov 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/escaner_ubuntu/</guid>
       <description>Si el escáner de tu impresora multifunción no es reconocido de forma automática, tranquilo, no está todo perdido.
 Ubuntu configura de forma automática la inmensa mayoría de impresoras, tanto conectada por cable como las existentes en nuestra red wifi, pero el escáner de esta (si, todavía hay gente como yo que lo usa) puede que no como es mi caso.
 Este procedimiento ha sido probado con mi vieja y querida HP Photosmart 5510, debería servir para cualquier modelo de la marca.</description>
     </item>
-    
     <item>
       <title>Boostnote</title>
       <link>https://rlodeiro.info/blog/boostnote/</link>
       <pubDate>Sat, 29 Sep 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/boostnote/</guid>
       <description>Hoy os hablaré de una herramienta, para mi LA HERRAMIENTA que vengo utilizando desde hace un año.
 Está disponible para equipos de escritorio (Linux, macOS y Windows). Como no, es gratis y OpenSource, podéis ver su código al completo en su repositorio de Github. La versión móvil ha sido retirada temporalmente, tanto para Android como para iOS, hasta que la rehagan por completo. Han dejado un comunicado aquí. Personalmente, lo utilizo para guardar manuales, snippets, notas personales y un largo etcétera.</description>
     </item>
-    
   </channel>
 </rss>

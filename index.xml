@@ -7,305 +7,260 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <copyright>© {year} Roberto Lodeiro</copyright>
-    <lastBuildDate>Sun, 11 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://rlodeiro.info/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Certificado auto-firmado</title>
+      <link>https://rlodeiro.info/blog/certificado-autofirmado/</link>
+      <pubDate>Sun, 03 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://rlodeiro.info/blog/certificado-autofirmado/</guid>
+      <description>Son muchos los escenarios en los que podemos necesitar un certificado auto-firmado. Desde probar una app que estemos desarrollando hasta servir de forma segura nuestros propios servicios en nuestra red doméstica.
+Si te interesa generar tus propios certificados auto-firmados en linux, este post es para ti!
+Preparación Primero vamos a instalar los paquetes necesarios. Como siempre yo utilizo Debian, pero servirá para cualquier derivado como Ubuntu o similares.
+Actualizamos e instalamos los paquetes necesarios: $ sudo apt update $ sudo apt install openssl ca-certificates Creamos una carpeta para trabajar en ella, la cual contendrá nuestros certificados: $ mkdir certificados $ cd certificados 1.</description>
+    </item>
     <item>
       <title>Actualizar Debian 11 a Debian 12 Bookworm</title>
       <link>https://rlodeiro.info/blog/actualizar-debian-11-debian-12-bookworm/</link>
       <pubDate>Sun, 11 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/actualizar-debian-11-debian-12-bookworm/</guid>
       <description>Ya a sido lanzado de forma oficial Debian 12 Bookworm. Como siempre, me gusta actualizar cuando se hace la release estable oficial para evitar problemas, así que vamos a ello.
 Recuerda que es muy recomendable hacer una copia de seguridad de nuestro equipo antes de realizar la actualización.
 Preparación Primero vamos a preparar nuestro sistema con Debian Bullseye para que actualice sin problemas.
 Actualizamos el sistema: $ sudo apt update $ sudo apt upgrade Verificamos que nuestro sistema es Debian Bullseye: $ cat /etc/*release Esto nos devolverá algo como lo siguiente, confirmando que estamos en Debian 11 Bullseye:</description>
     </item>
-    
     <item>
       <title>Duplicati</title>
       <link>https://rlodeiro.info/blog/duplicati/</link>
       <pubDate>Sun, 30 Apr 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/duplicati/</guid>
       <description>¿Necesitas una herramienta para gestionar tus copias de seguridad? entonces continua leyendo.
 Duplicati es opensource y totalmente gratuito. Te permite guardar tus copias de seguridad en otro equipo mediante SFTP (SSH), Webdav, FTP o S3 entre muchos otros.
 1. Descarga Lo primero es descargar la última versión para nuestro sistema operativo, en nuestro caso será Debian. Podemos descargarlo desde su página oficial. Hay versiones para Linux, Windows y macOS. Se encuentra en fase beta, pero por lo que lo he probado es totalmente estable.</description>
     </item>
-    
     <item>
       <title>Ventoy</title>
       <link>https://rlodeiro.info/blog/ventoy/</link>
       <pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/ventoy/</guid>
       <description>Si estás cansado de tener que quemar cada imagen que bajas de un sistema operativo en un Pendrive, este es tu post.
 Ventoy es una utilidad que te permite tener múltiples imágenes de distintos sistemas operativos, listas y totalmente Bootables en una misma Memoria USB.
 1. Descarga Ya que Ventoy es Open Source y gratuito, podemos descargarlo desde su página de Github. Como podemos ver, hay versión tanto para Linux como para Windows, además de una ISO.</description>
     </item>
-    
     <item>
       <title>Navidrome</title>
       <link>https://rlodeiro.info/blog/navidrome/</link>
       <pubDate>Wed, 09 Feb 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/navidrome/</guid>
       <description>Los servicios de música en streaming están de moda, pero si eres de los que tiene su propia biblioteca de música, esto te va a interesar.
 Navidrome es un servidor de música Self-Hosted y Opensource, con cliente web y diversos clientes para dispositivos móviles. Vamos a ver como instalarlo.
 1. Instalación Para la instalación vamos a usar Docker, ya que facilita el despliegue del servicio y configuración del mismo. Si todavía no tiene Docker en tu máquina, puedes leer este post donde explico como instalarlo.</description>
     </item>
-    
     <item>
       <title>fwupd</title>
       <link>https://rlodeiro.info/blog/fwupd-linux-firmware/</link>
       <pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/fwupd-linux-firmware/</guid>
       <description>Si tienes un equipo Dell, Lenovo Thinkpad, Intel o HP (entre otros dispositivos y marcas) esto va a interesarte. Se acabó tener que ir a Windows para actualizar el firmware de nuestra placa base y otros dispositivos.
 Vamos a ver como instalar y ulitizar fwupd para actualizar el firmware desde Linux.
 Instalación Por supuesto, fwupd se encuentra por defecto en los repositorios de las distribuciones más utilizadas. En mi caso en Debian tan solo tenemos que hacer lo siguiente:</description>
     </item>
-    
     <item>
       <title>Diun: Avisos de actualizaciones de imágenes Docker</title>
       <link>https://rlodeiro.info/blog/diun-avisos-actualizaciones-imagenes-docker/</link>
       <pubDate>Fri, 10 Sep 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/diun-avisos-actualizaciones-imagenes-docker/</guid>
       <description>Debido al extendido uso de Docker y a la gran cantidad de imágenes que podemos tener en nuestro servidor, resulta muy útil tener un servicio automatizado para el aviso de actualizaciones disponibles de las mismas.
 Vamos a ver como instalar y configurar Diun, totalmente OpenSource y selfhosted, para que nos avise por correo electrónico y/o por Telegram.
 Instalación y configuración Teniendo Docker instalado y corriendo en nuestro sistema, primero vamos a crear un directorio diun el cual enlazaremos al contenedor para guardar la configuración y datos del mismo.</description>
     </item>
-    
     <item>
       <title>Actualizar Debian 10 a Debian 11 Bullseye</title>
       <link>https://rlodeiro.info/blog/actualizar-debian-10-a-debian-11-bullseye/</link>
       <pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/actualizar-debian-10-a-debian-11-bullseye/</guid>
       <description>Hoy es el lanzamiento oficial de Debian 11 Bullseye. Si bien ya se podía actualizar antes de Debian Buster a Debian Bullseye, me gusta esperar al día oficial del lanzamiento para que la migración resulte estable y el nuevo sistema esté 100% testeado.
 Recuerda que es muy recomendable hacer una copia de seguridad de nuestro equipo antes de realizar la actualización.
 Preparación Primero vamos a preparar nuestro sistema con Debian Buster para que actualice sin problemas, veremos que es más sencillo de lo esperado.</description>
     </item>
-    
     <item>
       <title>PS5 &amp; PS4: Remote Play en Linux</title>
       <link>https://rlodeiro.info/blog/ps5-ps4-remote-play-linux/</link>
       <pubDate>Fri, 06 Aug 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/ps5-ps4-remote-play-linux/</guid>
       <description>Resulta muy útil poder jugar con tu PlayStation 5 o PlayStation 4 de forma remota, ya que puedes tenerla conectada en el televisor del salón, y cuando quieras puedes utilizarla también desde tu ordenador.
 Oficialmente solo se puede desde Windows o macOS, pero en este post vamos a ver como hacerlo también desde Linux.
 1. Instalación Vamos a utilizar un programa gratis y Open Source llamado Chiaki. Lo instalaremos por Flatpak, si todavía no tienes Flatpak configurado en tu sistema puedes ver este post donde explico como hacerlo.</description>
     </item>
-    
     <item>
       <title>DNI electrónico en Linux</title>
       <link>https://rlodeiro.info/blog/dnie-linux/</link>
       <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/dnie-linux/</guid>
       <description>Debido a la situación actual, el uso del DNIe se ha hecho todavía mas imprescindible que antes, tanto para identificarnos ante organismos oficiales como para firmar documentos.
 Si te interesa utilizarlo en Linux, continua leyendo.
 1. Evitar que el lector se apague En Debian, mi lector se apagaba al poco de conectarlo por motivos de ahorro de energía. Si este no es tu caso puedes saltar al segundo punto.
 Para evitarlo, tenemos que editar el Grub.</description>
     </item>
-    
     <item>
       <title>GitHub: 2FA y claves SSH</title>
       <link>https://rlodeiro.info/blog/github-2fa-ssh/</link>
       <pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/github-2fa-ssh/</guid>
       <description>En pleno siglo XXI, los ataques a servicios y dispositivos están a la orden del día, por lo que no está de más revisar las configuraciones de seguridad de los mismos.
 En esta entrada vamos a ver como incrementar la seguridad en nuestra cuenta de GitHub y como realizar la autenticación mediante una clave SSH.
 1. 2FA La autenticación de dos factores no es un requisito para poder utilizar la clave SSH en GitHub, sin embargo, lo recomiendo encarecidamente ya que es la forma que tenemos para incrementar la seguridad de nuestra cuenta.</description>
     </item>
-    
     <item>
       <title>Raspberry Pi: Swap y Swappiness</title>
       <link>https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/</link>
       <pubDate>Tue, 08 Jun 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/</guid>
       <description>Si utilizamos nuestra Raspberry Pi como servidor, resulta de vital importancia optimizar la configuración de la misma.
 Veamos a modificar la forma en que el sistema haga uso de la memoria virtual o Swap mediante la propiedad Swappiness, y a incrementar el tamaño de la misma en Raspberry Pi.
 Por supuesto, la propiedad Swappiness es útil modificarla también en Debian, Ubuntu, Fedora u otras distribuciones Linux en nuestro equipo de escritorio, ya que con ello reduciremos el uso de Swap.</description>
     </item>
-    
     <item>
       <title>Flatpak</title>
       <link>https://rlodeiro.info/blog/flatpak/</link>
       <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/flatpak/</guid>
       <description>Ya que el verano está finalizando, vamos a hablar de las aplicaciones en Linux. Flatpak solventa los problemas encontrados al instalar aplicaciones de la forma habitual, y facilita enormemente la distribución de las mismas.
 A los más puristas no les gusta Flatpak (quien sabe por qué), pero yo llevo utilizándolo un tiempo y no le encuentro más que ventajas.
 Tenemos un catálogo inmenso de aplicaciones, periódicamente actualizadas, sin problemas de dependencias y disponibles para la gran mayoría de distribuciones Linux desde un único repositorio.</description>
     </item>
-    
     <item>
       <title>Pi-hole &amp; Docker</title>
       <link>https://rlodeiro.info/blog/pihole_docker/</link>
       <pubDate>Sun, 21 Jul 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/pihole_docker/</guid>
       <description>Pi-hole es la mejor solución para terminar con la publicidad intrusiva, tanto de aplicaciones como de sitios web, en todos los dispositivos de nuestra red. Vamos a instalarlo en nuestra Raspberry Pi, la cual actuará como servidor DNS. Además, explicaré como configurar dominios locales.
 Aunque existen otras formas de instalación, he elegido Docker por las múltiples ventajas que aporta. Algunas de estas ventajas son: facilidad a la hora de actualizar, no modificamos los archivos del sistema y tendremos la posibilidad de aprovechar al máximo nuestra Raspberry Pi instalando otros servicios.</description>
     </item>
-    
     <item>
       <title>Screen tearing en Linux</title>
       <link>https://rlodeiro.info/blog/tearing_linux/</link>
       <pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/tearing_linux/</guid>
       <description>Muchos de los que usamos Linux hemos sufrido tearing, y al fin he encontrado la solución. Tanto si usas una gráfica Nvidia, como una integrada de Intel, podrás decir adiós a este molesto problema.
 Anteriormente escribí dos posts sobre como instalar Debian y como personalizar XFCE (el mejor entorno de escritorio que he probado hasta la fecha), así que basaré este en máquinas con esta configuración, aunque seguramente te sea de utilidad si utilizas otra distribución u otro entorno de escritorio.</description>
     </item>
-    
     <item>
       <title>Audio Multiroom</title>
       <link>https://rlodeiro.info/blog/audio_multiroom/</link>
       <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/audio_multiroom/</guid>
       <description>Hoy vamos a instalar y configurar forked-daapd, un servidor multimedia para nuestra biblioteca musical.
 DAAP (Digital Audio Access Protocol) es un protocolo ideado por Apple, el cual es utilizado por iTunes. Nuestro servidor será compatible por lo tanto con iTunes, dispositivos comerciales preparados para trabajar con Airplay, clientes MPD, entre otros.
 Tal como expliqué en una entrada anterior, podemos montar nuestros propios dispositivos compatibles con Airplay con una simple Raspberry Pi con Shairport Sync instalado conectándola a nuestro equipo Hi-Fi, altavoz auto-amplificado o similar.</description>
     </item>
-    
     <item>
       <title>Personalizar XFCE</title>
       <link>https://rlodeiro.info/blog/personalizar_xfce/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/personalizar_xfce/</guid>
       <description>Vamos a personalizar el entorno de escritorio XFCE para darle un toque actual y modificar a nuestro gusto algunas de las opciones por defecto.
 En la entrada anterior vimos como instalar Debian 9 Stretch , donde escogí XFCE por su estabilidad, bajo consumo de recursos y sus altas posibilidades de personalización. Hoy toca adaptarlo y vitaminarlo para mejorar nuestro entorno de trabajo.
 1. Tema 1.1 Apariencia General Primero vamos a cambiar el tema de nuestro escritorio.</description>
     </item>
-    
     <item>
       <title>Instalar Debian 9 Stretch</title>
       <link>https://rlodeiro.info/blog/instalacion_debian/</link>
       <pubDate>Sat, 30 Mar 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/instalacion_debian/</guid>
       <description>Tras tres duros meses desaparecido en combate, voy a explicar como y porque he cambiado mi distribución Linux por la archiconocida Debian.
 Primero me deshice de mi Macbook (¡que contesto estoy de la decisión!), y tras un año aproximadamente utilizando Ubuntu, siento la necesidad de pasarme a Debian, me lo pide el cuerpo!
 He escuchado comentarios del estilo: &amp;ldquo;Esa distribución es para servidores&amp;rdquo;, &amp;ldquo;El software está obsoleto&amp;rdquo;, &amp;ldquo;Es una distribución para freaks&amp;rdquo;, entre otros.</description>
     </item>
-    
     <item>
       <title>SAI | Sistema de alimentacion ininterrumpida</title>
       <link>https://rlodeiro.info/blog/sai/</link>
       <pubDate>Sun, 30 Dec 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/sai/</guid>
       <description>Hoy explico como he integrado al fin el SAI que tengo en el servidor, para poder monitorizar de una forma sencilla su estado, y que este apague el servidor en caso de un corte de luz prolongado.
 Después de pasar la época de exámenes y desconectar unos días celebrando con compañeros, amigos y familia, tocaba hacer la ultima entrada del ano, y de paso conseguir que si se va la luz durante las campanadas, mi Raspberry Pi me avise!</description>
     </item>
-    
     <item>
       <title>MQTT | Parte 2</title>
       <link>https://rlodeiro.info/blog/mqtt2/</link>
       <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/mqtt2/</guid>
       <description>Segunda entrada sobre MQTT, donde veremos como instalar el Broker y un cliente básico en consola.
 Como siempre, asumo que las maquinas cliente y servidor tienen una distro Linux Debian o derivada. En la primera entrada sobre MQTT hice una introducción básica al protocolo, ahora me centraré en explicar un caso de uso básico.
 Mi servidor es una Raspberry Pi (que raro), pero puede ser otro pc, o el mismo donde posteriormente instales también el cliente y así poder probar el funcionamiento.</description>
     </item>
-    
     <item>
       <title>AirPlay en Linux</title>
       <link>https://rlodeiro.info/blog/airplay_linux/</link>
       <pubDate>Tue, 27 Nov 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/airplay_linux/</guid>
       <description>Con Shairport Sync podrás convertir tu Raspberry Pi u otro sistema Linux en un receptor de audio AirPlay.
 Tanto si quieres actualizar tu equipo de música (mi caso) conectándole una Raspberry Pi, como configurarlo en tu pc, con Shairport Sync podrás enviar audio desde cualquier cliente compatible(si, existen para Linux) a tu nuevo receptor. En caso de que tu distribución no sea Ubuntu/Debian o derivados, consulta aquí tus requisitos de configuración.</description>
     </item>
-    
     <item>
       <title>Raspberry Pi - Backup remoto</title>
       <link>https://rlodeiro.info/blog/raspberrypi_backup_remoto/</link>
       <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/raspberrypi_backup_remoto/</guid>
       <description>Si odias apagar tu Raspberry PI para hacer una copia de seguridad del sistema, continua leyendo.
 Ya te habrá quedado claro que soy un Full Lover de la Raspberry PI, la uso como servidor principal y es casi mas importante que yo en casa, pero el ritual de hacer una copia de seguridad me cansaba. Tenia que apagarla, desconectar los discos y la microSD, conectar todo a mi pc y hacer el backup.</description>
     </item>
-    
     <item>
       <title>Escáner en Ubuntu</title>
       <link>https://rlodeiro.info/blog/escaner_ubuntu/</link>
       <pubDate>Mon, 12 Nov 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/escaner_ubuntu/</guid>
       <description>Si el escáner de tu impresora multifunción no es reconocido de forma automática, tranquilo, no está todo perdido.
 Ubuntu configura de forma automática la inmensa mayoría de impresoras, tanto conectada por cable como las existentes en nuestra red wifi, pero el escáner de esta (si, todavía hay gente como yo que lo usa) puede que no como es mi caso.
 Este procedimiento ha sido probado con mi vieja y querida HP Photosmart 5510, debería servir para cualquier modelo de la marca.</description>
     </item>
-    
     <item>
       <title>MQTT | Parte 1</title>
       <link>https://rlodeiro.info/blog/mqtt1/</link>
       <pubDate>Mon, 29 Oct 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/mqtt1/</guid>
       <description>Esta primera entrada sobre MQTT, pretende ser una forma sencilla de entender los conceptos básicos. Explicaré en que consiste y como podemos usarlo, pero sin entrar en demasiados tecnicismos (para eso ya vendrán entradas posteriores).
 Si usas Telegram u otra aplicación de mensajería actual o has usado IRC antaño, ¡será muy fácil que lo entiendas!.
 MQTT(Message Queuing Telemetry Transport), es un protocolo de comunicación muy utilizado en el Iot(Internet of Things).</description>
     </item>
-    
     <item>
       <title>RAID en Linux</title>
       <link>https://rlodeiro.info/blog/mdadm/</link>
       <pubDate>Sun, 21 Oct 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/mdadm/</guid>
       <description>Si queremos tener la información en nuestro disco a salvo de errores, un RAID puede ser una muy buena opción. Este proceso sirve tanto para un sistema Linux X86, como para una Raspberry Pi con varios discos USB conectados (USB boot mode). En esta entrada me centraré en crear un RAID1, lo cual implica dos discos iguales que guardarán la misma información. Si uno falla, el otro tendrá toda la información a salvo y podremos sustituir el defectuoso.</description>
     </item>
-    
     <item>
       <title>NTP | Servidor local</title>
       <link>https://rlodeiro.info/blog/ntp/</link>
       <pubDate>Sun, 14 Oct 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/ntp/</guid>
       <description>Nuestro ordenador, nuestro router y muchos de los dispositivos que utilizamos a diario, sincronizan la hora del sistema con un servidor NTP (Network Time Protocol). Los mas conocidos y utilizados son los de NTP Pool Project. Si tenemos en mente por ejemplo un proyecto relacionado con la domótica, puede que no queramos que nuestros dispositivos (salvo el servidor local que los gestione) tengan acceso a internet, pero que tengamos la necesidad de que estos tengan la hora correcta para poder consultar los logs de una forma sencilla y eficiente.</description>
     </item>
-    
     <item>
       <title>Gogs | Self-Hosted Git</title>
       <link>https://rlodeiro.info/blog/gogs/</link>
       <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/gogs/</guid>
       <description>Todos los que de uno u otro modo estamos relacionados con el desarrollo de software, antes o después hemos usado algún servicio de repositorios Git en la nube. Por lo general, son gratuitos para repositorios públicos, y pagando podemos crear repositorios privados.
 Gogs es un servicio de Git opensource para alojar nuestros repositorios Git en nuestro propio servidor. He probado otras alternativas similares, pero para mi, Gogs es la ganadora ya que consume poquísimos recursos y funciona perfectamente ¿que más se puede pedir?</description>
     </item>
-    
     <item>
       <title>Boostnote</title>
       <link>https://rlodeiro.info/blog/boostnote/</link>
       <pubDate>Sat, 29 Sep 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/boostnote/</guid>
       <description>Hoy os hablaré de una herramienta, para mi LA HERRAMIENTA que vengo utilizando desde hace un año.
 Está disponible para equipos de escritorio (Linux, macOS y Windows). Como no, es gratis y OpenSource, podéis ver su código al completo en su repositorio de Github. La versión móvil ha sido retirada temporalmente, tanto para Android como para iOS, hasta que la rehagan por completo. Han dejado un comunicado aquí. Personalmente, lo utilizo para guardar manuales, snippets, notas personales y un largo etcétera.</description>
     </item>
-    
     <item>
       <title>Raspberry Pi &amp; USB Boot Mode</title>
       <link>https://rlodeiro.info/blog/raspberryusbboot/</link>
       <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/raspberryusbboot/</guid>
       <description>En esta primera entrada, explicaré algo que me ha sido muy util a la hora de tener una Raspberry Pi como servidor en casa.
 Todos sabemos que la Raspberry Pi, por defecto, utiliza una tarjeta MicroSD como disco para el sistema, lo cual supone muchas limitaciones, tanto a nivel de rendimiento como de durabilidad.
 Desde hace relativamente poco, en la documentación oficial se explica como activar el arranque desde un dispositivo usb.</description>
     </item>
-    
   </channel>
 </rss>

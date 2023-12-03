@@ -7,18 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <copyright>© {year} Roberto Lodeiro</copyright>
-    <lastBuildDate>Sun, 25 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/dni-electr%C3%B3nico/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://rlodeiro.info/tags/dni-electr%C3%B3nico/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DNI electrónico en Linux</title>
       <link>https://rlodeiro.info/blog/dnie-linux/</link>
       <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/dnie-linux/</guid>
       <description>Debido a la situación actual, el uso del DNIe se ha hecho todavía mas imprescindible que antes, tanto para identificarnos ante organismos oficiales como para firmar documentos.
 Si te interesa utilizarlo en Linux, continua leyendo.
 1. Evitar que el lector se apague En Debian, mi lector se apagaba al poco de conectarlo por motivos de ahorro de energía. Si este no es tu caso puedes saltar al segundo punto.
 Para evitarlo, tenemos que editar el Grub.</description>
     </item>
-    
   </channel>
 </rss>

@@ -7,27 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <copyright>© {year} Roberto Lodeiro</copyright>
-    <lastBuildDate>Sun, 14 Apr 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/airplay/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 14 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://rlodeiro.info/tags/airplay/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Audio Multiroom</title>
       <link>https://rlodeiro.info/blog/audio_multiroom/</link>
       <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/audio_multiroom/</guid>
       <description>Hoy vamos a instalar y configurar forked-daapd, un servidor multimedia para nuestra biblioteca musical.
 DAAP (Digital Audio Access Protocol) es un protocolo ideado por Apple, el cual es utilizado por iTunes. Nuestro servidor será compatible por lo tanto con iTunes, dispositivos comerciales preparados para trabajar con Airplay, clientes MPD, entre otros.
 Tal como expliqué en una entrada anterior, podemos montar nuestros propios dispositivos compatibles con Airplay con una simple Raspberry Pi con Shairport Sync instalado conectándola a nuestro equipo Hi-Fi, altavoz auto-amplificado o similar.</description>
     </item>
-    
     <item>
       <title>AirPlay en Linux</title>
       <link>https://rlodeiro.info/blog/airplay_linux/</link>
       <pubDate>Tue, 27 Nov 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/airplay_linux/</guid>
       <description>Con Shairport Sync podrás convertir tu Raspberry Pi u otro sistema Linux en un receptor de audio AirPlay.
 Tanto si quieres actualizar tu equipo de música (mi caso) conectándole una Raspberry Pi, como configurarlo en tu pc, con Shairport Sync podrás enviar audio desde cualquier cliente compatible(si, existen para Linux) a tu nuevo receptor. En caso de que tu distribución no sea Ubuntu/Debian o derivados, consulta aquí tus requisitos de configuración.</description>
     </item>
-    
   </channel>
 </rss>

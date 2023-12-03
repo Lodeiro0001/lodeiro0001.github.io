@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SSL on Roberto Lodeiro</title>
+    <link>https://rlodeiro.info/tags/ssl/</link>
+    <description>Recent content in SSL on Roberto Lodeiro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <copyright>© {year} Roberto Lodeiro</copyright>
+    <lastBuildDate>Sun, 03 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://rlodeiro.info/tags/ssl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Certificado auto-firmado</title>
+      <link>https://rlodeiro.info/blog/certificado-autofirmado/</link>
+      <pubDate>Sun, 03 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://rlodeiro.info/blog/certificado-autofirmado/</guid>
+      <description>Son muchos los escenarios en los que podemos necesitar un certificado auto-firmado. Desde probar una app que estemos desarrollando hasta servir de forma segura nuestros propios servicios en nuestra red doméstica.
+Si te interesa generar tus propios certificados auto-firmados en linux, este post es para ti!
+Preparación Primero vamos a instalar los paquetes necesarios. Como siempre yo utilizo Debian, pero servirá para cualquier derivado como Ubuntu o similares.
+Actualizamos e instalamos los paquetes necesarios: $ sudo apt update $ sudo apt install openssl ca-certificates Creamos una carpeta para trabajar en ella, la cual contendrá nuestros certificados: $ mkdir certificados $ cd certificados 1.</description>
+    </item>
+  </channel>
+</rss>

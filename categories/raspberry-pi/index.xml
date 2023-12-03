@@ -7,66 +7,55 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <copyright>© {year} Roberto Lodeiro</copyright>
-    <lastBuildDate>Tue, 08 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/categories/raspberry-pi/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://rlodeiro.info/categories/raspberry-pi/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Raspberry Pi: Swap y Swappiness</title>
       <link>https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/</link>
       <pubDate>Tue, 08 Jun 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/</guid>
       <description>Si utilizamos nuestra Raspberry Pi como servidor, resulta de vital importancia optimizar la configuración de la misma.
 Veamos a modificar la forma en que el sistema haga uso de la memoria virtual o Swap mediante la propiedad Swappiness, y a incrementar el tamaño de la misma en Raspberry Pi.
 Por supuesto, la propiedad Swappiness es útil modificarla también en Debian, Ubuntu, Fedora u otras distribuciones Linux en nuestro equipo de escritorio, ya que con ello reduciremos el uso de Swap.</description>
     </item>
-    
     <item>
       <title>Pi-hole &amp; Docker</title>
       <link>https://rlodeiro.info/blog/pihole_docker/</link>
       <pubDate>Sun, 21 Jul 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/pihole_docker/</guid>
       <description>Pi-hole es la mejor solución para terminar con la publicidad intrusiva, tanto de aplicaciones como de sitios web, en todos los dispositivos de nuestra red. Vamos a instalarlo en nuestra Raspberry Pi, la cual actuará como servidor DNS. Además, explicaré como configurar dominios locales.
 Aunque existen otras formas de instalación, he elegido Docker por las múltiples ventajas que aporta. Algunas de estas ventajas son: facilidad a la hora de actualizar, no modificamos los archivos del sistema y tendremos la posibilidad de aprovechar al máximo nuestra Raspberry Pi instalando otros servicios.</description>
     </item>
-    
     <item>
       <title>Raspberry Pi - Backup remoto</title>
       <link>https://rlodeiro.info/blog/raspberrypi_backup_remoto/</link>
       <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/raspberrypi_backup_remoto/</guid>
       <description>Si odias apagar tu Raspberry PI para hacer una copia de seguridad del sistema, continua leyendo.
 Ya te habrá quedado claro que soy un Full Lover de la Raspberry PI, la uso como servidor principal y es casi mas importante que yo en casa, pero el ritual de hacer una copia de seguridad me cansaba. Tenia que apagarla, desconectar los discos y la microSD, conectar todo a mi pc y hacer el backup.</description>
     </item>
-    
     <item>
       <title>RAID en Linux</title>
       <link>https://rlodeiro.info/blog/mdadm/</link>
       <pubDate>Sun, 21 Oct 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/mdadm/</guid>
       <description>Si queremos tener la información en nuestro disco a salvo de errores, un RAID puede ser una muy buena opción. Este proceso sirve tanto para un sistema Linux X86, como para una Raspberry Pi con varios discos USB conectados (USB boot mode). En esta entrada me centraré en crear un RAID1, lo cual implica dos discos iguales que guardarán la misma información. Si uno falla, el otro tendrá toda la información a salvo y podremos sustituir el defectuoso.</description>
     </item>
-    
     <item>
       <title>NTP | Servidor local</title>
       <link>https://rlodeiro.info/blog/ntp/</link>
       <pubDate>Sun, 14 Oct 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/ntp/</guid>
       <description>Nuestro ordenador, nuestro router y muchos de los dispositivos que utilizamos a diario, sincronizan la hora del sistema con un servidor NTP (Network Time Protocol). Los mas conocidos y utilizados son los de NTP Pool Project. Si tenemos en mente por ejemplo un proyecto relacionado con la domótica, puede que no queramos que nuestros dispositivos (salvo el servidor local que los gestione) tengan acceso a internet, pero que tengamos la necesidad de que estos tengan la hora correcta para poder consultar los logs de una forma sencilla y eficiente.</description>
     </item>
-    
     <item>
       <title>Raspberry Pi &amp; USB Boot Mode</title>
       <link>https://rlodeiro.info/blog/raspberryusbboot/</link>
       <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://rlodeiro.info/blog/raspberryusbboot/</guid>
       <description>En esta primera entrada, explicaré algo que me ha sido muy util a la hora de tener una Raspberry Pi como servidor en casa.
 Todos sabemos que la Raspberry Pi, por defecto, utiliza una tarjeta MicroSD como disco para el sistema, lo cual supone muchas limitaciones, tanto a nivel de rendimiento como de durabilidad.
 Desde hace relativamente poco, en la documentación oficial se explica como activar el arranque desde un dispositivo usb.</description>
     </item>
-    
   </channel>
 </rss>
