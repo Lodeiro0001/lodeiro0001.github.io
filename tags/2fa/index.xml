@@ -7,8 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <copyright>© {year} Roberto Lodeiro</copyright>
-    <lastBuildDate>Sun, 27 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://rlodeiro.info/tags/2fa/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Buttercup: tu gestor de contraseñas</title>
+      <link>https://rlodeiro.info/blog/buttercup/</link>
+      <pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://rlodeiro.info/blog/buttercup/</guid>
+      <description>Comienza un nuevo año, y os traigo un regalo!. Buttercup es un gestor de contraseñas open source, gratuito y multidispositivo. Está disponible para Linux, macOS, Windows, iOS y Android.
+Tanto si nunca has utilizado un gestor de contraseñas y quieres uno, como si estás cansado del tuyo, este post es para ti!
+Descarga Ya que Buttercup es open source y gratuito vamos a descargarlo desde su página de Github. Veremos que está disponible para Linux, macOS y Windows.</description>
+    </item>
     <item>
       <title>GitHub: 2FA y claves SSH</title>
       <link>https://rlodeiro.info/blog/github-2fa-ssh/</link>

@@ -2,16 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://rlodeiro.info/tags/android/</loc>
-    <lastmod>2023-12-03T00:00:00+00:00</lastmod>
+    <loc>https://rlodeiro.info/tags/2fa/</loc>
+    <lastmod>2024-01-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://rlodeiro.info/tags/auto-firmado/</loc>
-    <lastmod>2023-12-03T00:00:00+00:00</lastmod>
+    <loc>https://rlodeiro.info/tags/android/</loc>
+    <lastmod>2024-01-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlodeiro.info/blog/</loc>
-    <lastmod>2023-12-03T00:00:00+00:00</lastmod>
+    <lastmod>2024-01-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/tags/buttercup/</loc>
+    <lastmod>2024-01-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/blog/buttercup/</loc>
+    <lastmod>2024-01-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlodeiro.info/categories/</loc>
+    <lastmod>2024-01-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/tags/gestor-contrase%C3%B1as/</loc>
+    <lastmod>2024-01-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/tags/ios/</loc>
+    <lastmod>2024-01-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/tags/linux/</loc>
+    <lastmod>2024-01-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/categories/linux/</loc>
+    <lastmod>2024-01-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/tags/macos/</loc>
+    <lastmod>2024-01-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/tags/otp/</loc>
+    <lastmod>2024-01-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/tags/password-manager/</loc>
+    <lastmod>2024-01-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/</loc>
+    <lastmod>2024-01-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/tags/</loc>
+    <lastmod>2024-01-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/tags/windows/</loc>
+    <lastmod>2024-01-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/tags/auto-firmado/</loc>
     <lastmod>2023-12-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlodeiro.info/tags/certificado/</loc>
@@ -23,25 +62,13 @@
     <loc>https://rlodeiro.info/tags/debian/</loc>
     <lastmod>2023-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://rlodeiro.info/tags/ios/</loc>
-    <lastmod>2023-12-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rlodeiro.info/categories/linux/</loc>
-    <lastmod>2023-12-03T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://rlodeiro.info/tags/nginx/</loc>
-    <lastmod>2023-12-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rlodeiro.info/</loc>
     <lastmod>2023-12-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlodeiro.info/tags/self-signed/</loc>
     <lastmod>2023-12-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlodeiro.info/tags/ssl/</loc>
-    <lastmod>2023-12-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rlodeiro.info/tags/</loc>
     <lastmod>2023-12-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlodeiro.info/tags/ubuntu/</loc>
@@ -149,9 +176,6 @@
     <loc>https://rlodeiro.info/tags/intel/</loc>
     <lastmod>2021-12-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://rlodeiro.info/tags/linux/</loc>
-    <lastmod>2021-12-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://rlodeiro.info/tags/lvfs/</loc>
     <lastmod>2021-12-10T00:00:00+00:00</lastmod>
   </url><url>
@@ -205,9 +229,6 @@
   </url><url>
     <loc>https://rlodeiro.info/tags/dnie/</loc>
     <lastmod>2021-07-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rlodeiro.info/tags/2fa/</loc>
-    <lastmod>2021-06-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlodeiro.info/tags/github/</loc>
     <lastmod>2021-06-27T00:00:00+00:00</lastmod>
