@@ -7,24 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <copyright>© {year} Roberto Lodeiro</copyright>
-    <lastBuildDate>Fri, 10 Dec 2021 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://rlodeiro.info/tags/intel/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/intel/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>fwupd</title>
       <link>https://rlodeiro.info/blog/fwupd-linux-firmware/</link>
       <pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/fwupd-linux-firmware/</guid>
       <description>Si tienes un equipo Dell, Lenovo Thinkpad, Intel o HP (entre otros dispositivos y marcas) esto va a interesarte. Se acabó tener que ir a Windows para actualizar el firmware de nuestra placa base y otros dispositivos.
 Vamos a ver como instalar y ulitizar fwupd para actualizar el firmware desde Linux.
 Instalación Por supuesto, fwupd se encuentra por defecto en los repositorios de las distribuciones más utilizadas. En mi caso en Debian tan solo tenemos que hacer lo siguiente:</description>
     </item>
+    
     <item>
       <title>Screen tearing en Linux</title>
       <link>https://rlodeiro.info/blog/tearing_linux/</link>
       <pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/tearing_linux/</guid>
       <description>Muchos de los que usamos Linux hemos sufrido tearing, y al fin he encontrado la solución. Tanto si usas una gráfica Nvidia, como una integrada de Intel, podrás decir adiós a este molesto problema.
 Anteriormente escribí dos posts sobre como instalar Debian y como personalizar XFCE (el mejor entorno de escritorio que he probado hasta la fecha), así que basaré este en máquinas con esta configuración, aunque seguramente te sea de utilidad si utilizas otra distribución u otro entorno de escritorio.</description>
     </item>
+    
   </channel>
 </rss>

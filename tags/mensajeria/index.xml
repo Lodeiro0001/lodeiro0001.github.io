@@ -7,25 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <copyright>© {year} Roberto Lodeiro</copyright>
-    <lastBuildDate>Wed, 05 Dec 2018 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://rlodeiro.info/tags/mensajeria/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Dec 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/mensajeria/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MQTT | Parte 2</title>
       <link>https://rlodeiro.info/blog/mqtt2/</link>
       <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/mqtt2/</guid>
       <description>Segunda entrada sobre MQTT, donde veremos como instalar el Broker y un cliente básico en consola.
 Como siempre, asumo que las maquinas cliente y servidor tienen una distro Linux Debian o derivada. En la primera entrada sobre MQTT hice una introducción básica al protocolo, ahora me centraré en explicar un caso de uso básico.
 Mi servidor es una Raspberry Pi (que raro), pero puede ser otro pc, o el mismo donde posteriormente instales también el cliente y así poder probar el funcionamiento.</description>
     </item>
+    
     <item>
       <title>MQTT | Parte 1</title>
       <link>https://rlodeiro.info/blog/mqtt1/</link>
       <pubDate>Mon, 29 Oct 2018 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/mqtt1/</guid>
       <description>Esta primera entrada sobre MQTT, pretende ser una forma sencilla de entender los conceptos básicos. Explicaré en que consiste y como podemos usarlo, pero sin entrar en demasiados tecnicismos (para eso ya vendrán entradas posteriores).
 Si usas Telegram u otra aplicación de mensajería actual o has usado IRC antaño, ¡será muy fácil que lo entiendas!.
 MQTT(Message Queuing Telemetry Transport), es un protocolo de comunicación muy utilizado en el Iot(Internet of Things).</description>
     </item>
+    
   </channel>
 </rss>

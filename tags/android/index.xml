@@ -7,26 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <copyright>© {year} Roberto Lodeiro</copyright>
-    <lastBuildDate>Tue, 02 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://rlodeiro.info/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/android/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Buttercup: tu gestor de contraseñas</title>
       <link>https://rlodeiro.info/blog/buttercup/</link>
       <pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/buttercup/</guid>
       <description>Comienza un nuevo año, y os traigo un regalo!. Buttercup es un gestor de contraseñas open source, gratuito y multidispositivo. Está disponible para Linux, macOS, Windows, iOS y Android.
 Tanto si nunca has utilizado un gestor de contraseñas y quieres uno, como si estás cansado del tuyo, este post es para ti!
 Descarga Ya que Buttercup es open source y gratuito vamos a descargarlo desde su página de Github. Veremos que está disponible para Linux, macOS y Windows.</description>
     </item>
+    
     <item>
       <title>Certificado auto-firmado</title>
       <link>https://rlodeiro.info/blog/certificado-autofirmado/</link>
       <pubDate>Sun, 03 Dec 2023 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/certificado-autofirmado/</guid>
       <description>Son muchos los escenarios en los que podemos necesitar un certificado auto-firmado. Desde probar una app que estemos desarrollando hasta servir de forma segura nuestros propios servicios en nuestra red doméstica.
 Si te interesa generar tus propios certificados auto-firmados en linux, este post es para ti!
 Preparación Primero vamos a instalar los paquetes necesarios. Como siempre yo utilizo Debian, pero servirá para cualquier derivado como Ubuntu o similares.
 Actualizamos e instalamos los paquetes necesarios: $ sudo apt update $ sudo apt install openssl ca-certificates Creamos una carpeta para trabajar en ella, la cual contendrá nuestros certificados: $ mkdir certificados $ cd certificados 1.</description>
     </item>
+    
   </channel>
 </rss>

@@ -7,16 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <copyright>© {year} Roberto Lodeiro</copyright>
-    <lastBuildDate>Sun, 15 Sep 2019 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://rlodeiro.info/tags/flatpak/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Sep 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/flatpak/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Flatpak</title>
       <link>https://rlodeiro.info/blog/flatpak/</link>
       <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/flatpak/</guid>
       <description>Ya que el verano está finalizando, vamos a hablar de las aplicaciones en Linux. Flatpak solventa los problemas encontrados al instalar aplicaciones de la forma habitual, y facilita enormemente la distribución de las mismas.
 A los más puristas no les gusta Flatpak (quien sabe por qué), pero yo llevo utilizándolo un tiempo y no le encuentro más que ventajas.
 Tenemos un catálogo inmenso de aplicaciones, periódicamente actualizadas, sin problemas de dependencias y disponibles para la gran mayoría de distribuciones Linux desde un único repositorio.</description>
     </item>
+    
   </channel>
 </rss>

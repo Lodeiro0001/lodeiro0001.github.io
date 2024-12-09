@@ -7,144 +7,187 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <copyright>© {year} Roberto Lodeiro</copyright>
-    <lastBuildDate>Tue, 02 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://rlodeiro.info/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Firefox en Linux</title>
+      <link>https://rlodeiro.info/blog/firefox/</link>
+      <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/blog/firefox/</guid>
+      <description>Todos utilizamos navegador web y en nuestra distribución favorita ya vendrá uno por defecto, en Debian viene Firefox-esr.
+En este post vamos a ver como reemplazarlo por la última versión de Firefox, y mantenerla siempre actualizada, sin necesidad de repositorio.
+Descarga Lo primero es descargarnos la última versión desde su página oficial. Le damos a descargar Firefox, y después a descargar para Linux 64 bits en mi caso.
+Instalación En mi caso en Debian, primero elimino la versión de Firefox incluida en el sistema:</description>
+    </item>
+    
     <item>
       <title>Buttercup: tu gestor de contraseñas</title>
       <link>https://rlodeiro.info/blog/buttercup/</link>
       <pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/buttercup/</guid>
       <description>Comienza un nuevo año, y os traigo un regalo!. Buttercup es un gestor de contraseñas open source, gratuito y multidispositivo. Está disponible para Linux, macOS, Windows, iOS y Android.
 Tanto si nunca has utilizado un gestor de contraseñas y quieres uno, como si estás cansado del tuyo, este post es para ti!
 Descarga Ya que Buttercup es open source y gratuito vamos a descargarlo desde su página de Github. Veremos que está disponible para Linux, macOS y Windows.</description>
     </item>
+    
     <item>
       <title>fwupd</title>
       <link>https://rlodeiro.info/blog/fwupd-linux-firmware/</link>
       <pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/fwupd-linux-firmware/</guid>
       <description>Si tienes un equipo Dell, Lenovo Thinkpad, Intel o HP (entre otros dispositivos y marcas) esto va a interesarte. Se acabó tener que ir a Windows para actualizar el firmware de nuestra placa base y otros dispositivos.
 Vamos a ver como instalar y ulitizar fwupd para actualizar el firmware desde Linux.
 Instalación Por supuesto, fwupd se encuentra por defecto en los repositorios de las distribuciones más utilizadas. En mi caso en Debian tan solo tenemos que hacer lo siguiente:</description>
     </item>
+    
     <item>
       <title>PS5 &amp; PS4: Remote Play en Linux</title>
       <link>https://rlodeiro.info/blog/ps5-ps4-remote-play-linux/</link>
       <pubDate>Fri, 06 Aug 2021 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/ps5-ps4-remote-play-linux/</guid>
       <description>Resulta muy útil poder jugar con tu PlayStation 5 o PlayStation 4 de forma remota, ya que puedes tenerla conectada en el televisor del salón, y cuando quieras puedes utilizarla también desde tu ordenador.
 Oficialmente solo se puede desde Windows o macOS, pero en este post vamos a ver como hacerlo también desde Linux.
 1. Instalación Vamos a utilizar un programa gratis y Open Source llamado Chiaki. Lo instalaremos por Flatpak, si todavía no tienes Flatpak configurado en tu sistema puedes ver este post donde explico como hacerlo.</description>
     </item>
+    
     <item>
       <title>DNI electrónico en Linux</title>
       <link>https://rlodeiro.info/blog/dnie-linux/</link>
       <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/dnie-linux/</guid>
       <description>Debido a la situación actual, el uso del DNIe se ha hecho todavía mas imprescindible que antes, tanto para identificarnos ante organismos oficiales como para firmar documentos.
 Si te interesa utilizarlo en Linux, continua leyendo.
 1. Evitar que el lector se apague En Debian, mi lector se apagaba al poco de conectarlo por motivos de ahorro de energía. Si este no es tu caso puedes saltar al segundo punto.
 Para evitarlo, tenemos que editar el Grub.</description>
     </item>
+    
     <item>
       <title>GitHub: 2FA y claves SSH</title>
       <link>https://rlodeiro.info/blog/github-2fa-ssh/</link>
       <pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/github-2fa-ssh/</guid>
       <description>En pleno siglo XXI, los ataques a servicios y dispositivos están a la orden del día, por lo que no está de más revisar las configuraciones de seguridad de los mismos.
 En esta entrada vamos a ver como incrementar la seguridad en nuestra cuenta de GitHub y como realizar la autenticación mediante una clave SSH.
 1. 2FA La autenticación de dos factores no es un requisito para poder utilizar la clave SSH en GitHub, sin embargo, lo recomiendo encarecidamente ya que es la forma que tenemos para incrementar la seguridad de nuestra cuenta.</description>
     </item>
+    
     <item>
       <title>Raspberry Pi: Swap y Swappiness</title>
       <link>https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/</link>
       <pubDate>Tue, 08 Jun 2021 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/</guid>
       <description>Si utilizamos nuestra Raspberry Pi como servidor, resulta de vital importancia optimizar la configuración de la misma.
 Veamos a modificar la forma en que el sistema haga uso de la memoria virtual o Swap mediante la propiedad Swappiness, y a incrementar el tamaño de la misma en Raspberry Pi.
 Por supuesto, la propiedad Swappiness es útil modificarla también en Debian, Ubuntu, Fedora u otras distribuciones Linux en nuestro equipo de escritorio, ya que con ello reduciremos el uso de Swap.</description>
     </item>
+    
     <item>
       <title>Flatpak</title>
       <link>https://rlodeiro.info/blog/flatpak/</link>
       <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/flatpak/</guid>
       <description>Ya que el verano está finalizando, vamos a hablar de las aplicaciones en Linux. Flatpak solventa los problemas encontrados al instalar aplicaciones de la forma habitual, y facilita enormemente la distribución de las mismas.
 A los más puristas no les gusta Flatpak (quien sabe por qué), pero yo llevo utilizándolo un tiempo y no le encuentro más que ventajas.
 Tenemos un catálogo inmenso de aplicaciones, periódicamente actualizadas, sin problemas de dependencias y disponibles para la gran mayoría de distribuciones Linux desde un único repositorio.</description>
     </item>
+    
     <item>
       <title>Screen tearing en Linux</title>
       <link>https://rlodeiro.info/blog/tearing_linux/</link>
       <pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/tearing_linux/</guid>
       <description>Muchos de los que usamos Linux hemos sufrido tearing, y al fin he encontrado la solución. Tanto si usas una gráfica Nvidia, como una integrada de Intel, podrás decir adiós a este molesto problema.
 Anteriormente escribí dos posts sobre como instalar Debian y como personalizar XFCE (el mejor entorno de escritorio que he probado hasta la fecha), así que basaré este en máquinas con esta configuración, aunque seguramente te sea de utilidad si utilizas otra distribución u otro entorno de escritorio.</description>
     </item>
+    
     <item>
       <title>Audio Multiroom</title>
       <link>https://rlodeiro.info/blog/audio_multiroom/</link>
       <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/audio_multiroom/</guid>
       <description>Hoy vamos a instalar y configurar forked-daapd, un servidor multimedia para nuestra biblioteca musical.
 DAAP (Digital Audio Access Protocol) es un protocolo ideado por Apple, el cual es utilizado por iTunes. Nuestro servidor será compatible por lo tanto con iTunes, dispositivos comerciales preparados para trabajar con Airplay, clientes MPD, entre otros.
 Tal como expliqué en una entrada anterior, podemos montar nuestros propios dispositivos compatibles con Airplay con una simple Raspberry Pi con Shairport Sync instalado conectándola a nuestro equipo Hi-Fi, altavoz auto-amplificado o similar.</description>
     </item>
+    
     <item>
       <title>Personalizar XFCE</title>
       <link>https://rlodeiro.info/blog/personalizar_xfce/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/personalizar_xfce/</guid>
       <description>Vamos a personalizar el entorno de escritorio XFCE para darle un toque actual y modificar a nuestro gusto algunas de las opciones por defecto.
 En la entrada anterior vimos como instalar Debian 9 Stretch , donde escogí XFCE por su estabilidad, bajo consumo de recursos y sus altas posibilidades de personalización. Hoy toca adaptarlo y vitaminarlo para mejorar nuestro entorno de trabajo.
 1. Tema 1.1 Apariencia General Primero vamos a cambiar el tema de nuestro escritorio.</description>
     </item>
+    
     <item>
       <title>Instalar Debian 9 Stretch</title>
       <link>https://rlodeiro.info/blog/instalacion_debian/</link>
       <pubDate>Sat, 30 Mar 2019 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/instalacion_debian/</guid>
       <description>Tras tres duros meses desaparecido en combate, voy a explicar como y porque he cambiado mi distribución Linux por la archiconocida Debian.
 Primero me deshice de mi Macbook (¡que contesto estoy de la decisión!), y tras un año aproximadamente utilizando Ubuntu, siento la necesidad de pasarme a Debian, me lo pide el cuerpo!
 He escuchado comentarios del estilo: &amp;ldquo;Esa distribución es para servidores&amp;rdquo;, &amp;ldquo;El software está obsoleto&amp;rdquo;, &amp;ldquo;Es una distribución para freaks&amp;rdquo;, entre otros.</description>
     </item>
+    
     <item>
       <title>SAI | Sistema de alimentacion ininterrumpida</title>
       <link>https://rlodeiro.info/blog/sai/</link>
       <pubDate>Sun, 30 Dec 2018 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/sai/</guid>
       <description>Hoy explico como he integrado al fin el SAI que tengo en el servidor, para poder monitorizar de una forma sencilla su estado, y que este apague el servidor en caso de un corte de luz prolongado.
 Después de pasar la época de exámenes y desconectar unos días celebrando con compañeros, amigos y familia, tocaba hacer la ultima entrada del ano, y de paso conseguir que si se va la luz durante las campanadas, mi Raspberry Pi me avise!</description>
     </item>
+    
     <item>
       <title>AirPlay en Linux</title>
       <link>https://rlodeiro.info/blog/airplay_linux/</link>
       <pubDate>Tue, 27 Nov 2018 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/airplay_linux/</guid>
       <description>Con Shairport Sync podrás convertir tu Raspberry Pi u otro sistema Linux en un receptor de audio AirPlay.
 Tanto si quieres actualizar tu equipo de música (mi caso) conectándole una Raspberry Pi, como configurarlo en tu pc, con Shairport Sync podrás enviar audio desde cualquier cliente compatible(si, existen para Linux) a tu nuevo receptor. En caso de que tu distribución no sea Ubuntu/Debian o derivados, consulta aquí tus requisitos de configuración.</description>
     </item>
+    
     <item>
       <title>Raspberry Pi - Backup remoto</title>
       <link>https://rlodeiro.info/blog/raspberrypi_backup_remoto/</link>
       <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/raspberrypi_backup_remoto/</guid>
       <description>Si odias apagar tu Raspberry PI para hacer una copia de seguridad del sistema, continua leyendo.
 Ya te habrá quedado claro que soy un Full Lover de la Raspberry PI, la uso como servidor principal y es casi mas importante que yo en casa, pero el ritual de hacer una copia de seguridad me cansaba. Tenia que apagarla, desconectar los discos y la microSD, conectar todo a mi pc y hacer el backup.</description>
     </item>
+    
     <item>
       <title>RAID en Linux</title>
       <link>https://rlodeiro.info/blog/mdadm/</link>
       <pubDate>Sun, 21 Oct 2018 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/mdadm/</guid>
       <description>Si queremos tener la información en nuestro disco a salvo de errores, un RAID puede ser una muy buena opción. Este proceso sirve tanto para un sistema Linux X86, como para una Raspberry Pi con varios discos USB conectados (USB boot mode). En esta entrada me centraré en crear un RAID1, lo cual implica dos discos iguales que guardarán la misma información. Si uno falla, el otro tendrá toda la información a salvo y podremos sustituir el defectuoso.</description>
     </item>
+    
     <item>
       <title>NTP | Servidor local</title>
       <link>https://rlodeiro.info/blog/ntp/</link>
       <pubDate>Sun, 14 Oct 2018 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/ntp/</guid>
       <description>Nuestro ordenador, nuestro router y muchos de los dispositivos que utilizamos a diario, sincronizan la hora del sistema con un servidor NTP (Network Time Protocol). Los mas conocidos y utilizados son los de NTP Pool Project. Si tenemos en mente por ejemplo un proyecto relacionado con la domótica, puede que no queramos que nuestros dispositivos (salvo el servidor local que los gestione) tengan acceso a internet, pero que tengamos la necesidad de que estos tengan la hora correcta para poder consultar los logs de una forma sencilla y eficiente.</description>
     </item>
+    
   </channel>
 </rss>

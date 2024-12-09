@@ -7,16 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <copyright>© {year} Roberto Lodeiro</copyright>
-    <lastBuildDate>Fri, 10 Sep 2021 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://rlodeiro.info/tags/telegram/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/telegram/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Diun: Avisos de actualizaciones de imágenes Docker</title>
       <link>https://rlodeiro.info/blog/diun-avisos-actualizaciones-imagenes-docker/</link>
       <pubDate>Fri, 10 Sep 2021 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/diun-avisos-actualizaciones-imagenes-docker/</guid>
       <description>Debido al extendido uso de Docker y a la gran cantidad de imágenes que podemos tener en nuestro servidor, resulta muy útil tener un servicio automatizado para el aviso de actualizaciones disponibles de las mismas.
 Vamos a ver como instalar y configurar Diun, totalmente OpenSource y selfhosted, para que nos avise por correo electrónico y/o por Telegram.
 Instalación y configuración Teniendo Docker instalado y corriendo en nuestro sistema, primero vamos a crear un directorio diun el cual enlazaremos al contenedor para guardar la configuración y datos del mismo.</description>
     </item>
+    
   </channel>
 </rss>

@@ -1,0 +1,1377 @@
+<!DOCTYPE HTML>
+<html lang="es">
+    <head>
+        
+        <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Firefox en Linux",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://rlodeiro.info"
+  },
+  "inLanguage" : "es-ES",
+  "articleSection" : "blog",
+  
+  "genre": "post",
+  "keywords": "Firefox, Debian, Ubuntu, Linux, tar, repositorio",
+  "wordcount":  172 ,
+  "url": "https://rlodeiro.info/blog/firefox/",
+  "datePublished": "2024-12-09",
+  "dateModified": "2024-12-09",
+  "license": "© 2024 Roberto Lodeiro",
+  "copyrightHolder" : "Roberto Lodeiro",
+  "copyrightYear" : "2024",
+  
+  "author" : "Roberto Lodeiro",
+  "description": "Instalación sin repositorio"
+}
+</script>
+        
+            
+                <title>Firefox en Linux | Roberto Lodeiro</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" href="https://rlodeiro.info/favicon.ico?v=kPP08pKEXB">
+
+
+        
+            <meta name="author" content="Roberto Lodeiro">
+        
+        
+            <meta name="description" content="Instalación sin repositorio">
+        
+
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://rlodeiro.info/img/posts/2024/12/firefox/firefox.jpg"/>
+
+<meta name="twitter:title" content="Firefox en Linux"/>
+<meta name="twitter:description" content="Instalación sin repositorio"/>
+<meta name="twitter:site" content="@lodeiro0001"/>
+
+        <meta property="og:title" content="Firefox en Linux" />
+<meta property="og:description" content="Instalación sin repositorio" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rlodeiro.info/blog/firefox/" /><meta property="og:image" content="https://rlodeiro.info/img/posts/2024/12/firefox/firefox.jpg" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2024-12-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-12-09T00:00:00+00:00" />
+
+        
+        <meta itemprop="name" content="Firefox en Linux">
+<meta itemprop="description" content="Instalación sin repositorio"><meta itemprop="datePublished" content="2024-12-09T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2024-12-09T00:00:00+00:00" />
+<meta itemprop="wordCount" content="172"><meta itemprop="image" content="https://rlodeiro.info/img/posts/2024/12/firefox/firefox.jpg">
+<meta itemprop="keywords" content="Firefox,Debian,Ubuntu,Linux,tar,repositorio," />
+        
+
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+            <link rel="stylesheet" href="https://rlodeiro.info/css/main.css">
+            <link rel="stylesheet" href="https://rlodeiro.info/css/add-on.css">
+            <link rel="stylesheet" href="https://rlodeiro.info/css/academicons.min.css">
+        
+
+        
+            
+                
+            
+                
+                    <link rel="stylesheet" href="https://rlodeiro.info/css/github.min.css">
+                
+            
+        
+
+
+
+      
+    </head>
+    <body>
+
+      
+      <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+      <h1><a href="https://rlodeiro.info/">Roberto Lodeiro</a></h1>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="https://rlodeiro.info/">
+                            <i class="fa fa-home">&nbsp;</i>Inicio
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/about/">
+                            <i class="fa fa-id-card-o">&nbsp;</i>Sobre mi
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/blog/">
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/categories/">
+                            <i class="fa fa-sitemap">&nbsp;</i>Categorias
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/contact/">
+                            <i class="fa fa-envelope-o">&nbsp;</i>Contacto
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Buscar</a>
+                <form id="search" method="get" action="//duckduckgo.com" target="_blank">
+                    <input type="text" name="q" placeholder="Buscar" />
+                    <input type="hidden" name="sites" value="https://rlodeiro.info">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+    <section>
+        <form class="search" method="get" action="//duckduckgo.com" target="_blank">
+            <input type="text" name="q" placeholder="Buscar" />
+            <input type="hidden" name="sites" value="https://rlodeiro.info">
+        </form>
+    </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="https://rlodeiro.info/">
+                            <h3>
+                                <i class="fa fa-home">&nbsp;</i>Inicio
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/about/">
+                            <h3>
+                                <i class="fa fa-id-card-o">&nbsp;</i>Sobre mi
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/blog/">
+                            <h3>
+                                <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/categories/">
+                            <h3>
+                                <i class="fa fa-sitemap">&nbsp;</i>Categorias
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/contact/">
+                            <h3>
+                                <i class="fa fa-envelope-o">&nbsp;</i>Contacto
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section class="recent-posts">
+            <div class="mini-posts">
+                <header>
+                    <h3>Publicaciones Recientes</h3>
+                </header>
+                
+
+                
+                    
+                
+
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/firefox/">Firefox en Linux</a></h3>
+                                
+                                <time class="published" datetime='2024-12-09'>
+                                    9 de diciembre de 2024
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/firefox/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2024/12/firefox/firefox.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/buttercup/">Buttercup: tu gestor de contraseñas</a></h3>
+                                
+                                <time class="published" datetime='2024-01-02'>
+                                    2 de enero de 2024
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/buttercup/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2024/01/buttercup/buttercup.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/certificado-autofirmado/">Certificado auto-firmado</a></h3>
+                                
+                                <time class="published" datetime='2023-12-03'>
+                                    3 de diciembre de 2023
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/certificado-autofirmado/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2023/12/certificado-autofirmado/certificado-autofirmado.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/actualizar-debian-11-debian-12-bookworm/">Actualizar Debian 11 a Debian 12 Bookworm</a></h3>
+                                
+                                <time class="published" datetime='2023-06-11'>
+                                    11 de junio de 2023
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/actualizar-debian-11-debian-12-bookworm/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2023/06/actualizar-debian-11-debian-12-bookworm/actualizar-debian-11-debian-12-bookworm.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/duplicati/">Duplicati</a></h3>
+                                
+                                <time class="published" datetime='2023-04-30'>
+                                    30 de abril de 2023
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/duplicati/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2023/04/duplicati/duplicati.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/ventoy/">Ventoy</a></h3>
+                                
+                                <time class="published" datetime='2022-09-03'>
+                                    3 de septiembre de 2022
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/ventoy/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2022/09/ventoy/ventoy.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+
+                
+                    <a href=
+                        
+                            /blog/
+                        
+                        class="button">Ver más entradas</a>
+                
+            </div>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Comparte esta publicación <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2frlodeiro.info%2fblog%2ffirefox%2f&amp;text=Firefox%20en%20Linux&amp;via=lodeiro0001" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frlodeiro.info%2fblog%2ffirefox%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=https%3a%2f%2frlodeiro.info%2fblog%2ffirefox%2f&amp;title=Firefox%20en%20Linux" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2frlodeiro.info%2fblog%2ffirefox%2f&amp;title=Firefox%20en%20Linux" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2frlodeiro.info%2fblog%2ffirefox%2f&amp;description=Firefox%20en%20Linux" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Chequea este post de Roberto%20Lodeiro&amp;body=https%3a%2f%2frlodeiro.info%2fblog%2ffirefox%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+  <header>
+    <div class="title">
+        
+            <h1><a href="https://rlodeiro.info/blog/firefox/">Firefox en Linux</a></h1>
+            
+        
+        
+            <p>Instalación sin repositorio</p>
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published" datetime='2024-12-09'>
+            9 de diciembre de 2024
+          </time>
+        <span class="author">Roberto Lodeiro</span>
+        
+        
+    </div>
+</header>
+
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2frlodeiro.info%2fblog%2ffirefox%2f&amp;text=Firefox%20en%20Linux&amp;via=lodeiro0001" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frlodeiro.info%2fblog%2ffirefox%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=https%3a%2f%2frlodeiro.info%2fblog%2ffirefox%2f&amp;title=Firefox%20en%20Linux" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2frlodeiro.info%2fblog%2ffirefox%2f&amp;title=Firefox%20en%20Linux" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2frlodeiro.info%2fblog%2ffirefox%2f&amp;description=Firefox%20en%20Linux" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Chequea este post de Roberto%20Lodeiro&amp;body=https%3a%2f%2frlodeiro.info%2fblog%2ffirefox%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+      </ul>
+    </section>
+  
+
+  
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/firefox/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2024/12/firefox/firefox.jpg" alt="">
+        </a>
+    
+
+
+  <div id="content">
+    <p>Todos utilizamos navegador web y en nuestra distribución favorita ya vendrá uno por defecto, en Debian viene Firefox-esr.</p>
+<p>En este post vamos a ver como reemplazarlo por la última versión de Firefox, y mantenerla siempre actualizada, sin necesidad de repositorio.</p>
+
+
+<hr style="border-color: #d6d6d6;" />
+
+
+<h2 id="descarga">Descarga</h2>
+<p>Lo primero es descargarnos la última versión 
+
+    
+        
+    
+
+    <a href="https://www.mozilla.org/es-ES/firefox/new/" target='_blank'>desde su página oficial.</a>
+
+</p>
+<p>Le damos a descargar Firefox, y después a descargar para Linux 64 bits en mi caso.</p>
+<h2 id="instalación">Instalación</h2>
+<p>En mi caso en Debian, primero elimino la versión de Firefox incluida en el sistema:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt remove --purge firefox-esr
+</span></span></code></pre></div><ul>
+<li>Descomprimimos el archivo descargado en <code>/opt</code>:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo tar xjfv firefox-133.0.tar.bz2 -C /opt/
+</span></span></code></pre></div><ul>
+<li>Creamos el acceso directo:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo wget https://raw.githubusercontent.com/mozilla/sumo-kb/main/install-firefox-linux/firefox.desktop -P /usr/local/share/applications
+</span></span></code></pre></div><ul>
+<li>Modificamos los permisos para que se actualice de forma automática:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo chmod -R <span style="color:#ae81ff">777</span> /opt/firefox/
+</span></span></code></pre></div><ul>
+<li>Creamos un enlace para que se pueda ejecutar desde consola:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo ln -s /opt/firefox/firefox /usr/local/bin/
+</span></span></code></pre></div><p>Con estos sencillos pasos ya tenemos la última versión de Firefox en Linux, siempre actualizada, sin depender de repositorios externos.</p>
+<p>
+
+<hr style="border-color: #d6d6d6;" />
+
+
+Espero que sea útil, ¡gracias por leerme!</p>
+
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/categories/linux">Linux</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+            
+            
+                <i class="fa fa-tags"></i>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/firefox">Firefox</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/debian">Debian</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/ubuntu">Ubuntu</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/linux">Linux</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/tar">tar</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/repositorio">repositorio</a></li>
+                
+            
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="https://rlodeiro.info/blog/buttercup/"
+                class="button big previous">Buttercup: tu gestor de contraseñas</a></li>
+    
+
+    
+</ul>
+
+
+    </div>
+    
+<section id="sidebar">
+
+  
+  <section id="intro">
+    
+    
+      
+        <a href='https://rlodeiro.info/'><img src="https://rlodeiro.info/img/main/logo.jpg" class="intro-circle" width="" alt="" /></a>
+      
+    
+    
+      <header>
+        <h2>Roberto Lodeiro</h2>
+        <p>Reality is wrong. Dreams are for real.</p>
+      </header>
+    
+    
+      <ul class="icons">
+        
+          
+    <li><a href="" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//twitter.com/lodeiro0001" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:me@rlodeiro.info" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+  </section>
+
+  
+  <section class="recent-posts">
+    <div class="mini-posts">
+      <header>
+        <h3>Publicaciones Recientes</h3>
+      </header>
+      <div class="posts-container">
+        
+
+        
+          
+        
+
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/firefox/">Firefox en Linux</a>
+              </h3>
+              
+              <time class="published" datetime='2024-12-09'>
+                9 de diciembre de 2024
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/firefox/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2024/12/firefox/firefox.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/buttercup/">Buttercup: tu gestor de contraseñas</a>
+              </h3>
+              
+              <time class="published" datetime='2024-01-02'>
+                2 de enero de 2024
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/buttercup/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2024/01/buttercup/buttercup.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/certificado-autofirmado/">Certificado auto-firmado</a>
+              </h3>
+              
+              <time class="published" datetime='2023-12-03'>
+                3 de diciembre de 2023
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/certificado-autofirmado/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2023/12/certificado-autofirmado/certificado-autofirmado.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/actualizar-debian-11-debian-12-bookworm/">Actualizar Debian 11 a Debian 12 Bookworm</a>
+              </h3>
+              
+              <time class="published" datetime='2023-06-11'>
+                11 de junio de 2023
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/actualizar-debian-11-debian-12-bookworm/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2023/06/actualizar-debian-11-debian-12-bookworm/actualizar-debian-11-debian-12-bookworm.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/duplicati/">Duplicati</a>
+              </h3>
+              
+              <time class="published" datetime='2023-04-30'>
+                30 de abril de 2023
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/duplicati/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2023/04/duplicati/duplicati.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/ventoy/">Ventoy</a>
+              </h3>
+              
+              <time class="published" datetime='2022-09-03'>
+                3 de septiembre de 2022
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/ventoy/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2022/09/ventoy/ventoy.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+      </div>
+
+      
+        <a href=
+          
+            /blog/
+          
+        class="button">Ver más entradas</a>
+      
+    </div>
+  </section>
+
+  
+  
+  
+  
+  
+    <section id="categories">
+      <header>
+        <h3>
+          <a href="https://rlodeiro.info/categories/">Categorías</a>
+        </h3>
+      </header>
+        
+          
+        
+
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/herramientas/">herramientas</a>
+                <span style="float:right;">9</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/iot/">iot</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/linux/">linux</a>
+                <span style="float:right;">25</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/raspberry-pi/">raspberry-pi</a>
+                <span style="float:right;">6</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/servicios/">servicios</a>
+                <span style="float:right;">9</span>
+              
+            </header>
+          </article>
+        </p>
+        
+    </section>
+  
+  
+
+  
+  
+    <section id="mini-bio">
+      <h3>Sobre Mi</h3>
+      <p>¿De donde viene? ¿Cual es su color de pelo? ¿A que tribu urbana pertenece? Si estás muy aburrid@ y/o quieres saberlo ¡adelante!</p>
+      <a href="https://rlodeiro.info/about/" class="button">Leer Más</a>
+    </section>
+  
+
+  
+  <section id="footer">
+    
+      <ul class="icons">
+        
+          
+    <li><a href="" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//twitter.com/lodeiro0001" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:me@rlodeiro.info" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+    <p class="copyright">
+      
+      © 2024 Roberto Lodeiro
+      
+    </p>
+  </section>
+</section>
+
+    </div>
+    <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+    
+
+    
+      
+    
+
+    
+    
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+      <script src="https://rlodeiro.info/js/util.js"></script>
+      <script src="https://rlodeiro.info/js/main.js"></script>
+      <script src="https://rlodeiro.info/js/backToTop.js"></script>
+    
+
+    
+      
+        
+      
+        
+          <script src="https://rlodeiro.info/js/highlight.min.js"></script>
+        
+      
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+      
+
+
+  </body>
+</html>
+

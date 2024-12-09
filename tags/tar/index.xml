@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tar on Roberto Lodeiro</title>
+    <link>https://rlodeiro.info/tags/tar/</link>
+    <description>Recent content in tar on Roberto Lodeiro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <copyright>© {year} Roberto Lodeiro</copyright>
+    <lastBuildDate>Mon, 09 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/tar/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Firefox en Linux</title>
+      <link>https://rlodeiro.info/blog/firefox/</link>
+      <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/blog/firefox/</guid>
+      <description>Todos utilizamos navegador web y en nuestra distribución favorita ya vendrá uno por defecto, en Debian viene Firefox-esr.
+En este post vamos a ver como reemplazarlo por la última versión de Firefox, y mantenerla siempre actualizada, sin necesidad de repositorio.
+Descarga Lo primero es descargarnos la última versión desde su página oficial. Le damos a descargar Firefox, y después a descargar para Linux 64 bits en mi caso.
+Instalación En mi caso en Debian, primero elimino la versión de Firefox incluida en el sistema:</description>
+    </item>
+    
+  </channel>
+</rss>

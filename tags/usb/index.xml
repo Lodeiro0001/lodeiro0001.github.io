@@ -7,25 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <copyright>© {year} Roberto Lodeiro</copyright>
-    <lastBuildDate>Sat, 03 Sep 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://rlodeiro.info/tags/usb/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/usb/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ventoy</title>
       <link>https://rlodeiro.info/blog/ventoy/</link>
       <pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/ventoy/</guid>
       <description>Si estás cansado de tener que quemar cada imagen que bajas de un sistema operativo en un Pendrive, este es tu post.
 Ventoy es una utilidad que te permite tener múltiples imágenes de distintos sistemas operativos, listas y totalmente Bootables en una misma Memoria USB.
 1. Descarga Ya que Ventoy es Open Source y gratuito, podemos descargarlo desde su página de Github. Como podemos ver, hay versión tanto para Linux como para Windows, además de una ISO.</description>
     </item>
+    
     <item>
       <title>Raspberry Pi &amp; USB Boot Mode</title>
       <link>https://rlodeiro.info/blog/raspberryusbboot/</link>
       <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/raspberryusbboot/</guid>
       <description>En esta primera entrada, explicaré algo que me ha sido muy util a la hora de tener una Raspberry Pi como servidor en casa.
 Todos sabemos que la Raspberry Pi, por defecto, utiliza una tarjeta MicroSD como disco para el sistema, lo cual supone muchas limitaciones, tanto a nivel de rendimiento como de durabilidad.
 Desde hace relativamente poco, en la documentación oficial se explica como activar el arranque desde un dispositivo usb.</description>
     </item>
+    
   </channel>
 </rss>

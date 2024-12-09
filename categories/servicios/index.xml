@@ -7,83 +7,100 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <copyright>© {year} Roberto Lodeiro</copyright>
-    <lastBuildDate>Wed, 09 Feb 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://rlodeiro.info/categories/servicios/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/categories/servicios/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Navidrome</title>
       <link>https://rlodeiro.info/blog/navidrome/</link>
       <pubDate>Wed, 09 Feb 2022 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/navidrome/</guid>
       <description>Los servicios de música en streaming están de moda, pero si eres de los que tiene su propia biblioteca de música, esto te va a interesar.
 Navidrome es un servidor de música Self-Hosted y Opensource, con cliente web y diversos clientes para dispositivos móviles. Vamos a ver como instalarlo.
 1. Instalación Para la instalación vamos a usar Docker, ya que facilita el despliegue del servicio y configuración del mismo. Si todavía no tiene Docker en tu máquina, puedes leer este post donde explico como instalarlo.</description>
     </item>
+    
     <item>
       <title>Diun: Avisos de actualizaciones de imágenes Docker</title>
       <link>https://rlodeiro.info/blog/diun-avisos-actualizaciones-imagenes-docker/</link>
       <pubDate>Fri, 10 Sep 2021 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/diun-avisos-actualizaciones-imagenes-docker/</guid>
       <description>Debido al extendido uso de Docker y a la gran cantidad de imágenes que podemos tener en nuestro servidor, resulta muy útil tener un servicio automatizado para el aviso de actualizaciones disponibles de las mismas.
 Vamos a ver como instalar y configurar Diun, totalmente OpenSource y selfhosted, para que nos avise por correo electrónico y/o por Telegram.
 Instalación y configuración Teniendo Docker instalado y corriendo en nuestro sistema, primero vamos a crear un directorio diun el cual enlazaremos al contenedor para guardar la configuración y datos del mismo.</description>
     </item>
+    
     <item>
       <title>Pi-hole &amp; Docker</title>
       <link>https://rlodeiro.info/blog/pihole_docker/</link>
       <pubDate>Sun, 21 Jul 2019 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/pihole_docker/</guid>
       <description>Pi-hole es la mejor solución para terminar con la publicidad intrusiva, tanto de aplicaciones como de sitios web, en todos los dispositivos de nuestra red. Vamos a instalarlo en nuestra Raspberry Pi, la cual actuará como servidor DNS. Además, explicaré como configurar dominios locales.
 Aunque existen otras formas de instalación, he elegido Docker por las múltiples ventajas que aporta. Algunas de estas ventajas son: facilidad a la hora de actualizar, no modificamos los archivos del sistema y tendremos la posibilidad de aprovechar al máximo nuestra Raspberry Pi instalando otros servicios.</description>
     </item>
+    
     <item>
       <title>Audio Multiroom</title>
       <link>https://rlodeiro.info/blog/audio_multiroom/</link>
       <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/audio_multiroom/</guid>
       <description>Hoy vamos a instalar y configurar forked-daapd, un servidor multimedia para nuestra biblioteca musical.
 DAAP (Digital Audio Access Protocol) es un protocolo ideado por Apple, el cual es utilizado por iTunes. Nuestro servidor será compatible por lo tanto con iTunes, dispositivos comerciales preparados para trabajar con Airplay, clientes MPD, entre otros.
 Tal como expliqué en una entrada anterior, podemos montar nuestros propios dispositivos compatibles con Airplay con una simple Raspberry Pi con Shairport Sync instalado conectándola a nuestro equipo Hi-Fi, altavoz auto-amplificado o similar.</description>
     </item>
+    
     <item>
       <title>MQTT | Parte 2</title>
       <link>https://rlodeiro.info/blog/mqtt2/</link>
       <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/mqtt2/</guid>
       <description>Segunda entrada sobre MQTT, donde veremos como instalar el Broker y un cliente básico en consola.
 Como siempre, asumo que las maquinas cliente y servidor tienen una distro Linux Debian o derivada. En la primera entrada sobre MQTT hice una introducción básica al protocolo, ahora me centraré en explicar un caso de uso básico.
 Mi servidor es una Raspberry Pi (que raro), pero puede ser otro pc, o el mismo donde posteriormente instales también el cliente y así poder probar el funcionamiento.</description>
     </item>
+    
     <item>
       <title>AirPlay en Linux</title>
       <link>https://rlodeiro.info/blog/airplay_linux/</link>
       <pubDate>Tue, 27 Nov 2018 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/airplay_linux/</guid>
       <description>Con Shairport Sync podrás convertir tu Raspberry Pi u otro sistema Linux en un receptor de audio AirPlay.
 Tanto si quieres actualizar tu equipo de música (mi caso) conectándole una Raspberry Pi, como configurarlo en tu pc, con Shairport Sync podrás enviar audio desde cualquier cliente compatible(si, existen para Linux) a tu nuevo receptor. En caso de que tu distribución no sea Ubuntu/Debian o derivados, consulta aquí tus requisitos de configuración.</description>
     </item>
+    
     <item>
       <title>MQTT | Parte 1</title>
       <link>https://rlodeiro.info/blog/mqtt1/</link>
       <pubDate>Mon, 29 Oct 2018 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/mqtt1/</guid>
       <description>Esta primera entrada sobre MQTT, pretende ser una forma sencilla de entender los conceptos básicos. Explicaré en que consiste y como podemos usarlo, pero sin entrar en demasiados tecnicismos (para eso ya vendrán entradas posteriores).
 Si usas Telegram u otra aplicación de mensajería actual o has usado IRC antaño, ¡será muy fácil que lo entiendas!.
 MQTT(Message Queuing Telemetry Transport), es un protocolo de comunicación muy utilizado en el Iot(Internet of Things).</description>
     </item>
+    
     <item>
       <title>NTP | Servidor local</title>
       <link>https://rlodeiro.info/blog/ntp/</link>
       <pubDate>Sun, 14 Oct 2018 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/ntp/</guid>
       <description>Nuestro ordenador, nuestro router y muchos de los dispositivos que utilizamos a diario, sincronizan la hora del sistema con un servidor NTP (Network Time Protocol). Los mas conocidos y utilizados son los de NTP Pool Project. Si tenemos en mente por ejemplo un proyecto relacionado con la domótica, puede que no queramos que nuestros dispositivos (salvo el servidor local que los gestione) tengan acceso a internet, pero que tengamos la necesidad de que estos tengan la hora correcta para poder consultar los logs de una forma sencilla y eficiente.</description>
     </item>
+    
     <item>
       <title>Gogs | Self-Hosted Git</title>
       <link>https://rlodeiro.info/blog/gogs/</link>
       <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/gogs/</guid>
       <description>Todos los que de uno u otro modo estamos relacionados con el desarrollo de software, antes o después hemos usado algún servicio de repositorios Git en la nube. Por lo general, son gratuitos para repositorios públicos, y pagando podemos crear repositorios privados.
 Gogs es un servicio de Git opensource para alojar nuestros repositorios Git en nuestro propio servidor. He probado otras alternativas similares, pero para mi, Gogs es la ganadora ya que consume poquísimos recursos y funciona perfectamente ¿que más se puede pedir?</description>
     </item>
+    
   </channel>
 </rss>

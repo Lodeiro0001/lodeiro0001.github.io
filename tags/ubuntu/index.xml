@@ -7,53 +7,74 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <copyright>© {year} Roberto Lodeiro</copyright>
-    <lastBuildDate>Sun, 03 Dec 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://rlodeiro.info/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Firefox en Linux</title>
+      <link>https://rlodeiro.info/blog/firefox/</link>
+      <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/blog/firefox/</guid>
+      <description>Todos utilizamos navegador web y en nuestra distribución favorita ya vendrá uno por defecto, en Debian viene Firefox-esr.
+En este post vamos a ver como reemplazarlo por la última versión de Firefox, y mantenerla siempre actualizada, sin necesidad de repositorio.
+Descarga Lo primero es descargarnos la última versión desde su página oficial. Le damos a descargar Firefox, y después a descargar para Linux 64 bits en mi caso.
+Instalación En mi caso en Debian, primero elimino la versión de Firefox incluida en el sistema:</description>
+    </item>
+    
     <item>
       <title>Certificado auto-firmado</title>
       <link>https://rlodeiro.info/blog/certificado-autofirmado/</link>
       <pubDate>Sun, 03 Dec 2023 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/certificado-autofirmado/</guid>
       <description>Son muchos los escenarios en los que podemos necesitar un certificado auto-firmado. Desde probar una app que estemos desarrollando hasta servir de forma segura nuestros propios servicios en nuestra red doméstica.
 Si te interesa generar tus propios certificados auto-firmados en linux, este post es para ti!
 Preparación Primero vamos a instalar los paquetes necesarios. Como siempre yo utilizo Debian, pero servirá para cualquier derivado como Ubuntu o similares.
 Actualizamos e instalamos los paquetes necesarios: $ sudo apt update $ sudo apt install openssl ca-certificates Creamos una carpeta para trabajar en ella, la cual contendrá nuestros certificados: $ mkdir certificados $ cd certificados 1.</description>
     </item>
+    
     <item>
       <title>DNI electrónico en Linux</title>
       <link>https://rlodeiro.info/blog/dnie-linux/</link>
       <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/dnie-linux/</guid>
       <description>Debido a la situación actual, el uso del DNIe se ha hecho todavía mas imprescindible que antes, tanto para identificarnos ante organismos oficiales como para firmar documentos.
 Si te interesa utilizarlo en Linux, continua leyendo.
 1. Evitar que el lector se apague En Debian, mi lector se apagaba al poco de conectarlo por motivos de ahorro de energía. Si este no es tu caso puedes saltar al segundo punto.
 Para evitarlo, tenemos que editar el Grub.</description>
     </item>
+    
     <item>
       <title>Raspberry Pi: Swap y Swappiness</title>
       <link>https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/</link>
       <pubDate>Tue, 08 Jun 2021 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/raspberry-pi_swap-swappiness/</guid>
       <description>Si utilizamos nuestra Raspberry Pi como servidor, resulta de vital importancia optimizar la configuración de la misma.
 Veamos a modificar la forma en que el sistema haga uso de la memoria virtual o Swap mediante la propiedad Swappiness, y a incrementar el tamaño de la misma en Raspberry Pi.
 Por supuesto, la propiedad Swappiness es útil modificarla también en Debian, Ubuntu, Fedora u otras distribuciones Linux en nuestro equipo de escritorio, ya que con ello reduciremos el uso de Swap.</description>
     </item>
+    
     <item>
       <title>AirPlay en Linux</title>
       <link>https://rlodeiro.info/blog/airplay_linux/</link>
       <pubDate>Tue, 27 Nov 2018 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/airplay_linux/</guid>
       <description>Con Shairport Sync podrás convertir tu Raspberry Pi u otro sistema Linux en un receptor de audio AirPlay.
 Tanto si quieres actualizar tu equipo de música (mi caso) conectándole una Raspberry Pi, como configurarlo en tu pc, con Shairport Sync podrás enviar audio desde cualquier cliente compatible(si, existen para Linux) a tu nuevo receptor. En caso de que tu distribución no sea Ubuntu/Debian o derivados, consulta aquí tus requisitos de configuración.</description>
     </item>
+    
     <item>
       <title>Escáner en Ubuntu</title>
       <link>https://rlodeiro.info/blog/escaner_ubuntu/</link>
       <pubDate>Mon, 12 Nov 2018 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/escaner_ubuntu/</guid>
       <description>Si el escáner de tu impresora multifunción no es reconocido de forma automática, tranquilo, no está todo perdido.
 Ubuntu configura de forma automática la inmensa mayoría de impresoras, tanto conectada por cable como las existentes en nuestra red wifi, pero el escáner de esta (si, todavía hay gente como yo que lo usa) puede que no como es mi caso.
 Este procedimiento ha sido probado con mi vieja y querida HP Photosmart 5510, debería servir para cualquier modelo de la marca.</description>
     </item>
+    
   </channel>
 </rss>

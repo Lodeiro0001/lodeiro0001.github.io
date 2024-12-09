@@ -7,15 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <copyright>© {year} Roberto Lodeiro</copyright>
-    <lastBuildDate>Tue, 20 Nov 2018 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://rlodeiro.info/tags/remoto/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Nov 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/remoto/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Raspberry Pi - Backup remoto</title>
       <link>https://rlodeiro.info/blog/raspberrypi_backup_remoto/</link>
       <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
+      
       <guid>https://rlodeiro.info/blog/raspberrypi_backup_remoto/</guid>
       <description>Si odias apagar tu Raspberry PI para hacer una copia de seguridad del sistema, continua leyendo.
 Ya te habrá quedado claro que soy un Full Lover de la Raspberry PI, la uso como servidor principal y es casi mas importante que yo en casa, pero el ritual de hacer una copia de seguridad me cansaba. Tenia que apagarla, desconectar los discos y la microSD, conectar todo a mi pc y hacer el backup.</description>
     </item>
+    
   </channel>
 </rss>
