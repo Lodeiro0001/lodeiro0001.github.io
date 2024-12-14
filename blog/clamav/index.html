@@ -1,0 +1,1440 @@
+<!DOCTYPE HTML>
+<html lang="es">
+    <head>
+        
+        <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "ClamAV Antivirus",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://rlodeiro.info"
+  },
+  "inLanguage" : "es-ES",
+  "articleSection" : "blog",
+  
+  "genre": "post",
+  "keywords": "ClamAV, Antivirus, Debian, Ubuntu, Linux, Virus, Malware, Protección, On access",
+  "wordcount":  432 ,
+  "url": "https://rlodeiro.info/blog/clamav/",
+  "datePublished": "2024-12-09",
+  "dateModified": "2024-12-09",
+  "license": "© 2024 Roberto Lodeiro",
+  "copyrightHolder" : "Roberto Lodeiro",
+  "copyrightYear" : "2024",
+  
+  "author" : "Roberto Lodeiro",
+  "description": "Protégete en tiempo real"
+}
+</script>
+        
+            
+                <title>ClamAV Antivirus | Roberto Lodeiro</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" href="https://rlodeiro.info/favicon.ico?v=kPP08pKEXB">
+
+
+        
+            <meta name="author" content="Roberto Lodeiro">
+        
+        
+            <meta name="description" content="Protégete en tiempo real">
+        
+
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://rlodeiro.info/img/posts/2024/12/clamav/clamav.jpg"/>
+
+<meta name="twitter:title" content="ClamAV Antivirus"/>
+<meta name="twitter:description" content="Protégete en tiempo real"/>
+<meta name="twitter:site" content="@lodeiro0001"/>
+
+        <meta property="og:title" content="ClamAV Antivirus" />
+<meta property="og:description" content="Protégete en tiempo real" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rlodeiro.info/blog/clamav/" /><meta property="og:image" content="https://rlodeiro.info/img/posts/2024/12/clamav/clamav.jpg" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2024-12-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-12-09T00:00:00+00:00" />
+
+        
+        <meta itemprop="name" content="ClamAV Antivirus">
+<meta itemprop="description" content="Protégete en tiempo real"><meta itemprop="datePublished" content="2024-12-09T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2024-12-09T00:00:00+00:00" />
+<meta itemprop="wordCount" content="432"><meta itemprop="image" content="https://rlodeiro.info/img/posts/2024/12/clamav/clamav.jpg">
+<meta itemprop="keywords" content="ClamAV,Antivirus,Debian,Ubuntu,Linux,Virus,Malware,Protección,On access," />
+        
+
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+            <link rel="stylesheet" href="https://rlodeiro.info/css/main.css">
+            <link rel="stylesheet" href="https://rlodeiro.info/css/add-on.css">
+            <link rel="stylesheet" href="https://rlodeiro.info/css/academicons.min.css">
+        
+
+        
+            
+                
+            
+                
+                    <link rel="stylesheet" href="https://rlodeiro.info/css/github.min.css">
+                
+            
+        
+
+
+
+      
+    </head>
+    <body>
+
+      
+      <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+      <h1><a href="https://rlodeiro.info/">Roberto Lodeiro</a></h1>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="https://rlodeiro.info/">
+                            <i class="fa fa-home">&nbsp;</i>Inicio
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/about/">
+                            <i class="fa fa-id-card-o">&nbsp;</i>Sobre mi
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/blog/">
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/categories/">
+                            <i class="fa fa-sitemap">&nbsp;</i>Categorias
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://rlodeiro.info/contact/">
+                            <i class="fa fa-envelope-o">&nbsp;</i>Contacto
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Buscar</a>
+                <form id="search" method="get" action="//duckduckgo.com" target="_blank">
+                    <input type="text" name="q" placeholder="Buscar" />
+                    <input type="hidden" name="sites" value="https://rlodeiro.info">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+    <section>
+        <form class="search" method="get" action="//duckduckgo.com" target="_blank">
+            <input type="text" name="q" placeholder="Buscar" />
+            <input type="hidden" name="sites" value="https://rlodeiro.info">
+        </form>
+    </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="https://rlodeiro.info/">
+                            <h3>
+                                <i class="fa fa-home">&nbsp;</i>Inicio
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/about/">
+                            <h3>
+                                <i class="fa fa-id-card-o">&nbsp;</i>Sobre mi
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/blog/">
+                            <h3>
+                                <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/categories/">
+                            <h3>
+                                <i class="fa fa-sitemap">&nbsp;</i>Categorias
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://rlodeiro.info/contact/">
+                            <h3>
+                                <i class="fa fa-envelope-o">&nbsp;</i>Contacto
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section class="recent-posts">
+            <div class="mini-posts">
+                <header>
+                    <h3>Publicaciones Recientes</h3>
+                </header>
+                
+
+                
+                    
+                
+
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/clamav/">ClamAV Antivirus</a></h3>
+                                
+                                <time class="published" datetime='2024-12-09'>
+                                    9 de diciembre de 2024
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/clamav/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2024/12/clamav/clamav.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/firefox/">Firefox en Linux</a></h3>
+                                
+                                <time class="published" datetime='2024-12-09'>
+                                    9 de diciembre de 2024
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/firefox/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2024/12/firefox/firefox.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/buttercup/">Buttercup: tu gestor de contraseñas</a></h3>
+                                
+                                <time class="published" datetime='2024-01-02'>
+                                    2 de enero de 2024
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/buttercup/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2024/01/buttercup/buttercup.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/certificado-autofirmado/">Certificado auto-firmado</a></h3>
+                                
+                                <time class="published" datetime='2023-12-03'>
+                                    3 de diciembre de 2023
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/certificado-autofirmado/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2023/12/certificado-autofirmado/certificado-autofirmado.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/actualizar-debian-11-debian-12-bookworm/">Actualizar Debian 11 a Debian 12 Bookworm</a></h3>
+                                
+                                <time class="published" datetime='2023-06-11'>
+                                    11 de junio de 2023
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/actualizar-debian-11-debian-12-bookworm/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2023/06/actualizar-debian-11-debian-12-bookworm/actualizar-debian-11-debian-12-bookworm.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://rlodeiro.info/blog/duplicati/">Duplicati</a></h3>
+                                
+                                <time class="published" datetime='2023-04-30'>
+                                    30 de abril de 2023
+                                  </time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/duplicati/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2023/04/duplicati/duplicati.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+
+                
+                    <a href=
+                        
+                            /blog/
+                        
+                        class="button">Ver más entradas</a>
+                
+            </div>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Comparte esta publicación <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2frlodeiro.info%2fblog%2fclamav%2f&amp;text=ClamAV%20Antivirus&amp;via=lodeiro0001" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frlodeiro.info%2fblog%2fclamav%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=https%3a%2f%2frlodeiro.info%2fblog%2fclamav%2f&amp;title=ClamAV%20Antivirus" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2frlodeiro.info%2fblog%2fclamav%2f&amp;title=ClamAV%20Antivirus" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2frlodeiro.info%2fblog%2fclamav%2f&amp;description=ClamAV%20Antivirus" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Chequea este post de Roberto%20Lodeiro&amp;body=https%3a%2f%2frlodeiro.info%2fblog%2fclamav%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+  <header>
+    <div class="title">
+        
+            <h1><a href="https://rlodeiro.info/blog/clamav/">ClamAV Antivirus</a></h1>
+            
+        
+        
+            <p>Protégete en tiempo real</p>
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published" datetime='2024-12-09'>
+            9 de diciembre de 2024
+          </time>
+        <span class="author">Roberto Lodeiro</span>
+        
+        
+    </div>
+</header>
+
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2frlodeiro.info%2fblog%2fclamav%2f&amp;text=ClamAV%20Antivirus&amp;via=lodeiro0001" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frlodeiro.info%2fblog%2fclamav%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=https%3a%2f%2frlodeiro.info%2fblog%2fclamav%2f&amp;title=ClamAV%20Antivirus" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2frlodeiro.info%2fblog%2fclamav%2f&amp;title=ClamAV%20Antivirus" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2frlodeiro.info%2fblog%2fclamav%2f&amp;description=ClamAV%20Antivirus" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Chequea este post de Roberto%20Lodeiro&amp;body=https%3a%2f%2frlodeiro.info%2fblog%2fclamav%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+      </ul>
+    </section>
+  
+
+  
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/clamav/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2024/12/clamav/clamav.jpg" alt="">
+        </a>
+    
+
+
+  <div id="content">
+    <p>En los tiempos que corren, las amenazas de virus y malware son muy frecuentes. Debemos de protegernos todo lo posible, incluso en sistemas Linux.</p>
+<p>En este post vamos a ver como instalar el antivirus <code>ClamAV</code> y configurarlo para tener protección en tiempo real.</p>
+
+
+<hr style="border-color: #d6d6d6;" />
+
+
+<h2 id="instalación">Instalación</h2>
+<p>Todo el proceso a sido realizado en Debian, pero debería funcionar perfectamente en cualquier distribución derivada de esta.</p>
+<ul>
+<li>Actualizamos repositorios y el sistema:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt update <span style="color:#f92672">&amp;&amp;</span> sudo apt upgrade
+</span></span></code></pre></div><ul>
+<li>Instalamos ClamAV:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt install clamav clamav-daemon
+</span></span></code></pre></div><p>Por defecto, ClamAV actualizará de forma automática sus base de datos de virus, pero si queremos hacerlo manualmente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo service clamav-freshclam stop
+</span></span><span style="display:flex;"><span>$ sudo freshclam
+</span></span><span style="display:flex;"><span>$ sudo service clamav-freshclam start
+</span></span></code></pre></div><p>Hemos parado el servicio que hace automáticamente la actualización, actualizado manualmente y vuelto a arrancar el servicio.</p>
+<h2 id="protección-en-tiempo-real">Protección en tiempo real</h2>
+<p>Ahora vamos a configurar la protección en tiempo real u <code>on acces</code> de ClamAV. En esta definiremos que directorios queremos monitorear para esta protección.</p>
+<p>Es muy importante que escojamos los directorios cuidadosamente, ya que si ponemos alguno con mucho uso podremos bloquear el sistema de forma drástica.</p>
+<ul>
+<li>Editamos el fichero de configuración:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo nano /etc/clamav/clamd.conf
+</span></span></code></pre></div><ul>
+<li>Pegamos al final lo siguiente, modificando los directorios incluidos según tus necesidades:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span># Protección en tiempo real
+</span></span><span style="display:flex;"><span>OnAccessIncludePath /tmp/
+</span></span><span style="display:flex;"><span>OnAccessIncludePath /var/tmp/
+</span></span><span style="display:flex;"><span>OnAccessIncludePath /home/rlodeiro/Downloads
+</span></span><span style="display:flex;"><span>OnAccessPrevention yes
+</span></span><span style="display:flex;"><span>OnAccessExtraScanning yes
+</span></span><span style="display:flex;"><span>OnAccessExcludeUname clamav
+</span></span><span style="display:flex;"><span>OnAccessExcludeUname root
+</span></span><span style="display:flex;"><span>User root
+</span></span></code></pre></div><p>He puesto <code>User root</code> ya que con el por defecto no me funcionaba. Si tienes presente en el fichero la linea <code>User clamav</code> coméntala.</p>
+<ul>
+<li>Creamos el directorio de cuarentena, donde los virus detectados en los directorios que hemos indicado serán movidos de forma automática:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo su -
+</span></span><span style="display:flex;"><span>$ cd /root/
+</span></span><span style="display:flex;"><span>$ mkdir quarantine
+</span></span><span style="display:flex;"><span>$ exit
+</span></span></code></pre></div><ul>
+<li>Reiniciamos el servicio de <code>clamav-daemon</code>:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo systemctl restart clamav-daemon.service
+</span></span></code></pre></div><ul>
+<li>Habilitamos e iniciamos el servicio de <code>clamonacc</code>, encargado de la protección en tiempo real:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo systemctl enable clamav-clamonacc.service
+</span></span><span style="display:flex;"><span>$ sudo systemctl start clamav-clamonacc.service
+</span></span></code></pre></div><p>Para probar que la protección se ha activado correctamente, descargaremos un fichero utilizado para probar los antivirus. Es totalmente inocuo.</p>
+<ul>
+<li>Situados en uno de los directorios incluidos en la configuración:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl https://secure.eicar.org/eicar.com -o test.txt
+</span></span></code></pre></div><p>El archivo debe ser detectado como virus inmediatamente y movido a <code>/root/quarantine</code>.</p>
+<ul>
+<li>Para ver el log con las acciones tomadas:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo nano /var/log/clamav/clamonacc.log
+</span></span></code></pre></div><h2 id="interfaz-gráfica">Interfaz gráfica</h2>
+<p>Por último, instalaremos una interfaz gráfica para ClamAV, la cual nos simplificará tareas de detección de virus entre otras.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt install clamtk
+</span></span></code></pre></div><p>La interfaz luce tal que así:
+
+
+<center>
+
+
+<img src="https://rlodeiro.info/img/posts/2024/12/clamav/clamav1.png" alt="">
+
+
+</center>
+
+</p>
+<p>Desde ella podemos realizar múltiples acciones de forma visual. Destaco la facilidad de escanear archivos o carpetas de forma manual.</p>
+<p>
+
+<hr style="border-color: #d6d6d6;" />
+
+
+Espero que sea útil, ¡gracias por leerme!</p>
+
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/categories/linux">Linux</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+            
+            
+                <i class="fa fa-tags"></i>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/clamav">ClamAV</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/antivirus">Antivirus</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/debian">Debian</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/ubuntu">Ubuntu</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/linux">Linux</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/virus">Virus</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/malware">Malware</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/protecci%C3%B3n">Protección</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://rlodeiro.info/tags/on-access">On access</a></li>
+                
+            
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="https://rlodeiro.info/blog/firefox/"
+                class="button big previous">Firefox en Linux</a></li>
+    
+
+    
+</ul>
+
+
+    </div>
+    
+<section id="sidebar">
+
+  
+  <section id="intro">
+    
+    
+      
+        <a href='https://rlodeiro.info/'><img src="https://rlodeiro.info/img/main/logo.jpg" class="intro-circle" width="" alt="" /></a>
+      
+    
+    
+      <header>
+        <h2>Roberto Lodeiro</h2>
+        <p>Reality is wrong. Dreams are for real.</p>
+      </header>
+    
+    
+      <ul class="icons">
+        
+          
+    <li><a href="" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//x.com/lodeiro0001" target="_blank" title="X" class="fa fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:me@rlodeiro.info" title="Email" class="fa fa-envelope"></a></li>
+
+
+
+  <li><a rel="me" href="https://mastodon.social/@r_lodeiro" target="_blank" title="Mastodon" class="fa fa-paw"></a></li>
+
+
+      </ul>
+    
+  </section>
+
+  
+  <section class="recent-posts">
+    <div class="mini-posts">
+      <header>
+        <h3>Publicaciones Recientes</h3>
+      </header>
+      <div class="posts-container">
+        
+
+        
+          
+        
+
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/clamav/">ClamAV Antivirus</a>
+              </h3>
+              
+              <time class="published" datetime='2024-12-09'>
+                9 de diciembre de 2024
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/clamav/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2024/12/clamav/clamav.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/firefox/">Firefox en Linux</a>
+              </h3>
+              
+              <time class="published" datetime='2024-12-09'>
+                9 de diciembre de 2024
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/firefox/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2024/12/firefox/firefox.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/buttercup/">Buttercup: tu gestor de contraseñas</a>
+              </h3>
+              
+              <time class="published" datetime='2024-01-02'>
+                2 de enero de 2024
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/buttercup/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2024/01/buttercup/buttercup.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/certificado-autofirmado/">Certificado auto-firmado</a>
+              </h3>
+              
+              <time class="published" datetime='2023-12-03'>
+                3 de diciembre de 2023
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/certificado-autofirmado/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2023/12/certificado-autofirmado/certificado-autofirmado.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/actualizar-debian-11-debian-12-bookworm/">Actualizar Debian 11 a Debian 12 Bookworm</a>
+              </h3>
+              
+              <time class="published" datetime='2023-06-11'>
+                11 de junio de 2023
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/actualizar-debian-11-debian-12-bookworm/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2023/06/actualizar-debian-11-debian-12-bookworm/actualizar-debian-11-debian-12-bookworm.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://rlodeiro.info/blog/duplicati/">Duplicati</a>
+              </h3>
+              
+              <time class="published" datetime='2023-04-30'>
+                30 de abril de 2023
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://rlodeiro.info/blog/duplicati/" class="image featured">
+            <img src="https://rlodeiro.info/img/posts/2023/04/duplicati/duplicati.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+      </div>
+
+      
+        <a href=
+          
+            /blog/
+          
+        class="button">Ver más entradas</a>
+      
+    </div>
+  </section>
+
+  
+  
+  
+  
+  
+    <section id="categories">
+      <header>
+        <h3>
+          <a href="https://rlodeiro.info/categories/">Categorías</a>
+        </h3>
+      </header>
+        
+          
+        
+
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/herramientas/">herramientas</a>
+                <span style="float:right;">9</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/iot/">iot</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/linux/">linux</a>
+                <span style="float:right;">26</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/raspberry-pi/">raspberry-pi</a>
+                <span style="float:right;">6</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://rlodeiro.info/categories/servicios/">servicios</a>
+                <span style="float:right;">9</span>
+              
+            </header>
+          </article>
+        </p>
+        
+    </section>
+  
+  
+
+  
+  
+    <section id="mini-bio">
+      <h3>Sobre Mi</h3>
+      <p>¿De donde viene? ¿Cual es su color de pelo? ¿A que tribu urbana pertenece? Si estás muy aburrid@ y/o quieres saberlo ¡adelante!</p>
+      <a href="https://rlodeiro.info/about/" class="button">Leer Más</a>
+    </section>
+  
+
+  
+  <section id="footer">
+    
+      <ul class="icons">
+        
+          
+    <li><a href="" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//x.com/lodeiro0001" target="_blank" title="X" class="fa fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:me@rlodeiro.info" title="Email" class="fa fa-envelope"></a></li>
+
+
+
+  <li><a rel="me" href="https://mastodon.social/@r_lodeiro" target="_blank" title="Mastodon" class="fa fa-paw"></a></li>
+
+
+      </ul>
+    
+    <p class="copyright">
+      
+      © 2024 Roberto Lodeiro
+      
+    </p>
+  </section>
+</section>
+
+    </div>
+    <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+    
+
+    
+      
+    
+
+    
+    
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+      <script src="https://rlodeiro.info/js/util.js"></script>
+      <script src="https://rlodeiro.info/js/main.js"></script>
+      <script src="https://rlodeiro.info/js/backToTop.js"></script>
+    
+
+    
+      
+        
+      
+        
+          <script src="https://rlodeiro.info/js/highlight.min.js"></script>
+        
+      
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+      
+
+
+  </body>
+</html>
+

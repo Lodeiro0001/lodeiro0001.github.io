@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ClamAV on Roberto Lodeiro</title>
+    <link>https://rlodeiro.info/tags/clamav/</link>
+    <description>Recent content in ClamAV on Roberto Lodeiro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <copyright>© {year} Roberto Lodeiro</copyright>
+    <lastBuildDate>Mon, 09 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/clamav/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ClamAV Antivirus</title>
+      <link>https://rlodeiro.info/blog/clamav/</link>
+      <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/blog/clamav/</guid>
+      <description>En los tiempos que corren, las amenazas de virus y malware son muy frecuentes. Debemos de protegernos todo lo posible, incluso en sistemas Linux.
+En este post vamos a ver como instalar el antivirus ClamAV y configurarlo para tener protección en tiempo real.
+Instalación Todo el proceso a sido realizado en Debian, pero debería funcionar perfectamente en cualquier distribución derivada de esta.
+Actualizamos repositorios y el sistema: $ sudo apt update &amp;amp;&amp;amp; sudo apt upgrade Instalamos ClamAV: $ sudo apt install clamav clamav-daemon Por defecto, ClamAV actualizará de forma automática sus base de datos de virus, pero si queremos hacerlo manualmente:</description>
+    </item>
+    
+  </channel>
+</rss>
