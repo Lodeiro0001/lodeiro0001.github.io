@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <copyright>© {year} Roberto Lodeiro</copyright>
-    <lastBuildDate>Mon, 09 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Antivirus</title>
       <link>https://rlodeiro.info/tags/antivirus/</link>
-      <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 14 Dec 2024 00:00:00 +0000</pubDate>
       
       <guid>https://rlodeiro.info/tags/antivirus/</guid>
       <description></description>
@@ -20,7 +20,7 @@
     <item>
       <title>ClamAV</title>
       <link>https://rlodeiro.info/tags/clamav/</link>
-      <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 14 Dec 2024 00:00:00 +0000</pubDate>
       
       <guid>https://rlodeiro.info/tags/clamav/</guid>
       <description></description>
@@ -29,9 +29,63 @@
     <item>
       <title>Debian</title>
       <link>https://rlodeiro.info/tags/debian/</link>
-      <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 14 Dec 2024 00:00:00 +0000</pubDate>
       
       <guid>https://rlodeiro.info/tags/debian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://rlodeiro.info/tags/linux/</link>
+      <pubDate>Sat, 14 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Malware</title>
+      <link>https://rlodeiro.info/tags/malware/</link>
+      <pubDate>Sat, 14 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/malware/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>On access</title>
+      <link>https://rlodeiro.info/tags/on-access/</link>
+      <pubDate>Sat, 14 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/on-access/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Protección</title>
+      <link>https://rlodeiro.info/tags/protecci%C3%B3n/</link>
+      <pubDate>Sat, 14 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/protecci%C3%B3n/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>https://rlodeiro.info/tags/ubuntu/</link>
+      <pubDate>Sat, 14 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Virus</title>
+      <link>https://rlodeiro.info/tags/virus/</link>
+      <pubDate>Sat, 14 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/virus/</guid>
       <description></description>
     </item>
     
@@ -41,42 +95,6 @@
       <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
       
       <guid>https://rlodeiro.info/tags/firefox/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Linux</title>
-      <link>https://rlodeiro.info/tags/linux/</link>
-      <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://rlodeiro.info/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Malware</title>
-      <link>https://rlodeiro.info/tags/malware/</link>
-      <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://rlodeiro.info/tags/malware/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>On access</title>
-      <link>https://rlodeiro.info/tags/on-access/</link>
-      <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://rlodeiro.info/tags/on-access/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Protección</title>
-      <link>https://rlodeiro.info/tags/protecci%C3%B3n/</link>
-      <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://rlodeiro.info/tags/protecci%C3%B3n/</guid>
       <description></description>
     </item>
     
@@ -95,24 +113,6 @@
       <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
       
       <guid>https://rlodeiro.info/tags/tar/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ubuntu</title>
-      <link>https://rlodeiro.info/tags/ubuntu/</link>
-      <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://rlodeiro.info/tags/ubuntu/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Virus</title>
-      <link>https://rlodeiro.info/tags/virus/</link>
-      <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://rlodeiro.info/tags/virus/</guid>
       <description></description>
     </item>
     

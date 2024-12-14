@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <copyright>© {year} Roberto Lodeiro</copyright>
-    <lastBuildDate>Mon, 09 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ClamAV Antivirus</title>
       <link>https://rlodeiro.info/blog/clamav/</link>
-      <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 14 Dec 2024 00:00:00 +0000</pubDate>
       
       <guid>https://rlodeiro.info/blog/clamav/</guid>
       <description>En los tiempos que corren, las amenazas de virus y malware son muy frecuentes. Debemos de protegernos todo lo posible, incluso en sistemas Linux.
