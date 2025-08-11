@@ -2,13 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://rlodeiro.info/tags/antivirus/</loc>
-    <lastmod>2024-12-14T00:00:00+00:00</lastmod>
+    <loc>https://rlodeiro.info/blog/actualizar-debian-12-debian-13-trixie/</loc>
+    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlodeiro.info/blog/</loc>
-    <lastmod>2024-12-14T00:00:00+00:00</lastmod>
+    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/tags/bookworm/</loc>
+    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlodeiro.info/categories/</loc>
+    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/tags/debian/</loc>
+    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/tags/debian-12/</loc>
+    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/tags/debian-13/</loc>
+    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/categories/linux/</loc>
+    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/</loc>
+    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/tags/</loc>
+    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/tags/trixie/</loc>
+    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlodeiro.info/tags/antivirus/</loc>
     <lastmod>2024-12-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlodeiro.info/tags/clamav/</loc>
@@ -17,13 +44,7 @@
     <loc>https://rlodeiro.info/blog/clamav/</loc>
     <lastmod>2024-12-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://rlodeiro.info/tags/debian/</loc>
-    <lastmod>2024-12-14T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://rlodeiro.info/tags/linux/</loc>
-    <lastmod>2024-12-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rlodeiro.info/categories/linux/</loc>
     <lastmod>2024-12-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlodeiro.info/tags/malware/</loc>
@@ -33,12 +54,6 @@
     <lastmod>2024-12-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlodeiro.info/tags/protecci%C3%B3n/</loc>
-    <lastmod>2024-12-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rlodeiro.info/</loc>
-    <lastmod>2024-12-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rlodeiro.info/tags/</loc>
     <lastmod>2024-12-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlodeiro.info/tags/ubuntu/</loc>
@@ -110,16 +125,10 @@
     <loc>https://rlodeiro.info/blog/actualizar-debian-11-debian-12-bookworm/</loc>
     <lastmod>2023-06-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://rlodeiro.info/tags/bookworm/</loc>
-    <lastmod>2023-06-11T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://rlodeiro.info/tags/bullseye/</loc>
     <lastmod>2023-06-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlodeiro.info/tags/debian-11/</loc>
-    <lastmod>2023-06-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rlodeiro.info/tags/debian-12/</loc>
     <lastmod>2023-06-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlodeiro.info/tags/backups/</loc>

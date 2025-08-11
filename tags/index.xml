@@ -7,7 +7,52 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <copyright>© {year} Roberto Lodeiro</copyright>
-    <lastBuildDate>Sat, 14 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://rlodeiro.info/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bookworm</title>
+      <link>https://rlodeiro.info/tags/bookworm/</link>
+      <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/bookworm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Debian</title>
+      <link>https://rlodeiro.info/tags/debian/</link>
+      <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/debian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Debian 12</title>
+      <link>https://rlodeiro.info/tags/debian-12/</link>
+      <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/debian-12/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Debian 13</title>
+      <link>https://rlodeiro.info/tags/debian-13/</link>
+      <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/debian-13/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Trixie</title>
+      <link>https://rlodeiro.info/tags/trixie/</link>
+      <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://rlodeiro.info/tags/trixie/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Antivirus</title>
       <link>https://rlodeiro.info/tags/antivirus/</link>
@@ -23,15 +68,6 @@
       <pubDate>Sat, 14 Dec 2024 00:00:00 +0000</pubDate>
       
       <guid>https://rlodeiro.info/tags/clamav/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Debian</title>
-      <link>https://rlodeiro.info/tags/debian/</link>
-      <pubDate>Sat, 14 Dec 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://rlodeiro.info/tags/debian/</guid>
       <description></description>
     </item>
     
@@ -243,15 +279,6 @@
     </item>
     
     <item>
-      <title>Bookworm</title>
-      <link>https://rlodeiro.info/tags/bookworm/</link>
-      <pubDate>Sun, 11 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://rlodeiro.info/tags/bookworm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Bullseye</title>
       <link>https://rlodeiro.info/tags/bullseye/</link>
       <pubDate>Sun, 11 Jun 2023 00:00:00 +0000</pubDate>
@@ -266,15 +293,6 @@
       <pubDate>Sun, 11 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://rlodeiro.info/tags/debian-11/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Debian 12</title>
-      <link>https://rlodeiro.info/tags/debian-12/</link>
-      <pubDate>Sun, 11 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://rlodeiro.info/tags/debian-12/</guid>
       <description></description>
     </item>
     
